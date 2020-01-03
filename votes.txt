@@ -1,0 +1,21 @@
+A record of formal votes in reverse chronological order.
+
+A template for voting (alphabetical by surname) follows.
+----------------
+topic: .
+Proposed by .
+Public: yes
+opened: yyyy-mm-dd
+closed: yyyy-mm-dd
+
+  Matt       [  ]
+  Mark       [  ]
+  Pauli      [  ]
+  Viktor     [  ]
+  Tim        [  ]
+  Richard    [  ]
+  Tomas      [  ]
+  Kurt       [  ]
+  Matthias   [  ]
+  Nicola     [  ]
+
