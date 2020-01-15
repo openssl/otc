@@ -1,6 +1,19 @@
-A record of formal votes in reverse chronological order.
+# A record of formal votes in reverse chronological order.
+#
+# To vote, add one of the following entries next to your name:
+#
+#   [+1]  I vote in favour of the proposal
+#   [ 0]  I abstain from the vote
+#   [-1]  I vote against the proposal
+#
+# If you are abstaining, you can indicate a tendency as follows:
+#
+#   [+0]  I abstain but with a slight lean towards a vote in favour
+#   [ 0]  I abstain with no stated preference
+#   [-0]  I abstain but with a slight lean towards a vote against
+#
+# A template for voting (alphabetical by surname) follows.
 
-A template for voting (alphabetical by surname) follows.
 ----------------
 topic: .
 Proposed by .
