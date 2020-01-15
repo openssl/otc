@@ -40,15 +40,15 @@ Public: yes
 opened: 2020-01-16
 closed: yyyy-mm-dd
 
-  Matt       [  ]
+  Matt       [-1]
   Mark       [  ]
-  Pauli      [  ]
+  Pauli      [-1]
   Viktor     [  ]
   Tim        [+1]
-  Richard    [  ]
-  Shane      [  ]
+  Richard    [ 0]
+  Shane      [-0]
   Tomas      [  ]
-  Kurt       [  ]
+  Kurt       [ 0]
   Matthias   [  ]
   Nicola     [  ]
 
