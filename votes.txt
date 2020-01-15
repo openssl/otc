@@ -14,8 +14,8 @@ closed: yyyy-mm-dd
   Viktor     [  ]
   Tim        [  ]
   Richard    [  ]
+  Shane      [  ]
   Tomas      [  ]
   Kurt       [  ]
   Matthias   [  ]
   Nicola     [  ]
-
