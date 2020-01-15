@@ -32,3 +32,23 @@ closed: yyyy-mm-dd
   Kurt       [  ]
   Matthias   [  ]
   Nicola     [  ]
+
+----------------
+topic: approve PR#8300 statem: fix the alert sent for too large messages
+Proposed by Tim Hudson
+Public: yes
+opened: 2020-01-16
+closed: yyyy-mm-dd
+
+  Matt       [  ]
+  Mark       [  ]
+  Pauli      [  ]
+  Viktor     [  ]
+  Tim        [+1]
+  Richard    [  ]
+  Shane      [  ]
+  Tomas      [  ]
+  Kurt       [  ]
+  Matthias   [  ]
+  Nicola     [  ]
+
