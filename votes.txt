@@ -34,6 +34,25 @@ closed: yyyy-mm-dd
   Nicola     [  ]
 
 ----------------
+topic: Keep FIPS_mode() as emulated by EVP_default_properties_is_fips_enabled(NULL)
+Proposed by Tomas Mraz
+Public: yes
+opened: 2020-04-09
+closed: yyyy-mm-dd
+
+  Matt       [  ]
+  Mark       [  ]
+  Pauli      [  ]
+  Viktor     [  ]
+  Tim        [  ]
+  Richard    [  ]
+  Shane      [  ]
+  Tomas      [+1]
+  Kurt       [  ]
+  Matthias   [  ]
+  Nicola     [  ]
+
+----------------
 topic: approve PR#8300 statem: fix the alert sent for too large messages
 Proposed by Tim Hudson
 Public: yes
