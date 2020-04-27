@@ -44,7 +44,7 @@ closed: 2020-04-27
   Mark       [ 0]
   Pauli      [-1]
   Viktor     [  ]
-  Tim        [  ]
+  Tim        [-1]
   Richard    [ 0]
   Shane      [-1]
   Tomas      [+1]
