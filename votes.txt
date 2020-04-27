@@ -38,19 +38,19 @@ topic: Keep FIPS_mode() as emulated by EVP_default_properties_is_fips_enabled(NU
 Proposed by Tomas Mraz
 Public: yes
 opened: 2020-04-09
-closed: yyyy-mm-dd
+closed: 2020-04-27
 
-  Matt       [  ]
-  Mark       [  ]
+  Matt       [+1]
+  Mark       [ 0]
   Pauli      [-1]
   Viktor     [  ]
   Tim        [  ]
-  Richard    [  ]
+  Richard    [ 0]
   Shane      [-1]
   Tomas      [+1]
-  Kurt       [  ]
-  Matthias   [  ]
-  Nicola     [  ]
+  Kurt       [ 0]
+  Matthias   [-1]
+  Nicola     [-1]
 
 ----------------
 topic: approve PR#8300 statem: fix the alert sent for too large messages
