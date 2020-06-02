@@ -49,7 +49,7 @@ closed: yyyy-mm-dd
   Tim        [  ]
   Richard    [-1]
   Shane      [  ]
-  Tomas      [  ]
+  Tomas      [-1]
   Kurt       [  ]
   Matthias   [  ]
   Nicola     [-1]
