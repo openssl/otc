@@ -47,7 +47,7 @@ closed: yyyy-mm-dd
   Pauli      [-1]
   Viktor     [  ]
   Tim        [  ]
-  Richard    [  ]
+  Richard    [-1]
   Shane      [  ]
   Tomas      [  ]
   Kurt       [  ]
