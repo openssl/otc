@@ -34,6 +34,36 @@ closed: yyyy-mm-dd
   Nicola     [  ]
 
 ----------------
+topic: For change requests which target both the master and the
+       OpenSSL_1_1_1-stable branch, the following procedure should be followed:
+       - First, a pull request needs to be opened against the master branch for
+       discussion. Only after that pull request has received the necessary
+       amount of approvals, a separate pull request can be opened  against the
+       OpenSSL_1_1_1-stable branch.
+       - A separate pull request against the OpenSSL_1_1_1-stable branch is
+       required. This holds - contrary to common practice - even if the change
+       can be cherry-picked without conflicts from the master branch. The only
+       exception from this rule are changes which are considered 'CLA: trivial',
+       like e.g. typographical fixes.
+Proposed by Matt Caswell
+Public: yes
+opened: 2020-06-02
+closed: yyyy-mm-dd
+
+  Matt       [ 0]
+  Mark       [  ]
+  Pauli      [  ]
+  Viktor     [  ]
+  Tim        [  ]
+  Richard    [  ]
+  Shane      [  ]
+  Tomas      [  ]
+  Kurt       [  ]
+  Matthias   [  ]
+  Nicola     [  ]
+
+
+----------------
 topic: Accept and merge #11577.
 comment: #11577 reduces the maximum length of TLS labels.
          It also breaks standards compliance.
