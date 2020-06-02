@@ -34,6 +34,27 @@ closed: yyyy-mm-dd
   Nicola     [  ]
 
 ----------------
+topic: Accept and merge #11577.
+comment: #11577 reduces the maximum length of TLS labels.
+         It also breaks standards compliance.
+Proposed by Paul.
+Public: yes
+opened: 2020-06-02
+closed: yyyy-mm-dd
+
+  Matt       [  ]
+  Mark       [  ]
+  Pauli      [-1]
+  Viktor     [  ]
+  Tim        [  ]
+  Richard    [  ]
+  Shane      [  ]
+  Tomas      [  ]
+  Kurt       [  ]
+  Matthias   [  ]
+  Nicola     [  ]
+
+----------------
 topic: Keep FIPS_mode() as emulated by EVP_default_properties_is_fips_enabled(NULL)
 Proposed by Tomas Mraz
 Public: yes
