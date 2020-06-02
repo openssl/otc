@@ -60,7 +60,7 @@ closed: yyyy-mm-dd
   Tomas      [  ]
   Kurt       [  ]
   Matthias   [  ]
-  Nicola     [  ]
+  Nicola     [+1]
 
 
 ----------------
