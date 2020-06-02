@@ -52,7 +52,7 @@ closed: yyyy-mm-dd
   Tomas      [  ]
   Kurt       [  ]
   Matthias   [  ]
-  Nicola     [  ]
+  Nicola     [-1]
 
 ----------------
 topic: Keep FIPS_mode() as emulated by EVP_default_properties_is_fips_enabled(NULL)
