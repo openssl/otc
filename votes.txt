@@ -51,7 +51,7 @@ opened: 2020-06-02
 closed: yyyy-mm-dd
 
   Matt       [ 0]
-  Mark       [  ]
+  Mark       [ 0]
   Pauli      [-1]
   Viktor     [  ]
   Tim        [  ]
