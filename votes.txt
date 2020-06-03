@@ -70,7 +70,7 @@ comment: #11577 reduces the maximum length of TLS labels.
 Proposed by Paul.
 Public: yes
 opened: 2020-06-02
-closed: yyyy-mm-dd
+closed: 2020-06-03
 
   Matt       [-1]
   Mark       [-1]
