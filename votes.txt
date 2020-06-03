@@ -57,7 +57,7 @@ closed: yyyy-mm-dd
   Tim        [+1]
   Richard    [  ]
   Shane      [ 0]
-  Tomas      [  ]
+  Tomas      [-1]
   Kurt       [  ]
   Matthias   [  ]
   Nicola     [+1]
