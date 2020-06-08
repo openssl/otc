@@ -53,7 +53,7 @@ closed: yyyy-mm-dd
   Matt       [ 0]
   Mark       [ 0]
   Pauli      [-1]
-  Viktor     [  ]
+  Viktor     [+1]
   Tim        [+1]
   Richard    [-1]
   Shane      [ 0]
