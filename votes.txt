@@ -58,7 +58,7 @@ closed: yyyy-mm-dd
   Richard    [-1]
   Shane      [ 0]
   Tomas      [-1]
-  Kurt       [  ]
+  Kurt       [-1]
   Matthias   [  ]
   Nicola     [+1]
 
@@ -80,7 +80,7 @@ closed: 2020-06-03
   Richard    [-1]
   Shane      [-1]
   Tomas      [-1]
-  Kurt       [  ]
+  Kurt       [-1]   # 2020-06-09
   Matthias   [  ]
   Nicola     [-1]
 
