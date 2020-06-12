@@ -81,7 +81,7 @@ closed: 2020-06-03
   Shane      [-1]
   Tomas      [-1]
   Kurt       [-1]   # 2020-06-09
-  Matthias   [  ]
+  Matthias   [ 0]
   Nicola     [-1]
 
 ----------------
