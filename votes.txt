@@ -48,7 +48,7 @@ topic: For change requests which target both the master and the
 Proposed by Matt Caswell
 Public: yes
 opened: 2020-06-02
-closed: yyyy-mm-dd
+closed: 2020-06-16
 
   Matt       [ 0]
   Mark       [ 0]
