@@ -46,17 +46,17 @@ Public: yes
 opened: 2020-08-18
 closed: 2020-mm-dd
 
-  Matt       [  ]
-  Mark       [  ]
-  Pauli      [  ]
+  Matt       [ 0]
+  Mark       [ 0]
+  Pauli      [+1]
   Viktor     [  ]
   Tim        [  ]
   Richard    [+1]
   Shane      [  ]
-  Tomas      [  ]
-  Kurt       [  ]
-  Matthias   [  ]
-  Nicola     [  ]
+  Tomas      [+1]
+  Kurt       [ 0]
+  Matthias   [+1]
+  Nicola     [+1]
 
 ----------------
 topic: Rename OPENSSL_CTX to OSSL_LIB_CTX (as proposed by pull request #12621)
