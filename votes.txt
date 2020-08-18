@@ -34,7 +34,7 @@ closed: 2020-mm-dd
   Nicola     [  ]
 
 ----------------
-topic: Rename OSSL_SERIALIZER / OSSL_DESERIALIZER to OSSL_ENCODE / OSSL_DECODE
+topic: Rename OSSL_SERIALIZER / OSSL_DESERIALIZER to OSSL_ENCODER / OSSL_DECODER
 
        The rationale is that it makes things easier on programmers
        (encode / decode is easier to write than serialize / deserialize),
