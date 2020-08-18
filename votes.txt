@@ -34,6 +34,34 @@ closed: yyyy-mm-dd
   Nicola     [  ]
 
 ----------------
+topic: Rename OPENSSL_CTX to OSSL_LIB_CTX (as proposed by pull request #12621)
+
+       The main rationale behind this change is consistency, because many of the new
+       OpenSSL 3.0 types have an OSSL_ prefix, and OPENSSL_CTX is a notable exception.
+       More details can be found in the description and thread of pull request #12621.
+
+       There was a discussion on openssl-committers ('Rename OPENSSL_CTX to OSSL_WHAT?')
+       and an initial poll on doodle about the favourite replacements for OPENSSL_CTX
+       (https://doodle.com/poll/drku9ziwvkp6tw25).
+
+Proposed by Matthias  St. Pierre
+Public: yes
+opened: 2020-08-18
+closed: 2020-mm-dd
+
+  Matt       [  ]
+  Mark       [  ]
+  Pauli      [  ]
+  Viktor     [  ]
+  Tim        [  ]
+  Richard    [  ]
+  Shane      [  ]
+  Tomas      [  ]
+  Kurt       [  ]
+  Matthias   [+1]
+  Nicola     [  ]
+
+----------------
 topic: For change requests which target both the master and the
        OpenSSL_1_1_1-stable branch, the following procedure should be followed:
        - First, a pull request needs to be opened against the master branch for
