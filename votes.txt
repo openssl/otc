@@ -74,17 +74,17 @@ Public: yes
 opened: 2020-08-18
 closed: 2020-mm-dd
 
-  Matt       [  ]
+  Matt       [ 0]
   Mark       [  ]
-  Pauli      [  ]
+  Pauli      [+1]
   Viktor     [  ]
   Tim        [  ]
-  Richard    [  ]
+  Richard    [-0]
   Shane      [  ]
-  Tomas      [  ]
-  Kurt       [  ]
+  Tomas      [+1]
+  Kurt       [ 0]
   Matthias   [+1]
-  Nicola     [  ]
+  Nicola     [+1]
 
 ----------------
 topic: For change requests which target both the master and the
