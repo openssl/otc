@@ -34,6 +34,31 @@ closed: 2020-mm-dd
   Nicola     [  ]
 
 ----------------
+topic: Rename OSSL_SERIALIZER / OSSL_DESERIALIZER to OSSL_ENCODE / OSSL_DECODE
+
+       The rationale is that it makes things easier on programmers
+       (encode / decode is easier to write than serialize / deserialize),
+       and also avoids disputes on what is and isn't serialization.
+
+       Associated issues and PRs: #12455, #12659 and #12660
+Proposed by Richard
+Public: yes
+opened: 2020-08-18
+closed: 2020-mm-dd
+
+  Matt       [  ]
+  Mark       [  ]
+  Pauli      [  ]
+  Viktor     [  ]
+  Tim        [  ]
+  Richard    [+1]
+  Shane      [  ]
+  Tomas      [  ]
+  Kurt       [  ]
+  Matthias   [  ]
+  Nicola     [  ]
+
+----------------
 topic: Rename OPENSSL_CTX to OSSL_LIB_CTX (as proposed by pull request #12621)
 
        The main rationale behind this change is consistency, because many of the new
