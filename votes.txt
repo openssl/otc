@@ -18,8 +18,8 @@
 topic: .
 Proposed by .
 Public: yes
-opened: yyyy-mm-dd
-closed: yyyy-mm-dd
+opened: 2020-mm-dd
+closed: 2020-mm-dd
 
   Matt       [  ]
   Mark       [  ]
