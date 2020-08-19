@@ -20,6 +20,7 @@ Proposed by .
 Public: yes
 opened: 2020-mm-dd
 closed: 2020-mm-dd
+accepted: yes/no (+X, -Y)
 
   Matt       [  ]
   Mark       [  ]
@@ -41,10 +42,13 @@ topic: Rename OSSL_SERIALIZER / OSSL_DESERIALIZER to OSSL_ENCODER / OSSL_DECODER
        and also avoids disputes on what is and isn't serialization.
 
        Associated issues and PRs: #12455, #12659 and #12660
+
 Proposed by Richard
 Public: yes
 opened: 2020-08-18
 closed: 2020-mm-dd
+
+accepted:  yes/no  (+X, -Y)
 
   Matt       [ 0]
   Mark       [ 0]
@@ -73,6 +77,7 @@ Proposed by Matthias  St. Pierre
 Public: yes
 opened: 2020-08-18
 closed: 2020-mm-dd
+accepted: yes/no (+X, -Y)
 
   Matt       [ 0]
   Mark       [  ]
@@ -102,6 +107,7 @@ Proposed by Matt Caswell
 Public: yes
 opened: 2020-06-02
 closed: 2020-06-16
+accepted:  no  (+4, -4)
 
   Matt       [ 0]
   Mark       [ 0]
@@ -124,6 +130,7 @@ Proposed by Paul.
 Public: yes
 opened: 2020-06-02
 closed: 2020-06-03
+accepted: no (+0, -8)
 
   Matt       [-1]
   Mark       [-1]
@@ -143,6 +150,7 @@ Proposed by Tomas Mraz
 Public: yes
 opened: 2020-04-09
 closed: 2020-04-27
+accepted: no (+2, -5)
 
   Matt       [+1]
   Mark       [ 0]
@@ -162,6 +170,7 @@ Proposed by Tim Hudson
 Public: yes
 opened: 2020-01-16
 closed: 2020-01-30
+accepted: no (+1, -4)
 
   Matt       [-1]
   Mark       [ 0]
