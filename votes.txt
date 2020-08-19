@@ -56,7 +56,7 @@ accepted:  yes/no  (+X, -Y)
   Viktor     [  ]
   Tim        [  ]
   Richard    [+1]
-  Shane      [  ]
+  Shane      [-0]       # Shane's vote was actually --0
   Tomas      [+1]
   Kurt       [ 0]
   Matthias   [+1]
