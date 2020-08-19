@@ -80,7 +80,7 @@ closed: 2020-mm-dd
   Viktor     [  ]
   Tim        [  ]
   Richard    [-0]
-  Shane      [  ]
+  Shane      [+1]
   Tomas      [+1]
   Kurt       [ 0]
   Matthias   [+1]
