@@ -74,14 +74,14 @@ topic: Rename OPENSSL_CTX to OSSL_LIB_CTX (as proposed by pull request #12621)
 Proposed by Matthias  St. Pierre
 Public: yes
 opened: 2020-08-18
-closed: 2020-mm-dd
-accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
+closed: 2020-08-20
+accepted:  yes  (for: 5, against: 0, abstained: 4, not voted: 2)
 
   Matt       [ 0]
   Mark       [  ]
   Pauli      [+1]
   Viktor     [  ]
-  Tim        [  ]
+  Tim        [-0]
   Richard    [-0]
   Shane      [+1]
   Tomas      [+1]
