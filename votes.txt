@@ -52,7 +52,7 @@ accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
   Mark       [ 0]
   Pauli      [+1]
   Viktor     [  ]
-  Tim        [  ]
+  Tim        [-1]
   Richard    [+1]
   Shane      [-0]       # Shane's vote was actually --0
   Tomas      [+1]
