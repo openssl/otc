@@ -45,8 +45,8 @@ topic: Rename OSSL_SERIALIZER / OSSL_DESERIALIZER to OSSL_ENCODER / OSSL_DECODER
 Proposed by Richard
 Public: yes
 opened: 2020-08-18
-closed: 2020-mm-dd
-accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
+closed: 2020-08-20
+accepted:  yes  (for: 5, against: 1, abstained: 4, not voted: 1)
 
   Matt       [ 0]
   Mark       [ 0]
