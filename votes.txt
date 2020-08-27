@@ -50,10 +50,10 @@ accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
   Tim        [-1]
   Richard    [  ]
   Shane      [  ]
-  Tomas      [  ]
+  Tomas      [-1]
   Kurt       [  ]
   Matthias   [  ]
-  Nicola     [  ]
+  Nicola     [-1]
 
 
 ----------------
