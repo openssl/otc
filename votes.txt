@@ -47,7 +47,7 @@ accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
   Mark       [  ]
   Pauli      [  ]
   Viktor     [  ]
-  Tim        [  ]
+  Tim        [-1]
   Richard    [  ]
   Shane      [  ]
   Tomas      [  ]
