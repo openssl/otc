@@ -44,14 +44,14 @@ closed: 2020-mm-dd
 accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
 
   Matt       [-1]
-  Mark       [  ]
+  Mark       [ 0]
   Pauli      [-0]
   Viktor     [  ]
   Tim        [-1]
-  Richard    [  ]
+  Richard    [-1]
   Shane      [  ]
   Tomas      [-1]
-  Kurt       [  ]
+  Kurt       [-1]
   Matthias   [  ]
   Nicola     [-1]
 
