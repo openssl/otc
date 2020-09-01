@@ -1,0 +1,56 @@
+Virtual Face to Face #001
+
+* Summary
+
+A video virtual f2f for OTC:
+
+Aiming for two three hour sessions over two of these days.
+    Tuesday 22nd, Wednesday 23rd, Thursday 24th, Tuesday 29th, Wednesday 30th
+    of September and Thursday the 1st of October.
+
+    ????-????UTC (3hrs) on 
+    ????-????UTC (3hrs) on 
+
+Will send google cal invite.
+
+Conferencing: 
+
+
+* Availability
+
+  Kurt
+
+  Matt
+
+  Mark
+
+  Viktor
+  
+  Tim
+  
+  Richard
+
+  Pauli
+    each day
+      0000-1400UTC (can start earlier -- previous day 2100)
+  
+  Shane
+
+  Tomas
+
+  Nicola
+
+  Matthias
+
+
+* Agenda and meeting stuff
+
+
+  Nominations for OTC and committer roles
+
+  Coding style updates?
+    Lines > 80 characters in length?
+
+  Performance improvement or bug fix?
+    Can we quantify this?
+
