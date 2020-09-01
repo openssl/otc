@@ -52,7 +52,7 @@ accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
   Shane      [  ]
   Tomas      [-1]
   Kurt       [-1]
-  Matthias   [  ]
+  Matthias   [-0]
   Nicola     [-1]
 
 
