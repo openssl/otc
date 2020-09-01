@@ -49,7 +49,7 @@ accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
   Viktor     [  ]
   Tim        [-1]
   Richard    [-1]
-  Shane      [  ]
+  Shane      [-1]
   Tomas      [-1]
   Kurt       [-1]
   Matthias   [-0]
