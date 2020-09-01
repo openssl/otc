@@ -57,3 +57,11 @@ Conferencing:
   Performance improvement or bug fix?
     Can we quantify this?
 
+  Voting process
+    - on openssl-project, or on otc list?
+
+  Review OMC proposed release roadmap
+
+  BIGNUM refactor - who/how/when
+
+  QUIC
