@@ -25,18 +25,20 @@ Conferencing:
   Mark
 
   Viktor
-  
+
   Tim
-  
+
   Richard
 
   Pauli
     each day
       0000-1400UTC (can start earlier -- previous day 2100)
-  
+
   Shane
 
   Tomas
+    each day
+      0700-1600UTC
 
   Nicola
 
