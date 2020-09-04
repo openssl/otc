@@ -44,7 +44,8 @@ Conferencing:
   Nicola
 
   Matthias
-
+    each day
+      0800-1800UTC (if necessary: 0600-2200UTC)
 
 * Agenda and meeting stuff
 
