@@ -30,6 +30,7 @@ Conferencing:
   Tim
 
   Richard
+      0700-1600UTC, 1800UTC-2200UTC, each day
 
   Pauli
     each day
