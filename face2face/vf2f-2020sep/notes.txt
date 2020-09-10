@@ -5,69 +5,22 @@ Virtual Face to Face #001
 A video virtual f2f for OTC:
 
 Aiming for two three hour sessions over two of these days.
-    Tuesday 22nd, Wednesday 23rd, Thursday 24th, Tuesday 29th, Wednesday 30th
-    of September and Thursday the 1st of October.
+    Monthday 28th, Tuesday 29th, Wednesday 30th of September.
 
-    ????-????UTC (3hrs) on
-    ????-????UTC (3hrs) on
 
 Will send google cal invite.
 
-Conferencing:
+Dates
+-----
+
+Committers:
+    29th September 0800 through 1100 UTC
+    Google meet call: https://meet.google.com/jng-qidi-ivm
+    https://docs.google.com/document/d/1J5H1phf5YjuZPUIlVLda7aCreJ7HNDNIEdpFG32TmKY/edit#heading=h.9ygwehm5r75b
 
 
-* Availability
-
-  Kurt
-
-  Matt
-      0600-0000UTC, available all days except *possibly* not on the 1st Oct
-
-  Mark
-
-  Viktor
-
-  Tim
-
-  Richard
-      0700-1600UTC, 1800UTC-2200UTC, each day
-
-  Pauli
-    each day
-      0000-1400UTC (can start earlier -- previous day 2100)
-
-  Shane
-    Same as Pauli.
-  Tomas
-    each day
-      0700-1600UTC
-
-  Nicola
-    each day
-      0600-1500UTC
-    Tue/Wed/Fri
-      0600-2200UTC
-
-  Matthias
-    each day
-      0800-1800UTC (if necessary: 0600-2200UTC)
-
-* Agenda and meeting stuff
-
-
-  Nominations for OTC and committer roles
-
-  Coding style updates?
-    Lines > 80 characters in length?
-
-  Performance improvement or bug fix?
-    Can we quantify this?
-
-  Voting process
-    - on openssl-project, or on otc list?
-
-  Review OMC proposed release roadmap
-
-  BIGNUM refactor - who/how/when
-
-  QUIC
+OTC:
+    28th September 0800 through 1100 UTC
+    30th September 0800 through 1100 UTC
+    Google meetin call: https://meet.google.com/jng-mdgb-mqq
+    https://docs.google.com/document/d/1hoKatxsu8Vr675swUUYPhZ-ZIADob5Rg_FzZdjPLsD8/edit#
