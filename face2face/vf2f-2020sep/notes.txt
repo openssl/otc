@@ -37,7 +37,7 @@ Conferencing:
       0000-1400UTC (can start earlier -- previous day 2100)
 
   Shane
-
+    Same as Pauli.
   Tomas
     each day
       0700-1600UTC
