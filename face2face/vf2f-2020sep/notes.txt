@@ -8,12 +8,12 @@ Aiming for two three hour sessions over two of these days.
     Tuesday 22nd, Wednesday 23rd, Thursday 24th, Tuesday 29th, Wednesday 30th
     of September and Thursday the 1st of October.
 
-    ????-????UTC (3hrs) on 
-    ????-????UTC (3hrs) on 
+    ????-????UTC (3hrs) on
+    ????-????UTC (3hrs) on
 
 Will send google cal invite.
 
-Conferencing: 
+Conferencing:
 
 
 * Availability
@@ -43,6 +43,10 @@ Conferencing:
       0700-1600UTC
 
   Nicola
+    each day
+      0600-1500UTC
+    Tue/Wed/Fri
+      0600-2200UTC
 
   Matthias
     each day
