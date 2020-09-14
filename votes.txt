@@ -41,12 +41,12 @@ Proposed by Matt Caswell
 Public: yes
 opened: 2020-08-27
 closed: 2020-09-10
-accepted:  no  (for: 0, against: 7, abstained: 3, not voted: 1)
+accepted:  no  (for: 0, against: 8, abstained: 3, not voted: 0)
 
   Matt       [-1]
   Mark       [ 0]
   Pauli      [-0]
-  Viktor     [  ]
+  Viktor     [-1]
   Tim        [-1]
   Richard    [-1]
   Shane      [-1]
