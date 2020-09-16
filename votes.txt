@@ -35,6 +35,49 @@ accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
   Nicola     [  ]
 
 ----------------
+topic: Adopt the coding style policy on function arguments as shown in chapter
+6.1 of web PR 194 (commit f37f8a9000)
+Proposed by Matt Caswell
+Public: yes
+opened: 2020-09-16
+closed: 2020-mm-dd
+accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
+
+  Matt       [+1]
+  Mark       [  ]
+  Pauli      [  ]
+  Viktor     [  ]
+  Tim        [  ]
+  Richard    [  ]
+  Shane      [  ]
+  Tomas      [  ]
+  Kurt       [  ]
+  Matthias   [  ]
+  Nicola     [  ]
+
+----------------
+topic: Adopt the coding style policy on extending existing functions as shown
+in chapter 6.2 of web PR 194 (commit f37f8a9000)
+Proposed by Matt Caswell
+Public: yes
+opened: 2020-09-16
+closed: 2020-mm-dd
+accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
+
+  Matt       [+1]
+  Mark       [  ]
+  Pauli      [  ]
+  Viktor     [  ]
+  Tim        [  ]
+  Richard    [  ]
+  Shane      [  ]
+  Tomas      [  ]
+  Kurt       [  ]
+  Matthias   [  ]
+  Nicola     [  ]
+
+
+----------------
 topic: The performance improvements provided in PR11188 should be considered a
        bug fix and therefore acceptable for backport to 1.1.1
 Proposed by Matt Caswell
