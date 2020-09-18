@@ -44,7 +44,7 @@ closed: 2020-mm-dd
 accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
 
   Matt       [+1]
-  Mark       [  ]
+  Mark       [ 0]
   Pauli      [-1]
   Viktor     [  ]
   Tim        [-1]
@@ -65,7 +65,7 @@ closed: 2020-mm-dd
 accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
 
   Matt       [+1]
-  Mark       [  ]
+  Mark       [ 0]
   Pauli      [-1]
   Viktor     [  ]
   Tim        [-1]
