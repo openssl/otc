@@ -52,7 +52,7 @@ accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
   Shane      [-1]
   Tomas      [+1]
   Kurt       [  ]
-  Matthias   [  ]
+  Matthias   [+0]
   Nicola     [  ]
 
 ----------------
@@ -73,7 +73,7 @@ accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
   Shane      [+1]
   Tomas      [+1]
   Kurt       [  ]
-  Matthias   [  ]
+  Matthias   [+0]
   Nicola     [  ]
 
 
