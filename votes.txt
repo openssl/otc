@@ -61,20 +61,20 @@ in chapter 6.2 of web PR 194 (commit f37f8a9000)
 Proposed by Matt Caswell
 Public: yes
 opened: 2020-09-16
-closed: 2020-mm-dd
-accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
+closed: 2020-09-21
+accepted:  yes  (for: 5, against: 3, abstained: 2, not voted: 1)
 
   Matt       [+1]
   Mark       [ 0]
   Pauli      [+1]       # Vote changed 2020-09-21
   Viktor     [  ]
   Tim        [-1]
-  Richard    [  ]
+  Richard    [+1]
   Shane      [+1]
   Tomas      [+1]
   Kurt       [-1]
   Matthias   [+0]
-  Nicola     [  ]
+  Nicola     [-1]
 
 
 ----------------
