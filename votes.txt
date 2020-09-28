@@ -35,6 +35,38 @@ accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
   Nicola     [  ]
 
 ----------------
+topic: Accept the OTC voting policy as defined:
+
+       The proposer of a vote is ultimately responsible for updating the votes.txt
+       file in the repository.  Outside of a face to face meeting, voters MUST reply
+       to the vote email indicating their preference and optionally their reasoning.
+       Voters MAY update the votes.txt file in addition.
+
+       The proposed vote text SHOULD be raised for discussion before calling the vote.
+
+       Public votes MUST be called on the project list, not the OTC list and the
+       subject MUST begin with “VOTE:”.  Private votes MUST be called on the
+       OTC list with “PRIVATE VOTE:” beginning subject.
+
+Proposed by Matthias St. Pierre (on behalf of the OTC)
+Public: yes
+opened: 2020-09-28
+closed: 2020-mm-dd
+accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
+
+  Matt       [  ]
+  Mark       [  ]
+  Pauli      [  ]
+  Viktor     [  ]
+  Tim        [  ]
+  Richard    [  ]
+  Shane      [  ]
+  Tomas      [  ]
+  Kurt       [  ]
+  Matthias   [+1]
+  Nicola     [  ]
+
+----------------
 topic: Adopt the coding style policy on function arguments as shown in chapter
 6.1 of web PR 194 (commit f37f8a9000)
 Proposed by Matt Caswell
