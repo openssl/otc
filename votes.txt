@@ -54,17 +54,17 @@ opened: 2020-09-28
 closed: 2020-mm-dd
 accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
 
-  Matt       [  ]
-  Mark       [  ]
-  Pauli      [  ]
+  Matt       [+1]
+  Mark       [+1]
+  Pauli      [+1]
   Viktor     [  ]
-  Tim        [  ]
-  Richard    [  ]
-  Shane      [  ]
-  Tomas      [  ]
+  Tim        [+1]
+  Richard    [+1]
+  Shane      [+1]
+  Tomas      [+1]
   Kurt       [  ]
   Matthias   [+1]
-  Nicola     [  ]
+  Nicola     [+1]
 
 ----------------
 topic: Adopt the coding style policy on function arguments as shown in chapter
