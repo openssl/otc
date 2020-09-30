@@ -35,6 +35,26 @@ accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
   Nicola     [  ]
 
 ----------------
+topic: OTC meeting will be called for next Tuesday (2020-10-06)
+Proposed by Matthias St. Pierre
+Public: yes
+opened: 2020-09-30
+closed: 2020-09-30
+accepted:  yes  (for: 7, against: 0, abstained: 0, not voted: 4)
+
+  Matt       [+1]
+  Mark       [  ]
+  Pauli      [+1]
+  Viktor     [  ]
+  Tim        [+1]
+  Richard    [+1]
+  Shane      [+1]
+  Tomas      [  ]
+  Kurt       [  ]
+  Matthias   [+1]
+  Nicola     [+1]
+
+----------------
 topic: Accept the OTC voting policy as defined:
 
        The proposer of a vote is ultimately responsible for updating the votes.txt
