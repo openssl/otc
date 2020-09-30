@@ -43,14 +43,14 @@ closed: 2020-09-30
 accepted:  yes  (for: 7, against: 0, abstained: 0, not voted: 4)
 
   Matt       [+1]
-  Mark       [  ]
+  Mark       [+1]       # 2020-09-30
   Pauli      [+1]
   Viktor     [  ]
   Tim        [+1]
   Richard    [+1]
   Shane      [+1]
-  Tomas      [  ]
-  Kurt       [  ]
+  Tomas      [+1]       # 2020-09-30
+  Kurt       [+1]       # 2020-09-30
   Matthias   [+1]
   Nicola     [+1]
 
