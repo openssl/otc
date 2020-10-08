@@ -35,6 +35,72 @@ accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
   Nicola     [  ]
 
 ----------------
+topic: The following items are required prerequisites for the first beta release:
+ 1) EVP is the recommended API, it must be feature-complete compared with
+    the functionality available using lower-level APIs.
+   - Anything that isn’t available must be put to an OTC vote to exclude.
+   - The apps are the minimum bar for this, subject to exceptions noted below.
+ 2) Deprecation List Proposal: DH_, DSA_, ECDH_, ECDSA_, EC_KEY_, RSA_,
+    RAND_METHOD_.
+   - Does not include macros defining useful constants (e.g.
+     SHA512_DIGEST_LENGTH).
+   - Excluded from Deprecation: `EC_`, `DSA_SIG_`, `ECDSA_SIG_`.
+   - There might be some others.
+   - Review for exceptions.
+   - The apps are the minimum bar to measure feature completeness for the EVP
+     interface: rewrite them so they do not use internal nor deprecated
+     functions (except speed, engine, list, passwd -crypt and the code to handle
+     the -engine CLI option).  That is, remove the suppression of deprecated
+     define.
+     - Proposal: drop passwd -crypt (OMC vote required)
+   - Compile and link 1.1.1 command line app against the master headers and
+     library.  Run 1.1.1 app test cases against the chimera.  Treat this as an
+     external test using a special 1.1.1 branch. Deprecated functions used by
+     libssl should be moved to independent file(s), to limit the suppression of
+     deprecated defines to the absolute minimum scope.
+ 3) Draft documentation (contents but not pretty)
+   - Need a list of things we know are not present - including things we have
+     removed.
+   - We need to have mapping tables for various d2i/i2d functions.
+   - We need to have a mapping table from “old names” for things into the
+     OSSL_PARAMS names.
+     - Documentation addition to old APIs to refer to new ones (man7).
+     - Documentation needs to reference name mapping.
+     - All the legacy interfaces need to have their documentation pointing to
+       the replacement interfaces.
+ 4) Review (and maybe clean up) legacy bridge code.
+ 5) Review TODO(3.0) items #12224.
+ 6) Source checksum script.
+ 7) Review of functions previously named _with_libctx.
+ 8) Encoder fixes (PKCS#8, PKCS#1, etc).
+ 9) Encoder DER to PEM refactor.
+10) Builds and passes tests on all primary, secondary and FIPS platforms.
+11) Query provider parameters (name, version, ...) from the command line.
+12) Setup buildbot infrastructure and associated instructions.
+13) Complete make fipsinstall.
+14) More specific decoding selection (e.g. params or keys).
+15) Example code covering replacements for deprecated APIs.
+16) Drop C code output options from the apps (OMC approval required).
+17) Address issues and PRs in the 3.0beta1 milestone.
+Proposed by .
+Public: yes
+opened: 2020-10-08
+closed: 2020-mm-dd
+accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
+
+  Matt       [+1]
+  Mark       [  ]
+  Pauli      [  ]
+  Viktor     [  ]
+  Tim        [  ]
+  Richard    [  ]
+  Shane      [  ]
+  Tomas      [  ]
+  Kurt       [  ]
+  Matthias   [  ]
+  Nicola     [  ]
+
+----------------
 topic: We should accept the Fully Pluggable TLSv1.3 KEM functionality as shown
 in PR #13018 into the 3.0 release
 Proposed by Matt Caswell
