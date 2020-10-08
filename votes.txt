@@ -35,6 +35,27 @@ accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
   Nicola     [  ]
 
 ----------------
+topic: We should accept the Fully Pluggable TLSv1.3 KEM functionality as shown
+in PR #13018 into the 3.0 release
+Proposed by Matt Caswell
+Public: yes
+opened: 2020-10-08
+closed: 2020-mm-dd
+accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
+
+  Matt       [+1]
+  Mark       [  ]
+  Pauli      [  ]
+  Viktor     [  ]
+  Tim        [  ]
+  Richard    [  ]
+  Shane      [  ]
+  Tomas      [  ]
+  Kurt       [  ]
+  Matthias   [  ]
+  Nicola     [  ]
+
+----------------
 topic: OTC meeting will be called for next Tuesday (2020-10-06)
 Proposed by Matthias St. Pierre
 Public: yes
