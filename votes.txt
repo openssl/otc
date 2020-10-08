@@ -55,9 +55,10 @@ topic: The following items are required prerequisites for the first beta release
      - Proposal: drop passwd -crypt (OMC vote required)
    - Compile and link 1.1.1 command line app against the master headers and
      library.  Run 1.1.1 app test cases against the chimera.  Treat this as an
-     external test using a special 1.1.1 branch. Deprecated functions used by
-     libssl should be moved to independent file(s), to limit the suppression of
-     deprecated defines to the absolute minimum scope.
+     external test using a special 1.1.1 branch.
+   - Deprecated functions used by libssl should be moved to independent file(s),
+     to limit the suppression of deprecated defines to the absolute minimum
+     scope.
  3) Draft documentation (contents but not pretty)
    - Need a list of things we know are not present - including things we have
      removed.
