@@ -35,6 +35,29 @@ accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
   Nicola     [  ]
 
 ----------------
+topic: The PR #11359 (Allow to continue with further checks on
+ UNABLE_TO_VERIFY_LEAF_SIGNATURE) is acceptable for 1.1.1 branch
+As the change is borderline on bug fix/behaviour change OTC needs
+to decide whether it is acceptable for 1.1.1 branch.
+Proposed by Tomas Mraz
+Public: yes
+opened: 2020-10-09
+closed: 2020-mm-dd
+accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
+
+  Matt       [  ]
+  Mark       [  ]
+  Pauli      [  ]
+  Viktor     [  ]
+  Tim        [  ]
+  Richard    [  ]
+  Shane      [  ]
+  Tomas      [+1]
+  Kurt       [  ]
+  Matthias   [  ]
+  Nicola     [  ]
+
+----------------
 topic: The following items are required prerequisites for the first beta release:
  1) EVP is the recommended API, it must be feature-complete compared with
     the functionality available using lower-level APIs.
