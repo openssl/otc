@@ -157,15 +157,15 @@ accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
 
   Matt       [+1]
   Mark       [  ]
-  Pauli      [  ]
+  Pauli      [+1]
   Viktor     [  ]
-  Tim        [  ]
+  Tim        [+1]
   Richard    [  ]
-  Shane      [  ]
-  Tomas      [  ]
-  Kurt       [  ]
-  Matthias   [  ]
-  Nicola     [  ]
+  Shane      [-1]
+  Tomas      [+1]
+  Kurt       [+1]
+  Matthias   [+1]
+  Nicola     [+1]
 
 ----------------
 topic: OTC meeting will be called for next Tuesday (2020-10-06)
