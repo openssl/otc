@@ -35,6 +35,28 @@ accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
   Nicola     [  ]
 
 ----------------
+topic: Hold online weekly OTC meetings starting on Tuesday 2020-10-13
+       and until 3.0 beta1 is released, in lieu of the weekly "developer
+       meetings".
+Proposed by Nicola Tuveri
+Public: yes
+opened: 2020-10-09
+closed: 2020-mm-dd
+accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
+
+  Matt       [  ]
+  Mark       [  ]
+  Pauli      [  ]
+  Viktor     [  ]
+  Tim        [  ]
+  Richard    [  ]
+  Shane      [  ]
+  Tomas      [  ]
+  Kurt       [  ]
+  Matthias   [  ]
+  Nicola     [+1]
+
+----------------
 topic: The PR #11359 (Allow to continue with further checks on
  UNABLE_TO_VERIFY_LEAF_SIGNATURE) is acceptable for 1.1.1 branch
 As the change is borderline on bug fix/behaviour change OTC needs
