@@ -41,19 +41,19 @@ topic: Hold online weekly OTC meetings starting on Tuesday 2020-10-13
 Proposed by Nicola Tuveri
 Public: yes
 opened: 2020-10-09
-closed: 2020-mm-dd
-accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
+closed: 2020-10-11
+accepted:  yes  (for: 9, against: 0, abstained: 0, not voted: 2)
 
-  Matt       [  ]
-  Mark       [  ]
-  Pauli      [  ]
+  Matt       [+1]
+  Mark       [+1]
+  Pauli      [+1]
   Viktor     [  ]
-  Tim        [  ]
+  Tim        [+1]
   Richard    [  ]
-  Shane      [  ]
-  Tomas      [  ]
-  Kurt       [  ]
-  Matthias   [  ]
+  Shane      [+1]
+  Tomas      [+1]
+  Kurt       [+1]
+  Matthias   [+1]
   Nicola     [+1]
 
 ----------------
