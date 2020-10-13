@@ -152,15 +152,15 @@ in PR #13018 into the 3.0 release
 Proposed by Matt Caswell
 Public: yes
 opened: 2020-10-08
-closed: 2020-mm-dd
-accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
+closed: 2020-10-13
+accepted:  yes  (for: 8, against: 1, abstained: 1, not voted: 1)
 
   Matt       [+1]
   Mark       [ 0]
   Pauli      [+1]
   Viktor     [  ]
   Tim        [+1]
-  Richard    [  ]
+  Richard    [+1]
   Shane      [-1]
   Tomas      [+1]
   Kurt       [+1]
