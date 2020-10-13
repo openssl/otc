@@ -131,20 +131,20 @@ topic: The following items are required prerequisites for the first beta release
 Proposed by .
 Public: yes
 opened: 2020-10-08
-closed: 2020-mm-dd
-accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
+closed: 2020-10-13
+accepted:  yes/no  (for: 8, against: 0, abstained: 0, not voted: 3)
 
   Matt       [+1]
   Mark       [  ]
-  Pauli      [  ]
+  Pauli      [+1]
   Viktor     [  ]
-  Tim        [  ]
-  Richard    [  ]
-  Shane      [  ]
-  Tomas      [  ]
+  Tim        [+1]
+  Richard    [+1]
+  Shane      [+1]
+  Tomas      [+1]
   Kurt       [  ]
-  Matthias   [  ]
-  Nicola     [  ]
+  Matthias   [+1]
+  Nicola     [+1]
 
 ----------------
 topic: We should accept the Fully Pluggable TLSv1.3 KEM functionality as shown
