@@ -49,7 +49,7 @@ accepted:  yes  (for: 9, against: 0, abstained: 0, not voted: 2)
   Pauli      [+1]
   Viktor     [  ]
   Tim        [+1]
-  Richard    [  ]
+  Richard    [+1]        # 2020-10-13
   Shane      [+1]
   Tomas      [+1]
   Kurt       [+1]
