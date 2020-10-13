@@ -132,7 +132,7 @@ Proposed by .
 Public: yes
 opened: 2020-10-08
 closed: 2020-10-13
-accepted:  yes/no  (for: 8, against: 0, abstained: 0, not voted: 3)
+accepted:  yes  (for: 8, against: 0, abstained: 0, not voted: 3)
 
   Matt       [+1]
   Mark       [  ]
