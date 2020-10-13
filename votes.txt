@@ -68,7 +68,7 @@ closed: 2020-mm-dd
 accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
 
   Matt       [  ]
-  Mark       [  ]
+  Mark       [ 0]
   Pauli      [  ]
   Viktor     [  ]
   Tim        [  ]
@@ -135,7 +135,7 @@ closed: 2020-10-13
 accepted:  yes  (for: 8, against: 0, abstained: 0, not voted: 3)
 
   Matt       [+1]
-  Mark       [  ]
+  Mark       [+1]        # 2020-10-13
   Pauli      [+1]
   Viktor     [  ]
   Tim        [+1]
@@ -156,7 +156,7 @@ closed: 2020-mm-dd
 accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
 
   Matt       [+1]
-  Mark       [  ]
+  Mark       [ 0]
   Pauli      [+1]
   Viktor     [  ]
   Tim        [+1]
