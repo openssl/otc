@@ -142,7 +142,7 @@ accepted:  yes  (for: 8, against: 0, abstained: 0, not voted: 3)
   Richard    [+1]
   Shane      [+1]
   Tomas      [+1]
-  Kurt       [  ]
+  Kurt       [-1]        # 2020-10-14
   Matthias   [+1]
   Nicola     [+1]
 
