@@ -67,17 +67,17 @@ opened: 2020-10-09
 closed: 2020-mm-dd
 accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
 
-  Matt       [  ]
+  Matt       [-1]
   Mark       [ 0]
-  Pauli      [  ]
+  Pauli      [+1]
   Viktor     [  ]
-  Tim        [  ]
-  Richard    [  ]
-  Shane      [  ]
+  Tim        [-1]
+  Richard    [ 0]
+  Shane      [ 0]
   Tomas      [+1]
-  Kurt       [  ]
-  Matthias   [  ]
-  Nicola     [  ]
+  Kurt       [ 0]
+  Matthias   [ 0]
+  Nicola     [+1]
 
 ----------------
 topic: The following items are required prerequisites for the first beta release:
