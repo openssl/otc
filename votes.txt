@@ -64,8 +64,8 @@ to decide whether it is acceptable for 1.1.1 branch.
 Proposed by Tomas Mraz
 Public: yes
 opened: 2020-10-09
-closed: 2020-mm-dd
-accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
+closed: 2020-10-26
+accepted:  yes  (for: 3, against: 2, abstained: 5, not voted: 1)
 
   Matt       [-1]
   Mark       [ 0]
