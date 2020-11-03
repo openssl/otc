@@ -35,6 +35,43 @@ accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
   Nicola     [  ]
 
 ----------------
+topic: For DH Generation, the OTC accepts the following resolution:
+* Quad-state generation:
+  - PKCS #3;
+  - named groups only;
+  - FIPS 186-2 generation or
+  - FIPS 186-4 generation.
+* For default provider:
+  - change back to PKCS #3 generation as the default and
+  - allow changing to FIPS 186-2, FIPS 186-4 or named groups.
+* For FIPS provider:
+  - choose a known safe prime group as default (rejecting non-standard lengths) and
+  - allow a change to FIPS 186-4 generation.
+* For parameter validation in FIPS:
+  - accept if a named group;
+  - run FIPS 186-4 validation if DHX key, otherwise reject.
+* For key validation: if a named group, do just partial key validation.
+* For validation more generally, allow a validation mode to be set.
+
+Proposed by Matt Caswell
+Public: yes
+opened: 2020-11-03
+closed: 2020-mm-dd
+accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
+
+  Matt       [+1]
+  Mark       [  ]
+  Pauli      [+1]
+  Viktor     [  ]
+  Tim        [+1]
+  Richard    [ 0]
+  Shane      [+1]
+  Tomas      [+1]
+  Kurt       [+1]
+  Matthias   [ 0]
+  Nicola     [+1]
+
+----------------
 topic: Hold online weekly OTC meetings starting on Tuesday 2020-10-13
        and until 3.0 beta1 is released, in lieu of the weekly "developer
        meetings".
