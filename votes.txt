@@ -35,6 +35,34 @@ accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
   Nicola     [  ]
 
 ----------------
+topic: For 3.0 EVP_PKEY keys, the OTC accepts the following resolution:
+* relax the conceptual model to allow private keys to exist without public
+  components;
+* all implementations apart from EC require the public component to be present;
+* relax implementation for EC key management to allow private keys that do not
+  contain public keys and
+* our decoders unconditionally generate the public key (where possible).
+
+Proposed by Matt Caswell
+Public: yes
+opened: 2020-11-03
+closed: 2020-mm-dd
+accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
+
+  Matt       [+1]
+  Mark       [  ]
+  Pauli      [+1]
+  Viktor     [  ]
+  Tim        [  ]
+  Richard    [+1]
+  Shane      [+1]
+  Tomas      [+1]
+  Kurt       [  ]
+  Matthias   [  ]
+  Nicola     [-1]
+
+
+----------------
 topic: For DH Generation, the OTC accepts the following resolution:
 * Quad-state generation:
   - PKCS #3;
