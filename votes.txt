@@ -84,8 +84,8 @@ topic: For DH Generation, the OTC accepts the following resolution:
 Proposed by Matt Caswell
 Public: yes
 opened: 2020-11-03
-closed: 2020-mm-dd
-accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
+closed: 2020-11-17
+accepted:  yes/no  (for: 7, against: 0, abstained: 2, not voted: 2)
 
   Matt       [+1]
   Mark       [  ]
