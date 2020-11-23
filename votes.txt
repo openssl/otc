@@ -46,19 +46,19 @@ topic: For 3.0 EVP_PKEY keys, the OTC accepts the following resolution:
 Proposed by Matt Caswell
 Public: yes
 opened: 2020-11-03
-closed: 2020-mm-dd
-accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
+closed: 2020-11-17
+accepted:  yes  (for: 5, against: 4, abstained: 1, not voted: 1)
 
   Matt       [+1]
   Mark       [  ]
   Pauli      [+1]
-  Viktor     [  ]
-  Tim        [  ]
+  Viktor     [-1]
+  Tim        [-1]
   Richard    [+1]
   Shane      [+1]
   Tomas      [+1]
-  Kurt       [  ]
-  Matthias   [  ]
+  Kurt       [-1]
+  Matthias   [ 0]
   Nicola     [-1]
 
 
