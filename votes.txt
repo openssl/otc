@@ -35,6 +35,32 @@ accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
   Nicola     [  ]
 
 ----------------
+topic: In the context of the OpenSSL apps, the OTC qualifies as bug
+       fixes the changes to return a failure exit status when a called
+       function fails with an unhandled return value.
+       Even when these bug fixes change the apps behavior triggering
+       early exits (compared to previous versions of the apps), as bug
+       fixes, they do not qualify as behavior changes that require an
+       explicit OMC approval.
+Proposed by Nicola Tuveri
+Public: yes
+opened: 2020-11-30
+closed: 2020-mm-dd
+accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
+
+  Matt       [  ]
+  Mark       [  ]
+  Pauli      [  ]
+  Viktor     [  ]
+  Tim        [  ]
+  Richard    [  ]
+  Shane      [  ]
+  Tomas      [  ]
+  Kurt       [  ]
+  Matthias   [  ]
+  Nicola     [  ]
+
+----------------
 topic: For 3.0 EVP_PKEY keys, the OTC accepts the following resolution:
 * relax the conceptual model to allow private keys to exist without public
   components;
