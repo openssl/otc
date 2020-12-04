@@ -35,6 +35,33 @@ accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
   Nicola     [  ]
 
 ----------------
+topic: For 3.0 EVP_PKEY keys all algorithm implementations that were usable
+       with 1.1.1 EVP_PKEY API or low level APIs without public component must
+       stay usable.
+
+       This overrules the
+         * all implementations apart from EC require the public component to be present;
+       part of the vote closed on 2020-11-17.
+
+Proposed by Tomas Mraz
+Public: yes
+opened: 2020-12-04
+closed: 2020-mm-dd
+accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
+
+  Matt       [  ]
+  Mark       [  ]
+  Pauli      [  ]
+  Viktor     [  ]
+  Tim        [  ]
+  Richard    [  ]
+  Shane      [  ]
+  Tomas      [+1]
+  Kurt       [  ]
+  Matthias   [  ]
+  Nicola     [  ]
+
+----------------
 topic: In the context of the OpenSSL apps, the OTC qualifies as bug
        fixes the changes to return a failure exit status when a called
        function fails with an unhandled return value.
