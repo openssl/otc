@@ -51,7 +51,7 @@ accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
 
   Matt       [  ]
   Mark       [  ]
-  Pauli      [  ]
+  Pauli      [+1]
   Viktor     [  ]
   Tim        [  ]
   Richard    [  ]
