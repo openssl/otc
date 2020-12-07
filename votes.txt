@@ -49,13 +49,13 @@ opened: 2020-12-04
 closed: 2020-mm-dd
 accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
 
-  Matt       [  ]
+  Matt       [+1]
   Mark       [  ]
   Pauli      [+1]
   Viktor     [  ]
-  Tim        [  ]
-  Richard    [  ]
-  Shane      [  ]
+  Tim        [+1]
+  Richard    [+1]
+  Shane      [+1]
   Tomas      [+1]
   Kurt       [  ]
   Matthias   [  ]
