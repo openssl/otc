@@ -35,6 +35,26 @@ accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
   Nicola     [  ]
 
 ----------------
+topic: Include NULL cipher in the FIPS provider.
+Proposed by Matthias.
+Public: yes
+opened: 2020-12-08
+closed: 2020-12-08
+accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
+
+  Matt       [-1]
+  Mark       [  ]
+  Pauli      [-1]
+  Viktor     [  ]
+  Tim        [-1]
+  Richard    [-1]
+  Shane      [-1]
+  Tomas      [-1]
+  Kurt       [  ]
+  Matthias   [-0]
+  Nicola     [-0]
+
+----------------
 topic: For 3.0 EVP_PKEY keys all algorithm implementations that were usable
        with 1.1.1 EVP_PKEY API or low level APIs without public component must
        stay usable.
