@@ -92,20 +92,20 @@ topic: In the context of the OpenSSL apps, the OTC qualifies as bug
 Proposed by Nicola Tuveri
 Public: yes
 opened: 2020-11-30
-closed: 2020-mm-dd
-accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
+closed: 2020-12-08
+accepted:  yes  (for: 9, against: 0, abstained: 0, not voted: 2)
 
-  Matt       [  ]
+  Matt       [+1]
   Mark       [  ]
-  Pauli      [  ]
+  Pauli      [+1]
   Viktor     [  ]
-  Tim        [  ]
-  Richard    [  ]
-  Shane      [  ]
-  Tomas      [  ]
-  Kurt       [  ]
-  Matthias   [  ]
-  Nicola     [  ]
+  Tim        [+1]
+  Richard    [+1]
+  Shane      [+1]
+  Tomas      [+1]
+  Kurt       [+1]
+  Matthias   [+1]
+  Nicola     [+1]
 
 ----------------
 topic: For 3.0 EVP_PKEY keys, the OTC accepts the following resolution:
