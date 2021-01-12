@@ -77,8 +77,8 @@ accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
   Richard    [+1]
   Shane      [+1]
   Tomas      [+1]
-  Kurt       [  ]
-  Matthias   [  ]
+  Kurt       [+1]
+  Matthias   [+1]
   Nicola     [  ]
 
 ----------------
