@@ -66,8 +66,8 @@ topic: For 3.0 EVP_PKEY keys all algorithm implementations that were usable
 Proposed by Tomas Mraz
 Public: yes
 opened: 2020-12-04
-closed: 2020-mm-dd
-accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
+closed: 2021-01-12
+accepted:  yes  (for: 8, against: 0, abstained: 0, not voted: 3)
 
   Matt       [+1]
   Mark       [  ]
