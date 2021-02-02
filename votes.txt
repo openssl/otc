@@ -35,6 +35,28 @@ accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
   Nicola     [  ]
 
 ----------------
+topic: Moving forwards we will use TYPE_NAME_action_name for function names.
+comment: Not camel case, underscores separating words.  I.e. EVP_MAC_update
+         not EVP_MACUpdate or EVP_MAC_Update.
+Proposed by pauli.
+Public: yes
+opened: 2020-02-02
+closed: 2020-02-02
+accepted:  yes  (for: 7, against: 0, abstained: 1, not voted: 3)
+
+  Matt       [+1]
+  Mark       [  ]
+  Pauli      [+1]
+  Viktor     [  ]
+  Tim        [+1]
+  Richard    [+1]
+  Shane      [+1]
+  Tomas      [+1]
+  Kurt       [ 0]
+  Matthias   [  ]
+  Nicola     [+1]
+
+----------------
 topic: Include NULL cipher in the FIPS provider.
 Proposed by Matthias.
 Public: yes
