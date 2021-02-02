@@ -35,6 +35,29 @@ accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
   Nicola     [  ]
 
 ----------------
+topic: Where a function does not use the TYPE_NAME_action_name naming scheme,
+       it is considered to be a defect.
+comment: These are not considered blockers for 3.0 if the function existed in
+         1.1.1.  New functions that do not conform must be fixed before release.
+Proposed by pauli.
+Public: yes
+opened: 2020-02-02
+closed: 2020-02-02
+accepted:  yes  (for: 5, against: 0, abstained: 3, not voted: 3)
+
+  Matt       [ 0]
+  Mark       [  ]
+  Pauli      [+1]
+  Viktor     [  ]
+  Tim        [+1]
+  Richard    [+1]
+  Shane      [+1]
+  Tomas      [+1]
+  Kurt       [ 0]
+  Matthias   [  ]
+  Nicola     [ 0]
+
+----------------
 topic: Moving forwards we will use TYPE_NAME_action_name for function names.
 comment: Not camel case, underscores separating words.  I.e. EVP_MAC_update
          not EVP_MACUpdate or EVP_MAC_Update.
