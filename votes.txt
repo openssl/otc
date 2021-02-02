@@ -35,6 +35,27 @@ accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
   Nicola     [  ]
 
 ----------------
+topic: EVP init functions should accept an OSSL_PARAM array to set parameters.
+comment: This will mostly avoid calling the equivalent set_param call.
+Proposed by pauli.
+Public: yes
+opened: 2020-02-02
+closed: 2020-02-02
+accepted:  yes  (for: 8, against: 0, abstained: 1, not voted: 2)
+
+  Matt       [+1]
+  Mark       [  ]
+  Pauli      [+1]
+  Viktor     [  ]
+  Tim        [+1]
+  Richard    [+1]
+  Shane      [+1]
+  Tomas      [+1]
+  Kurt       [+1]
+  Matthias   [+1]
+  Nicola     [ 0]
+
+----------------
 topic: Where a function does not use the TYPE_NAME_action_name naming scheme,
        it is considered to be a defect.
 comment: These are not considered blockers for 3.0 if the function existed in
