@@ -65,7 +65,7 @@ Proposed by pauli.
 Public: yes
 opened: 2020-02-02
 closed: 2020-02-02
-accepted:  yes  (for: 7, against: 0, abstained: 1, not voted: 3)
+accepted:  yes  (for: 8, against: 0, abstained: 1, not voted: 2)
 
   Matt       [+1]
   Mark       [  ]
@@ -76,7 +76,7 @@ accepted:  yes  (for: 7, against: 0, abstained: 1, not voted: 3)
   Shane      [+1]
   Tomas      [+1]
   Kurt       [ 0]
-  Matthias   [  ]
+  Matthias   [+1]
   Nicola     [+1]
 
 ----------------
