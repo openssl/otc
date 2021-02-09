@@ -35,6 +35,27 @@ accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
   Nicola     [  ]
 
 ----------------
+topic: Change PKCS#12 creation to use AES-256-CBC and SHA-256 by default.
+comment: Both app and API, inlcude CHANGES entry.
+Proposed by Pauli.
+Public: yes
+opened: 2020-02-09
+closed: 2020-02-09
+accepted:  yes  (for: 8, against: 0, abstained: 0, not voted: 3)
+
+  Matt       [+1]
+  Mark       [  ]
+  Pauli      [+1]
+  Viktor     [  ]
+  Tim        [+1]
+  Richard    [+1]
+  Shane      [+1]
+  Tomas      [+1]
+  Kurt       [+1]
+  Matthias   [  ]
+  Nicola     [+1]
+
+----------------
 topic: The EVP_xxx_CTX types should support an EVP_xxx_CTX_dup call but not an
        EVP_xxx_CTX_copy call.
 comments: Existing EVP_xxx_copy() functions not to be removed in the 3.0
