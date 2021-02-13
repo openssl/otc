@@ -18,8 +18,8 @@
 topic: .
 Proposed by .
 Public: yes
-opened: 2020-mm-dd
-closed: 2020-mm-dd
+opened: 2021-mm-dd
+closed: 2021-mm-dd
 accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
 
   Matt       [  ]
@@ -39,8 +39,8 @@ topic: Change PKCS#12 creation to use AES-256-CBC and SHA-256 by default.
 comment: Both app and API, inlcude CHANGES entry.
 Proposed by Pauli.
 Public: yes
-opened: 2020-02-09
-closed: 2020-02-09
+opened: 2021-02-09
+closed: 2021-02-09
 accepted:  yes  (for: 8, against: 0, abstained: 0, not voted: 3)
 
   Matt       [+1]
@@ -62,8 +62,8 @@ comments: Existing EVP_xxx_copy() functions not to be removed in the 3.0
           timeframe.
 Proposed by pauli.
 Public: yes
-opened: 2020-02-02
-closed: 2020-02-02
+opened: 2021-02-02
+closed: 2021-02-02
 accepted:  yes  (for: 8, against: 0, abstained: 0, not voted: 3)
 
   Matt       [+1]
@@ -85,8 +85,8 @@ comment: The existing EVP_xxx_dup() function supports this functionality.
          timeframe.
 Proposed by pauli.
 Public: yes
-opened: 2020-02-02
-closed: 2020-02-02
+opened: 2021-02-02
+closed: 2021-02-02
 accepted:  yes  (for: 7, against: 0, abstained: 1, not voted: 3)
 
   Matt       [+1]
@@ -105,8 +105,8 @@ accepted:  yes  (for: 7, against: 0, abstained: 1, not voted: 3)
 topic: EVP_MAC_init should accept key and key length arguments.
 Proposed by pauli.
 Public: yes
-opened: 2020-02-02
-closed: 2020-02-02
+opened: 2021-02-02
+closed: 2021-02-02
 accepted:  yes  (for: 4, against: 1, abstained: 4, not voted: 2)
 
   Matt       [ 0]
@@ -126,8 +126,8 @@ topic: EVP init functions should accept an OSSL_PARAM array to set parameters.
 comment: This will mostly avoid calling the equivalent set_param call.
 Proposed by pauli.
 Public: yes
-opened: 2020-02-02
-closed: 2020-02-02
+opened: 2021-02-02
+closed: 2021-02-02
 accepted:  yes  (for: 8, against: 0, abstained: 1, not voted: 2)
 
   Matt       [+1]
@@ -149,8 +149,8 @@ comment: These are not considered blockers for 3.0 if the function existed in
          1.1.1.  New functions that do not conform must be fixed before release.
 Proposed by pauli.
 Public: yes
-opened: 2020-02-02
-closed: 2020-02-02
+opened: 2021-02-02
+closed: 2021-02-02
 accepted:  yes  (for: 6, against: 0, abstained: 3, not voted: 2)
 
   Matt       [ 0]
@@ -171,8 +171,8 @@ comment: Not camel case, underscores separating words.  I.e. EVP_MAC_update
          not EVP_MACUpdate or EVP_MAC_Update.
 Proposed by pauli.
 Public: yes
-opened: 2020-02-02
-closed: 2020-02-02
+opened: 2021-02-02
+closed: 2021-02-02
 accepted:  yes  (for: 8, against: 0, abstained: 1, not voted: 2)
 
   Matt       [+1]
