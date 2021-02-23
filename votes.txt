@@ -35,6 +35,27 @@ accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
   Nicola     [  ]
 
 ----------------
+topic: The RSA_SSLV23_PADDING and related functions should be
+completely removed from OpenSSL 3.0 code.
+Proposed by Tomas Mraz
+Public: yes
+opened: 2021-02-23
+closed: 2021-mm-dd
+accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
+
+  Matt       [  ]
+  Mark       [  ]
+  Pauli      [  ]
+  Viktor     [  ]
+  Tim        [  ]
+  Richard    [  ]
+  Shane      [  ]
+  Tomas      [+1]
+  Kurt       [  ]
+  Matthias   [  ]
+  Nicola     [  ]
+
+----------------
 topic: We allow calling a free function on an algorithm method for methods that
        were not fetched. The free function does nothing in that case.
        EVP_MD_CTX_md will be deprecated and documented as having "get0"
