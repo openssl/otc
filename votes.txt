@@ -35,6 +35,30 @@ accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
   Nicola     [  ]
 
 ----------------
+topic: We allow calling a free function on an algorithm method for methods that
+       were not fetched. The free function does nothing in that case.
+       EVP_MD_CTX_md will be deprecated and documented as having "get0"
+       semantics. We will replace it with EVP_MD_CTX_get0_md and
+       EVP_MD_CTX_get1_md. We should do the same for other similar functions
+Proposed by Matt Caswell
+Public: yes
+opened: 2021-02-23
+closed: 2021-02-23
+accepted:  yes/no  (for: 4, against: 0, abstained: 5, not voted: 2)
+
+  Matt       [+1]
+  Mark       [  ]
+  Pauli      [ 0]
+  Viktor     [  ]
+  Tim        [+1]
+  Richard    [ 0]
+  Shane      [+0]
+  Tomas      [+0]
+  Kurt       [ 0]
+  Matthias   [+1]
+  Nicola     [+1]
+
+----------------
 topic: Change PKCS#12 creation to use AES-256-CBC and SHA-256 by default.
 comment: Both app and API, inlcude CHANGES entry.
 Proposed by Pauli.
