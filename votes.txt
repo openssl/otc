@@ -43,17 +43,17 @@ opened: 2021-02-23
 closed: 2021-mm-dd
 accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
 
-  Matt       [  ]
-  Mark       [  ]
-  Pauli      [  ]
+  Matt       [ 0]
+  Mark       [ 0]
+  Pauli      [+1]
   Viktor     [  ]
-  Tim        [  ]
-  Richard    [  ]
-  Shane      [  ]
+  Tim        [ 0]
+  Richard    [ 0]
+  Shane      [ 0]
   Tomas      [+1]
-  Kurt       [  ]
-  Matthias   [  ]
-  Nicola     [  ]
+  Kurt       [+1]
+  Matthias   [+1]
+  Nicola     [+1]
 
 ----------------
 topic: We allow calling a free function on an algorithm method for methods that
