@@ -40,13 +40,13 @@ completely removed from OpenSSL 3.0 code.
 Proposed by Tomas Mraz
 Public: yes
 opened: 2021-02-23
-closed: 2021-mm-dd
-accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
+closed: 2021-02-28
+accepted:  yes  (for: 6, against: 0, abstained: 5, not voted: 0)
 
   Matt       [ 0]
   Mark       [ 0]
   Pauli      [+1]
-  Viktor     [  ]
+  Viktor     [+1]
   Tim        [ 0]
   Richard    [ 0]
   Shane      [ 0]
