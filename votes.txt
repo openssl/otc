@@ -35,6 +35,48 @@ accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
   Nicola     [  ]
 
 ----------------
+topic: EVP init functions take an OSSL_PARAM array to set parameters and this
+       should be reflected in the equivalent provider interface.
+Proposed by Matt Caswell
+Public: yes
+opened: 2021-03-09
+closed: 2021-03-09
+accepted:  yes  (for: 5, against: 0, abstained: 2, not voted: 4)
+
+  Matt       [+1]
+  Mark       [  ]
+  Pauli      [+1]
+  Viktor     [  ]
+  Tim        [+1]
+  Richard    [ 0]
+  Shane      [+1]
+  Tomas      [+1]
+  Kurt       [  ]
+  Matthias   [  ]
+  Nicola     [+0]
+
+----------------
+topic: In 3.0 it will not be possible to use SM2 with a non-SM2 curve. This
+       should be documented.
+Proposed by Matt Caswell
+Public: yes
+opened: 2021-03-09
+closed: 2021-mm-dd
+accepted:  yes/no  (for: 5, against: 1, abstained: 1, not voted: 4)
+
+  Matt       [+1]
+  Mark       [  ]
+  Pauli      [+1]
+  Viktor     [  ]
+  Tim        [+1]
+  Richard    [+1]
+  Shane      [+1]
+  Tomas      [ 0]
+  Kurt       [  ]
+  Matthias   [  ]
+  Nicola     [-1]
+
+----------------
 topic: EVP_PKEY_get0 functions will return a cached copy of the legacy key, and
 will be changed to return const. EVP_PKEY_get1 functions work as per
 EVP_PKEY_get0 but are not const returns and up the reference count
