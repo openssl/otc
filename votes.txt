@@ -52,7 +52,7 @@ accepted:  yes  (for: 5, against: 0, abstained: 2, not voted: 4)
   Shane      [+1]
   Tomas      [+1]
   Kurt       [  ]
-  Matthias   [  ]
+  Matthias   [+0]  # 2021-03-09
   Nicola     [+0]
 
 ----------------
@@ -73,7 +73,7 @@ accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
   Shane      [+1]
   Tomas      [ 0]
   Kurt       [  ]
-  Matthias   [  ]
+  Matthias   [+1]
   Nicola     [-1]
 
 ----------------
@@ -96,7 +96,7 @@ accepted:  yes  (for: 7, against: 0, abstained: 0, not voted: 4)
   Shane      [+1]
   Tomas      [+1]
   Kurt       [  ]
-  Matthias   [  ]
+  Matthias   [+0]  # 2021-03-09
   Nicola     [+1]
 
 ----------------
