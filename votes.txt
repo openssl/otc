@@ -35,6 +35,27 @@ accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
   Nicola     [  ]
 
 ----------------
+topic: Add a description field to the OSSL_ALGORITHM structure
+Comment: See Issue #14514 for background
+Proposed by Matt Caswell
+Public: yes
+opened: 2021-03-16
+closed: 2021-mm-dd
+accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
+
+  Matt       [+1]
+  Mark       [  ]
+  Pauli      [-1]
+  Viktor     [  ]
+  Tim        [  ]
+  Richard    [+1]
+  Shane      [ 0]
+  Tomas      [+1]
+  Kurt       [  ]
+  Matthias   [  ]
+  Nicola     [+1]
+
+----------------
 topic: EVP init functions take an OSSL_PARAM array to set parameters and this
        should be reflected in the equivalent provider interface.
 Proposed by Matt Caswell
