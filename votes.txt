@@ -35,6 +35,29 @@ accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
   Nicola     [  ]
 
 ----------------
+topic: EVP_PKEY types are immutable once set. Types cannot be changed once 
+       set. To move from one type to another compatible type will require 
+       export/import.
+Comment: This will result in breaking changes compared to previous releases.
+Proposed by Tim 
+Public: yes
+opened: 2021-03-23
+closed: 2021-03-23
+accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
+
+  Matt       [+1]
+  Mark       [  ]
+  Pauli      [+1]
+  Viktor     [  ]
+  Tim        [+1]
+  Richard    [+1]
+  Shane      [+1]
+  Tomas      [+1]
+  Kurt       [  ]
+  Matthias   [  ]
+  Nicola     [  ]
+
+----------------
 topic: Add a description field to the OSSL_ALGORITHM structure
 Comment: See Issue #14514 for background
 Proposed by Matt Caswell
