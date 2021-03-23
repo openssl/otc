@@ -41,7 +41,7 @@ Proposed by Matt Caswell
 Public: yes
 opened: 2021-03-16
 closed: 2021-03-23
-accepted:  yes/no  (for: 5, against: 1, abstained: 1, not voted: 4)
+accepted:  yes  (for: 5, against: 1, abstained: 1, not voted: 4)
 
   Matt       [+1]
   Mark       [  ]
