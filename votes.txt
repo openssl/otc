@@ -43,7 +43,7 @@ Proposed by Tim
 Public: yes
 opened: 2021-03-23
 closed: 2021-03-23
-accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
+accepted:  yes  (for: 6, against: 0, abstained: 0, not voted: 5)
 
   Matt       [+1]
   Mark       [  ]
