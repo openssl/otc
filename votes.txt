@@ -95,7 +95,7 @@ accepted:  yes  (for: 5, against: 0, abstained: 2, not voted: 4)
   Richard    [ 0]
   Shane      [+1]
   Tomas      [+1]
-  Kurt       [  ]
+  Kurt       [+1]  # 2021-03-09
   Matthias   [+0]  # 2021-03-09
   Nicola     [+0]
 
@@ -128,7 +128,7 @@ Comment: See PR #14319 for background
 Proposed by Matt Caswell
 Public: yes
 opened: 2021-03-02
-closed: 2021-02-02
+closed: 2021-03-02
 accepted:  yes  (for: 7, against: 0, abstained: 0, not voted: 4)
 
   Matt       [+1]
