@@ -55,7 +55,7 @@ accepted:  yes  (for: 6, against: 0, abstained: 0, not voted: 5)
   Tomas      [+1]
   Kurt       [  ]
   Matthias   [+1]  # 2021-02-23
-  Nicola     [  ]
+  Nicola     [+1]  # 2021-03-30
 
 ----------------
 topic: Add a description field to the OSSL_ALGORITHM structure
