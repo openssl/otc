@@ -25,7 +25,6 @@ accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
   Matt       [  ]
   Mark       [  ]
   Pauli      [  ]
-  Viktor     [  ]
   Tim        [  ]
   Richard    [  ]
   Shane      [  ]
@@ -33,6 +32,46 @@ accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
   Kurt       [  ]
   Matthias   [  ]
   Nicola     [  ]
+
+----------------
+topic: Set PR 13817 milestone to Post 3.0
+Proposed by Tim Hudson
+Public: yes
+opened: 2021-04-20
+closed: 2021-mm-dd
+accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
+
+  Matt       [ 0]
+  Mark       [  ]
+  Pauli      [  ]
+  Viktor     [  ]
+  Tim        [+1]
+  Richard    [ 0]
+  Shane      [+1]
+  Tomas      [ 0]
+  Kurt       [  ]
+  Matthias   [ 0]
+  Nicola     [ 0]
+
+----------------
+topic: Set issue 11164 milestone to Post 3.0
+Proposed by Tim Hudson
+Public: yes
+opened: 2021-04-20
+closed: 2021-04-20
+accepted:  yes  (for: 6, against: 1, abstained: 0, not voted: 4)
+
+  Matt       [+1]
+  Mark       [  ]
+  Pauli      [  ]
+  Viktor     [  ]
+  Tim        [+1]
+  Richard    [+1]
+  Shane      [+1]
+  Tomas      [+1]
+  Kurt       [  ]
+  Matthias   [+1]
+  Nicola     [-1]
 
 ----------------
 topic: EVP_PKEY types are immutable once set. Types cannot be changed once 
