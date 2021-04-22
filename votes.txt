@@ -78,7 +78,7 @@ Proposed by Tim Hudson
 Public: yes
 opened: 2021-04-20
 closed: 2021-04-20
-accepted:  yes  (for: 7, against: 1, abstained: 0, not voted: 4)
+accepted:  yes  (for: 6, against: 1, abstained: 0, not voted: 4)
 
   Matt       [+1]
   Mark       [  ]
