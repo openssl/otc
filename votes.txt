@@ -40,15 +40,15 @@ Public: yes
 opened: 2021-04-20
 closed: 2021-mm-dd
 accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
-  Matt       [  ]
+  Matt       [ 0]
   Mark       [  ]
   Pauli      [-0]
   Viktor     [  ]
-  Tim        [  ]
+  Tim        [-1]
   Richard    [  ]
-  Shane      [  ]
-  Tomas      [  ]
-  Kurt       [  ]
+  Shane      [+1]
+  Tomas      [-1]
+  Kurt       [+1]
   Matthias   [  ]
   Nicola     [+1]
 
@@ -68,7 +68,7 @@ accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
   Richard    [ 0]
   Shane      [+1]
   Tomas      [ 0]
-  Kurt       [  ]
+  Kurt       [ 0]
   Matthias   [ 0]
   Nicola     [ 0]
 
@@ -88,7 +88,7 @@ accepted:  yes  (for: 6, against: 1, abstained: 0, not voted: 4)
   Richard    [+1]
   Shane      [+1]
   Tomas      [+1]
-  Kurt       [  ]
+  Kurt       [-1]   # 2021-04-22
   Matthias   [+1]
   Nicola     [-1]
 
