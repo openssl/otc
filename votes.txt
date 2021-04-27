@@ -45,11 +45,11 @@ accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
   Pauli      [-0]
   Viktor     [  ]
   Tim        [-1]
-  Richard    [  ]
+  Richard    [ 0]
   Shane      [+1]
   Tomas      [-1]
   Kurt       [+1]
-  Matthias   [  ]
+  Matthias   [ 0]
   Nicola     [+1]
 
 ----------------
