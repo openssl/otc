@@ -38,8 +38,8 @@ topic: Reject PR#14759
 Proposed by Nicola Tuveri
 Public: yes
 opened: 2021-04-20
-closed: 2021-mm-dd
-accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
+closed: 2021-05-04
+accepted:  yes  (for: 3, against: 2, abstained: 4, not voted: 2)
   Matt       [ 0]
   Mark       [  ]
   Pauli      [-0]
