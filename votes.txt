@@ -23,7 +23,6 @@ closed: 2021-mm-dd
 accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
 
   Matt       [  ]
-  Mark       [  ]
   Pauli      [  ]
   Tim        [  ]
   Richard    [  ]
