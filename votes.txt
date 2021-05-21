@@ -56,8 +56,8 @@ topic: Set PR 13817 milestone to Post 3.0
 Proposed by Tim Hudson
 Public: yes
 opened: 2021-04-20
-closed: 2021-mm-dd
-accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
+closed: 2021-05-21
+accepted:  yes  (for: 2, against: 0, abstained: 7, not voted: 2)
 
   Matt       [ 0]
   Mark       [  ]
