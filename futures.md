@@ -96,3 +96,5 @@
 - Certificate Compression
 
 - More encoders/decoders, e.g. JWK support
+
+- Review all "Post 3.0" items for possible inclusion
