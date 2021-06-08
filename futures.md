@@ -42,6 +42,10 @@
   The KDFs in the passwd command are aging but potentially useful elsewhere.
   PVK
 
+- Argon2 KDF and thread support
+
+- yescrypt KDF
+
 - create EVP_PRF (hybrid between KDF, MAC and RAND)
   Our PRFs are part of KDF, however MACs are also used in this role and the
   DRBGs are too.  In terms of complexity, RAND >> MAC > KDF.  An EVP_PRF would
@@ -98,3 +102,9 @@
 - More encoders/decoders, e.g. JWK support
 
 - Review all "Post 3.0" items for possible inclusion
+
+- Better configurability of TLS sigalgs
+
+- Better configurability of algorithm support
+  API and configuration file support for enabling/disabling algorithms
+  in general (filtering on fetch level basis)
