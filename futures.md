@@ -29,6 +29,9 @@
   To allow different implementations of one algorithm to be chosen based on
   a desirability.
 
+- More fine grained fetchable selection, e.g. ability to provide implementations
+  for EC for just some curves but not all
+
 - LTS+
   When do we do this?
 
@@ -49,6 +52,7 @@
   it now?
 
 - fetchable signature algorithms
+  Both for X509 and TLS
 
 - CNG provider
 
@@ -86,3 +90,9 @@
 - finish deprecations
 
 - more demos
+
+- DTLS 1.3
+
+- Certificate Compression
+
+- More encoders/decoders, e.g. JWK support
