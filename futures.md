@@ -132,11 +132,9 @@
 
 - Better configurability of TLS sigalgs
 
-- Better configurability of algorithm support
-  API and configuration file support for enabling/disabling algorithms
-  in general (filtering on fetch level basis)
-  - does this include removal of support for algoriths or just filtering?
-    e.g. I never want RSA and want the code supporting it out of the build.
+- Better run-time configurability of algorithm support
+  API and run-time configuration file support for enabling/disabling
+  algorithms in general (filtering on fetch level basis)
 
 - Makefile dependencies
   Current generated Makefile gets things wrong and this requires cleaning
