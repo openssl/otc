@@ -5,6 +5,10 @@
   Significant rework is involved to make BNs constant time pervasively and
   by default.
 
+- safe integer operations wrappers
+  Like the constant time ones but avoiding overflow etc.
+  We're constantly reinventing these in a variety of places and they are tricky.
+
 - better EC
   - EC kiila?
   - not using BN?
@@ -108,3 +112,9 @@
 - Better configurability of algorithm support
   API and configuration file support for enabling/disabling algorithms
   in general (filtering on fetch level basis)
+  - does this include removal of support for algoriths or just filtering?
+    e.g. I never want RSA and want the code supporting it out of the build.
+
+- Makefile dependencies
+  Current generated Makefile gets things wrong and this requires cleaning
+  (both clean and distclean) too frequently.
