@@ -56,6 +56,10 @@
 
 - yescrypt KDF
 
+- Secret sharing
+  Shamir's secret sharing or a different scheme or several?
+  Command line application plus a C API
+
 - create EVP_PRF (hybrid between KDF, MAC and RAND)
   - [#14543](https://github.com/openssl/openssl/issues/14543)
   Our PRFs are part of KDF, however MACs are also used in this role and the
@@ -65,6 +69,11 @@
 - create EVP_AEAD_CIPHER
   This should have been done when they were invented.  Is it too late to do
   it now?
+
+- AEAD for enc
+  Introduce a different command for this?
+  We'd need to define a file format for this.
+  Should be limited to decryptions that fit into memory.
 
 - fetchable signature algorithms
   - [#10512](https://github.com/openssl/openssl/issues/10512)
