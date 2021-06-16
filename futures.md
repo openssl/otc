@@ -41,6 +41,12 @@
 - LTS+
   When do we do this?
 
+- Multithreading improvements
+  Make CRYPTO_RWLOCK and atomic counters opaque structures.
+  - Atomics could only carry the lock on platforms where atomics aren't defined.
+    current usage is to have the lock even if it isn't used (some exceptions).
+  - We could add thread debugging / tracing.
+
 - better XOF mode
   - [#7894](https://github.com/openssl/openssl/issues/7894)
   Allowing XOF final to be called repeatedly to generate more output.
