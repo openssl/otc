@@ -154,3 +154,6 @@
 - Makefile dependencies
   Current generated Makefile gets things wrong and this requires cleaning
   (both clean and distclean) too frequently.
+
+- Type sanity
+  Replace long long with int64 and similar
