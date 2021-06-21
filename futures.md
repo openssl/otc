@@ -167,3 +167,6 @@
 - Internal platform library with clearly defined internal headers.
   (e_os.h is a mess, and all kinds of platform specific compensation
   code all over our source is a mess)
+
+- Better autoconfiguration of builds - automatically checking whether we can
+  enable things like ec_nistp_64_gcc_128 or not
