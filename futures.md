@@ -87,6 +87,12 @@
   - [#15624](https://github.com/openssl/openssl/issues/15624)
   Both for X509 and TLS
 
+- fetchable any AlgorithmIdentifier.algorithm
+  (signature algorithms aren't the only "composite" algorithms.  See EVP_PBE)
+
+- mechanism to pass AlgorithmIdentifier.parameters to providers
+  (we have that mechanism for ciphers, see EVP_CIPHER_asn1_to_params())
+
 - CNG provider
   - [#3481](https://github.com/openssl/openssl/issues/3481)
   - [#6338](https://github.com/openssl/openssl/issues/6338)
@@ -157,3 +163,7 @@
 
 - Type sanity
   Replace long long with int64 and similar
+
+- Internal platform library with clearly defined internal headers.
+  (e_os.h is a mess, and all kinds of platform specific compensation
+  code all over our source is a mess)
