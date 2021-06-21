@@ -175,3 +175,7 @@
 - Post-Quantum Cryptography - subject to standardization of finalists.
   See https://csrc.nist.gov/Projects/post-quantum-cryptography/round-3-submissions
   (Possibly integrating 3rd party providers/implementations if permission was granted).
+
+- Installation verification tests - testing that the installed libraries
+  headers, configuration and documentation are installed properly
+
