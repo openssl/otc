@@ -101,6 +101,7 @@
 
 - PKCS #11 provider
   How much of the standard?
+  There are at least 2 companies that would assist in this effort.
 
 - ESNI
   - [#7482](https://github.com/openssl/openssl/issues/7482)
@@ -170,3 +171,7 @@
 
 - Better autoconfiguration of builds - automatically checking whether we can
   enable things like ec_nistp_64_gcc_128 or not
+
+- Post-Quantum Cryptography - subject to standardization of finalists.
+  See https://csrc.nist.gov/Projects/post-quantum-cryptography/round-3-submissions
+  (Possibly integrating 3rd party providers/implementations if permission was granted).
