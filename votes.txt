@@ -33,6 +33,24 @@ accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
   Nicola     [  ]
 
 ----------------
+topic: Accept the concept of the refactor proposed in PR 15854 for 3.0
+Proposed by Matt Caswell
+Public: yes
+opened: 2021-06-22
+closed: 2021-06-22
+accepted:  yes  (for: 5, against: 1, abstained: 2, not voted: 1)
+
+  Matt       [+1]
+  Pauli      [+1]
+  Tim        [-1]
+  Richard    [ 0]
+  Shane      [+1]
+  Tomas      [+1]
+  Kurt       [+1]
+  Matthias   [  ]
+  Nicola     [+0]
+
+----------------
 topic: Change the outlen paramter from unsigned int * to size_t * for EVP_Q_mac
        and size from unsigned int * to size_t * for EVP_Q_digest.
 Proposed by Nicola Tuveri
