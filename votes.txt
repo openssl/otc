@@ -33,6 +33,25 @@ accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
   Nicola     [  ]
 
 ----------------
+topic: Change the outlen paramter from unsigned int * to size_t * for EVP_Q_mac
+       and size from unsigned int * to size_t * for EVP_Q_digest.
+Proposed by Nicola Tuveri
+Public: yes
+opened: 2021-06-22
+closed: 2021-06-22
+accepted:  yes  (for: 5, against: 3, abstained: 0, not voted: 1)
+
+  Matt       [-1]
+  Pauli      [+1]
+  Tim        [-1]
+  Richard    [+1]
+  Shane      [-1]
+  Tomas      [+1]
+  Kurt       [+1]
+  Matthias   [  ]
+  Nicola     [+1]
+
+----------------
 topic: OTC approve the release of 3.0 beta1 on Thursday 17th June on the basis
        that: 1) all current approved PRs with the beta1 milestone are merged
        2) issues #15755 and #15756 are resolved 3) We accept that VMS does not
