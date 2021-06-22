@@ -168,6 +168,10 @@
 - Internal platform library with clearly defined internal headers.
   (e_os.h is a mess, and all kinds of platform specific compensation
   code all over our source is a mess)
+  
+- Internal path building library (perhaps inspired from perl's File::Spec)
+  (we currently handle the difference between VMS and unix-ish paths
+  in an ad-hoc, and not very consistent manner)
 
 - Better autoconfiguration of builds - automatically checking whether we can
   enable things like ec_nistp_64_gcc_128 or not
