@@ -91,6 +91,7 @@ accepted:  yes  (for: 6, against: 1, abstained: 0, not voted: 2)
 ----------------
 topic: We will allow enabling of __owur specifiers for functions for 3.0 as a
        safe API-change exception.
+comment: See issue #15902
 Proposed by Paul Dale
 Public: yes
 opened: 2021-06-29
