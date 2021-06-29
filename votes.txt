@@ -33,6 +33,64 @@ accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
   Nicola     [  ]
 
 ----------------
+topic: Accept PR #15763 for 1.1.1 subject to the normal review process
+Proposed by Matt Caswell
+Public: yes
+opened: 2021-06-29
+closed: 2021-06-29
+accepted:  yes  (for: 7, against: 0, abstained: 0, not voted: 2)
+
+  Matt       [+1]
+  Pauli      [+1]
+  Tim        [+1]
+  Richard    [+1]
+  Shane      [  ]
+  Tomas      [+1]
+  Kurt       [  ]
+  Matthias   [+1]
+  Nicola     [+1]
+
+
+----------------
+topic: Accept the API additions from pull request #15790 subject to the normal
+       review process
+Proposed by Tomas Mraz
+Public: yes
+opened: 2021-06-29
+closed: 2021-06-29
+accepted:  yes  (for: 6, against: 1, abstained: 0, not voted: 2)
+
+  Matt       [+1]
+  Pauli      [+1]
+  Tim        [-1]
+  Richard    [+1]
+  Shane      [  ]
+  Tomas      [+1]
+  Kurt       [  ]
+  Matthias   [+1]
+  Nicola     [+1]
+
+----------------
+topic: We will allow enabling of __owur specifiers for functions for 3.0 as a
+       safe API-change exception.
+Proposed by Paul Dale
+Public: yes
+opened: 2021-06-29
+closed: 2021-mm-dd
+accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
+
+  Matt       [-1]
+  Pauli      [  ]
+  Tim        [-1]
+  Richard    [ 0]
+  Shane      [  ]
+  Tomas      [ 0]
+  Kurt       [  ]
+  Matthias   [+0]
+  Nicola     [+1]
+
+
+----------------
 topic: Accept the concept of the refactor proposed in PR 15854 for 3.0
 Proposed by Matt Caswell
 Public: yes
