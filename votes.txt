@@ -65,7 +65,7 @@ accepted:  yes  (for: 7, against: 0, abstained: 0, not voted: 2)
   Richard    [+1]
   Shane      [+1]   # 2021-06-30
   Tomas      [+1]
-  Kurt       [  ]
+  Kurt       [+1]   # 2021-06-30
   Matthias   [+1]
   Nicola     [+1]
 
@@ -85,7 +85,7 @@ accepted:  yes  (for: 6, against: 1, abstained: 0, not voted: 2)
   Richard    [+1]
   Shane      [+1]   # 2021-06-30
   Tomas      [+1]
-  Kurt       [  ]
+  Kurt       [ 0]   # 2021-06-30
   Matthias   [+1]
   Nicola     [+1]
 
@@ -104,7 +104,7 @@ accepted:  no  (for: 1, against: 3, abstained: 4, not voted: 1)
   Richard    [ 0]
   Shane      [-1]
   Tomas      [ 0]
-  Kurt       [  ]
+  Kurt       [-1]   # 2021-06-30
   Matthias   [+0]
   Nicola     [+1]
 
