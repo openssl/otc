@@ -77,10 +77,10 @@ Proposed by Paul Dale
 Public: yes
 opened: 2021-06-29
 closed: 2021-mm-dd
-accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
+accepted:  no  (for: 1, against: 3, abstained: 4, not voted: 1)
 
   Matt       [-1]
-  Pauli      [  ]
+  Pauli      [-0]
   Tim        [-1]
   Richard    [ 0]
   Shane      [-1]
