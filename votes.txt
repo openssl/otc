@@ -33,6 +33,25 @@ accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
   Nicola     [  ]
 
 ----------------
+topic: Deprecate ERR_GET_FUNC() in 3.0
+comment: PR attempting this is #15955
+Proposed by Pauli.
+Public: yes
+opened: 2021-06-30
+closed: 2021-mm-dd
+accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
+
+  Matt       [  ]
+  Pauli      [+1]
+  Tim        [  ]
+  Richard    [  ]
+  Shane      [  ]
+  Tomas      [  ]
+  Kurt       [  ]
+  Matthias   [  ]
+  Nicola     [  ]
+
+----------------
 topic: Accept PR #15763 for 1.1.1 subject to the normal review process
 Proposed by Matt Caswell
 Public: yes
