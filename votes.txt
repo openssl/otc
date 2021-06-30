@@ -38,13 +38,13 @@ Proposed by Matt Caswell
 Public: yes
 opened: 2021-06-29
 closed: 2021-06-29
-accepted:  yes  (for: 8, against: 0, abstained: 0, not voted: 1)
+accepted:  yes  (for: 7, against: 0, abstained: 0, not voted: 2)
 
   Matt       [+1]
   Pauli      [+1]
   Tim        [+1]
   Richard    [+1]
-  Shane      [+1]
+  Shane      [+1]   # 2021-06-30
   Tomas      [+1]
   Kurt       [  ]
   Matthias   [+1]
@@ -58,13 +58,13 @@ Proposed by Tomas Mraz
 Public: yes
 opened: 2021-06-29
 closed: 2021-06-29
-accepted:  yes  (for: 7, against: 1, abstained: 0, not voted: 1)
+accepted:  yes  (for: 6, against: 1, abstained: 0, not voted: 2)
 
   Matt       [+1]
   Pauli      [+1]
   Tim        [-1]
   Richard    [+1]
-  Shane      [+1]
+  Shane      [+1]   # 2021-06-30
   Tomas      [+1]
   Kurt       [  ]
   Matthias   [+1]
