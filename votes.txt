@@ -46,7 +46,7 @@ accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
   Tim        [  ]
   Richard    [  ]
   Shane      [  ]
-  Tomas      [  ]
+  Tomas      [+1]
   Kurt       [  ]
   Matthias   [  ]
   Nicola     [  ]
