@@ -44,7 +44,7 @@ accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
   Pauli      [+1]
   Tim        [  ]
   Richard    [  ]
-  Shane      [  ]
+  Shane      [+1]
   Tomas      [+1]
   Kurt       [-1]
   Matthias   [  ]
