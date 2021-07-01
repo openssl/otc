@@ -95,7 +95,7 @@ comment: See issue #15902
 Proposed by Paul Dale
 Public: yes
 opened: 2021-06-29
-closed: 2021-mm-dd
+closed: 2021-06-30
 accepted:  no  (for: 1, against: 3, abstained: 4, not voted: 1)
 
   Matt       [-1]
