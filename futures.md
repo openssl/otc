@@ -40,6 +40,8 @@
 
 - LTS+
   When do we do this?
+  The LTS+ concept is to run a parallel release with the LTS release that allow
+  features -- additional platforms, assembly optimisations, etc.
 
 - Multithreading improvements
   Make CRYPTO_RWLOCK and atomic counters opaque structures.
@@ -50,11 +52,15 @@
 - better XOF mode
   - [#7894](https://github.com/openssl/openssl/issues/7894)
   Allowing XOF final to be called repeatedly to generate more output.
-  Require diving into assembly implementations
+  Requires diving into assembly implementations
 
-- additional KDFs (3 from passwd command)
-  The KDFs in the passwd command are aging but potentially useful elsewhere.
-  PVK
+- passwd KDFs
+  The three KDFs in the passwd command are aging but potentially useful
+  elsewhere.
+
+- The PVK KDF
+  Currently in the PEM code, could be made a stand alone KDF.
+  Possibly in the legacy provider?
 
 - Argon2 KDF and thread support
   - [#4091](https://github.com/openssl/openssl/issues/4091)
