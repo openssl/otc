@@ -33,6 +33,25 @@ accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
   Nicola     [  ]
 
 ----------------
+topic: Remove ERR_GET_FUNC in 3.0
+Proposed by Nicola Tuveri
+Public: yes
+opened: 2021-07-06
+closed: 2021-07-06
+accepted:  yes  (for: 6, against: 1, abstained: 0, not voted: 2)
+
+  Matt       [+1]
+  Pauli      [+1]
+  Tim        [+1]
+  Richard    [-1]
+  Shane      [+1]
+  Tomas      [  ]
+  Kurt       [  ]
+  Matthias   [+1]
+  Nicola     [+1]
+
+
+----------------
 topic: Accept #15955 in 3.0
 Proposed by Pauli.
 Public: yes
