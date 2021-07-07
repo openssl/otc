@@ -171,6 +171,12 @@
 - Type sanity
   Replace long long with int64 and similar
 
+- Bitfields
+  Do we want to replace bit fields with something else?
+  Bitfields are useful but they also can have some surprises with atomic
+  operations and threading: all adjacent bit fields in a structure require
+  the same lock.
+
 - Internal platform library with clearly defined internal headers.
   (e_os.h is a mess, and all kinds of platform specific compensation
   code all over our source is a mess)
