@@ -203,3 +203,17 @@
   Should something similar be done at the Perl level (which might avoid the
   magic of FIPS install test).
 
+- Should we tag more public functions with __owur?
+  Or more likely with a better named macro (ossl_wur or ossl_warn_unused_return)
+  The goal being to have applications catch errors rather than continuing and
+  crash in our code later.
+
+- Ignored returns warnings (#15994) -- relevant if we adopt __owur more widerly
+  Currently, the biggest offenders are in speed.c and as noted in the PR, gcc is
+  rejecting a cast to void as a solution.  Should we make an effort to use the
+  return codes and check properly after the timing loops?
+  I.e. something like `fails += function() == 0` inside the loops and a check
+  outside that prints a warning if anything did fail: _dubious result due to
+  failures_
+
+
