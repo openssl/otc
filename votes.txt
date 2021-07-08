@@ -45,7 +45,7 @@ accepted:  yes  (for: 6, against: 1, abstained: 0, not voted: 2)
   Tim        [+1]
   Richard    [-1]
   Shane      [+1]
-  Tomas      [  ]
+  Tomas      [+1]   # 2021-07-08
   Kurt       [ 0]   # 2021-07-08
   Matthias   [+1]
   Nicola     [+1]
@@ -56,8 +56,8 @@ topic: Accept #15955 in 3.0
 Proposed by Pauli.
 Public: yes
 opened: 2021-06-30
-closed: 2021-mm-dd
-accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
+closed: 2021-07-08
+accepted:  vote withdraw becuase the vote above invalidates it
 
   Matt       [  ]
   Pauli      [+1]
