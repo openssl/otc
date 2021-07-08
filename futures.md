@@ -195,3 +195,11 @@
 - Installation verification tests - testing that the installed libraries
   headers, configuration and documentation are installed properly
 
+- Test dependencies
+  In some situation we have places where test A must run first or test B must
+  run before test C.  The current test order randomisation have no inkling about
+  any of these and this produces occasional false positives.  It would be good
+  to allow unit tests to specify some ordering constrains at the C level.
+  Should something similar be done at the Perl level (which might avoid the
+  magic of FIPS install test).
+
