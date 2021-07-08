@@ -209,11 +209,13 @@
   crash in our code later.
 
 - Ignored returns warnings (#15994) -- relevant if we adopt __owur more widerly
-  Currently, the biggest offenders are in speed.c and as noted in the PR, gcc is
-  rejecting a cast to void as a solution.  Should we make an effort to use the
-  return codes and check properly after the timing loops?
-  I.e. something like `fails += function() == 0` inside the loops and a check
-  outside that prints a warning if anything did fail: _dubious result due to
-  failures_
+  - Currently, the biggest internal offenders are in speed.c and as noted
+    in the PR, gcc is rejecting a cast to void as a solution.  Should we
+    make an effort to use the return codes and check properly after the
+    timing loops?  I.e. something like `fails += function() == 0` inside
+    the loops and a check outside that prints a warning if anything did
+    fail: _dubious result due to failures_
+  - Should we add such flags for public functions where failure is really bad?
+    As an API change, this would be major release material.
 
 
