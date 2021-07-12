@@ -59,7 +59,7 @@ opened: 2021-06-30
 closed: 2021-07-08
 accepted:  vote withdraw becuase the vote above invalidates it
 
-  Matt       [  ]
+  Matt       [-1]   # 2021-07-12
   Pauli      [+1]
   Tim        [  ]
   Richard    [  ]
