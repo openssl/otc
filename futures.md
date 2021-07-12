@@ -2,9 +2,6 @@
   - [#8797](https://github.com/openssl/openssl/issues/8797)
   The standard has now been published and this has become more timely.
 
-DTLS 1.3
-  - Not a standard yet but soon maybe
-
 - constant time bignum
   - [#6640](https://github.com/openssl/openssl/issues/6640)
   Significant rework is involved to make BNs constant time pervasively and
@@ -164,6 +161,7 @@ DTLS 1.3
 
 - DTLS 1.3
   - [#13900](https://github.com/openssl/openssl/issues/13900)
+  - Not a standard yet but soon maybe
 
 - Certificate Compression RFC 8879
   - [#13597](https://github.com/openssl/openssl/issues/13597)
