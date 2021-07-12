@@ -54,6 +54,17 @@
   Allowing XOF final to be called repeatedly to generate more output.
   Requires diving into assembly implementations
 
+- Side channel resistance via randomisation
+  [#14464](https://github.com/openssl/openssl/pull/14464) and it's follow on
+  [#15702](https://github.com/openssl/openssl/pull/15702) implement randomisation for
+  swap operations.
+  - Should this be made more widely available?
+  - Should we intoroduce a small & fast non-cryptographic RNG for this purpose?
+    - Should such an RNG be used for blinding too?
+    - There are two examples of such RNGs in the code currently:
+       - George Marsaglia's 32 bit xorshift for stochastic property cache flushing
+       - GNU C library's random(3) from https://www.mscs.dal.ca/~selinger/random/ in testutil
+
 - passwd KDFs
   The three KDFs in the passwd command are aging but potentially useful
   elsewhere.
@@ -158,6 +169,9 @@
 
 - Review all "Post 3.0" items for possible inclusion
 
+- Lightweight cryptography
+  Possibly a little premature sice the standards aren't finished quite yet.
+
 - Better configurability of TLS sigalgs
 
 - Better run-time configurability of algorithm support
@@ -178,12 +192,12 @@
   the same lock.
 
 - Internal platform library with clearly defined internal headers.
-  (e_os.h is a mess, and all kinds of platform specific compensation
-  code all over our source is a mess)
+  e_os.h is a mess, and all kinds of platform specific compensation
+  code all over our source is a mess.
   
 - Internal path building library (perhaps inspired from perl's File::Spec)
-  (we currently handle the difference between VMS and unix-ish paths
-  in an ad-hoc, and not very consistent manner)
+  We currently handle the difference between VMS and unix-ish paths
+  in an ad-hoc, and not very consistent manner.
 
 - Better autoconfiguration of builds - automatically checking whether we can
   enable things like ec_nistp_64_gcc_128 or not
