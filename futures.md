@@ -42,6 +42,8 @@
   When do we do this?
   The LTS+ concept is to run a parallel release with the LTS release that allow
   features -- additional platforms, assembly optimisations, etc.
+  - Using `BN_secure_new()`/`BN_CTX_secure` in all functions dealing
+    with private key components (see, e.g. #13892) ?
 
 - Multithreading improvements
   Make CRYPTO_RWLOCK and atomic counters opaque structures.
@@ -174,6 +176,7 @@
   Possibly a little premature sice the standards aren't finished quite yet.
 
 - Better configurability of TLS sigalgs
+  - Sigs as capabilities, like it's done for KEX and KEM?
 
 - Better run-time configurability of algorithm support
   API and run-time configuration file support for enabling/disabling
