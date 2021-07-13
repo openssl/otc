@@ -39,7 +39,7 @@ Proposed by Paul Dale
 Public: yes
 opened: 2021-07-13
 closed: 2021-07-13
-accepted:  yes/no  (for: 5, against: 1, abstained: 2, not voted: 1)
+accepted:  yes  (for: 5, against: 1, abstained: 2, not voted: 1)
 
   Matt       [ 0]
   Pauli      [+1]
