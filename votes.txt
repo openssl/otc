@@ -33,6 +33,25 @@ accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
   Nicola     [  ]
 
 ----------------
+topic: Allow the addition of EVP_PKEY_get0_provider() and
+       EVP_PKEY_CTX_get0_provider() calls in 3.0
+Proposed by Paul Dale
+Public: yes
+opened: 2021-07-13
+closed: 2021-07-13
+accepted:  yes/no  (for: 5, against: 1, abstained: 2, not voted: 1)
+
+  Matt       [ 0]
+  Pauli      [+1]
+  Tim        [-1]
+  Richard    [+1]
+  Shane      [+1]
+  Tomas      [+1]
+  Kurt       [  ]
+  Matthias   [ 0]
+  Nicola     [+1]
+
+----------------
 topic: Remove ERR_GET_FUNC in 3.0
 Proposed by Nicola Tuveri
 Public: yes
