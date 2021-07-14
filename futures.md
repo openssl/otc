@@ -236,4 +236,4 @@
   - Should we add such flags for public functions where failure is really bad?
     As an API change, this would be major release material.
 
-
+- Amend the test framework to be more amenable to running on embedded platforms
