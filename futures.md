@@ -77,10 +77,6 @@
   The three KDFs in the passwd command are aging but potentially useful
   elsewhere.
 
-- The PVK KDF
-  Currently in the PEM code, could be made a stand alone KDF.
-  Possibly in the legacy provider?
-
 - Argon2 KDF and thread support
   - [#4091](https://github.com/openssl/openssl/issues/4091)
   - [#12256](https://github.com/openssl/openssl/issues/12256)
