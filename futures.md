@@ -11,6 +11,12 @@
   Like the constant time ones but avoiding overflow etc.
   We're constantly reinventing these in a variety of places and they are tricky.
 
+- public API argument checking
+  - NULL check pointers
+  - range check integers
+  - lots of low hanging fruit here
+  - which APIs?
+
 - better EC
   - EC kiila?
   - not using BN?
