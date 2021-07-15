@@ -130,6 +130,7 @@
 - Windows cert & key store
 
 - FIPS 140-3
+  - More generally, maintaining FIPS compliance going forward
 
 - EVP_SKEY (or equivalent)
 
@@ -190,6 +191,7 @@
 
 - Type sanity
   Replace long long with int64 and similar
+  - Where do we stop?
 
 - Bitfields
   Do we want to replace bit fields with something else?
