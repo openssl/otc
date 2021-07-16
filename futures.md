@@ -117,6 +117,7 @@
 - CNG provider
   - [#3481](https://github.com/openssl/openssl/issues/3481)
   - [#6338](https://github.com/openssl/openssl/issues/6338)
+  - Mention of one in progress on the [users mailing list](https://marc.info/?t=162516187800002&r=1&w=2).
 
 - PVK
 
