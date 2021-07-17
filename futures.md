@@ -29,7 +29,7 @@
 
 - RNG strengths as a limiting factor
   - Limit key generation to the strength of the RNG.
-  - Anternatively, implement SP 800-90C 10.1.2 to increase RNG strength.
+  - Alternatively, implement SP 800-90C 10.1.2 to increase RNG strength.
 
 - algorithm strength passed around pervasively
   Extension of the above where strength is spread more pervasively.
@@ -91,6 +91,7 @@
 - Secret sharing
   Shamir's secret sharing or a different scheme or several?
   Command line application plus a C API
+  https://www.oasis-open.org/committees/download.php/68643/sam-tss-v1.0-csd01.docx
 
 - create EVP_PRF (hybrid between KDF, MAC and RAND)
   - [#14543](https://github.com/openssl/openssl/issues/14543)
@@ -247,3 +248,4 @@
     As an API change, this would be major release material.
 
 - Amend the test framework to be more amenable to running on embedded platforms
+
