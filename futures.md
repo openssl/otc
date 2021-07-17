@@ -11,6 +11,11 @@
   Like the constant time ones but avoiding overflow etc.
   We're constantly reinventing these in a variety of places and they are tricky.
 
+- safe casting operation wrappers
+  Safely convert an int to a size_t etc.
+  These are constantly flagged by various compilers so having a systemic
+  way to approach them might help
+
 - public API argument checking
   - NULL check pointers
   - range check integers
