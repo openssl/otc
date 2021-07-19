@@ -249,3 +249,7 @@
 
 - Amend the test framework to be more amenable to running on embedded platforms
 
+- Use QEMU to run the test suites for the cross compiled CIs
+  Currently, they are compiled but not executed which catches a number of
+  compiler problems.  Executing them would be better.
+
