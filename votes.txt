@@ -33,6 +33,61 @@ accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
   Nicola     [  ]
 
 ----------------
+topic: We should accept PR #16118 into 3.0 when completed and subject to the 
+       normal review process
+Proposed by Matt Caswell
+Public: yes
+opened: 2021-07-21
+closed: 2021-07-21
+accepted:  yes  (for: 5, against: 0, abstained: 3, not voted: 1)
+
+  Matt       [+1]
+  Pauli      [+1]
+  Tim        [ 0]
+  Richard    [ 0]
+  Shane      [ 0]
+  Tomas      [+1]
+  Kurt       [  ]
+  Matthias   [+1]
+  Nicola     [+1]
+
+----------------
+topic: We should fix the issue described in #16088 for 3.0
+Proposed by Matt Caswell
+Public: yes
+opened: 2021-07-21
+closed: 2021-07-21
+accepted:  yes  (for: 6, against: 0, abstained: 2, not voted: 1)
+
+  Matt       [+1]
+  Pauli      [+1]
+  Tim        [ 0]
+  Richard    [ 0]
+  Shane      [+1]
+  Tomas      [+1]
+  Kurt       [  ]
+  Matthias   [+1]
+  Nicola     [+1]
+
+----------------
+topic: Accept PR 16050 in 3.0 subject to our normal review process
+Proposed by Tim Hudson
+Public: yes
+opened: 2021-07-20
+closed: 2021-mm-dd
+accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
+
+  Matt       [-1]
+  Pauli      [+0]
+  Tim        [-1]
+  Richard    [+1]
+  Shane      [-1]
+  Tomas      [ 0]
+  Kurt       [  ]
+  Matthias   [ 0]
+  Nicola     [ 0]
+
+----------------
 topic: Allow the addition of EVP_PKEY_get0_provider() and
        EVP_PKEY_CTX_get0_provider() calls in 3.0
 Proposed by Paul Dale
