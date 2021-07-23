@@ -41,14 +41,14 @@ closed: 2021-mm-dd
 accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
 
   Matt       [+1]
-  Pauli      [  ]
-  Tim        [  ]
-  Richard    [  ]
-  Shane      [  ]
-  Tomas      [  ]
+  Pauli      [+1]
+  Tim        [+1]
+  Richard    [+1]
+  Shane      [+1]
+  Tomas      [+1]
   Kurt       [  ]
-  Matthias   [  ]
-  Nicola     [  ]
+  Matthias   [+1]
+  Nicola     [+1]
 
 ----------------
 topic: We should accept PR #16118 into 3.0 when completed and subject to the 
