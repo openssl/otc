@@ -38,7 +38,7 @@ Proposed by Matt Caswell
 Public: yes
 opened: 2021-07-27
 closed: 2021-07-27
-accepted:  yes/no  (for: 7, against: 0, abstained: 0, not voted: 2)
+accepted:  yes  (for: 7, against: 0, abstained: 0, not voted: 2)
 
   Matt       [+1]
   Pauli      [+1]
