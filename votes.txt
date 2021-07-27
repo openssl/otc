@@ -33,12 +33,30 @@ accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
   Nicola     [  ]
 
 ----------------
+topic: OTC approve the release of 3.0 beta2 on Thursday 29th July
+Proposed by Matt Caswell
+Public: yes
+opened: 2021-07-27
+closed: 2021-07-27
+accepted:  yes/no  (for: 7, against: 0, abstained: 0, not voted: 2)
+
+  Matt       [+1]
+  Pauli      [+1]
+  Tim        [+1]
+  Richard    [+1]
+  Shane      [+1]
+  Tomas      [  ]
+  Kurt       [  ]
+  Matthias   [+1]
+  Nicola     [+1]
+
+----------------
 topic: Accept PR 16128 in 3.0 subject to our normal review process
 Proposed by Matt Caswell
 Public: yes
 opened: 2021-07-22
-closed: 2021-mm-dd
-accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
+closed: 2021-07-27
+accepted:  yes  (for: 8, against: 0, abstained: 0, not voted:1)
 
   Matt       [+1]
   Pauli      [+1]
@@ -92,8 +110,8 @@ topic: Accept PR 16050 in 3.0 subject to our normal review process
 Proposed by Tim Hudson
 Public: yes
 opened: 2021-07-20
-closed: 2021-mm-dd
-accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
+closed: 2021-07-27
+accepted:  no  (for: 1, against: 3, abstained: 4, not voted: 1)
 
   Matt       [-1]
   Pauli      [+0]
