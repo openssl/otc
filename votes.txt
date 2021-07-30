@@ -22,6 +22,7 @@ opened: 2021-mm-dd
 closed: 2021-mm-dd
 accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
 
+  Dmitry     [  ]
   Matt       [  ]
   Pauli      [  ]
   Tim        [  ]
