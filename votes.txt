@@ -49,8 +49,8 @@ ONE WEEK VOTE
   Richard    [  ]
   Shane      [+1]
   Tomas      [+1]
-  Kurt       [  ]
-  Matthias   [  ]
+  Kurt       [-1]
+  Matthias   [ 0]
   Nicola     [+1]
 
 ----------------
@@ -69,8 +69,8 @@ ONE WEEK VOTE
   Richard    [  ]
   Shane      [ 0]
   Tomas      [+1]
-  Kurt       [  ]
-  Matthias   [  ]
+  Kurt       [-1]
+  Matthias   [ 0]
   Nicola     [+0]
 
 ----------------
