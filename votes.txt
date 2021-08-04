@@ -58,8 +58,8 @@ topic: Accept PR 16203 in 3.0 subject to our normal review process.
 Proposed by Pauli.
 Public: yes
 opened: 2021-08-03
-closed: 2021-mm-dd
-accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
+closed: 2021-08-05
+accepted:  yes  (for: 4, against: 1, abstained: 4, not voted: 1)
 ONE WEEK VOTE
 
   Dmitry     [+1]
