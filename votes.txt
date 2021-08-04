@@ -63,7 +63,7 @@ accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
 ONE WEEK VOTE
 
   Dmitry     [+1]
-  Matt       [  ]
+  Matt       [+1]
   Pauli      [+1]
   Tim        [ 0]
   Richard    [  ]
