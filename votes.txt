@@ -34,6 +34,48 @@ accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
   Nicola     [  ]
 
 ----------------
+topic: RSA public exponent validation in 3.0 for the default provider should be
+consistent with 1.1.1
+Comment: See issue #16255 for background
+Proposed by Matt Caswell
+Public: yes
+opened: 2021-08-10
+closed: 2021-mm-dd
+accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
+
+  Dmitry     [ 0]
+  Matt       [+1]
+  Pauli      [  ]
+  Tim        [+1]
+  Richard    [  ]
+  Shane      [+1]
+  Tomas      [+1]
+  Kurt       [  ]
+  Matthias   [  ]
+  Nicola     [-0]
+
+----------------
+topic: Revert the commits merged from PR #16027 in 1.1.1
+Comment: Refer to issue #16266 for background
+Proposed by Tomas Mraz
+Public: yes
+opened: 2021-08-10
+closed: 2021-mm-dd
+accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
+
+  Dmitry     [+1]
+  Matt       [+1]
+  Pauli      [  ]
+  Tim        [-1]
+  Richard    [  ]
+  Shane      [-1]
+  Tomas      [+1]
+  Kurt       [  ]
+  Matthias   [  ]
+  Nicola     [-1]
+
+
+----------------
 topic: Accept PR 16171 in 3.0 subject to our normal review process.
 Proposed by Pauli.
 Public: yes
