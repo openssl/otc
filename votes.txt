@@ -85,7 +85,7 @@ accepted:  yes  (for: 6, against: 1, abstained:1, not voted: 2)
 ONE WEEK VOTE
 
   Dmitry     [+1]
-  Matt       [  ]
+  Matt       [+1]   # 2021-08-10
   Pauli      [+1]
   Tim        [+1]
   Richard    [  ]
