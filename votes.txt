@@ -40,17 +40,17 @@ Comment: See issue #16255 for background
 Proposed by Matt Caswell
 Public: yes
 opened: 2021-08-10
-closed: 2021-mm-dd
-accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
+closed: 2021-08-11
+accepted:  yes  (for: 4, against: 2, abstained: 3, not voted: 1)
 
   Dmitry     [ 0]
   Matt       [+1]
-  Pauli      [  ]
+  Pauli      [ 0]
   Tim        [+1]
   Richard    [  ]
   Shane      [+1]
   Tomas      [+1]
-  Kurt       [  ]
+  Kurt       [-1]
   Matthias   [-1]
   Nicola     [-0]
 
@@ -65,7 +65,7 @@ accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
 
   Dmitry     [+1]
   Matt       [+1]
-  Pauli      [  ]
+  Pauli      [+0]
   Tim        [-1]
   Richard    [  ]
   Shane      [-1]
