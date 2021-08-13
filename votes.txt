@@ -60,8 +60,8 @@ Comment: Refer to issue #16266 for background
 Proposed by Tomas Mraz
 Public: yes
 opened: 2021-08-10
-closed: 2021-mm-dd
-accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
+closed: 2021-08-13
+accepted:  yes  (for: 5, against: 3, abstained: 1, not voted: 1)
 
   Dmitry     [+1]
   Matt       [+1]
@@ -70,7 +70,7 @@ accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
   Richard    [  ]
   Shane      [-1]
   Tomas      [+1]
-  Kurt       [  ]
+  Kurt       [+1]
   Matthias   [+1]
   Nicola     [-1]
 
