@@ -47,7 +47,7 @@ accepted:  yes  (for: 4, against: 2, abstained: 3, not voted: 1)
   Matt       [+1]
   Pauli      [ 0]
   Tim        [+1]
-  Richard    [  ]
+  Richard    [ 0]   # 2021-08-15
   Shane      [+1]
   Tomas      [+1]
   Kurt       [-1]
@@ -67,7 +67,7 @@ accepted:  yes  (for: 5, against: 3, abstained: 1, not voted: 1)
   Matt       [+1]
   Pauli      [+0]
   Tim        [-1]
-  Richard    [  ]
+  Richard    [-1]   # 2021-08-15
   Shane      [-1]
   Tomas      [+1]
   Kurt       [+1]
