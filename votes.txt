@@ -38,10 +38,10 @@ topic: Accept PR#16286 into 3.0 subject to the normal review process
 Proposed by Shane Lontis
 Public: yes
 opened: 2021-08-17
-closed: 2021-mm-dd
-accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
+closed: 2021-08-18
+accepted:  yes  (for: 5, against: 1, abstained: 1, not voted: 3)
 
-  Dmitry     [  ]
+  Dmitry     [+1]
   Matt       [-1]
   Pauli      [+1]
   Tim        [ 0]
