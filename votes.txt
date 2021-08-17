@@ -34,6 +34,25 @@ accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
   Nicola     [  ]
 
 ----------------
+topic: Accept PR#16286 into 3.0 subject to the normal review process
+Proposed by Shane Lontis
+Public: yes
+opened: 2021-08-17
+closed: 2021-mm-dd
+accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
+
+  Dmitry     [  ]
+  Matt       [-1]
+  Pauli      [+1]
+  Tim        [ 0]
+  Richard    [+1]
+  Shane      [+1]
+  Tomas      [  ]
+  Kurt       [  ]
+  Matthias   [  ]
+  Nicola     [+1]
+
+----------------
 topic: RSA public exponent validation in 3.0 for the default provider should be
 consistent with 1.1.1
 Comment: See issue #16255 for background
