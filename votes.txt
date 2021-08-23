@@ -47,7 +47,7 @@ accepted:  yes  (for: 5, against: 1, abstained: 1, not voted: 3)
   Tim        [ 0]
   Richard    [+1]
   Shane      [+1]
-  Tomas      [  ]
+  Tomas      [-1]   # 2021-08-23
   Kurt       [  ]
   Matthias   [  ]
   Nicola     [+1]
