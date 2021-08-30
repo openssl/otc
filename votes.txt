@@ -48,7 +48,7 @@ accepted:  yes  (for: 5, against: 1, abstained: 1, not voted: 3)
   Richard    [+1]
   Shane      [+1]
   Tomas      [-1]   # 2021-08-23
-  Kurt       [  ]
+  Kurt       [-1]   # 2021-08-29
   Matthias   [ 0]   # 2021-08-23
   Nicola     [+1]
 
