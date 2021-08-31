@@ -45,7 +45,7 @@ closed: 2021-08-31
 accepted:  yes  (for: 7, against: 0, abstained: 0, not voted: 3)
 
   Dmitry     [+1]
-  Matt       [  ]
+  Matt       [+1]   # 2021-09-01
   Pauli      [+1]
   Tim        [+1]
   Richard    [+1]
@@ -65,7 +65,7 @@ closed: 2021-08-31
 accepted:  yes  (for: 8, against: 0, abstained: 0, not voted: 2)
 
   Dmitry     [+1]
-  Matt       [  ]
+  Matt       [+1]   # 2021-09-01
   Pauli      [+1]
   Tim        [+1]
   Richard    [+1]
