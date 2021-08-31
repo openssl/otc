@@ -34,6 +34,25 @@ accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
   Nicola     [  ]
 
 ----------------
+topic: Release 3.0.0 final on Tuesday the 7th of September 2021 if run-checker and CI builds have been clean for two days.
+Proposed by Pauli.
+Public: yes
+opened: 2021-08-31
+closed: 2021-08-31
+accepted:  yes  (for: 8, against: 0, abstained: 0, not voted: 2)
+
+  Dmitry     [+1]
+  Matt       [  ]
+  Pauli      [+1]
+  Tim        [+1]
+  Richard    [+1]
+  Shane      [+1]
+  Tomas      [+1]
+  Kurt       [  ]
+  Matthias   [+1]
+  Nicola     [+1]
+
+----------------
 topic: Accept PR#16286 into 3.0 subject to the normal review process
 Proposed by Shane Lontis
 Public: yes
