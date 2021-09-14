@@ -34,6 +34,27 @@ accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
   Nicola     [  ]
 
 ----------------
+topic: Allow the restart of merging of non-breaking small features to the master
+       branch
+Proposed by Matt Caswell
+Public: yes
+opened: 2021-09-14
+closed: 2021-09-14
+accepted:  yes  (for: 5, against: 1, abstained: 1, not voted: 2)
+
+  Dmitry     [+1]
+  Matt       [+1]
+  Pauli      [  ]
+  Tim        [-1]
+  Richard    [+1]
+  Shane      [ 0]
+  Tomas      [+1]
+  Kurt       [  ]
+  Matthias   [+1]
+  Nicola     [+1]
+
+
+----------------
 topic: Create `openssl-3.0' git branch today.
 comment: This cascades to other names/version information on GitHub.
          For example, change the release version information in the
