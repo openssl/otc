@@ -44,7 +44,7 @@ accepted:  yes  (for: 5, against: 1, abstained: 1, not voted: 2)
 
   Dmitry     [+1]
   Matt       [+1]
-  Pauli      [  ]
+  Pauli      [+1]   # 2021-09-14
   Tim        [-1]
   Richard    [+1]
   Shane      [ 0]
