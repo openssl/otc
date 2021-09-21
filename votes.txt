@@ -34,6 +34,25 @@ accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
   Nicola     [  ]
 
 ----------------
+topic: Increase the default security level from 1 to 2 in master
+Proposed by Matt Caswell
+Public: yes
+opened: 2021-09-21
+closed: 2021-09-21
+accepted:  yes  (for: 7, against: 1, abstained: 1, not voted: 1)
+
+  Dmitry     [+1]
+  Matt       [+1]
+  Pauli      [+1]
+  Tim        [+0]
+  Richard    [+1]
+  Shane      [-1]
+  Tomas      [+1]
+  Kurt       [  ]
+  Matthias   [+1]
+  Nicola     [+1]
+
+----------------
 topic: Accept PR#16594 into master subject to the normal review process
 comment: this doesn't meet the requirement of being a standard but is in use
          and we have the implementation but it isn't exposed.
