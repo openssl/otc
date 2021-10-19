@@ -34,6 +34,25 @@ accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
   Nicola     [  ]
 
 ----------------
+topic: Accept PR#16725 as a bug fix for backport into 3.0 subject to the normal review process
+Proposed by Matt Caswell
+Public: yes
+opened: 2021-10-19
+closed: 2021-mm-dd
+accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
+
+  Dmitry     [+0]
+  Matt       [+1]
+  Pauli      [  ]
+  Tim        [-1]
+  Richard    [+0]
+  Shane      [+1]
+  Tomas      [+1]
+  Kurt       [  ]
+  Matthias   [-1]
+  Nicola     [-1]
+
+----------------
 topic: Increase the default security level from 1 to 2 in master
 Proposed by Matt Caswell
 Public: yes
