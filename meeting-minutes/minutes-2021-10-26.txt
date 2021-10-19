@@ -1,0 +1,16 @@
+Meeting Date: 2021-10-26
+Minutes taken by: TBC
+Attendees:
+TBC
+
+Agenda:
+* Nominate a minute taker and confirm agenda
+* Agree minutes from previous meeting
+* Do we want to restart the GH items review in this or that form?
+* Can we do anything with file load performance regression
+* OpenSSL 3.1 Requirements
+* Coverage discussion (Shane)
+* Allocation of tasks to staff
+* Agree agenda for next meeting
+* AOB 
+

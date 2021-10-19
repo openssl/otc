@@ -1,0 +1,57 @@
+Meeting Date: 2021-10-19
+Minutes taken by: Matt Caswell
+Attendees:
+Nicola Tuveri
+Tim Hudson
+Matthias St Pierre
+Richard Levitte
+Dmitry Belyavskiy
+Tomáš Mráz
+Shane Lontis
+Matt Caswell
+
+Agenda:
+* Nominate a minute taker and confirm agenda
+* Platform policy update
+* Review policy process strawman
+* PR #16725
+* Do we want to restart the GH items review in this or that form?
+* Can we do anything with file load performance regression
+* OpenSSL 3.1
+* Agree agenda for next meeting
+* AOB 
+
+
+Matt agreed as minute taker and agenda agreed.
+
+Matt presented the updates that have been made to the platform policy. Richard
+noted that the OpenVMS version is wrong for Itanium. Should be 8.4. FreeBSD
+clang version 11.0.1 is default for FreeBSD 13.0
+
+Tomáš presented the proposed technical policy change policy
+(https://github.com/openssl/technical-policies/pull/1). Discussion about whether
+it is necessary to send notifications about proposed policy changes to the
+openssl-project list. Discussion about the format of policies and what markdown
+to use. Discussion about whether the 2 week waiting period is too long. Comment
+that it should be clear that anyone could propose a policy. It should be clear
+when the text is “frozen” and ready to vote. Tomáš to make suggested edits and
+then start a vote after the 2 week period.
+
+Richard and Matt gave an overview of PR#16725. Discussion about whether this is
+a feature or a bug. Should this be postponed to 3.1? Could we do an early 3.1
+release? It was identified that there is some missing documentation from the
+proposed PR. Discussion about whether or not the behavior being changed by this
+PR was always intended or not. Vote started.
+
+Due to time, further agenda items were deferred until the next meeting.
+
+Agenda for next week:
+* Nominate a minute taker and confirm agenda
+* Agree minutes from previous meeting
+* Do we want to restart the GH items review in this or that form?
+* Can we do anything with file load performance regression
+* OpenSSL 3.1 Requirements
+* Coverage discussion (Shane)
+* Allocation of tasks to staff
+* Agree agenda for next meeting
+* AOB 
