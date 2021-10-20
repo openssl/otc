@@ -34,21 +34,22 @@ accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
   Nicola     [  ]
 
 ----------------
-topic: Accept PR#16725 as a bug fix for backport into 3.0 subject to the normal review process
+topic: Accept PR#16725 as a bug fix for backport into 3.0 subject to the normal
+       review process
 Proposed by Matt Caswell
 Public: yes
 opened: 2021-10-19
-closed: 2021-mm-dd
-accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
+closed: 2021-10-20
+accepted:  yes  (for: 4, against: 2, abstained: 4, not voted: 0)
 
   Dmitry     [+0]
   Matt       [+1]
-  Pauli      [  ]
-  Tim        [-1]
+  Pauli      [ 0]
+  Tim        [ 0]       # Vote changed 2021-10-20
   Richard    [+0]
   Shane      [+1]
   Tomas      [+1]
-  Kurt       [  ]
+  Kurt       [+1]
   Matthias   [-1]
   Nicola     [-1]
 
