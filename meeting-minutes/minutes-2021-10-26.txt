@@ -1,16 +1,53 @@
 Meeting Date: 2021-10-26
-Minutes taken by: TBC
+Minutes taken by: Tomáš Mráz
 Attendees:
-TBC
+Nicola Tuveri
+Tim Hudson
+Matthias St Pierre
+Richard Levitte
+Dmitry Belyavskiy
+Tomáš Mráz
+Paul Dale
+Matt Caswell
 
 Agenda:
 * Nominate a minute taker and confirm agenda
 * Agree minutes from previous meeting
+* OpenSSL 3.1 Requirements
 * Do we want to restart the GH items review in this or that form?
 * Can we do anything with file load performance regression
-* OpenSSL 3.1 Requirements
-* Coverage discussion (Shane)
 * Allocation of tasks to staff
 * Agree agenda for next meeting
 * AOB 
 
+Tomáš Mráz was agreed to be the minutes taker.
+
+Agenda was confirmed.
+
+Last week minutes were approved.
+
+Matthias and Nicola presented a pre-draft proposal for round table discussion with community about the QUIC implementation in OpenSSL. About what should be the objectives for the QUIC implementation and how the OpenSSL team should approach the implementation. They presented some concerns about how the wide OpenSSL users and developer community input was perceived as ignored by OMC.
+
+Tim presented that whether OpenSSL should implement QUIC or not is an political decision so that is clearly within OMC responsibility.
+
+Dmitry had concerns about having something released within 6 months.
+
+A lengthy discussion about what is a technical decision and what is a business decision happened.
+
+Proposal: OTC requests staff to create a design process proposal.
+
+Tim moves, Matt seconds, no objections.
+Agreed.
+
+Other topics were postponed due to lack of time.
+
+Agenda for the next meeting:
+* Nominate a minute taker and confirm agenda
+* Agree minutes from previous meeting
+* Design process proposal
+* Do we want to restart the GH items review in this or that form?
+* Can we do anything with file load performance regression
+* Allocation of tasks to staff
+* Coverage discussion (Shane)
+* Agree agenda for next meeting
+* AOB

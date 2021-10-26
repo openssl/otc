@@ -1,0 +1,38 @@
+Meeting Date: 2021-11-02
+Minutes taken by: TBC
+Attendees:
+TBC - delete people not present
+Dmitry Belyavskiy
+Matt Caswell
+Matthias St Pierre
+Nicola Tuveri
+Paul Dale
+Richard Levitte
+Shane Lontis
+Tim Hudson
+Tomáš Mráz
+
+Agenda:
+* Nominate a minute taker and confirm agenda
+* Agree minutes from previous meeting
+* Design process proposal
+* Do we want to restart the GH items review in this or that form?
+* Can we do anything with file load performance regression
+* Allocation of tasks to staff
+* Coverage discussion (Shane)
+* Agree agenda for next meeting
+* AOB
+
+TBC was agreed to be the minutes taker.
+
+TBC Agenda was confirmed.
+
+TBC Last week minutes were approved.
+
+
+TBC
+
+
+Agenda for the next meeting:
+
+TBC
