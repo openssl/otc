@@ -28,7 +28,7 @@ Last week minutes were approved.
 
 Matthias and Nicola presented a pre-draft proposal for round table discussion with community about the QUIC implementation in OpenSSL. About what should be the objectives for the QUIC implementation and how the OpenSSL team should approach the implementation. They presented some concerns about how the wide OpenSSL users and developer community input was perceived as ignored by OMC.
 
-Tim presented that whether OpenSSL should implement QUIC or not is an political decision so that is clearly within OMC responsibility.
+Tim presented that whether OpenSSL should implement QUIC or not is a business decision so that is clearly within OMC responsibility.
 
 Dmitry had concerns about having something released within 6 months.
 
