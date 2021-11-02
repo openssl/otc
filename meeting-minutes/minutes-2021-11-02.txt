@@ -1,38 +1,98 @@
 Meeting Date: 2021-11-02
-Minutes taken by: TBC
+Minutes taken by: Pauli
 Attendees:
-TBC - delete people not present
-Dmitry Belyavskiy
-Matt Caswell
-Matthias St Pierre
-Nicola Tuveri
-Paul Dale
-Richard Levitte
-Shane Lontis
-Tim Hudson
-Tomáš Mráz
+    Matt Caswell
+    Matthias St Pierre
+    Nicola Tuveri
+    Paul Dale
+    Tim Hudson
+    Tomáš Mráz
+    Richard Levitte [forty five minutes late]
 
 Agenda:
 * Nominate a minute taker and confirm agenda
 * Agree minutes from previous meeting
+* Discuss Rich's email to project list - should we respond?
 * Design process proposal
+* OTC hold reviewing
 * Do we want to restart the GH items review in this or that form?
 * Can we do anything with file load performance regression
 * Allocation of tasks to staff
-* Coverage discussion (Shane)
 * Agree agenda for next meeting
 * AOB
 
-TBC was agreed to be the minutes taker.
+Paul was agreed to be the minutes taker.
 
-TBC Agenda was confirmed.
-
-TBC Last week minutes were approved.
+Agenda was confirmed.  Proposed: Tomáš Seconded: Matt
 
 
-TBC
+Last week minutes were approved.  Proposed: Tim Seconded: Matt & Matthias
+
+
+Discussion about Rich's email.  The distinction between a technical
+decision and management decision is tricky and should be explained.
+Last week's OTC call showed that there was not clarity about this.
+Other users are far less informed.  Concerns raised about the time lines
+involved and our ability to meet them.
+
+Matthias: ask for the OMC to respond to Rich's email and more generally
+about the QUIC situation.  Seconded: Nicola
+
+
+Design process proposal: Nicola has some concerns about the just enough
+approach which could result in designs that are under-specified.  It would
+be better if we avoided this since it created disagreement during the
+3.0 process.  Matt is concerned about designs being over specified
+which is the converse.  With 3.0 we failed to iterate the design based
+on items discovered during development and a failure to revisit design
+assumptions that were incorrect.  The significant up front design without
+malleability was the problem.
+
+We need to do some design ahead of implementation.  Each component
+needs some design in addition to the overall system.  We also need to
+review the APIs that are being presented - the API should be part of the
+subsystem design.  I.e. the first visibility of new APIs should **not**
+be in a PR.  We need a stronger link between PR's with code and the
+design artifacts used to create it.
+
+Should third party PRs be subjected to the same review criteria as our
+contributions?  Ours typically only need to meet a lower bar - i.e. we
+should raise the bar for our contributions.  Should we have some triggers
+in place (lines of code, number of APIs) to gate the threshold where
+a design is mandatory.  The design documents should be tracked in git
+(rather than in a PR).
+
+AI: Matt add to the policy to create linkage between design processes.
+
+Also need more testing to cover interactions between sub-modules.
+Testing the API should be part of the design process so we can verify
+that exactly what was designed is happening.  If the test needs to be
+updated, the design must also be.  The tests should cover the APIs
+as they are meant to be called, what their return values are, etc.
+However, not to the level of mocking the APIs and having the tests run
+before they are implemented.  I.e. not full blown test driven development.
+
+AI: Matt to include the _word_ test in the policy at least once.
+
+
+#16944: this should have been discussed at the time.  Constant time
+follow up PR.  The PR can be merged as is.
+
+
+Separate review and test processes need to be fleshed out.  Start with
+the review process.  AI: staff to attempt this, staff to decide whom.
 
 
 Agenda for the next meeting:
 
-TBC
+* Discuss shorter release times and how to achieve them (time based vs feature
+based)
+* Discuss design process if not ready for voting
+* Discuss review process
+* OTC hold reviewing
+* Do we want to restart the GH items review in this or that form?
+* Can we do anything with file load performance regression
+* Coverage discussion (Shane)
+* Allocation of tasks to staff
+* Agree agenda for next meeting
+* AOB
