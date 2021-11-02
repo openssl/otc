@@ -34,6 +34,30 @@ accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
   Nicola     [  ]
 
 ----------------
+topic: Accept openssl/technical-policies PR#1 - the policy change
+       process proposal as of commit 3bccdf6. This will become an official OTC
+       policy.
+comment: This will implement the formal policy change process so we can
+         introduce and amend further policies as set by OTC via a public
+         process.
+Proposed by Tomáš Mráz
+Public: yes
+opened: 2021-11-01
+closed: 2021-mm-dd
+accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
+
+   Dmitry     [+1]
+   Matt       [+1]
+   Pauli      [+1]
+   Tim        [+1]
+   Richard    [  ]
+   Shane      [+1]
+   Tomas      [+1]
+   Kurt       [  ]
+   Matthias   [  ]
+   Nicola     [  ]
+
+----------------
 topic: Accept PR#16725 as a bug fix for backport into 3.0 subject to the normal
        review process
 Proposed by Matt Caswell
