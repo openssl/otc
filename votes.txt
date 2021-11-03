@@ -43,19 +43,19 @@ comment: This will implement the formal policy change process so we can
 Proposed by Tomáš Mráz
 Public: yes
 opened: 2021-11-01
-closed: 2021-mm-dd
-accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
+closed: 2021-11-03
+accepted:  yes  (for: 9, against: 0, abstained: 0, not voted: 1)
 
    Dmitry     [+1]
    Matt       [+1]
    Pauli      [+1]
    Tim        [+1]
-   Richard    [  ]
+   Richard    [+1]
    Shane      [+1]
    Tomas      [+1]
    Kurt       [  ]
-   Matthias   [  ]
-   Nicola     [  ]
+   Matthias   [+1]
+   Nicola     [+1]
 
 ----------------
 topic: Accept PR#16725 as a bug fix for backport into 3.0 subject to the normal
