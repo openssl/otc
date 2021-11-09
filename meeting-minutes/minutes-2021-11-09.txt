@@ -1,0 +1,88 @@
+Meeting Date: 2021-11-09
+Minutes taken by: Matt
+Attendees:
+    Matt Caswell
+    Matthias St Pierre
+    Nicola Tuveri
+    Paul Dale
+    Tomáš Mráz
+    Richard Levitte
+    Dmitry Belyavsky
+    Tim Hudson [25 minutes late]
+
+Agenda:
+* Nominate a minute taker and confirm agenda
+* Agree minutes from previous meeting
+* Discuss design process if not ready for voting
+* Discuss voting process
+* Do we want to restart the GH items review in this or that form?
+* OTC hold reviewing
+* Discuss shorter release times and how to achieve them (time based vs feature
+based)
+* Discuss review process
+* Can we do anything with file load performance regression
+* Allocation of tasks to staff
+* Agree agenda for next meeting
+* AOB
+
+Matt was agreed to be the minutes taker.
+
+Agenda was confirmed.  Proposed: Matt Seconded: Nicola
+
+Last week minutes were approved.  Proposed: Nicola Seconded: Matthias
+
+Matt outlined the changes that have been made to the design process since
+last week. Matthias asked a general question about what the purpose of all our
+policies. The process has not yet been open for 2 weeks.
+
+AI: Matt to start the vote to agree the design policy once 2 weeks has elapsed
+since the PR was opened
+
+Tim suggested that writing a blog post about the policy change process
+
+AI: Tomas to write a blog post
+
+Tomas presented the public voting procedure of OTC proposal.
+
+Matthias asked a question about the location of where meeting minutes for this
+meeting are held. They are held in the otc repository.
+
+Tomas proposed this vote text: Accept openssl/technical-policies PR#2 - The
+Public Voting Procedure of OTC as of commit  5740178. This will become an
+official OTC policy.
+
+The proposed vote was held, closed and passed.
+
+A discussion was held about what issues/PRs should be reviewed in OTC meetings.
+
+We will review OTC holds that are of the type "is this a bug fix" or "is this a
+candidate for backport to a stable release"? Time boxed to 20 minute. Proposed
+by Tomas. Tim seconds.
+
+The OTC holds were reviewed.
+
+Discussion held about the preference between time based releases vs feature
+based released. The OMC requirements state the MVP as a firm requirement for
+3.1. The 6 month release cadence is stated as an objective, not a firm
+requirement.
+
+Matt proposed that the staff members work on a plan for the steps we need to
+take to get an estimate of the MVP.
+
+Proposal is "Staff members to produce a draft plan for estimating the MVP for
+discussion at the next OTC meeting. OTC requests that the OMC allocate
+sufficient resources to meet this objective." Proposed by Tim. Seconded by Matt,
+Nicola.
+
+Agenda for the next meeting:
+
+* Nominate a minute taker and confirm agenda
+* Agree minutes from previous meeting
+* Review the staff plan for estimating MVP
+* OTC hold reviews (20 minutes)
+* Coverage discussion (Shane)
+* Discuss review process
+* Can we do anything with file load performance regression
+* Allocation of tasks to staff
+* Agree agenda for next meeting
+* AOB
