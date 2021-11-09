@@ -1,3 +1,7 @@
+# This file is obsolete as of 2021-11-09 as we use the new voting process
+# according to
+# https://github.com/openssl/technical-policies/blob/master/policies/voting-procedure.md
+#
 # A record of formal votes in reverse chronological order.
 #
 # To vote, add one of the following entries next to your name:
@@ -32,6 +36,30 @@ accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
   Kurt       [  ]
   Matthias   [  ]
   Nicola     [  ]
+
+----------------
+topic: Accept openssl/technical-policies PR#2 - the policy change
+       process proposal as of commit 5740178. This will become an official OTC
+       policy.
+comment: This changes the voting procedure for public OTC votes to use the
+         pull requests and issues on the openssl/technical-policies repository
+         instead of the openssl-project mailing list.
+Proposed by Tomáš Mráz
+Public: yes
+opened: 2021-11-09
+closed: 2021-11-09
+accepted:  yes  (for: 8, against: 0, abstained: 0, not voted: 2)
+
+  Dmitry     [+1]
+  Matt       [+1]
+  Pauli      [+1]
+  Tim        [+1]
+  Richard    [+1]
+  Shane      [  ]
+  Tomas      [+1]
+  Kurt       [  ]
+  Matthias   [+1]
+  Nicola     [+1]
 
 ----------------
 topic: Accept openssl/technical-policies PR#1 - the policy change
