@@ -27,9 +27,9 @@ based)
 
 Matt was agreed to be the minutes taker.
 
-Agenda was confirmed.  Proposed: Matt Seconded: Nicola
+Agenda was confirmed.  Proposed: Matt, Seconded: Nicola
 
-Last week minutes were approved.  Proposed: Nicola Seconded: Matthias
+Last week minutes were approved. Proposed: Nicola Seconded: Matthias
 
 Matt outlined the changes that have been made to the design process since
 last week. Matthias asked a general question about what the purpose of all our
@@ -38,7 +38,7 @@ policies. The process has not yet been open for 2 weeks.
 AI: Matt to start the vote to agree the design policy once 2 weeks has elapsed
 since the PR was opened
 
-Tim suggested that writing a blog post about the policy change process
+Tim suggested writing a blog post about the policy change process
 
 AI: Tomas to write a blog post
 
@@ -56,7 +56,7 @@ The proposed vote was held, closed and passed.
 A discussion was held about what issues/PRs should be reviewed in OTC meetings.
 
 We will review OTC holds that are of the type "is this a bug fix" or "is this a
-candidate for backport to a stable release"? Time boxed to 20 minute. Proposed
+candidate for backport to a stable release"? Time boxed to 20 minutes. Proposed
 by Tomas. Tim seconds.
 
 The OTC holds were reviewed.
