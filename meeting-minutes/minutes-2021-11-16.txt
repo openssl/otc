@@ -1,0 +1,147 @@
+Meeting Date: 2021-11-16
+Minutes taken by: Pauli
+Attendees:
+    Matt Caswell
+    Paul Dale
+    Dmitry Belyavsky
+    Tim Hudson
+    Richard Levitte
+    Matthias St Pierre
+    Tomáš Mráz
+    Nicola Tuveri
+
+Apology from Shane.
+
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * OTC hold reviews (20 minutes)
+    * Review oustanding actions
+    * OMC request for 3.1 release in six months
+    * Review the staff plan for estimating MVP
+    * Stable updates policy discussion
+    * Discuss review process
+    * Allocation of tasks to staff
+    * Agree agenda for next meeting
+    * AOB
+
+
+Pauli was agreed to be the minutes taker.
+
+
+** Last week minutes were approved. Proposed: Matt, seconded: Pauli
+
+
+OTC hold reviews (20 minutes)
+
+    #17003 Changing EVP_PKEY_base_id to a macro breaks applications not updated for OpenSSL 3.0.0
+    #16989 EC keys: i2d_PublicKey and d2i_PublicKey not working as expected
+    #16896 d2i_KeyParams(EVP_PKEY_DHX, ...) creates pkey that you can't get p/g/q from
+    #16998 Add error handling to x509_v3_set_ctx and x509_v3_set_nconf
+    #16928 md5: add assembly implementation for aarch64
+
+
+Outstanding actions
+
+    AI: Matt to start the vote to agree the design policy once 2 weeks
+        has elapsed since the PR was opened [not started yet]
+
+    AI: Tomas to write a blog post [done]
+
+
+OMC request for 3.1 release in six months
+
+    Does the OTC have questions about the requirements?
+
+    Discussion about the six month time line that's a rehash of the previous
+    discussion.
+
+    Identify design team: who outside of staff have time to produce a
+    design Tim can review but can't participate in the design process
+    itself.  Staff to be on the design team this is more than 10%
+    and would require OMC approval.  OTC memembers who aren't staff
+    aren't going to have time to contribute to the design process.
+    Concerns about low level network experience in group.
+
+**  OTC: ask OMC to allocate as much staff time as possible to this task.
+    Proposed: Tim, seconded: Matt, Richard.
+
+    The possibility of external people raised.  Concerns about low level
+    network knowledge.  Third party input would be useful a little later
+    down the line.  Should we set up a design workshop (say mid Decemeber)?
+    Any such workshop, if it happens, would be invite only.  By the 7th of
+    December we should have a much better idea about what is required.  We
+    need to do the initial estimation work to have a clue of the scope.
+
+    OTC to plan for a workshop and to approach interested parties.  January
+    seems most likely but December would be much better from a time line
+    perspective.
+
+**  OTC: staff are the initial design team.  Proposed: Matt, seconded: Tim.
+
+
+Review the staff plan for estimating MVP
+
+    Needs a section about how it meets the requirements.
+
+    Section 2 needs to be priority ordered.  E.g. QUIC API broken up into
+    more and smaller bits.
+
+    Organise two design meetings later this week.
+
+    Lots of process and procedural discussions.
+
+
+Allocation of tasks to staff
+    OTC asks staff to propose a plan for these two items:
+        i2d d2i public key
+        file load performance issue
+    Proposed: Tim, seconded: Tomas.
+
+
+Discuss review process
+
+    Matt needs to make changes based on Kurt's comments.  Then ready for a
+    vote.
+
+    Discuss each of Kurt's comments in turn.
+
+
+Agree agenda for next meeting
+
+    See below.
+
+
+New and carried over actions
+
+    AI: Matt to start the vote to agree the design policy once 2 weeks has
+        elapsed since the PR was opened
+
+    AI: Tomas draft policy over function signature changes
+            void -> int returns
+            constification
+
+    AI: Matt draft policy about improved assembler implementations and what
+        releases are acceptable.
+
+    AI: Richard to make OTC repo in GHE that can at least track issues.
+        create issues for other outstanding OTC AIs.
+
+    AI: OTC to ask OMC for time for design work.
+
+
+Agenda for the next meeting:
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review oustanding actions
+    * Coverage discussion (Shane) delayed until the 30th November
+    * Can we do anything with file load performance regression
+    * How to handle substantial feature contributions from the community that
+      have been stalled/pending for ages
+    * Allocation of tasks to staff
+    * Stable updates policy discussion
+    * Discuss review process
+    * Agree agenda for next meeting
+    * AOB
