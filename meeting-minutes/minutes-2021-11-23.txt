@@ -1,0 +1,141 @@
+Meeting Date: 2021-11-23
+Minutes taken by: Richard
+Attendees:
+    Matt Caswell
+    Paul Dale
+    Dmitry Belyavsky
+    Tim Hudson
+    Richard Levitte
+    Matthias St Pierre
+    Tomáš Mráz
+    Nicola Tuveri
+
+[Shane on holiday]
+
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Review OTC holds
+    * Presentation of QUIC design discussions by staff members
+    * Quick discussion about upcoming stable release updates (1.1.1m & 3.0.1)
+    * Can we do anything with file load performance regression
+    * How to handle substantial feature contributions from the community that
+      have been stalled/pending for ages
+    * Allocation of tasks to staff
+    * Stable updates policy discussion
+    * Discuss review process
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Richard has been volunteered to take the minutes
+
+** Agree minutes from previous meeting
+
+Last week minutes were approved.
+Proposed: Matt, seconded: Pauli
+
+** OTC holds [timeboxed 20 minutes]
+
+3.0.1 ETA: to be released 14th December.
+Proposed: Matt, seconded: Tim
+
+Fix OSSL_PARAM_allocate_from_text() to do sign extension: It’s
+determined to be a bug fix.
+Proposed: Richard, seconded: Matt
+
+Make OSSL_PARAM_push_BN{,_pad}() return an error on negative numbers:
+Lift the hold on this PR, let it merge.
+Proposed: Matt, seconded: Tomáš 
+
+** Presentation of QUIC design discussions by staff members
+
+Staff reports having discussed a large scope design for the QUIC MVP
+and further
+https://docs.google.com/document/d/1mrI5J6XlIpvHoZTtVi4SIZIwjAxO9xL25i8GsGIT5EA/edit#
+
+This document is work in progress.  Workshops have happened last
+Thursday, Friday and yesterday (Monday).  OTC opinions and comments
+are encouraged.
+
+Nicola pointed out that this link should be sent to the OTC mailing
+list.  AI: Matt to send that email.
+
+** Quick discussion about upcoming stable release updates (1.1.1m & 3.0.1)
+
+Proposed release date: 14th December.
+Proposed: Tim, seconded: Dmitry
+
+** Outstanding actions from last week
+
+    AI: Matt to start the vote to agree the design policy once 2 weeks has
+        elapsed since the PR was opened
+
+        [not yet done]
+
+    AI: Tomáš draft policy over function signature changes
+            void -> int returns
+            constification
+
+        [not yet done]
+
+    AI: Matt draft policy about improved assembler implementations and what
+        releases are acceptable.
+
+        https://github.com/openssl/technical-policies/pull/9
+
+        [DONE]
+
+    AI: Richard to make OTC repo in GHE that can at least track issues.
+        create issues for other outstanding OTC AIs.
+
+        [DONE]
+
+    AI: OTC to ask OMC for time for design work.
+
+        [DONE]
+
+** Stable updates policy discussion
+
+    AI: Tomáš to start the vote for accepting the stable release policy
+        https://github.com/openssl/technical-policies/pull/8
+
+** Allocation of tasks to staff
+
+The 10% staff time slot will be spent on the action items mentioned
+here. If there’s any time left from that slot, add it to design work.
+Proposed: Matt, seconded: Tim
+
+----------------------------------------------------------------------
+
+New and carried over action items [transported from above]:
+
+    AI: Matt to send email to OTC mailing list regarding the QUIC
+        design document.
+
+    AI: Matt to start the vote to agree the design policy once 2 weeks has
+        elapsed since the PR was opened
+
+    AI: Tomáš draft policy over function signature changes
+            void -> int returns
+            constification
+
+    AI: Tomáš to start the vote for accepting the stable release policy
+        https://github.com/openssl/technical-policies/pull/8
+
+Agenda for next week:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Coverage discussion (Shane) delayed until the 30th November
+    * Can we do anything with file load performance regression
+    * How to handle substantial feature contributions from the community that
+      have been stalled/pending for ages
+    * Allocation of tasks to staff
+    * Discuss review process
+    * Agree agenda for next meeting
+    * AOB
+
