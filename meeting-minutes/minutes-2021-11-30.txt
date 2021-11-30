@@ -1,0 +1,177 @@
+Meeting Date: 2021-11-30
+Minutes taken by: Tomas
+Attendees:
+    Matt Caswell
+    Paul Dale
+    Dmitry Belyavsky
+    Tim Hudson
+    Richard Levitte
+    Matthias St Pierre
+    Tomáš Mráz
+    Shane Lontis
+
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Discuss the OMC response to release requirements (5 minutes)
+    * Review issues with OTC hold (20 minutes)
+    * QUIC API and event loop design choices
+    * How to handle substantial feature contributions from the community that
+      have been stalled/pending for ages
+    * Coverage discussion
+    * Can we do anything with file load performance regression
+    * Allocation of tasks to staff
+    * Discuss review process
+    * Agree agenda for next meeting
+    * AOB
+
+
+** Nominate a minute taker and confirm agenda
+
+Tomas has been volunteered to take the minutes
+
+Agenda for the meeting agreed. Proposed: Matt, seconded: Tim
+
+
+** Agree minutes from previous meeting
+
+Last week minutes were approved.
+Proposed: Matt, seconded: Tomas
+
+
+** Review outstanding actions
+
+    AI: Matt to send email to OTC mailing list regarding the QUIC
+        design document.
+    [done]
+
+    AI: Matt to start the vote to agree the design policy once 2 weeks has
+        elapsed since the PR was opened
+    [done]
+
+    AI: Tomáš draft policy over function signature changes
+            void -> int returns
+            constification
+    [done]
+
+    AI: Tomáš to start the vote for accepting the stable release policy
+        https://github.com/openssl/technical-policies/pull/8
+    [done]
+
+
+** Discuss the OMC response to release requirements (5 minutes)
+
+Tim asked if OTC agrees that the OTC question to OMC was answered by the blog
+post.
+https://www.openssl.org/blog/blog/2021/11/25/openssl-update/
+
+OTC requests that the OMC provides the OTC with advance notice of future
+release requirements and policy updates to allow the OTC to comment (or at
+least be aware of updates) before they are public.
+
+Proposed: Tim, Seconded: Matt, Matthias
+
+AI: Matthias to e-mail the request to OMC.
+
+
+** OTC holds [timeboxed 20 minutes]
+
+- TEST: Enable and fix test_bn2padded() in test/bntest.c
+
+As the test was present just not enabled, we allow this to be backported to
+stable branches.
+
+- Increment the OSSL_DYNAMIC_VERSION
+
+We should not merge this to 3.0 as that breaks engines compiled against 3.0.0.
+It has to go in 4.0 at the earliest.
+
+
+** QUIC API and event loop design choices
+
+The QUIC design team prepared design choices on QUIC API and on the event loop.
+
+https://docs.google.com/document/d/1mrI5J6XlIpvHoZTtVi4SIZIwjAxO9xL25i8GsGIT5EA/edit
+
+Matt suggests to create PRs for both of these subproblem areas with design
+choices.
+
+Tim suggested we need a blog post announcing the PRs for the community to know
+about we are using the new design process.
+
+AI: Staff to create the PRs for the design choices on QUIC API and on the event
+loop.
+
+AI: Staff to create a blog post to announce these PRs to get community input on
+them.
+
+Matthias asked for more details about pros and cons of the design choices
+presented in the document.
+
+
+** How to handle substantial feature contributions from the community that
+   have been stalled/pending for ages
+
+Should OTC and/or OMC explicitly approve large features before they are
+accepted? Or can it just follow the normal review process without needing any
+extra approval.
+
+How do we find out if any feature is important to broad community, not just the
+contributor who contributed the PR.
+
+We do not have any way to objectively measure the interest of the broad
+community.
+
+OTC could pre-select PRs that are sufficiently complex to need OMC decision
+on whether the paid resources should spend time on reviewing them and accept
+them into a release.
+
+How do we identify those PRs?
+
+We need to have a new label to mark these PRs - 'hold: substantial feature'
+
+AI: Tomas to create the label and put it on PRs previously identified by Nicola.
+
+AI: Everyone to put the label on any other substantial feature PRs.
+
+
+** Allocation of tasks to staff
+
+Staff to continue the QUIC design work.
+Proposed: Matt, seconded: Richard
+
+
+** New and carried over action items [transported from above]:
+
+OTC requests that the OMC provides the OTC with advance notice of future
+release requirements and policy updates to allow the OTC to comment (or at
+least be aware of updates) before they are public.
+AI: Matthias to e-mail the request to OMC.
+
+AI: Staff to create the PRs for the design choices on QUIC API and on the event
+loop.
+
+AI: Staff to create a blog post to announce these PRs to get community input on
+them.
+
+AI: Tomas to create the label and put it on PRs previously identified by Nicola.
+
+AI: Everyone to put the label on any other substantial feature PRs.
+
+
+** Agenda for next week:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Review issues with OTC hold (20 minutes)
+    * QUIC API and event loop design choices
+    * Coverage discussion
+    * Review the hold: substantial feature PRs
+    * Can we do anything with file load performance regression
+    * Discuss review process
+    * Allocation of tasks to staff
+    * Agree agenda for next meeting
+    * AOB
+
