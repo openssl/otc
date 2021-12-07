@@ -1,0 +1,147 @@
+Meeting Date: 2021-12-07
+Minutes taken by: Matt
+Attendees:
+    Matt Caswell
+    Paul Dale
+    Dmitry Belyavsky
+    Tim Hudson
+    Richard Levitte
+    Matthias St Pierre
+    Tomáš Mráz
+    Shane Lontis
+
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Review issues with OTC hold (20 minutes)
+    * Coverage discussion
+    * Can we do anything with file load performance regression
+    * QUIC API and event loop design choices
+    * Review the hold: substantial feature PRs
+    * Review draft technical policies
+    * Allocation of tasks to staff
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Matt has been volunteered to take the minutes
+
+Agenda for the meeting agreed. Proposed: Tim, seconded: Matthias, Pauli
+
+
+** Agree minutes from previous meeting
+
+Last week minutes were approved.
+Proposed: Richard, seconded: Tomas
+
+** Review outstanding actions
+
+OTC requests that the OMC provides the OTC with advance notice of future
+release requirements and policy updates to allow the OTC to comment (or at
+least be aware of updates) before they are public.
+AI: Matthias to e-mail the request to OMC.
+[done]
+
+AI: Staff to create the PRs for the design choices on QUIC API and on the event
+loop.
+[done]
+
+AI: Staff to create a blog post to announce these PRs to get community input on
+them.
+[done]
+
+AI: Tomas to create the label and put it on PRs previously identified by Nicola.
+[done]
+
+AI: Everyone to put the label on any other substantial feature PRs.
+
+
+** Review issues with OTC hold (20 minutes)
+
+PR16450: Not a bug fix so not elgibile for backport to 3.0
+
+PR16705: Vote held, this can be backported to 3.0
+
+
+** Coverage discussion
+
+Shane stated that PRs are going in without having associated tests. Some
+discussion around how we could test malloc failures to increase coverage.
+PRs should have tests, including PR16705.
+
+Shane asked is it possible to run the coverage so that it doesn't take an hour.
+
+Tim asked is there something that we could do to get better coverage feedback,
+e.g. per PR.
+
+AI: Matt to write a draft test policy
+
+** Can we do anything with file load performance regression
+
+Dmitry stated that file load performance has regressed since 1.1.1 due to
+having a more generic architecture and design.
+
+Some discussion about having automated performance testing.
+
+We have some things that we could measure now (e.g. openssl speed). We should
+start doing this.
+
+AI: Matt to include in the draft test policy some identification of components
+that we should automatically measure performance of
+
+AI: Design team to start collecting technical requirements document - including
+quic performance
+
+
+** QUIC API and event loop design choices
+
+OTC require there to be an external event loop, and it must be part of the MVP.
+We may add our own event loop at some later time, but it is not a requirement
+for MVP. Blocking and non-blocking support are required for MVP.
+
+Can we make the simplifying assumption that threads are required for QUIC, i.e.
+QUIC won't work on a no-threads platform?
+
+The above items should be captured in the design documents for public feedback.
+
+
+** Allocation of tasks to staff
+
+Perform actions as identified above. Remaining time to be spent on design.
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Review issues with OTC hold (20 minutes)
+    * Review draft technical policies
+    * Review the hold: substantial feature PRs
+    * QUIC API and event loop design choices
+    * Allocation of tasks to staff
+    * Agree agenda for next meeting
+    * AOB
+
+** AOB
+
+Matthias mentioned comments by simo5 in the event loop PR. Matt to capture the
+second two points in the design document.
+
+No OTC meeting on 21st + 28th December, and 4th January
+
+14th December to be a 3 hour meeting
+
+** New and carried over action items [transported from above]:
+
+AI: Everyone to put the label on any other substantial feature PRs.
+
+AI: Matt to write a draft test policy
+
+AI: Matt to include in the draft test policy some identification of components
+that we should automatically measure performance of
+
+AI: Design team to start collecting technical requirements document - including
+quic performance
