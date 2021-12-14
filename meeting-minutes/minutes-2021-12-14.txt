@@ -1,0 +1,175 @@
+Meeting Date: 2021-12-14
+Minutes taken by: Richard
+Attendees:
+    Matt Caswell
+    Paul Dale
+    Dmitry Belyavsky
+    Tim Hudson
+    Richard Levitte
+    Nicola Tuveri
+    Tomáš Mráz
+    Shane Lontis
+    Kurt Roeckx
+    Matthias St Pierre
+
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Review the hold: substantial feature PRs (20 minutes)
+    * QUIC API and event loop design choices
+    * Allocation of tasks to staff
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Richard has been volunteered to take the minutes
+Proposed: Tim, seconded: Matt & Co
+
+Agenda for the meeting agreed. Proposed: Tomáš, seconded: Matt
+
+** Agree minutes from previous meeting
+
+Last week minutes were approved.
+Proposed: Matt, seconded: Richard
+
+** Review outstanding actions
+
+AI: Everyone to put the label on any other substantial feature PRs.
+[assumed done]
+
+AI: Matt to write a draft test policy
+[done]
+
+AI: Matt to include in the draft test policy some identification of components
+that we should automatically measure performance of
+[done] (Matt comments that file loading performance isn’t included)
+
+AI: Design team to start collecting technical requirements document - including
+quic performance
+[in progress] (needs converting to markdown and placed in the appropriate repository)
+
+** Review issues with OTC hold (30 minutes)
+
+PR #16770:
+AI: Tomáš to raise a vote for backporting (cherry-picking) PR #16770 into 3.0
+
+PR #16923: milestone set to 4.0, hold removed.
+
+PR #17022: not a bug fix, so master only.
+
+PR #17050: not a bug fix, already merged to master.
+
+PR #17088: hold removed, milestone already set to 4.0.
+
+PR #17163: decision post-poned, we’d like to see an alternative proposal.
+
+PR #17207: remove hold, it should just go in when CI tests pass.
+
+** Review draft technical policies
+
+PR #9: Voting concluding today
+
+PR #7: Everyone should have another look.
+
+PR #10: Voting started
+
+PR #13: Everyone should have another look.
+
+Issue #4: PR welcome!
+
+Issue #5:
+AI: staff writes a documentation policy
+
+Issue #6:
+AI: Paul to submit a PR that moves the coding style to technical-policies
+AI: Matthias to submit a PR to change of https://www.openssl.org/policies/otc-policies.html
+AI: OTC (via Matthias) to ask OMC, what existing website policies or parts thereof are owned by OMC and what parts are owned by OTC
+
+Issue #11: Skipped in this meeting
+
+** Review the hold: substantial feature PRs (20 minutes)
+
+PR #8962: Hold removed, resume normal review process
+
+PR #9155: Added OMC hold
+
+PR #9223: Hold removed, resume normal review process
+
+PR #12255: Added OMC hold
+
+PR #12256: Added OMC hold
+
+PR #13817: Dropped substantial hold, Added OTC hold
+
+PR #15857: Added OMC hold
+
+PR #15916: Hold removed.
+AI: Richard to eyeball it
+
+PR #16620: Added OMC hold
+
+PR #16637: Dropped hold
+AI: Tomáš to do a formal final review
+
+PR #16854: Dropped hold
+AI: Tomáš to do a formal final review
+
+PR #16928: Added OMC hold
+
+PR #17172: No change, ongoing development
+
+** QUIC API and event loop design choices
+
+Skipped because time
+
+** Allocation of tasks to staff
+
+Skipped because time
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Review the hold: substantial feature PRs (20 minutes)
+    * QUIC API and event loop design choices
+    * Allocation of tasks to staff
+    * Agree agenda for next meeting
+    * AOB
+
+** AOB
+
+No OTC meeting on 21st + 28th December, and 4th January
+
+** New and carried over action items [transported from above]:
+
+AI: Design team to start collecting technical requirements document - including
+quic performance
+[in progress] (needs converting to markdown and placed in the appropriate repository)
+
+AI: Tomáš to raise a vote for backporting (cherry-picking) PR #16770 into 3.0
+
+Technical-policies issue #5:
+AI: staff writes a documentation policy
+
+Technical-policies issue #6:
+AI: Paul to submit a PR that moves the coding style to technical-policies
+AI: Matthias to submit a PR to change of https://www.openssl.org/policies/otc-policies.html
+AI: OTC (via Matthias) to ask OMC, what existing website policies or parts thereof are owned by OMC and what parts are owned by OTC
+
+PR #15916: Hold removed.
+AI: Richard to eyeball it
+
+PR #16637: Dropped hold
+AI: Tomáš to do a formal final review
+
+PR #16854: Dropped hold
+AI: Tomáš to do a formal final review
+
