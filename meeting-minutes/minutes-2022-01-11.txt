@@ -1,0 +1,154 @@
+Meeting Date: 2022-01-11
+Minutes taken by: Matt
+Attendees:
+    Matt Caswell
+    Dmitry Belyavsky
+    Tim Hudson
+    Richard Levitte
+    Tomáš Mráz
+    Matthias St Pierre
+    Shane Lontis
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Review the hold: substantial feature PRs (20 minutes)
+    * Allocation of tasks to staff
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Matt has been volunteered to take the minutes
+Proposed: Tim, seconded: Matthias
+
+Agenda for the meeting agreed. Proposed: Tomáš, seconded: Tim
+
+** Agree minutes from previous meeting
+
+Last week minutes were approved.
+Proposed: Richard, seconded: Matt
+
+** Review outstanding actions
+
+AI: Design team to start collecting technical requirements document - including
+quic performance
+[in progress] (needs converting to markdown and placed in the appropriate repository)
+
+AI: Tomáš to raise a vote for backporting (cherry-picking) PR #16770 into 3.0
+Closed, completed (no vote was required)
+
+Technical-policies issue #5:
+AI: staff writes a documentation policy
+In progress
+
+Technical-policies issue #6:
+AI: Paul to submit a PR that moves the coding style to technical-policies
+Closed, completed (see PR#16)
+
+AI: Matthias to submit a PR to change of https://www.openssl.org/policies/otc-policies.html
+In progress
+
+AI: OTC (via Matthias) to ask OMC, what existing website policies or parts thereof are owned by OMC and what parts are owned by OTC
+Closed, completed
+
+PR #15916: Hold removed.
+AI: Richard to eyeball it
+In progress
+
+PR #16637: Dropped hold
+AI: Tomáš to do a formal final review
+Closed, completed
+
+PR #16854: Dropped hold
+AI: Tomáš to do a formal final review
+Closed, completed
+
+** Review issues with OTC hold (30 minutes)
+
+PR #13817: To be discussed next week
+AI: Tomáš to present to OTC
+
+PR #17163/PR #17281: Pauli is not present so defer the discussion
+
+PR #17328: No decision to be made at this point.
+
+PR #17336: This PR has breaking changes which are unacceptable for the 3 series.
+Adding a -quiet flag which just suppresses verbose output would be acceptable
+
+PR #17345: This PR can go ahead. Another issue needs to be raised for the larger
+atexit problem
+AI: Richard to raise an issue for the larger atexit problem
+
+PR #17349: The documentation should be changed to match the code in all branches.
+PR #17349 can now be closed.
+
+Issue #17374: We will not change the default cipher list at this time - issue to
+be closed.
+
+** Review draft technical policies
+
+AI: PR #16: Tomáš to start the vote
+
+AI: PR #13: Matt to respond to the feedback
+
+PR #7: To be discussed at next week's OTC meeting
+
+** Review the hold: substantial feature PRs (20 minutes)
+
+PR#16928: We would accept external review of the assembler code. If such a
+reviewer comes forward then this is not considered "substantial"
+
+** Allocation of tasks to staff
+
+Complete action items as above, plus QUIC design.
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Review the hold: substantial feature PRs (20 minutes)
+    * Review PR 13817
+    * Discuss the proposed Branch Policy (technical policy PR #7)
+    * Allocation of tasks to staff
+    * Agree agenda for next meeting
+    * AOB
+
+** AOB
+
+A discussion was held about a potential security issue. No CVE assigned and it
+can be disclosed publicly.
+
+A question was asked about adding extra tests and associated fixes for the
+TLSFuzzer external tests. This will be handled via the normal review process.
+
+A discussion was held about a potential future submission of new TLSv1.3 GOST
+ciphersuites. Previous discussions with Richard suggested there could be a
+provider side deficiency that could prevent this.
+AI: Richard to check his notes and confirm if there is a potential issue
+
+** New and carried over action items [transported from above]:
+
+AI: Design team to start collecting technical requirements document - including
+quic performance (needs converting to markdown and placed in the appropriate
+repository)
+
+AI: staff to write a documentation policy
+
+AI: Matthias to submit a PR to change of https://www.openssl.org/policies/otc-policies.html
+
+AI: Richard to eyeball PR #15916 following hold removal
+
+AI: Tomáš to present PR#13817 to OTC
+
+AI: Richard to raise an issue for the atexit problem
+
+AI: Technical Policies PR #16: Tomáš to start the vote
+
+AI: Techncial Policies PR #13: Matt to respond to the feedback
