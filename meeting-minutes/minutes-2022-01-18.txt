@@ -1,0 +1,143 @@
+Meeting Date: 2022-01-18
+Minutes taken by: Tomáš
+Attendees:
+    Matt Caswell
+    Dmitry Belyavsky
+    Tim Hudson
+    Richard Levitte
+    Tomáš Mráz
+    Matthias St Pierre
+    Paul Dale
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Review the hold: substantial feature PRs (20 minutes)
+    * Discuss the proof of concept for QUIC API proposal
+    * Review PR 13817
+    * Discuss the proposed Branch Policy (technical policy PR #7)
+    * Allocation of tasks to staff
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Tomáš has been volunteered to take the minutes
+Proposed: Matt, seconded: Matthias
+
+Agenda for the meeting agreed. Proposed: Tomáš, seconded: Tim
+
+** Agree minutes from previous meeting
+
+Last week minutes were approved.
+Proposed: Matt, seconded: Tim
+
+** Review outstanding actions
+
+AI: Design team to start collecting technical requirements document - including
+quic performance (needs converting to markdown and placed in the appropriate
+repository)
+- Done by Matt, sent to the OTC mailing list
+
+AI: staff to write a documentation policy
+- Done by Paul, technical-policies PR#18
+
+AI: Matthias to submit a PR to change of https://www.openssl.org/policies/otc-policies.html
+- Carried over to next week
+
+AI: Richard to eyeball PR #15916 following hold removal
+- Carried over to next week
+
+AI: Tomáš to present PR#13817 to OTC
+- Should be done by end of this mtg
+
+AI: Richard to raise an issue for the atexit problem
+- Raised issue #17469
+
+AI: Technical Policies PR #16: Tomáš to start the vote
+- Done
+
+AI: Technical Policies PR #13: Matt to respond to the feedback
+- Done
+
+** Review issues with OTC hold (30 minutes)
+
+PR#17163 and PR#17281: Closed both as caching the value would be better solution.
+AI: Paul to try the caching as a new PR
+
+PR#17408: Treat #16912 as a documentation issue instead. We can add a new
+function to perform the stricter import, e.g. EVP_PKEY_fromdata_ex().
+
+** Review draft technical policies
+
+PR #13: Matt responded to the feedback. Tim had further comments.
+AI: Matt to respond again.
+
+PR #17: Minor tweak to the voting policy. The vote will start once the 2 week
+waiting period elapses.
+
+** Review the hold: substantial feature PRs (20 minutes)
+
+No new items.
+
+** Discuss the proof of concept for QUIC API proposal
+
+Tim proposed that the POC should include the compat layer for the existing SSL
+API.
+
+The POC will be timeboxed to 2 people for 4 calendar weeks (2 sprints).
+
+The POC document will be committed into the OTC repository.
+
+** Review PR 13817
+
+Not a bug. It can be merged to the master subject to a normal review process.
+Tim would like to see an EVP_PKEY flag to switch this off for compat reasons.
+
+** Discuss the proposed Branch Policy (technical policy PR #7)
+
+Postponed due to running out of time.
+
+** Allocation of tasks to staff
+
+Unchanged
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Review the hold: substantial feature PRs (20 minutes)
+    * Discuss the AES performance regression
+    * Discuss the Technical requirements document
+    * Discuss the Branch Policy proposal (technical policy PR #7)
+    * Discuss the removal of atexit calls
+    * Allocation of tasks to staff
+    * Agree agenda for next meeting
+    * AOB
+
+** AOB
+
+AES performance regression put on the next week agenda.
+
+** New and carried over action items [transported from above]:
+
+AI: Matt to put the technical requirements document into a PR against the main
+openssl repository
+
+AI: Matthias to submit a PR to change of https://www.openssl.org/policies/otc-policies.html
+
+AI: Richard to eyeball PR #15916 following hold removal
+
+AI: Paul to create a PR for caching the most often used EVP_CIPHER_CTX and
+EVP_MD_CTX getters.
+
+AI: Staff to think about and eventually add testing of 3.0 FIPS provider against
+master libcrypto and master FIPS provider against the 3.0 libcrypto.
+
+AI: Matt to respond to the additional feedback on techical-policies PR#13
