@@ -1,0 +1,180 @@
+Meeting Date: 2022-01-25
+Minutes taken by: Pauli
+Attendees:
+    Matt Caswell
+    Dmitry Belyavsky
+    Tim Hudson
+    Richard Levitte
+    Tomáš Mráz
+    Shane Lontis
+    Paul Dale
+    Nicola Tuveri
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Discuss the AES performance regression
+    * Discuss the removal of atexit calls
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Discuss the Branch Policy proposal (technical policy PR #7)
+    * PR #17162 signed bignum params
+    * Discuss the Technical requirements document
+    * Allocation of tasks to staff
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Pauli has been volunteered to take the minutes
+Proposed: Matt, seconded: Tomáš
+
+Agenda for the meeting agreed. Proposed: Tomáš, seconded: Tim
+
+** Agree minutes from previous meeting
+
+Last week minutes were approved.
+Proposed: Tomáš, seconded: Richard
+
+** Review outstanding actions
+
+AI: Matt to put the technical requirements document into a PR against the main
+openssl repository
+- Done
+
+AI: Matthias to submit a PR to change of https://www.openssl.org/policies/otc-policies.html
+- Not on call deferred
+
+AI: Richard to eyeball PR #15916 following hold removal
+- Not done yet
+
+AI: Paul to create a PR for caching the most often used EVP_CIPHER_CTX and
+EVP_MD_CTX getters.
+- In progress
+
+AI: Staff to think about and eventually add testing of 3.0 FIPS provider against
+master libcrypto and master FIPS provider against the 3.0 libcrypto.
+- Not started
+
+AI: Matt to respond to the additional feedback on techical-policies PR#13
+- Done
+
+** Discuss the AES performance regression
+
+Vote: OTC approves the OMC request for an exception to the stable release
+      policy to allow changing the default AES for no-asm builds from the
+      constant time one introduced in PR#10828 to the prior non-constant
+      time version.
+
+PR #16374: not for 3.0, should get a performance comparison before accepting.
+
+** Discuss the removal of atexit calls
+
+This has been there since 1.0.  Providers have made this tricky.
+There is a consensus that we should remove the atexit calls from 3.1.
+
+There is not a consensus for adopting this in 3.0 and 1.1.1.  This can be
+classified as a bug but the risk is large.  Users will see what appear to
+be memory leaks because they fail to call the new cleanup routine.  We
+want to see a solution before making a decision about backporting this.
+
+Long discussion as to the difficulties etc that surround this.
+- should libraries be pinned?
+- what should OPENSSL_INIT_NO_ATEXIT do?
+- Richard has done some in PR #17483
+
+** Review issues with OTC hold (30 minutes)
+
+#7130 Remove the NULL checks of function parameters
+- OTC needs a policy on this.  Traditionally not having them was not considered
+  a bug but having them wasn't mandated.  If there, they shouldn't be removed.
+- We're not suggesting that these should be backfitted, going forwards they
+  should be included in public API calls.
+- Over time we should aim to retrofit them.
+- AI: staff to raise PR update to coding style to include NULL argument
+      checking on public APIs.
+- AI: Tomáš merge coding style policy.
+- Closed
+
+#8208 Add X509_V_FLAG_NO_CHECK_SUBJECT and change default to be safe
+- Defer until next time.
+- AI: Tomáš to provide a summary for next meeting.
+
+#11310 Added signature length check for RSA PSS signature verification.
+- This is a breaking change, do we want to do it?  We're more lenient that
+  mandated.
+- Not a candidate for backporting.  Change is generally okay for 3.1,
+  however, it will need a changes entry and the error handling shouldn't
+  be perterbed as much as it has (do this during review).
+
+#17112 Prevent crash with engine using different openssl runtime
+- two changes: one change OPENSSL_init_crypto to have NO_ATEXIT, the other
+  prevents a crash.
+- Long discussion.  Richard wants to go further and ban engines linked
+  to different libcrypto.
+- Leave hold on this pending alternative.
+
+** Review draft technical policies
+
+#13 Testing policy
+- Updated yesterday, one question outstanding
+- OTC: no requirement, at this stage, for tests to go in at the same time as
+  the code changes.
+- AI: Matt start vote on testing policy
+
+#17 Voting policy update
+- AI: Matt start vote tomorrow
+
+#18 Documentation policy
+- Another week before vote, Matt wants another pass over it.
+
+** Discuss the proposed Branch Policy (technical policy PR #7)
+- Too late to discuss this, this will go early in the agenda next week.
+
+** PR #17162 signed bignum params
+- Signed bignums don't work well with params.
+- Disagreement about BNs being signed or unsigned integers.  We originally
+  specified them as unsigned but they are really signed.
+
+** Allocation of tasks to staff
+As before
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Discuss the Branch Policy proposal (technical policy PR #7)
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Discuss the Technical requirements document
+    * Allocation of tasks to staff
+    * Agree agenda for next meeting
+    * AOB
+
+** AOB
+
+
+** New and carried over action items [transported from above]:
+
+AI: Matthias to submit a PR to change of https://www.openssl.org/policies/otc-policies.html
+
+AI: Richard to eyeball PR #15916 following hold removal
+
+AI: Paul to create a PR for caching the most often used EVP_CIPHER_CTX and
+EVP_MD_CTX getters.
+
+AI: Staff to think about and eventually add testing of 3.0 FIPS provider against
+master libcrypto and master FIPS provider against the 3.0 libcrypto.
+
+AI: staff to raise PR update to coding style to include NULL argument
+    checking on public APIs.
+
+AI: Tomáš merge coding style policy.
+
+AI: Tomáš to provide a summary for next meeting.
+
+AI: Matt start vote on testing policy
+
+AI: Matt start vote tomorrow on voting policy update
