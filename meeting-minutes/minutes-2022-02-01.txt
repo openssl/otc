@@ -1,0 +1,151 @@
+Meeting Date: 2022-02-01
+Minutes taken by: Matt
+Attendees:
+    Matt Caswell
+    Dmitry Belyavsky
+    Tomáš Mráz
+    Shane Lontis
+    Paul Dale
+    Nicola Tuveri
+    Richard Levitte
+    Tim Hudson
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Discuss the Branch Policy proposal (technical policy PR #7)
+    * Review draft technical policies
+    * Discuss the Technical requirements document
+    * Review issues with OTC hold (30 minutes)
+    * Allocation of tasks to staff
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Matt has been volunteered to take the minutes
+Proposed: Matt, seconded: Tomáš
+
+Agenda for the meeting agreed. Proposed: Matt, seconded: Tomáš, Pauli
+
+** Agree minutes from previous meeting
+
+Last week minutes were approved.
+Proposed: Pauli, seconded: Matt
+
+** Review outstanding actions
+
+AI: Matthias to submit a PR to change https://www.openssl.org/policies/otc-policies.html
+    Carried over. Issue #3 in otc repository on GHE
+
+AI: Richard to eyeball PR #15916 following hold removal
+    Done
+
+AI: Paul to create a PR for caching the most often used EVP_CIPHER_CTX and
+EVP_MD_CTX getters.
+    Done - PR 17543
+
+AI: Staff to think about and eventually add testing of 3.0 FIPS provider against
+master libcrypto and master FIPS provider against the 3.0 libcrypto.
+    In progress. Issue #2 in otc repository
+
+AI: staff to raise PR update to coding style to include NULL argument
+    checking on public APIs.
+    Done. PR 21
+
+AI: Tomáš merge coding style policy.
+    Done
+
+AI: Tomáš to provide a summary for next meeting. (PR10195)
+    Done
+
+AI: Matt start vote on testing policy
+    Done. Vote is in progress.
+    AI: Matt to close the vote and merge the test policy.
+
+AI: Matt start vote tomorrow on voting policy update
+    Done.
+    AI: Matt to close the vote and merge the vote policy update.
+
+
+** Discuss the Branch Policy proposal (technical policy PR #7)
+
+Long discussion about different approaches that could be taken. The problem that
+we have right now is PRs that aren't suitable for 3.1 but have nowhere to go. It
+could be useful to have a "next-minor" and "next-major" release development
+branch. We do not need feature branches right now. We may need them when we have
+time-based releases where the feature is "big".
+AI: Tomáš to refresh the policy proposal to tackle the problem that we have now.
+
+** Review draft technical policies
+
+PR#18: Documentation policy
+AI: Everyone to provide any final comments
+AI: Paul to start the vote on 3rd Feb
+
+PR#21: Code style policy update
+Remove the "enumerated arguments" phrase.
+AI: Pauli to start the vote on code style policy update on 9th Feb
+
+** Discuss the Technical requirements document
+
+Discussion about performance being "comparable with other major implementations".
+This needs to be more specific. We are not aiming to be the fastest. We should
+state what we are testing against and what "comparable" means.
+The internal architecture should not prevent the future introduction of a public
+facing "single copy" API.
+
+AI: Matt to separate out the requirements in the Technical Requirements document
+    into the releases they are relevant for.
+
+** Review issues with OTC hold (30 minutes)
+
+Skipped for this week.
+
+
+** Allocation of tasks to staff
+As before
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Review draft technical policies
+    * Discussion of PR10195
+    * Review issues with OTC hold (30 minutes)
+    * Allocation of tasks to staff
+    * Agree agenda for next meeting
+    * AOB
+
+** AOB
+
+Matt will be late for the next couple of months.
+AI: Tomáš to send out a new meeting link
+
+New staff member is starting today.
+
+** New and carried over action items [transported from above]:
+
+AI: Matthias to submit a PR to change https://www.openssl.org/policies/otc-policies.html
+    (Issue #3 in otc repository on GHE)
+
+AI: Staff to think about and eventually add testing of 3.0 FIPS provider against
+master libcrypto and master FIPS provider against the 3.0 libcrypto.
+    (Issue #2 in otc repository)
+
+AI: Matt to close the vote and merge the test policy.
+
+AI: Matt to close the vote and merge the vote policy update.
+
+AI: Documentation Policy - Everyone to provide any final comments
+
+AI: Documentation Policy - Pauli to start the vote on 3rd Feb
+
+AI: Pauli to start the vote on code style policy update on 9th Feb
+
+AI: Matt to separate out the requirements in the Technical Requirements document
+    into the releases they are relevant for.
+
+AI: Tomáš to send out a new meeting link
