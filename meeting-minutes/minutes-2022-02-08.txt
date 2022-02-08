@@ -1,0 +1,139 @@
+Meeting Date: 2022-02-01
+Minutes taken by: Matt
+Attendees:
+    Dmitry Belyavsky
+    Tomáš Mráz
+    Matthias St. Pierre
+    Paul Dale
+    Richard Levitte
+    Shane Lontis
+    Matt Caswell
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Invite Daniel Fiala to introduce himself to the OTC
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Discussion of PR#10195
+    * Allocation of tasks to staff
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Paul has been volunteered to take the minutes
+Proposed: Tomáš, seconded: Matthias
+
+Agenda for the meeting agreed. Proposed: Pauli, seconded: Tomáš
+
+** Agree minutes from previous meeting
+
+Last week minutes were approved.
+Proposed: Tomáš, seconded: Pauli
+
+** Review outstanding actions
+
+AI: Matthias to submit a PR to change https://www.openssl.org/policies/otc-policies.html
+    (Issue #3 in otc repository on GHE)
+no action
+
+AI: Staff to think about and eventually add testing of 3.0 FIPS provider against
+master libcrypto and master FIPS provider against the 3.0 libcrypto.
+    (Issue #2 in otc repository)
+started
+
+AI: Matt to close the vote and merge the test policy.
+done
+
+AI: Matt to close the vote and merge the vote policy update.
+done
+
+AI: Documentation Policy - Everyone to provide any final comments
+AI: Documentation Policy - Pauli to start the vote on 3rd Feb
+vote started, not closed yet.  Changes have been asked for but will require a
+separate PR.
+
+AI: Pauli to start the vote on code style policy update on 9th Feb
+several updates over the week, will delay vote a few days
+
+AI: Matt to separate out the requirements in the Technical Requirements document
+    into the releases they are relevant for.
+didn't happen
+
+AI: Tomáš to send out a new meeting link
+done
+
+** Review issues with OTC hold (30 minutes)
+
+10195 Add X509_V_FLAG_NO_CHECK_SUBJECT and change default to be safe
+separate item on agenda
+
+17112 Prevent crash with engine using different openssl runtime
+OTC: this can go into 3.0
+
+17568 SSL_CTX_set_cert_verify_callback(3) semantic change
+the change was bad, we should undo it in 3.0.  A vote is required.
+we need an alternative way to signal the retry
+Vote to revert change in PR #13906 for 3.0 & master and provide an alternative
+mechanism for the desired behaviour: passed
+
+17517 Is OpenSSL_version_num() deprecated? 
+deprecated in documentation, not in code.
+undeprecate it in the documentation.
+Vote to undeprecate this in 3.0: passed
+
+17543 evp cipher: cache key and IV lengths in the context
+leaning towards backporting this to 3.0 but wait for feedback from the problem
+reporter.
+
+** Invite Daniel Fiala to introduce himself to the OTC
+Introduction happened.
+
+** Review draft technical policies
+
+#21 code style: public functions should check their arguments
+OTC discussed this and this can go to vote.
+AI: Pauli raise vote on technical policy #21
+
+#24 clarify the definition of stable release, and add definition of patch release
+The existing definition is dubious, the replacement is better but seems to miss
+something.  Discussion.  Some slight changes to be done in the PR.
+
+** Discussion of PR#10195 (timeboxed to 20 minutes)
+Discussed: 4.0.  qv #15216 where we discussed essentially the same thing.
+
+** Allocation of tasks to staff
+As before
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Review draft technical policies
+    * Review issues with OTC hold (30 minutes)
+    * Allocation of tasks to staff
+    * Agree agenda for next meeting
+    * AOB
+
+** AOB
+
+Matt proposed a new committer.  Vote started.
+
+** New and carried over action items [transported from above]:
+
+AI: Matthias to submit a PR to change https://www.openssl.org/policies/otc-policies.html
+    (Issue #3 in otc repository on GHE)
+
+AI: Staff to think about and eventually add testing of 3.0 FIPS provider against
+master libcrypto and master FIPS provider against the 3.0 libcrypto.
+    (Issue #2 in otc repository)
+
+AI: Pauli to start the vote on code style policy update after 9th Feb
+
+AI: Matt to separate out the requirements in the Technical Requirements document
+    into the releases they are relevant for.
+
+AI: Pauli raise vote on technical policy #21
