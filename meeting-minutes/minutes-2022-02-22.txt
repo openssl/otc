@@ -146,7 +146,6 @@ We will be using Tomas's link next week.
 
 AI: Matthias to submit a PR to change https://www.openssl.org/policies/otc-policies.html
     (Issue #3 in otc repository on GHE)
-In progress
 
 AI: All of OTC to read the document in https://github.openssl.org/otc/security/issues/2
 
