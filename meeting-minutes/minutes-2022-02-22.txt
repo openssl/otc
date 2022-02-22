@@ -1,0 +1,164 @@
+Meeting Date: 2022-02-22
+Minutes taken by: Matt
+Attendees:
+    Dmitry Belyavsky
+    Matthias St. Pierre
+    Paul Dale
+    Shane Lontis
+    Matt Caswell
+    Nicola Tuveri
+    Richard Levitte
+    Tim Hudson
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Side channel mitigations
+    * PSK and SECLEVEL
+    * Performance
+    * Review draft technical policies
+    * Review issues with OTC hold (30 minutes)
+    * Allocation of tasks to staff
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Matt has been volunteered to take the minutes
+Proposed: Pauli, seconded: Richard
+
+Agenda for the meeting agreed. Proposed: Matt, seconded: Tim
+
+** Agree minutes from previous meeting
+
+Last week minutes were approved.
+Proposed: Pauli, seconded: Dmitry
+
+** Review outstanding actions
+
+AI: Matthias to submit a PR to change https://www.openssl.org/policies/otc-policies.html
+    (Issue #3 in otc repository on GHE)
+In progress
+
+AI: Staff to think about and eventually add testing of 3.0 FIPS provider against
+master libcrypto and master FIPS provider against the 3.0 libcrypto.
+    (Issue #2 in otc repository)
+Done
+
+AI: Pauli to start the vote on code style policy update after 9th Feb
+Done
+
+AI: Matt to separate out the requirements in the Technical Requirements document
+    into the releases they are relevant for.
+Done
+
+AI: Pauli raise vote on technical policy #21
+Done
+
+** Side channel mitigations
+
+A report about some side channel attacks and mitigations was received. This issues
+not a CVE. Should we incorporate the migitgations anyway?
+AI: All of OTC to read the document in https://github.openssl.org/otc/security/issues/2
+
+** PSK and SECLEVEL
+
+https://github.com/openssl/openssl/issues/17743
+The definition of the SECLEVELs is here:
+https://www.openssl.org/docs/man3.0/man3/SSL_CTX_set_security_level.html
+
+#17743 is probably just a bug that should be fixed.
+AI: Nicola to investigate the forward secrecy of the TLS1.2 PSK ciphersuites (#17743)
+
+** Performance
+
+Issue discussed with property query string being NULL instead of "" causes the
+code to go down a slower code path
+AI: Pauli to raise a PR to fix query string being NULL issues
+
+OSSL_LIB_CTX locking is an issue. Proposal to pre-allocate the locks rather
+than lazily initialise them.
+AI: Pauli to raise an issue to put fixing the OSSL_LIB_CTX locking issue in the
+backlog
+
+** Review draft technical policies
+
+PR#7: No update
+
+PR#24: Clarify the definition of stable release
+AI: Richard to update technical-policies PR#24 following feedback
+
+PR#27: Add links to the glossary
+Still needs to wait until 2 weeks are up for the vote to start. This only changes
+links not the meaning of the policies.
+
+** Review issues with OTC hold (30 minutes)
+
+#17408: Reviewed previously. We didn't remove the hold. Now done.
+
+#17493: Should we mark parameters with an "optional" marker?
+We won't do this.
+
+#17577
+AI: OTC members to read the techical requirements document (#17577)
+
+#17590: Oversized EC co-ordinates. Should we reject them?
+This is a breaking change. Not for 3.0 or 1.1.1. Postpone the decision until 4.0.
+
+#17627 Performance problems
+AI: Pauli to propose what performance fixes should be included in 3.1
+
+#17655 Changing N_WORDS to NUM_WORDS in the ige code.
+This won't be included.
+
+#17722 RIPMD160 problematic
+We will not change this for 3.x. We can revist this for 4.0.
+
+** Allocation of tasks to staff
+As before
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Review the technical requirements document
+    * Review draft technical policies
+    * Review issues with OTC hold (30 minutes)
+    * Allocation of tasks to staff
+    * Agree agenda for next meeting
+    * AOB
+
+** AOB
+
+What do we do with algorithms that are deprecated during the FIPS lifecycle?
+We can do this via security policy.
+
+Question about the workflow for merging to various repositories. Could we use
+the green "merge" button for technical-policies? Currently the PRs are raised on
+public github, but the repository is master in GHE.
+addrev is only required on the main source code repo.
+
+We will be using Tomas's link next week.
+
+** New and carried over action items [transported from above]:
+
+AI: Matthias to submit a PR to change https://www.openssl.org/policies/otc-policies.html
+    (Issue #3 in otc repository on GHE)
+In progress
+
+AI: All of OTC to read the document in https://github.openssl.org/otc/security/issues/2
+
+AI: Nicola to investigate the forward secrecy of the TLS1.2 PSK ciphersuites (#17743)
+
+AI: Pauli to raise a PR to fix query string being NULL issues
+
+AI: Pauli to raise an issue to put fixing the OSSL_LIB_CTX locking issue in the
+backlog
+
+AI: Richard to update technical-policies PR#24 following feedback
+
+AI: OTC members to read the techical requirements document (#17577)
+
+AI: Pauli to propose what performance fixes should be included in 3.1 (#17627)
