@@ -1,0 +1,143 @@
+Meeting Date: 2022-03-08
+Minutes taken by: Matt
+Attendees:
+    Dmitry Belyavsky
+    Matthias St. Pierre
+    Shane Lontis
+    Matt Caswell
+    Nicola Tuveri
+    Richard Levitte
+    Tim Hudson
+    Tomas Mraz
+    Paul Dale
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Security issues
+    * Hugo introduction
+    * Review issues with OTC hold (30 minutes)
+    * API Discussion
+    * Review the technical requirements document
+    * Review draft technical policies
+    * Allocation of tasks to staff
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Matt has been volunteered to take the minutes
+Proposed: Tim, seconded: Pauli
+
+Agenda for the meeting agreed. Proposed: Tim , seconded: Pauli
+
+** Agree minutes from previous meeting
+
+Last week minutes were approved.
+Proposed: Matt, seconded: Pauli
+
+** Review outstanding actions
+
+AI: Matthias to submit a PR to change https://www.openssl.org/policies/otc-policies.html
+    (Issue #3 in otc repository on GHE)
+    Done
+
+AI: All of OTC to read the document in https://github.openssl.org/otc/security/issues/2
+    Done
+
+AI: Nicola to investigate the forward secrecy of the TLS1.2 PSK ciphersuites (#17743)
+    Done
+
+AI: Pauli to raise a PR to fix query string being NULL issues
+    Done
+
+AI: Pauli to raise an issue to put fixing the OSSL_LIB_CTX locking issue in the
+backlog
+    Done (17116)
+
+AI: Richard to update technical-policies PR#24 following feedback
+    Done
+
+AI: OTC members to read the techical requirements document (#17577)
+    Done
+
+AI: Pauli to propose what performance fixes should be included in 3.1 (#17627)
+    Done
+
+** Security issues
+
+We had a discussion about security issues.
+
+AI: Pauli to write a blog post about SPECTRE
+
+** Hugo introduction
+
+The new developer on the project introduced himself to the OTC.
+
+** Review issues with OTC hold (30 minutes)
+
+Performance issues:
+16552 is primarily resolved via reverting the AES constant time.
+
+AI: Hugo to look at #17064, #17116 performance issues
+
+14787 proposal is to "not fix"
+
+AI: Hugo to repeat the tests in 15199 and get new performance figures.
+
+17779: Tomas proposes to backport the fix to 3.0 (overriding the stable release
+updates policy), Matt seconds, Tim objects. The motion carries.
+
+** API Discussion
+
+17184 QUIC API design has been updated
+
+AI: All OTC to read #17184 by next week.
+
+** Review the technical requirements document
+
+Discussion was deferred
+
+** Review draft technical policies
+
+2 PRs are in vote.
+
+AI: Tomas to update technical-policies PR#7 (Branch policy) following feedback
+
+** Allocation of tasks to staff
+
+As before
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Review the technical requirements document
+    * Review the QUIC API proposal
+    * Review draft technical policies
+    * Review issues with OTC hold (30 minutes)
+    * Allocation of tasks to staff
+    * Agree agenda for next meeting
+    * AOB
+
+** AOB
+
+Vote on reactivating Nicola was held.
+
+Question about move of the main repo to github.openssl.org. No formal announcement
+required.
+
+** New and carried over action items [transported from above]:
+
+AI: Pauli to write a blog post about SPECTRE
+
+AI: Hugo to look at #17064, #17116 performance issues
+
+AI: Hugo to repeat the tests in 15199 and get new performance figures.
+
+AI: All OTC to read #17184 (QUIC API design) by next week.
+
+AI: Tomas to update technical-policies PR#7 (Branch policy) following feedback
+
