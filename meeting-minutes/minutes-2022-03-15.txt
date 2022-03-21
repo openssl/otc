@@ -1,0 +1,138 @@
+Meeting Date: 2022-03-15
+Minutes taken by: Tomáš
+Attendees:
+    Dmitry Belyavsky
+    Matthias St. Pierre
+    Shane Lontis
+    Matt Caswell
+    Nicola Tuveri
+    Richard Levitte
+    Tim Hudson
+    Tomas Mraz
+    Paul Dale
+
+Agenda:
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Review the QUIC technical requirements document
+    * Review the QUIC API proposal
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Allocation of tasks to staff
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Tomáš volunteered to take the minutes.
+Proposed: Matt, seconded: Pauli
+
+Invite rest of contractors for today and future meetings.
+Proposed: Tomáš, seconded: Pauli, Richard
+
+Agenda for the meeting agreed. Proposed: Pauli, seconded: Matthias
+
+** Agree minutes from previous meeting
+
+Last week minutes were approved.
+Proposed: Nicola, seconded: Pauli
+
+** Review outstanding actions
+
+AI: Pauli to write a blog post about SPECTRE
+Done
+
+AI: Hugo to look at #17064, #17116 performance issues
+Done, PRs proposed
+
+AI: Hugo to repeat the tests in 15199 and get new performance figures.
+In progress
+
+AI: All OTC to read #17184 (QUIC API design) by next week.
+Done
+
+AI: Tomas to update technical-policies PR#7 (Branch policy) following feedback
+Done
+
+** Review the QUIC technical requirements document
+
+Matt converted the requirements from OMC and various discussions into a formal
+document. There is a section on MVP requirements for 3.1.
+
+Tim mentioned there are also two more objectives (6 month releases, and internal
+CI for primary platforms).
+
+There was a discussion about what will be the implementation we will test the
+MVP against if the HTTP/3 is not an objective for the release.
+
+AI: Matt to add these two additional objectives to the document. Also explicitly
+mention that in MVP for the next release the pluggable record layer interface
+will be internal.
+
+There was a discussion whether performance of the QUIC implementation and
+single copy interfaces should be requirements or just aspirational goals.
+
+AI: Matt to adjust the document to mention the internal plumbing should allow
+for the fact that we may want to be able to support single copy APIs in future.
+In addition to the existing interface. And put the existing "single copy"
+bullets under it. The performance comparability should be aimed at a future
+release.
+
+AI: Matt to add 'Support' to the last bullet of MVP requirements.
+
+AI: Matt to update the document and start a vote after two days unless there
+is a major discussion ongoing on the PR.
+
+** Review the QUIC API proposal
+
+Postponed to the next week due to time.
+
+** Review issues with OTC hold (30 minutes)
+
+EVP_MD performance fix #17857 to be backported to 3.0. Pauli proposed a vote.
+
+** Review draft technical policies
+
+Postponed to the next week due to time.
+
+** Allocation of tasks to staff
+
+As before
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Review the QUIC API proposal
+    * Discuss release requirements policy (technical-policies #27)
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Allocation of tasks to staff
+    * Agree agenda for next meeting
+    * AOB
+
+** AOB
+
+None
+
+** New and carried over action items [transported from above]:
+
+AI: Hugo to repeat the tests in 15199 and get new performance figures.
+
+AI: Matt to do adjustments on the QUIC technical requirements document:
+
+ - to add 6 month releases, and internal CI for primary platforms as objectives
+   to the document. Also explicitly mention that in MVP for the next release the
+   pluggable record layer interface will be internal.
+ - to mention the internal plumbing should allow for the fact that we may want
+   to be able to support single copy APIs in future. In addition to the existing
+   interface. And put the existing "single copy" bullets under it.
+   The performance comparability should be aimed at a future release.
+ - to add 'Support' to the last bullet of MVP requirements.
+
+AI: Matt to update the document and start a vote after two days unless there
+is a major discussion ongoing on the PR.
+
