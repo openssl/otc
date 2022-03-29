@@ -1,0 +1,176 @@
+Meeting Date: 2022-03-29
+Minutes taken by: Tomáš
+Attendees:
+    Dmitry Belyavsky
+    Matthias St. Pierre
+    Matt Caswell
+    Nicola Tuveri
+    Richard Levitte
+    Tomas Mraz
+    Tim Hudson
+    Paul Dale
+External attendees:
+    Hugo Landau
+    Daniel Fiala
+
+Agenda:
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Review issues with OTC hold (20 minutes)
+    * Discuss the demo driven development proposal
+    * Review draft technical policies
+    * Allocation of tasks to contractors
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Tomáš volunteered to take the minutes.
+Proposed: Tomáš, seconded: Matt
+
+Agenda for the meeting agreed. Proposed: Matt, seconded: Tim
+
+** Agree minutes from previous meeting
+
+Last week minutes were approved.
+Proposed: Matt, seconded: Tomáš
+
+** Review outstanding actions
+
+AI: Matt to update the technical requirements document and start a vote after
+two days unless there is a major discussion ongoing on the PR.
+
+Done, please vote
+
+AI: Update the QUIC API proposal with approach to solving the 5 problems
+(1) timer based events (2) TCP vs UDP socket creation (3) blocking (4) no visible
+event capability for existing apps (5) configure protocol via a string.
+
+Not done, waiting on the demos
+
+AI: Separate out in the API proposal the subset we will implement for MVP.
+
+Not done, waiting on the demos
+
+AI: Matt to extend out the description of SSL_new_stream() to make it clearer that
+in the TLS context it creates a new connection.
+
+Done
+
+AI: Tomas to write a draft release requirements policy in the next sprint
+
+Not done
+
+** Review issues with OTC hold (20 minutes)
+
+#17894 - How should we handle Coverity issues when they are false positives. In
+general if the workaround is not performance expensive or too ugly, we should
+do it.
+
+#17937 - How to handle the deprecations of OPENSSL_LH_stats functions as that
+generates warnings when using DEFINE_LHASH_OF. Postponed to next week to review
+alternative proposals.
+
+#17973 - Should we backport the sparse array size change to 3.0?
+AI: Pauli to call a vote on the sparse array size change backport.
+
+#17978 - ecparam handling in fips module - the bug fix in the ec_export() is OK
+for master and 3.0. We should change the behaviour in master to disallow
+import of arbitrary explicit parameters into the fips module.
+
+** Discuss the demo driven development proposal
+
+Hugo presented his proposed set of demos that should be representative of apps
+that use OpenSSL for TLS.
+
+There were various ideas where should these API reference implementations
+live in the OpenSSL source tree.
+
+AI: Hugo to create a PR against the OpenSSL source tree which adds the demos
+in the tree.
+
+Once the PR is in we will hold a vote on whether these demos are representative
+of the major usage patterns of libssl.
+
+AI: Hugo to write a blog post about the demos and their relation to the QUIC
+API design.
+
+** Review draft technical policies
+
+AI: All to re-read the branch policy proposal.
+
+#36 - Simple policy edits policy
+Richard opened this policy proposal. There was an idea to merge this into the
+policy for technical policy changes.
+
+AI: Tomáš to create an alternative proposal that amends the policy change
+process policy
+
+#33 - Switch to C11 instead of C89/90
+If anyone wants to propose this change he needs to create a PR against coding
+style policy with the proposal. 
+
+** Allocation of tasks to contractors
+
+No change.
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Discuss various options of handling the OPENSSL_LH_stats deprecations    
+    * Review the QUIC API proposal
+    * Review the record layer API proposal
+    * Review the congestion control API proposal
+    * Review the updated branch policy proposal
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Allocation of tasks to contractors
+    * Agree agenda for next meeting
+    * AOB
+
+** AOB
+
+Dmitry presented the problem of dropping real errors happenning when
+decoding fails in some particular decoder.
+
+AI: Dmitry to open an issue that will show the concrete problems where
+real errors from decoders are dropped.
+
+Nicola reported that he won't be able to complete the testcases for the
+PR #16624.
+
+AI: Matt to ensure https://github.openssl.org/openssl/openssl/issues/72
+is scheduled for the next sprint.
+
+** New and carried over action items [transported from above]:
+
+AI: Update the QUIC API proposal with approach to solving the 5 problems
+(1) timer based events (2) TCP vs UDP socket creation (3) blocking (4) no visible
+event capability for existing apps (5) configure protocol via a string.
+
+AI: Separate out in the API proposal the subset we will implement for MVP.
+
+AI: Tomas to write a draft release requirements policy in the next sprint
+
+AI: Pauli to call a vote on the sparse array size change backport.
+
+AI: Hugo to create a PR against the OpenSSL source tree which adds the demos
+in the tree.
+
+AI: Hugo to write a blog post about the demos and their relation to the QUIC
+API design.
+
+AI: All to re-read the branch policy proposal.
+
+AI: Tomáš to create an alternative proposal that amends the policy change
+process policy
+
+AI: Dmitry to open an issue that will show the concrete problems where
+real errors from decoders are dropped.
+
+AI: Matt to ensure https://github.openssl.org/openssl/openssl/issues/72
+is scheduled for the next sprint.
