@@ -1,0 +1,160 @@
+Meeting Date: 2022-04-05
+Minutes taken by: Matt
+Attendees:
+    Dmitry Belyavsky
+    Matthias St. Pierre
+    Matt Caswell
+    Nicola Tuveri
+    Richard Levitte
+    Tomas Mraz
+    Tim Hudson
+    Paul Dale
+    Shane Lontis
+External attendees:
+    Hugo Landau
+    Daniel Fiala
+    Martin Koci
+
+Agenda:
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Introductions
+    * Review outstanding actions
+    * Review issues with OTC hold (20 minutes)
+    * Walk through of API diffs
+    * Walk through of Record layer proposal
+    * EC generated code query
+    * Review draft technical policies
+    * Allocation of tasks to contractors
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Matt volunteered to take the minutes.
+Proposed: Tomas, seconded: Tim
+
+Agenda for the meeting agreed. Proposed: Matt, seconded: Tim
+
+** Agree minutes from previous meeting
+
+Last week minutes were approved.
+Proposed: Tomas, seconded: Tim
+
+** Introductions
+
+Martin introduced himself to the group. Dmitry, Shane, Nicola and Matthias
+introduced themselves. Martin had already met the remaining members of the OTC.
+
+** Review outstanding actions
+
+AI: Update the QUIC API proposal with approach to solving the 5 problems
+(1) timer based events (2) TCP vs UDP socket creation (3) blocking (4) no visible
+event capability for existing apps (5) configure protocol via a string.
+In progress - blocked on API diff work
+
+AI: Separate out in the API proposal the subset we will implement for MVP.
+In progress - blocked on API diff work
+
+AI: Tomas to write a draft release requirements policy in the next sprint
+In progress
+
+AI: Pauli to call a vote on the sparse array size change backport.
+Done
+
+AI: Hugo to create a PR against the OpenSSL source tree which adds the demos
+in the tree.
+Done
+
+AI: Hugo to write a blog post about the demos and their relation to the QUIC
+API design.
+Done
+
+AI: All to re-read the branch policy proposal.
+In progress
+
+AI: Tomáš to create an alternative proposal that amends the policy change
+process policy
+Not done
+
+AI: Dmitry to open an issue that will show the concrete problems where
+real errors from decoders are dropped.
+Done - Issue #17987
+
+AI: Matt to ensure https://github.openssl.org/openssl/openssl/issues/72
+is scheduled for the next sprint.
+Pending
+
+** Review issues with OTC hold (20 minutes)
+
+#17937:
+AI: Matt to review the latest proposal im #17937 and potentially lift the OTC hold
+
+#17938: Remove support for attacker supplied curve parameters
+Options would be to remove support based on compile time option. Default could
+be on for 3.1 and off in a future version.
+This support should not be removed by default in 3.1. We don't object to an
+option being introduced to disable this (preferably runtime)
+
+#17984 Won't be considered for backport to 3.0
+
+#17998 Unclear whether we should backport this to 3.0. This PR needs to add
+documentation (or add via a separate PR)
+AI: Tomas to raise a vote on #17998
+
+** Walk through of API diffs
+
+Hugo walked through the proposed diffs to the demos required for the new QUIC
+API
+
+Tim raised the issues that this may be a problem with applications that inject
+buffering BIOs
+
+AI: All OTC to members to read the diffs in:
+https://github.com/hlandau/openssl/compare/ddd-diff-base...hlandau:ddd-diff?short_path=fce5e24#diff-fce5e24a44227bdd83c647fbdd16dbe773cac5b9b61a4f918a9598bd57d7145a
+https://github.com/hlandau/openssl/tree/ddd-diff/ddd
+
+** Walk through of Record layer proposal
+
+Tim suggested adding a diagram describing the different types of QUIC layer.
+
+AI: All to read the record layer proposal ready for next week
+
+AI: Matt to schedule implementing this for current protocols in the next sprint
+
+** EC generated code query
+
+Question about the EC Kiila. The blockage was around CLAs. Without CLA we cannot
+incoporate code. It can be implemented as an external 3rd party provider.
+
+AI: Shane to raise issue with OMC for CLA exception for EC Kiila code.
+
+** Review draft technical policies
+
+Coding style change not yet ready for review.
+
+** Allocation of tasks to contractors
+
+No change.
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * API Diffs
+    * Error suppressing in OpenSSL
+    * Branch policy
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Allocation of tasks to contractors
+    * Agree agenda for next meeting
+    * AOB
+
+** AOB
+
+Dmitry will investigate #18039
+
+** New and carried over action items [transported from above]:
+
