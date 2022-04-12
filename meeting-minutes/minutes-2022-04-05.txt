@@ -119,7 +119,6 @@ https://github.com/hlandau/openssl/tree/ddd-diff/ddd
 
 Tim suggested adding a diagram describing the different types of QUIC layer.
 
-AI: All to read the record layer proposal ready for next week
 
 AI: Matt to schedule implementing this for current protocols in the next sprint
 
@@ -157,4 +156,28 @@ No change.
 Dmitry will investigate #18039
 
 ** New and carried over action items [transported from above]:
+
+AI: Update the QUIC API proposal with approach to solving the 5 problems
+(1) timer based events (2) TCP vs UDP socket creation (3) blocking (4) no visible
+event capability for existing apps (5) configure protocol via a string.
+
+AI: Separate out in the API proposal the subset we will implement for MVP.
+
+AI: Tomas to write a draft release requirements policy in the next sprint
+
+AI: All to re-read the branch policy proposal.
+
+AI: Tomáš to create an alternative proposal that amends the policy change
+process policy
+
+AI: Matt to ensure https://github.openssl.org/openssl/openssl/issues/72
+is scheduled for the next sprint.
+
+AI: Matt to review the latest proposal im #17937 and potentially lift the OTC hold
+
+AI: Tomas to raise a vote on #17998
+
+AI: Matt to schedule implementing record layer for current protocols in the next sprint
+
+AI: Shane to raise issue with OMC for CLA exception for EC Kiila code.
 
