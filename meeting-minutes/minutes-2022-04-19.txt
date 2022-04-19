@@ -1,0 +1,169 @@
+Meeting Date: 2022-04-19
+Minutes taken by: Matt
+Attendees:
+    Dmitry Belyavsky
+    Matthias St. Pierre
+    Matt Caswell
+    Nicola Tuveri
+    Richard Levitte
+    Tomas Mraz
+    Shane Lontis
+External attendees:
+    Hugo Landau
+    Daniel Fiala
+    Martin Koci
+
+Agenda:
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Security issues
+    * Locale issues
+    * API Diffs
+    * Error suppressing in OpenSSL
+    * Branch policy
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Allocation of tasks to contractors
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Matt volunteered to take the minutes.
+Proposed: Matt, seconded: Nicola
+
+Agenda for the meeting agreed. Proposed: Matt, seconded: Tomas
+
+** Agree minutes from previous meeting
+
+Last week minutes were approved.
+Proposed: Matt, seconded: Nicola
+
+** Review outstanding actions
+
+AI: Update the QUIC API proposal with approach to solving the 5 problems
+(1) timer based events (2) TCP vs UDP socket creation (3) blocking (4) no visible
+event capability for existing apps (5) configure protocol via a string.
+In progress
+
+AI: Separate out in the API proposal the subset we will implement for MVP.
+In progress
+
+AI: Tomas to write a draft release requirements policy in the next sprint
+Done
+
+AI: All to re-read the branch policy proposal.
+Not done
+
+AI: Tomáš to create an alternative proposal that amends the policy change
+process policy
+Done
+
+AI: Matt to ensure https://github.openssl.org/openssl/openssl/issues/72
+is scheduled for the next sprint.
+Done
+
+AI: Matt to review the latest proposal im #17937 and potentially lift the OTC hold
+Done
+
+AI: Tomas to raise a vote on #17998
+Done
+
+AI: Matt to schedule implementing record layer for current protocols in the next sprint
+Done
+
+AI: Shane to raise issue with OMC for CLA exception for EC Kiila code.
+Pending
+
+** Security issues
+
+Current security issues were discussed and severity assigned.
+
+Discussion about possible changes to the security policy.
+
+** Locale issues
+
+The consensus is that 18039 is a bug that needs fixing in 3.0
+
+Discussion about whether OPENSSL_strcasecmp() should be made public API in 3.0.
+The biggest stability risk is fixing the bug. Exposing the API is low risk and
+is very likely to be required by provider authors.
+
+AI: Dmitry to raise a vote about whether OPENSSL_strcasecmp() should be public
+API in 3.0
+
+** API Diffs
+
+AI: Everyone to read the API diffs
+
+** Error suppressing in OpenSSL
+
+https://github.com/openssl/openssl/issues/17987
+
+One possibility is to add errors to the trace output.
+
+Defer further disucssion to a later meeting.
+
+** Branch policy
+
+Defer
+
+** Review issues with OTC hold (30 minutes)
+
+Defer
+
+** Allocation of tasks to contractors
+
+No change.
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * API Diffs
+    * Error suppressing in OpenSSL
+    * Discuss issue 18099
+    * Branch policy
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Allocation of tasks to contractors
+    * Agree agenda for next meeting
+    * AOB
+
+** AOB
+
+Martin requested write access to the OTC repository (e.g. to store meeting minutes)
+i.e. GHE otc/otc repository (which gets mirrored to the public repository).
+Proposed: Tomas, Seconded: Richard
+
+AI: Tomas to add permissions to allow Martin access to otc/otc repository
+
+Matthias raised this issue:
+https://github.com/openssl/openssl/pull/18099#issuecomment-1098291897
+
+AI: Everyone to read the discussion in 18099
+
+** New and carried over action items [transported from above]:
+
+
+AI: Update the QUIC API proposal with approach to solving the 5 problems
+(1) timer based events (2) TCP vs UDP socket creation (3) blocking (4) no visible
+event capability for existing apps (5) configure protocol via a string.
+
+AI: Separate out in the API proposal the subset we will implement for MVP.
+
+AI: All to re-read the branch policy proposal.
+
+AI: Shane to raise issue with OMC for CLA exception for EC Kiila code.
+
+AI: Dmitry to raise a vote about whether OPENSSL_strcasecmp() should be public
+API in 3.0
+
+AI: Everyone to read the API diffs
+
+AI: Tomas to add permissions to allow Martin access to otc/otc repository
+
+AI: Everyone to read the discussion in 18099
