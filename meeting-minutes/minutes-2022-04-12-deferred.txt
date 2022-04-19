@@ -4,6 +4,7 @@ Attendees:
     Dmitry Belyavsky
     Tomas Mraz
     Paul Dale
+    Nicola Tuveri
 External attendees:
     Hugo Landau
     Daniel Fiala
