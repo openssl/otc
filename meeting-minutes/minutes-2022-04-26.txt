@@ -1,0 +1,213 @@
+Meeting Date: 2022-04-26
+Minutes taken by: Tomas
+Attendees:
+    Matthias St. Pierre
+    Matt Caswell
+    Nicola Tuveri
+    Richard Levitte
+    Tomas Mraz
+    Shane Lontis
+    Paul Dale
+    Tim Hudson
+External attendees:
+    Hugo Landau
+    Martin Koci
+
+Agenda:
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Security issues
+    * PRs to merge before the release (#18142, #18143)
+    * API Diffs
+    * Discuss issue 18099
+    * Review draft technical policies
+    * Branch policy
+    * Review issues with OTC hold (30 minutes)
+    * Allocation of tasks to contractors
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Tomas volunteered to take the minutes.
+Proposed: Matt, seconded: Tim
+
+Agenda for the meeting agreed. Proposed: Tomas, seconded: Matt
+
+** Agree minutes from previous meeting
+
+Last week minutes were approved.
+Proposed: Matt, seconded: Matthias
+
+** Review outstanding actions
+
+AI: Update the QUIC API proposal with approach to solving the 5 problems
+(1) timer based events (2) TCP vs UDP socket creation (3) blocking (4) no visible
+event capability for existing apps (5) configure protocol via a string.
+
+In progress
+
+AI: Separate out in the API proposal the subset we will implement for MVP.
+
+In progress
+
+AI: All to re-read the branch policy proposal.
+
+In progress
+
+AI: Shane to raise issue with OMC for CLA exception for EC Kiila code.
+
+Not relevant for OTC
+
+AI: Dmitry to raise a vote about whether OPENSSL_strcasecmp() should be public
+API in 3.0
+
+Done
+
+AI: Everyone to read the API diffs
+
+In progress
+
+AI: Tomas to add permissions to allow Martin access to otc/otc repository
+
+Done
+
+AI: Everyone to read the discussion in 18099
+
+Done
+
+** Security issues
+
+Current security issues were discussed and severity assigned.
+
+** PRs to merge before the release (#18142, #18143)
+
+Although #18142 fixes a regression, it is minor one which does not affect any
+proper API call invocations. We can postpone merging these PRs after the
+release.
+
+Discussion about pushing the release a week later due to OPENSSL_strcasecmp
+patch being invasive. The consensus was to continue with the release today.
+
+Tim has dropped off the meeting.
+
+** API Diffs
+
+https://github.com/hlandau/openssl/pull/1
+
+AI Matt, Hugo: To synthesize the API proposal and the diffs into a single PR
+
+** Discuss issue 18099
+
+Matthias wanted to bring the issue whether different behavior between FIPS and
+default provider in EVP_PKEY_check() is desirable or not. Also the documentation
+is somewhat unclear on what the behavior should be. It is provider specific
+so perhaps the documentation of the provider implementations should be
+improved.
+
+AI: Shane to look at the PKEY check documentation in providers' docs.
+
+** Review draft technical policies
+
+https://github.com/openssl/technical-policies/pull/7
+
+Postponed, we have a separate meeting topic for that policy.
+
+https://github.com/openssl/technical-policies/pull/39
+
+In general it is OK to be voted on. If anybody has further review comments,
+please add them to the PR.
+
+AI: Tomas to start the vote when it is ready for vote.
+
+https://github.com/openssl/technical-policies/pull/40
+
+AI: All to read the Release Requirements policy proposal.
+
+https://github.com/openssl/technical-policies/pull/42
+
+This can be voted on.
+
+https://github.com/openssl/technical-policies/pull/45
+
+There were some ideas how to improve this proposal that will be recorded
+in the PR.
+
+Matt dropped off the meeting.
+
+** Branch policy
+
+Deferred to the next week due to time.
+
+** Review issues with OTC hold (30 minutes)
+
+https://github.com/openssl/openssl/pull/18130
+
+This is a feature PR against 1.1.1 which is not going to be merged.
+
+https://github.com/openssl/openssl/pull/18038
+
+These are missing accessors and OTC agrees with adding them to 3.0 and 1.1.1.
+
+https://github.com/openssl/openssl/issues/17987
+
+Postponed, we have a separate topic scheduled for the next meeting.
+
+https://github.com/openssl/openssl/pull/17937
+
+Postponed as Matt has dropped off the meeting. 
+
+** Allocation of tasks to contractors
+
+No change.
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Error suppressing in OpenSSL
+    * Branch policy
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Allocation of tasks to contractors
+    * Agree agenda for next meeting
+    * AOB
+
+** AOB
+
+Nicola mentioned that pyca tests are important to have enabled because they
+include the Wycheproof tests that include many negative testcases for
+crypto algorithms.
+
+AI: Nicola to rebase the PR#16340 for making the pyca tests run against the
+1.1.1 branch.
+
+** New and carried over action items [transported from above]:
+
+AI: Update the QUIC API proposal with approach to solving the 5 problems
+(1) timer based events (2) TCP vs UDP socket creation (3) blocking (4) no visible
+event capability for existing apps (5) configure protocol via a string.
+
+AI: Separate out in the API proposal the subset we will implement for MVP.
+
+AI: All to re-read the branch policy proposal.
+
+AI: Everyone to read the API diffs
+
+AI: Dmitry to properly record the vote in openssl/technical-policies#44
+
+AI: Matt and Hugo to synthesize the API proposal and the diffs into a single PR
+
+AI: Shane to look at the PKEY check documentation in providers' docs.
+
+AI: Tomas to start the vote on Coding style adjustments when it is ready for
+vote.
+
+AI: All to read the Release Requirements policy proposal. 
+    https://github.com/openssl/technical-policies/pull/40
+
+AI: Nicola to rebase the PR#16340 for making the pyca tests run against the
+1.1.1 branch.
