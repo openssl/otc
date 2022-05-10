@@ -1,0 +1,146 @@
+Meeting Date: 2022-05-10
+Minutes taken by: Matt
+Attendees:
+    Matthias St. Pierre
+    Matt Caswell
+    Shane Lontis
+    Paul Dale
+    Tim Hudson
+    Dmitry Belyavskiy
+    Tomas Mraz
+
+External attendees:
+    Hugo Landau
+    Martin Koci
+    Daniel Fiala
+
+Agenda:
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Release requirements policy
+    * strcasecmp issue
+    * Timer API
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Matt volunteered to take the minutes.
+Proposed: Matt, seconded: Tim
+
+Agenda for the meeting agreed. Proposed: Tim, seconded: Matthias
+
+** Agree minutes from previous meeting
+
+Last week minutes were approved.
+Proposed: Tomas, seconded: Pauli
+
+** Review outstanding actions
+
+AI: Dmitry to write requirements for the error suppression agenda item.
+Done
+
+AI: Update the QUIC API proposal with approach to solving the 5 problems
+(1) timer based events (2) TCP vs UDP socket creation (3) blocking
+(4) no visible event capability for existing apps (5) configure protocol
+via a string.
+Done
+
+AI: Separate out in the API proposal the subset we will implement for MVP.
+Done
+
+AI: Dmitry to properly record the vote in openssl/technical-policies#44
+Done
+
+AI: Matt and Hugo to synthesize the API proposal and the diffs into a single PR
+Done
+
+AI: Shane to look at the PKEY check documentation in providers' docs.
+Done
+
+** Release requirements policy
+
+There are five types of release: Major, Minor, Patch, Alpha, Beta
+
+Some of these may be treated in the same way and covered together in the
+section.
+
+The requirements for a patch release are likely to be different than major/Minor
+releases.
+
+AI: Tomas to update the release requirements policy based on the dicussion
+
+AI: Tomas to take the the requirements policy to a vote
+
+There is no need to discuss this again in a future OTC meeting.
+
+** strcasecmp issue
+
+There are two issues: a build issue on some platforms (fixed by #18241), and a
+failure to init the locale in some situations
+
+We could do a RUN_ONCE inside strcasecmp to solve the second issue, or we could
+"cheat" and assume pointer writes are atomic, and just check whether the locale
+pointer is non-null.
+
+Hold on #18241 can be lifted. We should use the RUN_ONCE approach.
+
+** Timer API
+
+Pauli presented the proposed internal Timer API.
+
+Function names should include the class. The main class should come first in
+the parameter list. The constructor should probably take a libctx.
+Some discussion about whether to use struct timeval - it doesn't matter too
+much at this stage (this is an internal API). Discussion about
+millisec/microsec/nanosec resolution. Question about thread safety.
+
+We will need to see this again.
+
+[Hugo left the meeting]
+
+** Review issues with OTC hold (30 minutes)
+
+#17937: Option C is the preferred solution
+
+#17969: Nothing to discuss in this meeting
+
+#17987: To be dicussed next week
+
+#18130: Won't be merged. Should be closed - ask Bernd to move this to his
+personal branch so that we can close it.
+
+** Review draft technical policies
+
+#46: This is a new version of a previous PR and is marked as reviewed
+
+#47: Remove the line about spelling. Marked as reviewed
+
+#48: Marked as reviewed.
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Branch policy
+    * Error suppressing in OpenSSL
+    * Timer API
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** AOB
+
+None
+
+** New and carried over action items [transported from above]:
+
+AI: Tomas to update the release requirements policy based on the dicussion
+
+AI: Tomas to take the the requirements policy to a vote
