@@ -1,5 +1,5 @@
-Meeting Date: 2022-04-26
-Minutes taken by: Tomas
+Meeting Date: 2022-05-03
+Minutes taken by: Pauli
 Attendees:
     Matthias St. Pierre
     Matt Caswell
@@ -43,8 +43,9 @@ Proposed: Pauli, seconded: Tomas, Nicola
 ** Review outstanding actions
 
 AI: Update the QUIC API proposal with approach to solving the 5 problems
-(1) timer based events (2) TCP vs UDP socket creation (3) blocking (4) no visible
-event capability for existing apps (5) configure protocol via a string.
+(1) timer based events (2) TCP vs UDP socket creation (3) blocking
+(4) no visible event capability for existing apps (5) configure protocol
+via a string.
 
 In progress
 
@@ -215,8 +216,9 @@ Martin does this now, removing from future agendas.
 AI: Dmitry to write requirements for the error suppression agenda item.
 
 AI: Update the QUIC API proposal with approach to solving the 5 problems
-(1) timer based events (2) TCP vs UDP socket creation (3) blocking (4) no visible
-event capability for existing apps (5) configure protocol via a string.
+(1) timer based events (2) TCP vs UDP socket creation (3) blocking
+(4) no visible event capability for existing apps (5) configure protocol
+via a string.
 
 AI: Separate out in the API proposal the subset we will implement for MVP.
 
