@@ -1,0 +1,147 @@
+Meeting Date: 2022-05-17
+Minutes taken by: Pauli
+Attendees:
+    Matthias St. Pierre
+    Matt Caswell
+    Shane Lontis
+    Paul Dale
+    Tim Hudson
+    Dmitry Belyavskiy
+    Tomas Mraz
+    Nicola Tuveri
+    Richard Levitte (late)
+
+External attendees:
+    Hugo Landau
+    Martin Koci
+
+Agenda:
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Branch policy
+    * Error suppressing in OpenSSL
+    * Timer API
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Pauli volunteered to take the minutes.
+Proposed: Matt, seconded: Tim
+
+Agenda for the meeting agreed. Proposed: Matt, seconded: Matthias
+
+
+** Agree minutes from previous meeting
+
+Last week minutes were approved.
+Proposed: Matt, seconded: Tomas
+
+
+** Review outstanding actions
+
+AI: Tomas to update the release requirements policy based on the dicussion
+Done
+
+AI: Tomas to take the the requirements policy to a vote
+Not done, discussions are ongoing
+
+
+** Branch policy
+
+Review after changes.  Master branch not mentioned anymore.
+Discussion about the added complexity and extra effort involved.
+Should be limitied to three development branches.
+How do the CIs deal with this?
+Automation of cherry picking is required.
+
+[much discussion ensues]
+
+AI: OTC read openssl/technical-polcies#7 this week.
+
+AI: Tomas call vote on openssl/technical-polcies#7 next week.
+
+
+** Error suppressing in OpenSSL
+
+openssl/openssl#17987 too aggressively discards errors.
+
+Shouldn't rely on recompilation to enable enough information to diagnose
+problems (i.e. trace API).
+
+We could log from ERR_raise.  What about extra data and threading.
+ERR_pop_to_mark could print what it pops.
+
+The trace infrastructure is too verbose to be included unconditionally.
+It might be possible to include the more useful output unconditionally
+and the less useful compiled out by default.  Compared to syslog:
+e.g. we could include info level and above but not debug level.
+
+[Tim departs during discussions]
+
+Should we introduce a logging API?  If so what time frame?
+
+OTC recommend to OMC and Martin that a run time available logging API
+be introduced to 3.1.  omc/omc#164
+
+What about 3.0?  Is popping a relevant error a bug?  These should be
+dealt with on a case by case basis.
+
+
+** Timer API
+
+openssl/openssl#18274
+
+No need to discuss :)
+The event and timer queues are possibly merging.
+
+
+** Review issues with OTC hold (30 minutes)
+
+#17969 ongoing work
+#17987 just discussed
+#18130 Not closed yet
+
+#18280 "wrong curve" error
+[Hugo departs during discussions]
+
+Discussions about fixing this in 1.1.1 and in 3.0.
+
+OTC: The server should be changed to accept the client certificate in
+TLS <= 1.2 if the curve is among the supported groups configured on the
+server side.
+
+
+** Review draft technical policies
+
+None to discuss.
+
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Review and confirm the BIO DGRAM API
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** AOB
+
+Please remember to set the "ready to vote" label in the technical-policies
+repository.
+
+
+** New and carried over action items [transported from above]:
+
+AI: Tomas to take the the requirements policy to a vote
+
+AI: OTC read openssl/technical-polcies#7 this week
+
+AI: Tomas call vote on openssl/technical-polcies#7 next week.
