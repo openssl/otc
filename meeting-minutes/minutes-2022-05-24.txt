@@ -1,0 +1,123 @@
+Meeting Date: 2022-05-24
+Minutes taken by: Matt
+Attendees:
+    Matthias St. Pierre
+    Matt Caswell
+    Shane Lontis
+    Paul Dale
+    Dmitry Belyavskiy
+    Tomas Mraz
+    Nicola Tuveri
+    Richard Levitte
+
+External attendees:
+    Martin Koci
+    Daniel Fiala
+
+Agenda:
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Empty Protocol
+    * RSA Key Gen
+    * Updates from the OMC
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Matt volunteered to take the minutes.
+Proposed: Matt, seconded: Tomas
+
+Agenda for the meeting agreed. Proposed: Matt, seconded: Tomas
+
+** Agree minutes from previous meeting
+
+Last week minutes were approved.
+Proposed: Matt, seconded: Pauli
+
+** Review outstanding actions
+
+AI: Tomas to take the the requirements policy to a vote
+Not done
+
+AI: OTC read openssl/technical-policies#7 this week
+Done
+
+AI: Tomas call vote on openssl/technical-policies#7 next week.
+Not done
+
+** Empty Protocol
+
+Tomas presented PR18307 for the empty protocol. Matt explained the idea is that
+we start with an empty protocol that implements the most basic protocol and
+passess tests. We will slowly change it into QUIC over time.
+
+Nicola asked about delivery timescales. Martin explained that he is working on
+the plan.
+
+** RSA Key Gen
+
+With the default RSA Key Gen implementation in 3.0 it can fail from time to time.
+A smaller "e" can make this occur more frequently. The problem seems to be in
+the standard itself.
+
+We should fallback to the old keygen in the case that e is out of the range
+specified by FIPS.
+There should be an error message put on the stack in the case that it fails.
+We should increase the number of loops to 20 as per the latest draft standard -
+which should not be a problem with compliance and will make the probability of
+failure less likely.
+This is a bug that should be fixed on the 3.0 branch.
+
+** Updates from the OMC
+
+OMC need further details on the logging API in order to make a decision - but it
+won't be in 3.1.
+
+There will be a forthcoming blog post about the NIST finalisation. (omc/omc#178)
+
+** Review issues with OTC hold (30 minutes)
+
+#17969: Record layer design - implementation for existing TLS is in progress.
+The design PR will be updated once that work is complete. The PR has been
+converted to draft and the hold removed
+
+#17987: Error suppression. Removing the hold - no OTC decision to be made at this
+stage. New issue raised to add a logging API #18393. We should collect the
+requirements there.
+AI: Dmitry to populate #18393 (logging API) with some requirements
+
+#18130: Removed the OTC hold and added a "won't fix" and converted it to draft.
+
+
+** Review draft technical policies
+
+#50 (switch to C99). Listing the C99 features that we want to support is the way
+forward. Approving C99 as a whole does not work for supporting older platforms.
+
+#51: Deprecate long. We should still be able to use long in certain situations
+(e.g. where there is existing use of long).
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Review and confirm the BIO DGRAM API
+    * Return values and typedefs
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** AOB
+
+Matt will be updating the OTC meeting link to allow for multiple co-hosts.
+
+
+** New and carried over action items [transported from above]:
+
