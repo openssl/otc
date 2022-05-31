@@ -1,0 +1,139 @@
+Meeting Date: 2022-05-31
+Minutes taken by: Tomas
+Attendees:
+    Matthias St. Pierre
+    Matt Caswell
+    Shane Lontis
+    Dmitry Belyavskiy
+    Tomas Mraz
+    Nicola Tuveri
+    Richard Levitte
+    Tim Hudson
+    Paul Dale
+
+External attendees:
+    Martin Koci
+    Daniel Fiala
+
+Agenda:
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Review and confirm the BIO DGRAM API
+    * Return values and typedefs
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Tomas volunteered to take the minutes.
+Proposed: Tomas, seconded: Matt
+
+Agenda for the meeting agreed. Proposed: Matt, seconded: Matthias
+
+** Agree minutes from previous meeting
+
+Last week minutes were approved.
+Proposed: Pauli, seconded: Matt
+
+** Review outstanding actions
+
+AI: Tomas to take the the requirements policy to a vote
+Done
+
+AI: Tomas call vote on openssl/technical-policies#7 next week.
+Done
+
+AI: Dmitry to populate #18393 (logging API) with some requirements
+Done
+
+** Review issues with OTC hold (30 minutes)
+
+#16741 - Bernd has some concerns whether this should go into 1.1.1.
+AI: Matt to re-check the PR#16741 and present to OTC next time
+
+#18198 - We have a broken OSSL_FUNC_BIO_ctrl upcall using wrong return type
+AI: Richard to create a separate PR for fixing OSSL_FUNC_BIO_ctrl with
+alternative proposal that would be forward and backward compatible (at least
+partially).
+
+#18407 - It's a test framework feature, a vote is required for backport to 3.0.
+Vote raised by Nicola: Accept PR#18407 for backfit to 3.0 as a policy exception.
+AI: Nicola to create the vote issue for the PR#18407 vote and e-mail according
+to the process.
+
+** Review draft technical policies
+
+https://github.com/openssl/technical-policies/pull/50:
+Asked Kurt to call the vote or amend the policy.
+
+https://github.com/openssl/technical-policies/pull/51:
+AI: Matt to raise the vote on Deprecate long policy change once the 2 weeks
+period since opening the PR passes.
+
+** Review and confirm the BIO DGRAM API
+
+Design PR:
+https://github.com/openssl/openssl/pull/18210
+
+Implementation:
+https://github.com/openssl/openssl/pull/18270
+
+OTC selected the design based on three major features:
+1. New BIO API calls BIO_sendmmsg, BIO_recvmmsg with public BIO_MSG structure
+   that can be later extended via the stride size parameter concept.
+2. We will not implement IOVs in the API.
+3. On platforms that do not support sendmmsg/recvmmsg the calls will be emulated
+   by sendmsg/sendto/recvmsg/recvfrom.
+
+Proposed by: Tomas, Seconded: Matt
+
+AI: Hugo to refine the design document based on the above and the implementation
+experience.
+
+** Return values and typedefs
+
+We have multiple types of error returns in functions, how to indicate that
+so this is more visible than buried somewhere in the API documentation.
+
+We should add macros to distinguish the various negative return values to
+clarify what they mean. These macros might potentially need to be
+module-specific.
+
+No volunteer came up to create a proposal of coding style policy change.
+Keeping the item on agenda for the next week.
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Return values and typedefs
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** AOB
+
+Nothing.
+
+** New and carried over action items [transported from above]:
+
+AI: Matt to re-check the PR#16741 and present to OTC next time
+
+AI: Richard to create a separate PR for fixing OSSL_FUNC_BIO_ctrl with
+alternative proposal that would be forward and backward compatible (at least
+partially).
+
+AI: Nicola to create the vote issue for the PR#18407 vote and e-mail according
+to the process.
+
+AI: Matt to raise the vote on Deprecate long policy change once the 2 weeks
+period since opening the PR passes.
+
+AI: Hugo to refine the design document based on the above and the implementation
+experience.
