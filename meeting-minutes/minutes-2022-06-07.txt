@@ -1,0 +1,136 @@
+Meeting Date: 2022-06-07
+Minutes taken by: Tomas
+Attendees:
+    Matt Caswell
+    Shane Lontis
+    Dmitry Belyavskiy
+    Tomas Mraz
+    Nicola Tuveri
+    Paul Dale
+
+External attendees:
+    Hugo Landau
+    Daniel Fiala
+    Martin Koci
+
+Agenda:
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * QUIC design overview
+    * Return values and typedefs
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Tomas volunteered to take the minutes.
+Proposed: Tomas, seconded: Matt
+
+Agenda for the meeting agreed. Proposed: Matt, seconded: Matthias
+
+** Agree minutes from previous meeting
+
+Last week minutes were approved.
+Proposed: Tomas, seconded: Nicola, Paul
+
+** Review outstanding actions
+
+AI: Matt to re-check the PR#16741 and present to OTC next time
+Not done
+
+AI: Richard to create a separate PR for fixing OSSL_FUNC_BIO_ctrl with
+alternative proposal that would be forward and backward compatible (at least
+partially).
+Not done
+
+AI: Nicola to create the vote issue for the PR#18407 vote and e-mail according
+to the process.
+Done
+
+AI: Matt to raise the vote on Deprecate long policy change once the 2 weeks
+period since opening the PR passes.
+Waiting for rebase of the PR
+
+AI: Hugo to refine the design document based on the above (#18210) and the
+implementation experience.
+Done
+
+** Review draft technical policies
+
+No new policy drafts to discuss.
+
+** Review issues with OTC hold (30 minutes)
+
+No new OTC hold issues except for QUIC design overview which we have agenda
+item for.
+
+** QUIC design overview
+
+The high level overview of QUIC design was presented by Tomas.
+https://github.com/openssl/openssl/pull/18406
+
+OTC confirms that the design looks OK and we will continue working on the
+individual components.
+Proposed: Matt, Seconded: Tomas
+
+** Return values and typedefs
+
+We are waiting for volunteer to create a proposal.
+
+Probably the best path for the proposal to be acceptable is to review existing
+usage of various return value types and see how the new proposal could
+clarify it and accommodate it at least partially. We probably will not want
+to apply this to existing code right away but gradually it would make sense
+to apply it even to the old code.
+
+AI: Matt to create a proposal on return values and return value types for new
+code.
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Certificate compression PR API (#18186)
+    * Threading support PR API (#12255)
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** AOB
+
+We discussed a potential security issue.
+
+The platform policy is somewhat hidden on the openssl website. The reason is
+that it needs to be converted into a proper general policies entry in the
+general-policies repository.
+
+Discussed a topic of assembler code contributions for platforms that are not
+among the primary supported platforms.
+
+We could recommend the contributor to enable the CI run with qemu on the PR
+with a temporary commit.
+
+** New and carried over action items [transported from above]:
+
+AI: Matt to re-check the PR#16741 and present to OTC next time
+
+AI: Richard to create a separate PR for fixing OSSL_FUNC_BIO_ctrl with
+alternative proposal that would be forward and backward compatible (at least
+partially).
+
+AI: Matt to raise the vote on Deprecate long policy change once the PR is
+rebased. Hugo to rebase it.
+
+AI: Hugo to respond to comments in the DGram API design PR (#18210)
+
+AI: Everyone to look at the API additions in PRs #18186 and #12255 to prepare
+for the next meeting.
+
+AI: Matt to create a proposal on return values and return value types for new
+code.
