@@ -1,0 +1,16 @@
+Meeting Date: 2022-06-14
+Minutes taken by: Matt
+Attendees:
+    Matt Caswell
+    Richard Levitte
+    Dmitry Belyavskiy
+    Tomas Mraz
+    Paul Dale
+
+External attendees:
+    Hugo Landau
+    Daniel Fiala
+    Martin Koci
+
+
+The meeting was not quorate and was abandoned.
