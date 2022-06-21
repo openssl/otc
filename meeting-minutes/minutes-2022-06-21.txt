@@ -1,0 +1,151 @@
+Meeting Date: 2022-06-21
+Minutes taken by: Matt
+Attendees:
+    Matt Caswell
+    Shane Lontis
+    Dmitry Belyavskiy
+    Tomas Mraz
+    Richard Levitte
+    Matthias St. Pierre
+    Paul Dale
+
+External attendees:
+    Hugo Landau
+    Daniel Fiala
+
+Agenda:
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * ACK Manager design
+    * 18501 - FIPS 140-3 Indicators
+    * 16741 Dynamic engine loading
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Matt volunteered to take the minutes.
+Proposed: Tomas, seconded: Matt
+
+Agenda for the meeting agreed. Proposed: Matt, seconded: Matthias, Tomas, Dmitry
+
+** Agree minutes from previous meeting
+
+Last week minutes were approved.
+Proposed: Tomas, seconded: Matt
+
+** Review outstanding actions
+
+AI: Matt to re-check the PR#16741 and present to OTC next time
+Done
+
+AI: Richard to create a separate PR for fixing OSSL_FUNC_BIO_ctrl with
+alternative proposal that would be forward and backward compatible (at least
+partially).
+Done
+
+AI: Matt to raise the vote on Deprecate long policy change once the PR is
+rebased. Hugo to rebase it.
+Not done - there are some outstanding comments.
+
+AI: Hugo to respond to comments in the DGram API design PR (#18210)
+Done
+
+AI: Everyone to look at the API additions in PRs #18186 and #12255 to prepare
+for the next meeting.
+Not done - but closing action. Replaced by:
+  AI: Tomas to review the threading API and get it ready for OTC review
+  AI: Matt to review the certificate compression API and get it ready for OTC review
+
+AI: Matt to create a proposal on return values and return value types for new
+code.
+Not done
+
+** ACK Manager design
+
+Hugo presented the ack manager design. Some discussion about the interaction with
+the de-packetizer.
+
+Ack manager design has been reviewed and is suitable to proceed to implementation.
+Proposed: Matt, Seconded: Tomas
+
+[Pauli left]
+
+** 18501 - FIPS 140-3 Indicators
+
+Dmitry presented the issue in 18501. There is a problem with the EVP_Sign* API
+Which splits the hash and sign operations into two steps (hash then sign) - so
+the whole operation is not performed inside the FIPS boundary.
+
+It would be useful to have input from Tim on this dicussion. Discussion deferred
+until Tim is present.
+
+** 16741 Dynamic engine loading
+
+Discussion about PR16741 which loads all built-in engines in 1.1.1 when calling
+the ENGINE_by_id function. This is incorrect - it should be changed just to load
+the dynamic engine.
+AI: Matt to update PR16741 to only load the dynamic engine
+
+There was also a discussion about the behaviour in master/3.0. These versions
+also load all the built-in functions in ENGINE_by_id. We will leave this
+behaviour as-is for now.
+
+** Review issues with OTC hold (30 minutes)
+
+18519: Discussion deferred until Pauli is present
+
+18586: Changing the default digest length for the SHAKE digests would potentially
+seriously break some applications. We should just document this behaviour.
+
+AI: Shane to investigate 18586 further and create a PR to document the behaviour.
+
+** Review draft technical policies
+
+Nothing further to discuss.
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Threading support PR API (#12255)
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** AOB
+
+Matt is on holiday from 28th - will miss the next 3 OTC meetings.
+Richard is also on holiday and will also miss the meeting on 28th
+Dmitry, Hugo and Tomas will miss the OTC meeting on 5th July.
+
+Meeting on 5th July is cancelled.
+
+Hertzbleed. Shane presented an overview of the Hertzbleed attack.
+
+Short RSA key issue was discussed. #18538
+AI: Matt to raise a PR to fix short RSA key issues (18538)
+
+** New and carried over action items [transported from above]:
+
+AI: Matt to raise the vote on Deprecate long policy change once the PR is
+rebased. Hugo to rebase it.
+
+AI: Tomas to review the threading API and get it ready for OTC review
+
+AI: Matt to review the certificate compression API and get it ready for OTC review
+
+AI: Matt to create a proposal on return values and return value types for new
+code.
+
+AI: Matt to update PR16741 to only load the dynamic engine
+
+AI: Shane to investigate 18586 further and create a PR to document the behaviour.
+
+AI: Matt to raise a PR to fix short RSA key issues (18538)
