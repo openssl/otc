@@ -1,0 +1,16 @@
+Meeting Date: 2022-06-28
+Minutes taken by: Matt
+Attendees:
+    Dmitry Belyavskiy
+    Tomas Mraz
+    Paul Dale
+    Shane Lontis
+    Matthias St. Pierre
+
+External attendees:
+    Hugo Landau
+    Daniel Fiala
+    Martin Koci
+
+
+The meeting was not quorate and was abandoned.
