@@ -1,0 +1,142 @@
+Meeting Date: 2022-07-12
+Minutes taken by: Tomas
+Attendees:
+    Shane Lontis
+    Dmitry Belyavskiy
+    Tomas Mraz
+    Richard Levitte
+    Matthias St. Pierre
+    Paul Dale
+    Tim Hudson
+    Nicola Tuveri
+
+External attendees:
+    Hugo Landau
+    Daniel Fiala
+    Tamara Dale
+    Martin Koci
+
+Agenda:
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Introducing Tamara Dale
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Tomas volunteered to take the minutes.
+Proposed: Tomas, seconded: Tim
+
+Agenda for the meeting agreed. Proposed: Tomas, seconded: Tim
+
+** Agree minutes from previous meeting
+
+Last meeting minutes (3 weeks ago) were approved.
+Proposed: Tomas, seconded: Matthias
+
+** Review outstanding actions
+
+AI: Matt to raise the vote on Deprecate long policy change once the PR is
+rebased. Hugo to rebase it.
+Not done
+
+AI: Tomas to review the threading API and get it ready for OTC review
+Not done
+
+AI: Matt to review the certificate compression API and get it ready for OTC review
+Not done
+
+AI: Matt to create a proposal on return values and return value types for new
+code.
+Not done
+
+AI: Matt to update PR16741 to only load the dynamic engine
+Done
+
+AI: Shane to investigate 18586 further and create a PR to document the behaviour.
+Done
+
+AI: Matt to raise a PR to fix short RSA key issues (18538)
+Done
+
+** Introducing Tamara Dale
+
+Tamara (Tam) Dale was hired as Business Operations Administrator to help with
+administrating of the customer relations.
+
+[Tamara has left the meeting.]
+
+** Review issues with OTC hold (30 minutes)
+
+#18750 Web Assembly support
+ - not an issue for OTC to decide. If third party submits PR with support for
+   Web Assembly it will be looked at.
+
+#18663 -Werror=free-nonheap-object warnings with GCC LTO
+ - This particular warning is a misdetecting an issue by the compiler so there
+   is nothing to do here.
+ - There are strict aliasing problems revealed by LTO. We do not support
+   LTO with the current codebase.
+
+#18519 Which clock should we use for timeouts etc?
+ - gettimeofday() is sufficient for now. Later we can reconsider this.
+
+#18480 Use as small dh key size as possible to support the security
+ - Not for 3.0 branch. OK for master branch.
+ - Perhaps we could have a blog post about mitigating DHEater
+
+** Review draft technical policies
+
+No new drafts to review.
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Threading support PR API (#12255)
+    * FIPS service indicators (#18501)
+    * PQC NIST announcements and our position
+    * Do we want a performance fix release?
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** AOB
+
+ICMC Conference happening mid September in USA Washington, DC - OpenSSL would
+like to offer OTC members to join Martin visiting the conference.
+
+CMS signature verification issue (#18729) - we are incompatible with Heimdal CMS
+support - this is a feature request as RFC 5652 even says: Implementations MAY 
+fail to validate signatures that use a digest algorithm that is not included in
+the SignedData digestAlgorithms set.
+
+Shane brought up an issue about some of the performance fixes in master branch
+not backported to 3.0. Maybe the solution would be making a 3.1 performance
+fix release branched from the 3.0 branch with all the performance fixes
+backported.
+
+RIPEMD160 problematic (#17722) - Duplicating it in default provider would not
+break the stability guarantee for minor releases. On the other hand it is a
+kind of hack. Another option would be to keep it in legacy but add an ability
+to switch off other legacy algorithms by a config file option.
+
+** New and carried over action items [transported from above]:
+
+AI: Matt to raise the vote on Deprecate long policy change once the PR is
+rebased. Hugo to rebase it.
+
+AI: Tomas to review the threading API and get it ready for OTC review
+
+AI: Matt to review the certificate compression API and get it ready for OTC review
+
+AI: Matt to create a proposal on return values and return value types for new
+code.
+

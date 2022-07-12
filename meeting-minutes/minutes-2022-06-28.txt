@@ -1,5 +1,5 @@
 Meeting Date: 2022-06-28
-Minutes taken by: Matt
+Minutes taken by: Tomas
 Attendees:
     Dmitry Belyavskiy
     Tomas Mraz
@@ -11,6 +11,5 @@ External attendees:
     Hugo Landau
     Daniel Fiala
     Martin Koci
-
 
 The meeting was not quorate and was abandoned.
