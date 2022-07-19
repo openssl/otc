@@ -1,0 +1,140 @@
+Meeting Date: 2022-07-19
+Minutes taken by: Matt
+Attendees:
+    Shane Lontis
+    Dmitry Belyavskiy
+    Tomas Mraz
+    Richard Levitte
+    Matthias St. Pierre
+    Tim Hudson
+    Nicola Tuveri
+    Matt Caswell
+
+External attendees:
+    Hugo Landau
+    Martin Koci
+
+Agenda:
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Threading support PR API (#12255)
+    * FIPS service indicators (#18501)
+    * PQC NIST announcements and our position
+    * Do we want a performance fix release?
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Matt volunteered to take the minutes.
+Proposed: Matt, seconded: Tim
+
+Agenda for the meeting agreed. Proposed: Matt, seconded: Tim
+
+** Agree minutes from previous meeting
+
+Last meeting minutes were approved.
+Proposed: Tomas, seconded: Nicola
+
+** Review outstanding actions
+
+AI: Matt to raise the vote on Deprecate long policy change once the PR is
+rebased. Hugo to rebase it.
+Not done
+
+AI: Tomas to review the threading API and get it ready for OTC review
+Done
+
+AI: Matt to review the certificate compression API and get it ready for OTC review
+Not done
+
+AI: Matt to create a proposal on return values and return value types for new
+code.
+Not done
+
+** Threading support PR API (#12255)
+
+Discussion about the current state of the threading API PR. There were
+differing view points about how much should be made public.
+
+AI: Hugo to write a design document for threading. It should capture what we
+are trying to achieve.
+
+** FIPS service indicators (#18501)
+
+Tim stated that composing different FIPS validated elements together is allowed.
+Discussion ensued about whether this is permitted or not. Dmitry will continue
+investigations and discussions offline.
+
+** PQC NIST announcements and our position
+
+Nicola provided an overview of the latest NIST announcements as well as the
+positions of other international standards organisations:
+
+https://hackmd.io/@romen/BkKc7boj9
+
+** Do we want a performance fix release?
+
+Discussion about whether the performance fixes in master that are not in 3.0
+worth putting out a new release.
+
+We don't currently have performance numbers.
+
+Having performance testing infrastructure would be helpful. OpenSSL are currently
+interviewing for a platform engineer role that could help us put in place the
+infrastructure.
+
+** Review issues with OTC hold (30 minutes)
+
+Defer
+
+** Review draft technical policies
+
+Defer
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** AOB
+
+Martin asked whether Tam could have access to openssl-security.
+Tomas proposed, Tim seconds.
+
+Tim proposed adding Hugo to openssl-security, Dmitry seconded.
+
+A security report was discussed.
+AI: Matt to respond to the security report.
+
+Matthias proposed adding the code of conduct to the repo.
+Hugo stated that the file should not be in the main repo - it should be in the
+policies repo.
+Proposal to add a file with a link to the code of conduct.
+AI: Matthias to create a PR to link the code of conduct
+
+** New and carried over action items [transported from above]:
+
+AI: Matt to raise the vote on Deprecate long policy change once the PR is
+rebased. Hugo to rebase it.
+
+AI: Matt to review the certificate compression API and get it ready for OTC review
+
+AI: Matt to create a proposal on return values and return value types for new
+code.
+
+AI: Hugo to write a design document for threading. It should capture what we
+are trying to achieve.
+
+AI: Matt to respond to the security report.
+
+AI: Matthias to create a PR to link the code of conduct
