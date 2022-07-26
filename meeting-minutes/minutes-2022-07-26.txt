@@ -1,0 +1,137 @@
+Meeting Date: 2022-07-26
+Minutes taken by: Tomas
+Attendees:
+    Shane Lontis
+    Dmitry Belyavskiy
+    Tomas Mraz
+    Richard Levitte
+    Matthias St. Pierre
+    Nicola Tuveri
+    Matt Caswell
+    Paul Dale
+
+External attendees:
+    Hugo Landau
+
+Agenda:
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Review outstanding security issues
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Tomas volunteered to take the minutes.
+Proposed: Tomas, seconded: Matthias, Matt
+
+Agenda for the meeting agreed. Proposed: Tomas, seconded: Matt
+
+** Agree minutes from previous meeting
+
+We've forgot to approve the meeting minutes from the previous meeting.
+To be done on the next meeting.
+
+** Review outstanding actions
+
+AI: Matt to raise the vote on Deprecate long policy change once the PR is
+rebased. Hugo to rebase it.
+Done
+
+AI: Matt to review the certificate compression API and get it ready for OTC review
+Not done
+
+AI: Matt to create a proposal on return values and return value types for new
+code.
+Not done
+
+AI: Hugo to write a design document for threading. It should capture what we
+are trying to achieve.
+Done
+
+AI: Matt to respond to the security report.
+Done
+
+AI: Matthias to create a PR to link the code of conduct
+Not done
+
+** Review issues with OTC hold (30 minutes)
+
+#18744 - Regression: Unable to set EC_KEY private_key to NULL starting in
+1.1.1h
+
+ - We should revert to the old behaviour on all branches, where passing NULL
+   sets the internal key to NULL and we get a failure result code back.
+
+[Nicola has left]
+
+#18583 - Resolve the BIO_ctrl() / OSSL_FUNC_BIO_ctrl_fn declaration clash
+[TAKE 1]
+#18584 - Resolve the BIO_ctrl() / OSSL_FUNC_BIO_ctrl_fn declaration clash
+[TAKE 2]
+
+ - After long discussion the conclusion is that the compatibility problem with
+TAKE 1 for providers compiled against new libcrypto headers is real and we do
+not want to break backwards and forwards compatibility.
+ - Decision is to add overflow checking to TAKE 2 and use it. If a possible
+new approach for having a backwards and forwards compatible fix appears it
+can be always applied on top of TAKE 2.
+
+#18820 - repo is missing a Code of Conduct statement
+
+ - Matthias will add a PR adding a file with link to the CoC web page
+
+#18834 - digestsign/digestverify self test
+
+ - Postponed to next week
+
+** Review draft technical policies
+
+ - No new policy drafts
+
+** Review outstanding security issues
+
+We reviewed outstanding security issues (not necessarily any).
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Review outstanding security issues
+    * Thread pool design proposal review (#18864)
+    * Certificate compression PR review (#18186)
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** AOB
+
+Dmitry asked whether we want a new label for PRs/Issues to be discussed by OTC.
+There was not seen a need for it. The existing hold: OTC decision needed is
+sufficient.
+
+Red Hat will submit a set of patches for OpenSSL mostly related to FIPS 140-3
+support. Adding the FIPS 140-3 support is OMC decision to be made.
+
+Shane asked whether informational RFCs constitute a proper standard for our
+policy about new features. It is a borderline however if it is an RFC
+that means it is not a moving target as drafts are. So it should be sufficient
+but of course something having an RFC does not mean we have to implement
+it.
+
+** New and carried over action items [transported from above]:
+
+AI: Everyone to review the thread pool design document #18864
+
+AI: Matt to review the certificate compression API and get it ready for OTC review
+
+AI: Matt to create a proposal on return values and return value types for new
+code.
+
+AI: Matthias to create a PR to link the code of conduct
