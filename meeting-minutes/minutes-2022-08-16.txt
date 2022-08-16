@@ -1,0 +1,129 @@
+Meeting Date: 2022-08-16
+Minutes taken by: Matt
+Attendees:
+    Shane Lontis
+    Dmitry Belyavskiy
+    Tomas Mraz
+    Richard Levitte
+    Matthias St. Pierre
+    Nicola Tuveri
+    Matt Caswell
+    Paul Dale
+
+External attendees:
+    Hugo Landau
+    Martin Koci
+
+Agenda:
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Review outstanding security issues
+    * Thread pool design proposal review (#18864)
+    * Certificate compression PR review (#18186)
+    * HPKE overview
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Matt volunteered to take the minutes.
+Proposed: Matt, seconded: Tomas, Matthias
+
+Agenda for the meeting agreed. Proposed: Matt, seconded: Paul
+
+** Agree minutes from previous meeting
+
+Minutes from previous meeting were agreed. Proposed: Matt, seconded: Tomas
+Minutes from 19th July 2022 were agreed. Proposed: Matt, seconded: Tomas
+
+** Review outstanding actions
+
+AI: Everyone to review the thread pool design document #18864
+Done
+
+AI: Matt to review the certificate compression API and get it ready for OTC review
+Done
+
+AI: Matt to create a proposal on return values and return value types for new
+code.
+Not done
+
+AI: Matthias to create a PR to link the code of conduct
+Done. PR#19002
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** Thread pool design proposal review (#18864)
+
+Hugo presented the thread pool design document.
+
+Initially we should only implement the simplest "default" model in MVP. The
+existing thread PR (#12255) should be modified to only expose these API calls in
+the public API.
+
+OpenSSL should not be doing signal handling if possible.
+
+AI: Tomas to communicate back the OTC view on threading to the author of PR#12255
+
+** Certificate compression PR review (#18186)
+
+Receiving of compressed certificates should be "on" by default
+Transmission of compressed certificates should be "off" by default, unless you
+have already cached some certificates using SSL_CTX_compress_cert() or you have
+set the callback.
+We should only negotiate compression algorithms for transmission for which we
+have a cached certificate (unless you are using the callback).
+
+There was some discussion about having a fetchable compression API in the future.
+
+** HPKE overview
+
+Shane provided an overview of HPKE
+
+AI: All to review the competing HPKE PRs ready for discussion next week
+
+AI: Matt to invite Stephen Farrell (author of PR#17172) to join the meeting next
+week (can join from the start).
+
+** Review issues with OTC hold (30 minutes)
+
+Deferred
+
+** Review draft technical policies
+
+Deferred
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * HPKE
+    * Review outstanding security issues
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** AOB
+
+Matthias asked about OTC activity status. We're only halfway through the
+quarter so there is plenty of time to get a commit in.
+
+** New and carried over action items [transported from above]:
+
+AI: Matt to create a proposal on return values and return value types for new
+code
+
+AI: Tomas to communicate back the OTC view on threading to the author of PR#12255
+
+AI: All to review the competing HPKE PRs ready for discussion next week
+
+AI: Matt to invite Stephen Farrell (author of PR#17172) to join the meeting next
+week (can join from the start).
