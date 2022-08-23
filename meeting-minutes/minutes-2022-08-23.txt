@@ -1,0 +1,128 @@
+Meeting Date: 2022-08-23
+Minutes taken by: Matt
+Attendees:
+    Dmitry Belyavskiy
+    Tomas Mraz
+    Richard Levitte
+    Nicola Tuveri
+    Matt Caswell
+    Paul Dale
+    Shane Lontis
+
+External attendees:
+    Hugo Landau
+    Stephen Farrell
+    Daniel Fiala
+
+Agenda:
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * HPKE
+    * Review outstanding security issues
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Matt volunteered to take the minutes.
+Proposed: Matt, seconded: Pauli
+
+Agenda for the meeting agreed. Proposed: Matt, seconded: Pauli
+
+** Agree minutes from previous meeting
+
+Minutes from previous meeting were agreed. Proposed: Matt, seconded: Pauli
+
+** Review outstanding actions
+
+AI: Matt to create a proposal on return values and return value types for new
+code
+Not done
+
+AI: Tomas to communicate back the OTC view on threading to the author of PR#12255
+Done
+
+AI: All to review the competing HPKE PRs ready for discussion next week
+Done
+
+AI: Matt to invite Stephen Farrell (author of PR#17172) to join the meeting next
+week (can join from the start).
+Done
+
+** HPKE 
+
+Stephen gave an introduction to HPKE.
+
+Primary differences between the two PRs are the public API and the DHKEM in the
+providers. 3 stages were proposed: 1) define the extended internal KEM API
+2) Implement DHKEM in the provider 3) Implement HPKE
+
+Discussion is that we would use Stephen's PR as the basis for the HPKE
+implementation - but use Shane's provider based KEM implementation.
+
+The external API should be evolved to be closer to the RFC API.
+
+Possibly we could restrict to just the base mode initially. However the API
+would have to be flexible enough to cover all modes.
+
+Decision:
+ 1) We will use Stephen's PR as the basis for the HPKE implementation
+ 2) The public API needs to be evolved to be closer to the RFC
+ 3) We will use the provider based DHKEM implementation from Shane's PR
+
+Discussion about making the KEM implementation not specific to EC.
+
+[Stephen Farrell left]
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** Review issues with OTC hold (30 minutes)
+
+#8136: Should there be a leading 0 when printing a BIGNUM? There is a
+difference between printing the DER encoding and printing the actual value.
+Because the removal of the leading zero might possibly break third party scripts
+and it is not seen as too confusing given the DER encoding contains the zero
+anyway we do not want to accept this into 3.1
+
+#14833: Make CRYPTO_malloc() and friends report ERR_R_MALLOC_FAILURE. There
+will be "double" malloc error reports as a result of this PR. The current state
+of the PR is not acceptable becuase it possibly reports error on 0 bytes
+allocated. This PR can be merged if there will be a followup PR to fix the
+duplicated ERR_raise(ERR_R_MALLOC_FAILURE) calls in one way or another - depending
+on the context.
+
+#15905 Enable some disabled __owurs. This is OK to go in 3.1
+
+#17662: Discussion about how this works. Further dicussion deferred.
+
+** Review draft technical policies
+
+None.
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Discuss 17662 (Config option to limit algorithm usage)
+    * RX Depacketizer design
+    * Review outstanding security issues
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** AOB
+
+None
+
+** New and carried over action items [transported from above]:
+
+AI: Matt to create a proposal on return values and return value types for new
+code
