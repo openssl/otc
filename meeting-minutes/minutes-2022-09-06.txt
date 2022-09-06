@@ -1,0 +1,113 @@
+Meeting Date: 2022-08-30
+Minutes taken by: Tomáš
+Attendees:
+    Dmitry Belyavskiy
+    Tomas Mraz
+    Richard Levitte
+    Matt Caswell
+    Tim Hudson
+    Matthias St. Pierre
+    Shane Lontis (since the Congestion of PRs needing reviews topic)
+
+External attendees:
+    Daniel Fiala
+    Martin Koci
+
+Agenda:
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Review outstanding security issues
+    * Congestion of PRs needing reviews
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Tomas volunteered to take the minutes.
+Proposed: Tomas, seconded: Tim
+
+Agenda for the meeting agreed. Proposed: Matt, seconded: Tomas, Matthias
+
+** Agree minutes from previous meeting
+
+Minutes from previous meeting were agreed. Proposed: Matt, seconded: Dmitry
+
+** Review outstanding actions
+
+AI: Matt to create a proposal on return values and return value types for new
+code
+Not done. Matt's not anticipating to get it done sooner than after a month,
+volunteers welcome.
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** Congestion of PRs needing reviews
+
+Matthias presented that we have many pending PRs that are stalled waiting for
+reviews.
+
+Tim suggested planning a PR backlog review sprint(s).
+
+We should also gather some statistics on whether the queue grows especially
+for externally contributed PRs. Also whether there are PRs that waiting
+_forever_ to get a review.
+
+We need these metrics to find out what are the priorities and how to improve
+the situation.
+
+AI: Martin to propose some metrics on outstanding GH PRs and issues.
+
+** Review issues with OTC hold (30 minutes)
+
+#19072 - ERR: Adapt ERR_raise() calls after making CRYPTO_malloc() and friends
+report ERR_R_MALLOC_FAILURE
+
+We need a proposal with the alternatives how to handle this.
+
+AI: Richard to propose alternatives for what to do with the duplicate
+ERR_raise() calls right after failed OPENSSL_*alloc() and also the ERR_raises
+after the other _new() call failures.
+
+** Review draft technical policies
+
+None.
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Discuss 17662 (Config option to limit algorithm usage)
+    * RX Depacketizer design
+    * Review outstanding security issues
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** AOB
+
+Dmitry brought up PR #13817 - if we can somehow resume review process on this
+PR. Tim asked for making this optional - to be able to turn it off for
+applications where Bleichenbacher attack is not relevant. But there is no
+OTC hold.
+
+** New and carried over action items [transported from above]:
+
+AI: Matt to create a proposal on return values and return value types for new
+code.
+
+AI: Tomas to create a draft blog post about changing defaults for enabled DH
+params.
+
+AI: Martin to propose some metrics on outstanding GH PRs and issues.
+
+AI: Richard to propose alternatives for what to do with the duplicate
+ERR_raise() calls right after failed OPENSSL_*alloc() and also the ERR_raises
+after the other _new() call failures.
