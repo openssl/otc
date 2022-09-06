@@ -1,25 +1,28 @@
-Meeting Date: 2022-08-30
-Minutes taken by: Tomáš
+Meeting Date: 2022-09-06
+Minutes taken by: Martin
 Attendees:
     Dmitry Belyavskiy
     Tomas Mraz
     Richard Levitte
-    Matt Caswell
-    Tim Hudson
     Matthias St. Pierre
-    Shane Lontis (since the Congestion of PRs needing reviews topic)
+    Shane Lontis
+    Pauli
+    Nicola
 
 External attendees:
-    Daniel Fiala
-    Martin Koci
+    Hugo
+    Ales
+    Martin
+    Daniel
 
 Agenda:
 
     * Nominate a minute taker and confirm agenda
     * Agree minutes from previous meeting
-    * Review outstanding actions
+    * Ales Marecek introduction - new DevOps in OpenSSL
+    * Review outstanding action
+    * RX Depacketizer design
     * Review outstanding security issues
-    * Congestion of PRs needing reviews
     * Review issues with OTC hold (30 minutes)
     * Review draft technical policies
     * Agree agenda for next meeting
@@ -27,64 +30,75 @@ Agenda:
 
 ** Nominate a minute taker and confirm agenda
 
-Tomas volunteered to take the minutes.
-Proposed: Tomas, seconded: Tim
+Martin volunteered to take the minutes.
+Proposed: Tomas, seconded: Matthias
 
-Agenda for the meeting agreed. Proposed: Matt, seconded: Tomas, Matthias
+Agenda for the meeting agreed. Proposed: Tomas, seconded: Pauli
 
 ** Agree minutes from previous meeting
 
-Minutes from previous meeting were agreed. Proposed: Matt, seconded: Dmitry
+Minutes from previous meeting were agreed. Proposed: Tomas, seconded: Dmitry 
+
+** Ales Marecek introduction
+
+Our new DevOps force. 
+How about buildbot efforts. Mostly Richard domain (specially development of this)
+but Ales will help too. 
 
 ** Review outstanding actions
 
 AI: Matt to create a proposal on return values and return value types for new
-code
-Not done. Matt's not anticipating to get it done sooner than after a month,
-volunteers welcome.
+code.
+Not done. 
+
+AI: Tomas to create a draft blog post about changing defaults for enabled DH
+params.
+Not done. 
+
+AI: Martin to propose some metrics on outstanding GH PRs and issues.
+Not done. 
+
+AI: Richard to propose alternatives for what to do with the duplicate
+ERR_raise() calls right after failed OPENSSL_*alloc() and also the ERR_raises
+after the other _new() call failures.
+Not done. 
+
+** RX Depacketizer design
+
+The design document already merged. 
+Implementation is almost ready for your review. 
+Tests are being added. 
 
 ** Review outstanding security issues
 
 We discussed outstanding security issues.
 
-** Congestion of PRs needing reviews
-
-Matthias presented that we have many pending PRs that are stalled waiting for
-reviews.
-
-Tim suggested planning a PR backlog review sprint(s).
-
-We should also gather some statistics on whether the queue grows especially
-for externally contributed PRs. Also whether there are PRs that waiting
-_forever_ to get a review.
-
-We need these metrics to find out what are the priorities and how to improve
-the situation.
-
-AI: Martin to propose some metrics on outstanding GH PRs and issues.
-
 ** Review issues with OTC hold (30 minutes)
 
-#19072 - ERR: Adapt ERR_raise() calls after making CRYPTO_malloc() and friends
-report ERR_R_MALLOC_FAILURE
-
-We need a proposal with the alternatives how to handle this.
-
-AI: Richard to propose alternatives for what to do with the duplicate
-ERR_raise() calls right after failed OPENSSL_*alloc() and also the ERR_raises
-after the other _new() call failures.
+#18973 - Increase size limits of RFC values
+ Tomas: I really don't think this should be merged. 
+ Pauli: Agree, unless there is a authoritative source to say yes. 
+ Closed with comment.
+#19105 - Add function to generate a public key from private
+ Tomas: actually, we have agreed in one of the previous meetings already
+ Tomas: But we didn't vote, and it is not in the mintues since it was long time
+ ago. 
+ Tomas: to propose a vote with the text: 
+ "For all currently implemented algorithms, where it is possible, if the public 
+ key component is missing when a key is imported into a provider, the public 
+ key component should be computed."
 
 ** Review draft technical policies
 
-None.
+We don't have any.
 
 ** Agree agenda for next meeting
 
     * Nominate a minute taker and confirm agenda
     * Agree minutes from previous meeting
     * Review outstanding actions
+    * Plan for re-triage process for stalled issues and PRs
     * Discuss 17662 (Config option to limit algorithm usage)
-    * RX Depacketizer design
     * Review outstanding security issues
     * Review issues with OTC hold (30 minutes)
     * Review draft technical policies
@@ -93,10 +107,10 @@ None.
 
 ** AOB
 
-Dmitry brought up PR #13817 - if we can somehow resume review process on this
-PR. Tim asked for making this optional - to be able to turn it off for
-applications where Bleichenbacher attack is not relevant. But there is no
-OTC hold.
+Tomas: I might have some proposal for re-triage process for outstanding PRs. 
+Does OTC wants to be involved in this? Yes, Martin added this topic to the agenda.
+Dmitry: propose update about RFC8446: 
+https://datatracker.ietf.org/doc/html/draft-ietf-tls-rfc8446bis-04
 
 ** New and carried over action items [transported from above]:
 
@@ -111,3 +125,4 @@ AI: Martin to propose some metrics on outstanding GH PRs and issues.
 AI: Richard to propose alternatives for what to do with the duplicate
 ERR_raise() calls right after failed OPENSSL_*alloc() and also the ERR_raises
 after the other _new() call failures.
+
