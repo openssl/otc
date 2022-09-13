@@ -1,0 +1,151 @@
+Meeting Date: 2022-09-13
+Minutes taken by: Matt
+Attendees:
+    Dmitry Belyavskiy
+    Tomas Mraz
+    Richard Levitte
+    Shane Lontis
+    Pauli
+    Nicola
+    Matt Caswell
+
+External attendees:
+    Hugo
+    Daniel
+
+Agenda:
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding action
+    * 3.0.0 FIPS provider
+    * HPKE
+    * Discuss 17662 (Config option to limit algorithm usage)
+    * Review outstanding security issues
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Matt volunteered to take the minutes.
+Proposed: Pauli, seconded: Richard
+
+Agenda for the meeting agreed. Proposed: Matt, seconded: Pauli
+
+** Agree minutes from previous meeting
+
+Minutes from previous meeting were agreed. Proposed: Tomas, seconded: Pauli
+
+** Review outstanding actions
+
+AI: Matt to create a proposal on return values and return value types for new
+code.
+Not done
+
+AI: Tomas to create a draft blog post about changing defaults for enabled DH
+params.
+Not done
+
+AI: Martin to propose some metrics on outstanding GH PRs and issues.
+Not done
+
+AI: Richard to propose alternatives for what to do with the duplicate
+ERR_raise() calls right after failed OPENSSL_*alloc() and also the ERR_raises
+after the other _new() call failures.
+Not done
+
+** 3.0.0 FIPS provider
+
+We are guaranteeing binary compatibility forward and backards for our providers.
+Using the 3.0.0 FIPS provider against the latest 3.0.x code causes test failures.
+All are due to tests introduced to cover bugs that were fixed since 3.0.0. There
+was a mistaken regression introduced but that has now been fixed.
+
+In the future the tests will need to do version checks. See Issue: 19171, Fix in
+19201.
+
+We need to test this via CI.
+
+** HPKE
+
+PR in 19068. There was some debate about the naming of the API functions and
+whether the encapsulate/decapsulate auth variants should be a separate OP code.
+The API naming is ok. We should not have a separate OP code.
+
+Discussion about the necessity to support Input Key Material (IKM). This is
+needed to support test vectors.
+
+** Discuss 17662 (Config option to limit algorithm usage)
+
+Issue was raised about how this will work in the FIPS provider. The FIPS
+provider has its own libctx, does not link against libcrypto, and does not load
+the config file - so this option would not work there.
+
+Currently this is implemented as a global setting. Is it possible to override it
+for specific circumstances?
+
+Dmitry proposed:
+  1. Algorithm allowance/disallowance should be on the provider configuration level
+Rationale: providers may be not aware about this feature
+
+  2. We may want to override the settings in some corner cases
+     - This could be done through loading a new libctx
+
+Dmitry will further discuss and come back.
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** Review issues with OTC hold (30 minutes)
+
+#15857:
+The OBJECT_DIGEST_INFO*, ISSUER_SERIAL* and IETF* namespaces are not ours to
+claim. All such names should be prefixed with OSSL_.
+
+** Review draft technical policies
+
+No technical policies to discuss.
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Plan for re-triage process for stalled issues and PRs
+    * TX Packetiser (18570)
+    * Connection ID cache
+    * QUIC Record Layer
+    * Github Discussions
+    * Review outstanding security issues
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** AOB
+
+Discussion about automatically compute public key on import vote (technical
+policies #54). Debate about the previous vote that was held on this topic. The
+vote has still one more week to run. We should see where we are in a weeks time.
+
+Post Quantum meeting that was forwarded to the list is being held today.
+AI: Matt to send details of the post-quantum meeting to the OTC list
+
+** New and carried over action items [transported from above]:
+
+AI: Matt to create a proposal on return values and return value types for new
+code.
+
+AI: Tomas to create a draft blog post about changing defaults for enabled DH
+params.
+
+AI: Martin to propose some metrics on outstanding GH PRs and issues.
+
+AI: Richard to propose alternatives for what to do with the duplicate
+ERR_raise() calls right after failed OPENSSL_*alloc() and also the ERR_raises
+after the other _new() call failures.
+
+AI: Matt to send details of the post-quantum meeting to the OTC list
