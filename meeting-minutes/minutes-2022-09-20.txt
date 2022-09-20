@@ -1,0 +1,172 @@
+Meeting Date: 2022-09-20
+Minutes taken by: Tomas
+Attendees:
+    Dmitry Belyavskiy
+    Tomas Mraz
+    Richard Levitte
+    Shane Lontis
+    Nicola Tuveri
+    Matt Caswell
+
+External attendees:
+    Hugo Landau
+    Daniel Fiala
+    Martin Koci
+
+Agenda:
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Summarize the key points from Martin's ICMC presentation
+    * Key points from the PQC discussion meeting
+    * QUIC Record Layer
+    * Github Discussions
+    * Review outstanding security issues
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Tomas volunteered to take the minutes.
+Proposed: Tomas, seconded: Shane
+
+Agenda for the meeting agreed. Proposed: Tomas, seconded: Matt
+
+** Agree minutes from previous meeting
+
+Minutes from previous meeting were agreed. Proposed: Matt, seconded: Nicola, Tomas
+
+** Review outstanding actions
+
+AI: Matt to create a proposal on return values and return value types for new
+code.
+Not done
+
+AI: Tomas to create a draft blog post about changing defaults for enabled DH
+params.
+Not done
+
+AI: Martin to propose some metrics on outstanding GH PRs and issues.
+Not done
+
+AI: Richard to propose alternatives for what to do with the duplicate
+ERR_raise() calls right after failed OPENSSL_*alloc() and also the ERR_raises
+after the other _new() call failures.
+Not done
+
+AI: Matt to send details of the post-quantum meeting to the OTC list
+Done
+
+** Summarize the key points from Martin's ICMC presentation
+
+OpenSSL vision statement is being formed.
+OpenSSL FIPS provider 3.0 can be rebranded by our premium customers for no
+additional cost.
+OpenSSL 3.1 release with FIPS 140-3 support announced and should happen in
+February 2023.
+The QUIC MVP will be in OpenSSL 3.2 and should be in July 2023.
+KeyPair consulting has prepared patches for the FIPS 140-3 support and they
+offered them to us.
+The 3.1 branch will be branched off the 3.0 branch.
+
+** Key points from the PQC discussion meeting
+
+Nicola and Dmitry attended an online PQC discussion meeting where various
+parties implementing secure communication and also from some universities
+discussed their plans and priorites for PQC algorithms.
+
+Nicola presented there that we are basically waiting on the actual standards to
+materialize.
+
+Cloudflare presented their hybrid KEM in TLS experiment.
+
+There was a discussion on hybrid KEM and the preferred ways how to design it.
+
+IETF PQC mailing list will be used for further discussions.
+https://mailarchive.ietf.org/arch/browse/pqc/
+
+** QUIC Record Layer
+
+Hugo gave an introduction of the QUIC Record Layer design and implementation.
+PR #18949 (already merged)
+
+No objections from OTC were raised, only praise.
+
+** Github Discussions
+
+Do we want to use Github Discussions as a replacement for openssl-users ML and
+issues which are `triaged: question`?
+
+There was discussion about benefit of having openssl-users ML community and
+whether we would lose it or not if we also had Github Discussions.
+
+There was no definite conclusion, we might want to revisit this topic later.
+
+It would be useful to have openssl-machine script closing the issues with
+`triaged: question` and `resolved: answered` labels after some time.
+
+AI: Tomas to create issue in youtrack to update openssl-machine autoclosing
+script.
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** Review issues with OTC hold (30 minutes)
+
+#18650 - Add support for zerocopy KTLS on Linux
+OTC would be OK with the PR if it was opt-in runtime configuration.
+
+** Review draft technical policies
+
+No technical policies to discuss.
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Matthias' key impressions from the ICMC conference
+    * Plan for re-triage process for stalled issues and PRs
+    * TX Packetiser (18570)
+    * Connection ID cache
+    * Configuration options to limit the digest algos in signatures (#19084)
+    * Should we have an OTC face to face meeting
+    * Review outstanding security issues
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** AOB
+
+Nicola asked informally about what OTC thinks about having functions in public
+headers that are available only when a special macro is defined. We've run
+out of time on the discussion.
+
+Shane has asked about a 3.0.6 release. This should be raised to OMC.
+
+AI: Matt to raise the question about 3.0.6 release timeframe to OMC.
+
+** New and carried over action items [transported from above]:
+
+AI: Matt to create a proposal on return values and return value types for new
+code.
+
+AI: Tomas to create a draft blog post about changing defaults for enabled DH
+params.
+
+AI: Martin to propose some metrics on outstanding GH PRs and issues.
+
+AI: Richard to propose alternatives for what to do with the duplicate
+ERR_raise() calls right after failed OPENSSL_*alloc() and also the ERR_raises
+after the other _new() call failures.
+
+AI: Tomas to create issue in youtrack to update openssl-machine autoclosing
+script.
+
+AI: All to read the update in #19084 from Red Hat to prepare for the discussion
+in next OTC.
