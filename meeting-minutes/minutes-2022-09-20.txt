@@ -170,3 +170,5 @@ script.
 
 AI: All to read the update in #19084 from Red Hat to prepare for the discussion
 in next OTC.
+
+AI: Matt to raise the question about 3.0.6 release timeframe to OMC.
