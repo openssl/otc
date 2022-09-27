@@ -1,0 +1,172 @@
+Meeting Date: 2022-09-27
+Minutes taken by: Matt
+Attendees:
+    Dmitry Belyavskiy
+    Tomas Mraz
+    Richard Levitte
+    Nicola Tuveri
+    Matt Caswell
+    Tim Hudson
+    Matthias St Pierre
+    Paul Dale
+    Shane Lontis
+
+External attendees:
+    Hugo Landau
+    Daniel Fiala
+    Martin Koci
+
+Agenda:
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Matthias' key impressions from the ICMC conference
+    * Design Process
+    * Connection ID cache
+    * Should we have an OTC face to face meeting
+    * Review outstanding security issues
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Matt volunteered to take the minutes.
+Proposed: Matt, seconded: Tim
+
+Agenda for the meeting agreed. Proposed: Tim, seconded: Richard
+
+** Agree minutes from previous meeting
+
+Minutes from previous meeting were agreed. Proposed: Tomas, seconded: Nicola, Dmitry
+
+** Review outstanding actions
+
+AI: Matt to create a proposal on return values and return value types for new
+code.
+Not done
+
+AI: Tomas to create a draft blog post about changing defaults for enabled DH
+params.
+Not done
+
+AI: Martin to propose some metrics on outstanding GH PRs and issues.
+Not done
+
+AI: Richard to propose alternatives for what to do with the duplicate
+ERR_raise() calls right after failed OPENSSL_*alloc() and also the ERR_raises
+after the other _new() call failures.
+Not done
+
+AI: Tomas to create issue in youtrack to update openssl-machine autoclosing
+script.
+Done
+
+AI: All to read the update in #19084 from Red Hat to prepare for the discussion
+in next OTC.
+In progress
+
+AI: Matt to raise the question about 3.0.6 release timeframe to OMC.
+Not done
+
+** Matthias' key impressions from the ICMC conference
+
+Matthias gave an overview of the ICMC conference and described some of the key
+talks that he attended. Not all the talks and slides are available yet.
+
+Some discussion about how we can improve communication about what we do to the
+community. Discussion about project governance and transparency.
+
+Some discussion about items that would be suitable for backport to 3.1. a
+suggestion was made that performance improvements should be backported. Another
+suggestion was that where we have fixed a "problem" in master that was not
+suitable for backport to 3.0 then we should consider those fixes for 3.1.
+
+[Nicola left]
+
+Shane pointed at issue #18846 as a list of things we might consider for backport
+to 3.1.
+
+AI: Martin to identify resource to come up with proposal for PRs to backport to
+3.1 for consideration by OTC for recommendation to OMC.
+
+** Design Process
+
+The current design process is not working and is not being followed.
+
+Some discussion about what do we do now and what do we do in the future.
+
+The Design Policy says: "From time to time the OTC may decide that certain
+problems should have a design document created for them before implementation
+should start"
+Proposal that OTC explicitly decides that internal QUIC related work that does not
+impact the public API does not need OTC approval under this policy. Design
+documents for this work should still exist and standard PR approval process
+applies.
+Proposed by: Matt, Seconded: Tomas, No objections
+
+AI: Martin to identify a resource to write a proposal for an improved design
+process
+
+** Should we have an OTC face to face meeting
+
+Defer
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** Review issues with OTC hold (30 minutes)
+
+Defer
+
+** Review draft technical policies
+
+Defer
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Plan for re-triage process for stalled issues and PRs
+    * Configuration options to limit the digest algos in signatures (#19084)
+    * Should we have an OTC face to face meeting
+    * Review outstanding security issues
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** AOB
+
+Dmitry drew OTC attention to this PKCS11 provider project:
+https://github.com/latchset/pkcs11-provider
+
+
+** New and carried over action items [transported from above]:
+
+AI: Matt to create a proposal on return values and return value types for new
+code.
+
+AI: Tomas to create a draft blog post about changing defaults for enabled DH
+params.
+
+AI: Martin to propose some metrics on outstanding GH PRs and issues.
+
+AI: Richard to propose alternatives for what to do with the duplicate
+ERR_raise() calls right after failed OPENSSL_*alloc() and also the ERR_raises
+after the other _new() call failures.
+
+AI: All to read the update in #19084 from Red Hat to prepare for the discussion
+in next OTC.
+
+AI: Matt to raise the question about 3.0.6 release timeframe to OMC.
+
+AI: Martin to identify resource to come up with proposal for PRs to backport to
+3.1 for consideration by OTC for recommendation to OMC.
+
+AI: Martin to identify a resource to write a proposal for an improved design
+process
