@@ -1,0 +1,157 @@
+Meeting Date: 2022-10-04
+Minutes taken by: Tomas
+Attendees:
+    Dmitry Belyavskiy
+    Tomas Mraz
+    Richard Levitte
+    Nicola Tuveri
+    Matt Caswell
+    Tim Hudson
+    Matthias St Pierre
+    Paul Dale
+    Shane Lontis
+    Hugo Landau
+
+External attendees:
+    Daniel Fiala
+
+Agenda:
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Review outstanding security issues
+    * Configuration options to limit the digest algos in signatures (#19084)
+    * Should we have an OTC face to face meeting
+    * Should we allow conditionally declared functions in headers
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Tomas volunteered to take the minutes.
+Proposed: Tomas, seconded: Matt
+
+Agenda for the meeting agreed. Proposed: Matt, seconded: Matthias
+
+** Agree minutes from previous meeting
+
+Minutes from previous meeting were agreed. Proposed: Matt, seconded: Tomas
+
+** Review outstanding actions
+
+AI: Matt to create a proposal on return values and return value types for new
+code.
+Not done.
+
+AI: Tomas to create a draft blog post about changing defaults for enabled DH
+params.
+Done.
+
+AI: Martin to propose some metrics on outstanding GH PRs and issues.
+Not done.
+
+AI: Richard to propose alternatives for what to do with the duplicate
+ERR_raise() calls right after failed OPENSSL_*alloc() and also the ERR_raises
+after the other _new() call failures.
+Done.
+
+AI: All to read the update in #19084 from Red Hat to prepare for the discussion
+in next OTC.
+Done.
+
+AI: Matt to raise the question about 3.0.6 release timeframe to OMC.
+Done. OMC proposed to do the release Tuesday next week.
+
+AI: Martin to identify resource to come up with proposal for PRs to backport to
+3.1 for consideration by OTC for recommendation to OMC.
+In progress.
+
+AI: Martin to identify a resource to write a proposal for an improved design
+process
+Status to be confirmed.
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+AI: Dmitry to raise a public GH issue about the infinite session prolongation
+in TLS-1.3.
+
+** Configuration options to limit the digest algos in signatures (#19084)
+
+There was a long discussion about various aspects of the PR. There were concerns
+about how general the approach is. However the feature is desirable in general
+and there will be additional comments added. We will continue with the normal
+review process on the PR.
+
+** Should we have an OTC face to face meeting
+
+In general face to face meetings are desirable from time to time. Probably
+Europe, probably in late spring 2023 would make sense given the geolocation of
+OTC members.
+
+AI: Martin to propose a plan for location and timing of the OTC F2F meeting.
+
+** Should we allow conditionally declared functions in headers
+
+An example is a function in new KEM public API that allows generation of
+a private key directly from a seed with no additional randomness. That might be
+insecure if used improperly. Should it be hidden by a conditional?
+
+The general consensus is using conditionals to hide declarations is undesirable.
+We should properly warn in the documentation that such parameter or function
+are inherently dangerous and should be used only with proper consideration. 
+
+** Review issues with OTC hold (30 minutes)
+
+#19330 - Make ossl_sleep() a public OSSL_sleep() function
+
+The consensus is to allow the function to be public.
+
+#19307 - Add djgpp as CI target
+
+If djgpp becomes community maintained platform, it can be added.
+
+Rest of the issues defered due to out of time.
+
+** Review draft technical policies
+
+Defer
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Review outstanding security issues
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** AOB
+
+None
+
+** New and carried over action items [transported from above]:
+
+AI: Richard to create instructions on how to add an OTC member.
+
+AI: Dmitry to raise a public GH issue about the infinite session prolongation
+in TLS-1.3.
+
+AI: Martin to propose a plan for location and timing of the OTC F2F meeting.
+
+AI: Matt to create a proposal on return values and return value types for new
+code.
+
+AI: Martin to propose some metrics on outstanding GH PRs and issues.
+
+AI: Martin to identify a resource to come up with proposal for PRs to backport
+to 3.1 for consideration by OTC for recommendation to OMC.
+
+AI: Martin to identify a resource to write a proposal for an improved design
+process
