@@ -37,6 +37,7 @@ accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
   Kurt       [  ]
   Matthias   [  ]
   Nicola     [  ]
+  Hugo       [  ]
 
 
 ----------------
