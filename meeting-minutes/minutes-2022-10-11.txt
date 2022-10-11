@@ -1,0 +1,156 @@
+Meeting Date: 2022-10-11
+Minutes taken by: Matt
+Attendees:
+    Dmitry Belyavskiy
+    Tomas Mraz
+    Richard Levitte
+    Nicola Tuveri
+    Matt Caswell
+    Matthias St Pierre
+    Paul Dale
+    Shane Lontis
+
+External attendees:
+    Daniel Fiala
+
+Agenda:
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Review outstanding security issues
+    * RIPEMD160
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Matt volunteered to take the minutes.
+Proposed: Matt, seconded: Dmitry
+
+Agenda for the meeting agreed. Proposed: Matt, seconded: Tomas
+
+** Agree minutes from previous meeting
+
+Minutes from previous meeting were agreed. Proposed: Tomas, seconded: Matt
+
+** Review outstanding actions
+
+AI: Richard to create instructions on how to add an OTC member.
+Not done
+
+AI: Dmitry to raise a public GH issue about the infinite session prolongation
+in TLS-1.3.
+Done
+
+AI: Martin to propose a plan for location and timing of the OTC F2F meeting.
+Not done
+
+AI: Matt to create a proposal on return values and return value types for new
+code.
+Not done
+
+AI: Martin to propose some metrics on outstanding GH PRs and issues.
+Not done
+
+AI: Martin to identify a resource to come up with proposal for PRs to backport
+to 3.1 for consideration by OTC for recommendation to OMC.
+Done
+
+AI: Martin to identify a resource to write a proposal for an improved design
+process
+Not done
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** RIPEMD160
+
+There was a discussion whether it was a mistake to remove RIPEMD160 in 3.0. The
+question now is what to do about it. We have a proposed fix which additionally
+makes RIPEMD160 available in the default provider.
+
+OTC refer the issue to OMC for a decision. An OMC hold has been placed on the
+PR (#19375). Also see issues #17722 and #16994.
+
+** Review issues with OTC hold (30 minutes)
+
+#17984 disable 5x interleave on buffers shorter than 512 bytes
+
+Discussion about whether this should be backported to 3.0 or not.
+
+[Matthias left]
+
+OTC Vote:
+OTC considers PR#17984 as a bug fix and therefore can be backported to the 3.0 branch
+
+  Dmitry     [+1]
+  Matt       [ 0]
+  Pauli      [ 0]
+  Tim        [  ]
+  Hugo       [  ]
+  Richard    [+1]
+  Shane      [+1]
+  Tomas      [+0]
+  Kurt       [  ]
+  Matthias   [  ]
+  Nicola     [-0]
+
+AI: Matt to create issue for the OTC vote on PR#17984
+
+#18864 Should libctx be added to the OSSL_set_max_threads() and
+OSSL_get_max_threads() functions?
+
+The consensus is that, yes, we should add libctx to those functions
+
+#19248 Loading a config file with SSL/TLS config overwrites config from another OSSL_LIB_CTX
+
+Fixing this could be breaking. A partial fix might be that loading the config into
+the NULL libctx sets the global default values. Otherwise loading config into a
+specific libctx will apply onto to that libctx.
+
+The partial fix is still not perfect.
+
+The partial fix is the preferred approach and should be applied to 3.0. We can
+consider changing this for 4.0.
+
+** Review draft technical policies
+
+Nothing to review
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Review outstanding security issues
+    * RIPEMD160
+    * Nominations for committer
+    * EC compression format compatibility discussion
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** AOB
+
+None
+
+** New and carried over action items [transported from above]:
+
+AI: Richard to create instructions on how to add an OTC member.
+
+AI: Martin to propose a plan for location and timing of the OTC F2F meeting.
+
+AI: Matt to create a proposal on return values and return value types for new
+code.
+
+AI: Martin to propose some metrics on outstanding GH PRs and issues.
+
+AI: Martin to identify a resource to write a proposal for an improved design
+process
+
+AI: Matt to create issue for the OTC vote on PR#17984
