@@ -1,0 +1,181 @@
+Meeting Date: 2022-10-18
+Minutes taken by: Hugo
+Attendees:
+    Richard Levitte
+    Hugo Landau
+    Nicola Tuveri
+    Dmitry Belyavskiy
+    Shane Lontis
+    Matthias St Pierre
+    Paul Dale
+    Matt Caswell
+    Tomas Mraz
+
+External attendees:
+    Daniel Fiala
+    Martin Koci
+
+Agenda:
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Review outstanding security issues
+    * Talk about several process issues (Shane)
+    * Review issues with OTC hold (30 minutes)
+    * Nominations for committer
+    * EC compression format compatibility discussion
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Hugo volunteered to take the minutes.
+Proposed: Hugo, seconded: Matt
+
+Agenda for the meeting agreed. Proposed: Hugo, seconded: Matt
+
+** Agree minutes from previous meeting
+
+Minutes from previous meeting were agreed. Proposed: Matt, seconded: Pauli
+
+** Review outstanding actions
+
+AI: Richard to create instructions on how to add an OTC member.
+Not done
+
+AI: Martin to propose a plan for location and timing of the OTC F2F meeting.
+Done, to be mailed to OTC list
+
+AI: Matt to create a proposal on return values and return value types for new
+code.
+Not done
+
+AI: Martin to propose some metrics on outstanding GH PRs and issues.
+Done, proposal created as YouTrack issue; Martin to send details to OTC list
+
+AI: Martin to identify a resource to write a proposal for an improved design
+process
+Done, Hugo to write improved process proposal in next sprint
+
+AI: Matt to create issue for the OTC vote on PR#17984
+Done
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** Talk about several process issues (Shane)
+
+- Retraction of 3.0.6: postmortem
+    Matt proposed this be raised at OMC
+
+- Blog: do we need to be more transparent about why
+  a release was retracted?
+
+- What do we do if we need to retract a release with
+  a high severity CVE fix in it?
+
+
+- Tests: still many PRs without associated tests?
+  
+  => Should we require tests be added before a release
+     is made?
+  => We need to be ready to make a release at any time
+     (e.g. if a CVE happens)
+
+  => OTC discussed the possibility that if a PR is to be merged
+     without a test an issue should first be created with a label
+     before merging
+  => Is existing policy being enforced strictly?
+
+  => Should we have triage labels for whether tests are included?
+        "tests: present"
+        "tests: needed"
+        "tests: exempted"
+
+        ... "tests: deferred"?
+
+  => There are many PRs where it doesn't make sense to have a test.
+
+  Propose AI: Someone to write a change to the test policy to add
+    the above four labels
+        Hugo to take this action item in the next sprint
+
+** Review issues with OTC hold (30 minutes)
+
+=> stack: Do not add error if pop/shift/value accesses outside of the stack
+(#19400)
+
+   Should our policies for API changes make an accommodation for
+   withdrawn releases?
+
+  A vote was proposed by Tomas:
+    Accept PR #19400 in master and 3.0 subject to normal review process
+
+  Tomas created the issue for the above OTC vote.
+  The vote passed immediately and has been closed.
+
+=> p12_kiss.c: clean sloppy use of sk_X509_shift() (#19414)
+
+  OTC decided that this is not a bugfix and should not go into 3.0.
+  The PR can now go through normal review process.
+
+** Review draft technical policies
+
+Nothing to review
+
+** Nominations for committer
+
+The OTC discussed possible committer nominations.
+
+** EC compression format compatibility discussion
+
+References: PR #16624, PR #18320
+
+Nicola asked if the OTC still wants the level of testing previously
+requested for PR #16624.
+
+AI: Nicola requests that people read the latest comments in the EC
+    compression PRs referenced above.
+
+Further discussion deferred until next meeting.
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Review outstanding security issues
+    * EC compression format compatibility discussion
+    * Should there be a separate reviewer role?
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** AOB
+
+The OTC was updated about the progress on the establishment
+of a performance testing infrastructure.
+
+** New and carried over action items [transported from above]:
+
+AI: Richard to create instructions on how to add an OTC member.
+
+AI: Martin to email information about the OTC F2F meeting plan to the OTC list
+
+AI: Matt to create a proposal on return values and return value types for new
+code.
+
+AI: Martin to email information on his proposals for measuring outstanding GH
+PRs and issues to the OTC list
+
+AI: Hugo to write improved process proposal in next sprint
+
+AI: Hugo to write a proposed change to the test policy
+    to add four tracking labels classifying if a PR needs or has tests
+
+AI: Nicola requests that people read the latest comments in the EC
+    compression (#16624, #18320).
