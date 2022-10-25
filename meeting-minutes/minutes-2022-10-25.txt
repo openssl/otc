@@ -1,0 +1,155 @@
+Meeting Date: 2022-10-25
+Minutes taken by: Hugo
+Attendees:
+    Hugo Landau
+    Dmitry Belyavskiy
+    Matthias St Pierre
+    Tomas Mraz
+    Matt Caswell
+    Richard Levitte
+    Shane Lontis
+    Paul Dale
+
+External attendees:
+    Daniel Fiala
+    Martin Koci
+
+Agenda:
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Review outstanding security issues
+    * 3.1 release PRs and issues
+    * FIPS 140-3
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Hugo volunteered to take the minutes.
+Proposed: Hugo, seconded: Matt
+
+Agenda for the meeting agreed. Proposed: Hugo, seconded: Matt
+
+** Agree minutes from previous meeting
+
+Minutes from previous meeting were agreed. Proposed: Hugo, seconded: Tomas
+
+** Review outstanding actions
+
+AI: Richard to create instructions on how to add an OTC member.
+Not done
+
+AI: Martin to email information about the OTC F2F meeting plan to the OTC list
+Done
+
+AI: Matt to create a proposal on return values and return value types for new
+code.
+Not done
+
+AI: Martin to email information on his proposals for measuring outstanding GH
+PRs and issues to the OTC list
+Done
+
+AI: Hugo to write improved process proposal in next sprint
+Not done
+
+AI: Hugo to write a proposed change to the test policy
+    to add four tracking labels classifying if a PR needs or has tests
+Done
+
+AI: Nicola requests that people read the latest comments in the EC
+    compression (#16624, #18320).
+Not done
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** 3.1 release PRs and issues
+
+Tomas created a list of 150 PRs for backport to 3.1
+No objections were raised to using this list as a starting point
+Objections may be raised by OMC tomorrow
+We will do the review in batches. We will keep the approvals
+of the original PRs and keep the approval headers in the commits.
+
+In the meantime, PRs which cherrypick cleanly to 3.0 and 3.1 can
+simply be merged.
+
+PRs which don't cherrypick cleanly will have to wait for the batches
+of cherry picks to complete and will be reviewed afterwards.
+
+** FIPS 140-3
+
+AI: Pauli to consider options for implementing KAT using deterministic RNG
+    in a safer manner
+
+** Review issues with OTC hold (30 minutes)
+
+#19401 (make CMAC properly fail if cipher is not CBC mode):
+  - Can this be backported to 3.0?
+    OTC: No
+  - Can this be backported to 3.1?
+    OTC: Yes
+
+#19419 (finer grained error records for provider load init failures)
+  - Can this be backported to 3.0?
+    OTC: Yes, this is a bug and the fix can be backported
+
+#19489 (remove old RSA CRT names)
+  - There was consensus that where and when this is fixed, it should be fixed
+    via a compile time breaking change and not a runtime breaking change.
+  - There was consensus that this should be fixed in 4.0 at the latest.
+  - OTC: We do not want to make the breaking changes proposed in 3.x. Some parts
+    of the PR are still OK for 3.x and should be split into a separate PR.
+  - Documentation in 3.x should be updated to warn against using these defines.
+
+** Review draft technical policies
+
+#57 (revise testing policy with labels)
+  - Pauli suggested if tests: deferred is used, the person adding the label
+    should create an issue for the tests at the same time.
+    We decided against updating the proposal at this time.
+    This could be proposed in a future policy change.
+
+  - We discussed the proposed testing policy. There were no objections.
+    OTC: This should be put to a vote once the two week period is up.
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Discussion of Buildbot CI issues
+    * Review outstanding actions
+    * Review outstanding security issues
+    * EC compression format compatibility discussion
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** AOB
+
+We discussed possible locations and dates for an OTC F2F meeting.
+Dmitry proposed this be discussed further via email.
+
+We discussed Buildbot CI issues and agreed to schedule this for the
+next meeting.
+
+[Matthias left the meeting.]
+
+** New and carried over action items [transported from above]:
+
+AI: Richard to create instructions on how to add an OTC member.
+
+AI: Matt to create a proposal on return values and return value types for new
+code.
+
+AI: Hugo to write improved design process proposal
+
+AI: Nicola requests that people read the latest comments in the EC
+    compression (#16624, #18320).
