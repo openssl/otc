@@ -1,0 +1,120 @@
+Meeting Date: 2022-11-01
+Minutes taken by: Hugo
+Attendees:
+    Hugo Landau
+    Richard Levitte
+    Dmitry Belyavskiy
+    Shane Lontis
+    Paul Dale
+    Tomas Mraz
+    Matt Caswell
+    Tim Hudson
+
+External attendees:
+    Martin Koci
+
+Agenda:
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Review outstanding security issues
+    * Release go/no-go
+    * CHANGES.md (Shane)
+    * Discussion of Buildbot CI issues
+    * EC compression format compatibility discussion
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Hugo volunteered to take the minutes.
+Proposed: Hugo, seconded: Matt
+
+Agenda for the meeting agreed. Proposed: Hugo, seconded: Matt
+
+** Agree minutes from previous meeting
+
+Minutes from previous meeting were agreed. Proposed: Hugo, seconded: Pauli
+
+** Review outstanding actions
+
+AI: Richard to create instructions on how to add an OTC member.
+Work in progress
+
+AI: Matt to create a proposal on return values and return value types for new
+code.
+Not done
+
+AI: Hugo to write improved design process proposal
+Work in progress
+
+AI: Nicola requests that people read the latest comments in the EC
+    compression (#16624, #18320).
+Not done
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+[Nicola joined the meeting]
+
+** Release go/no-go
+
+The OTC discussed whether to go ahead with the release scheduled
+for today.
+
+The OTC agreed to proceed with the release.
+
+** CHANGES.md (Shane)
+
+Deferred
+
+** Discussion of Buildbot CI issues
+
+Deferred
+
+** EC compression format compatibility discussion
+
+Deferred
+
+** Review issues with OTC hold (30 minutes)
+
+Deferred
+
+** Review draft technical policies
+
+Deferred
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Review outstanding security issues
+    * Should we publish CVE numbers immediately? (Hugo)
+    * CHANGES.md (Shane)
+    * Discussion of Buildbot CI issues
+    * EC compression format compatibility discussion
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** AOB
+
+None.
+
+** New and carried over action items [transported from above]:
+
+AI: Richard to create instructions on how to add an OTC member.
+
+AI: Matt to create a proposal on return values and return value types for new
+code.
+
+AI: Hugo to write improved design process proposal
+
+AI: Nicola requests that people read the latest comments in the EC
+    compression (#16624, #18320).
