@@ -1,0 +1,185 @@
+Meeting Date: 2022-11-08
+Minutes taken by: Hugo
+Attendees:
+    Hugo Landau
+    Dmitry Belyavskiy
+    Matthias St. Pierre
+    Matt Caswell
+    Tim Hudson
+    Tomas Mraz
+    Paul Dale
+    Shane Lontis
+
+External attendees:
+    Martin Koci
+    Daniel Fiala
+
+Agenda:
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Review outstanding security issues
+    * Security release retrospective
+    * Should we publish CVE numbers immediately? (Hugo)
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Hugo volunteered to take the minutes.
+Proposed: Hugo, seconded: Matt
+
+Agenda for the meeting agreed. Proposed: Hugo, seconded: Matt
+
+** Agree minutes from previous meeting
+
+Minutes from previous meeting were agreed. Proposed: Hugo, seconded: Pauli
+
+** Review outstanding actions
+
+AI: Richard to create instructions on how to add an OTC member.
+Not done
+
+AI: Matt to create a proposal on return values and return value types for new
+code.
+Not done
+
+AI: Hugo to write improved design process proposal
+Done
+
+AI: Nicola requests that people read the latest comments in the EC
+    compression (#16624, #18320).
+Defer
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+[Shane joined the meeting]
+
+** Security release retrospective
+
+- At the retrospective meeting the following conclusions were reached:
+
+  - We should create a guide for pre-announcement changes.
+
+  - We should have a private policy for handling changes in releases.
+
+  - We should adjust the process (messaging and communication) for future
+    CRITICAL (HIGH+) issues including blog posts and posts on LinkedIn and
+    Twitter.
+
+  - We should consider to have a contractor (some “outreach role”) with Twitter
+    awareness or generally with a social media awareness.  Somebody like
+    evangelist role. Mark did 60 tweets in that regard.
+
+- It is desirable to have an owner for any given security issue.
+- However, one person cannot be available 24/7.
+- OTC is needed to make CVE downgrade decisions.
+
+- Should prenotification be done earlier, with a longer timeframe?
+  - When should the private announcement be made?
+  - When should the public announcement be made?
+  - Should the private announcement be tiered, with a smaller
+    prenotification group for parties likely to contribute to the
+    security process?
+
+AI: Martin to create a security release guide.
+
+- It would be valuable to maintain standing relationships with
+  people who can help with technical analysis of security issues.
+  Currently, these relationships are only developed as part of
+  the handling of a specific security issue.
+
+** Should we publish CVE numbers immediately? (Hugo)
+
+- Hugo proposes that we should publish CVE numbers
+  and other identifiers as soon as we make an announcement
+  of an upcoming security release, before embargo ends.
+
+- This would aid clarity of communication, especially
+  if we have multiple CVEs in a release, especially
+  if the affected versions are different.
+
+- Hugo proposes we include a table in any announcement of
+  an upcoming security release with three columns:
+    CVE ID/other identifiers; severity; affected releases.
+
+- There was confusion about the affected releases for the
+  security issue. This would aid communication.
+
+- Releasing CVE IDs early aids other parties in managing
+  the entire lifecycle of the vulnerability.
+
+- Historically we did not publish CVE IDs because we didn't
+  want to reveal the number of CVEs in an upcoming release.
+  Do we still need to do this?
+
+** Review issues with OTC hold (30 minutes)
+
+#17207 (KTLS: enable the CCM mode of KTLS):
+  OTC: This fix can go into master as long as there is a
+  CHANGES entry describing compatibility breaks with older
+  kernels when CCM is enabled.
+
+#19377 (QUIC: convert implementations to use the list data type)
+  OTC: Yes, we want accessor functions
+
+#19602 (CI: don't test the master FIPS provider against a 3.0 build)
+  AI: Pauli to ask test lab if we can include the 140-3 deprecated
+      algorithms in 3.1
+  AI: Pauli to revert changes which broke tests in 3.1
+  We will discuss this again in the next meeting.
+
+** Review draft technical policies
+
+AI: Hugo to add some text to the design document proposal
+    describing what we are looking for in design documents
+
+    - Describe the requirements - premises of the design
+    - Capture architectural design decisions and rationales
+    - How different API calls work together
+    - Describe the 'inputs' to the design process
+    - Structured documents like RFCs?
+        - Assumptions, premises and input requirements
+        - Design Overview and Discussion
+        - New/evolved APIs (can be none)
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Review outstanding security issues
+    * Discussion of Buildbot CI issues
+    * How can we improve our fuzz testing? (Matthias)
+    * EC compression format compatibility discussion
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** AOB
+
+Matthias raised the issue that many people have commented on the lack of fuzz
+testing on the punycode code in which the recent vulnerability was found.
+
+** New and carried over action items [transported from above]:
+
+AI: Richard to create instructions on how to add an OTC member.
+
+AI: Matt to create a proposal on return values and return value types for new
+code.
+
+AI: Nicola requests that people read the latest comments in the EC
+    compression (#16624, #18320).
+
+AI: Martin to create a security release guide.
+
+AI: Pauli to ask test lab if we can include the 140-3 deprecated
+  algorithms in 3.1
+
+AI: Pauli to revert changes which broke tests in 3.1
