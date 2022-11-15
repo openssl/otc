@@ -1,0 +1,220 @@
+Meeting Date: 2022-11-15
+Minutes taken by: Hugo
+Attendees:
+    Hugo Landau
+    Richard Levitte
+    Matthias St. Pierre
+    Dmitry Belyavskiy
+    Kurt Roeckx
+    Matt Caswell
+    Tomas Mraz
+    Shane Lontis
+    Paul Dale
+    Tim Hudson
+    Nicola Tuveri
+
+External attendees:
+    Daniel Fiala
+    Martin Koci
+
+Agenda:
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Review outstanding security issues
+    * FIPS discussion
+    * Discussion of Buildbot CI issues
+    * How can we improve our fuzz testing? (Matthias)
+    * EC compression format compatibility discussion
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Hugo volunteered to take the minutes.
+Proposed: Hugo, seconded: Matt
+
+Agenda for the meeting agreed. Proposed: Hugo, seconded: Matt
+
+** Agree minutes from previous meeting
+
+Minutes from previous meeting were agreed. Proposed: Hugo, seconded: Matt
+
+** Review outstanding actions
+
+AI: Richard to create instructions on how to add an OTC member.
+In progress
+
+AI: Matt to create a proposal on return values and return value types for new
+code.
+Not done
+
+AI: Nicola requests that people read the latest comments in the EC compression PRs (#16624, #18320).
+Not done
+
+AI: Martin to create a security release guide.
+Not done
+
+AI: Pauli to ask test lab if we can include the 140-3 deprecated algorithms in 3.1
+Done
+
+AI: Pauli to revert changes which broke tests in 3.1
+Done
+
+AI: Hugo to add some text to the design document proposal
+    describing what we are looking for in design documents
+Not done
+
+[Martin joined the meeting]
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** FIPS discussion
+
+- Can we include non-FIPS algorithms inside the FIPS boundary
+  for 140-3?
+
+** Discussion of Buildbot CI issues
+
+- Some Buildbot CI tasks are persistently failing or timing out
+- Should these be fixed or removed?
+
+AI: Martin to create ticket for someone to investigate these
+    issues and fix or remove the affected CIs
+
+** How can we improve our fuzz testing? (Matthias)
+
+- Should we require fuzz testing on all new network-facing parsing code?
+  General consensus: yes
+
+- It may be unreasonable to ask external contributors to
+  add fuzzing code
+
+- What if new network-facing parsing code is contributed by an
+  external contributor who lacks the expertise to add fuzzing
+  for the code?
+
+- Should/could contractor resources be allocated when such
+  an external contribution is merged?
+
+- Improving the documentation for how to add fuzzing may be
+  significantly helpful to external contributors
+
+AI: OTC to read documentation of existing fuzz testing
+    infrastructure
+
+AI: Martin to create both public and YT issues for someone to add
+    fuzzing for the certificate compression PR
+
+AI: Martin to create YT issue to add fuzzing to QUIC implementation
+
+** EC compression format compatibility discussion
+
+- Should the OTC reduce the degree of testing it asked for?
+  Do we really need to test all curves?
+
+  - We could test all curves one time, but only merge a PR
+    which tests one or a few curves, as the number of curves
+    currently proposed to be unit tested is excessive.
+
+- How much of a breaking change is it to change the default
+  compression mode?
+
+AI: Hugo to update the EC compression compatibility testing PR
+    to test fewer curves. Use original commit message for Nicola's
+    patch
+
+- Is the to_data change a breaking change too far?
+  Can we do it in 3.1?
+
+  - There should be a CHANGES entry if we do
+  - We would be entitled to change this because the documentation
+    does not specify we return a compressed key
+  - However, it may break existing systems in practice which
+    are parsing this information and only implemented the
+    compressed format
+  - Should we change this?
+
+- Regardless of the decision made, the documentation should be
+  updated
+
+AI: Nicola to propose an OTC vote on the list to follow the
+    compression format as specified in 3.1
+
+** Review issues with OTC hold (30 minutes)
+
+AI: A vote should be raised on whether to switch warnings
+    for unused parameters and for elided field initializers.
+    These should be separate votes. (#19626)
+
+** Review draft technical policies
+
+Not done
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Review outstanding security issues
+    * QUIC: Blocking/non-blocking
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** AOB
+
+None.
+
+** New and carried over action items [transported from above]:
+
+AI: Richard to create instructions on how to add an OTC member.
+In progress
+
+AI: Matt to create a proposal on return values and return value types for new
+code.
+Not done
+
+AI: Nicola requests that people read the latest comments in the EC compression PRs (#16624, #18320).
+Not done
+
+AI: Martin to create a security release guide.
+Not done
+
+AI: Pauli to ask test lab if we can include the 140-3 deprecated algorithms in 3.1
+Done
+
+AI: Pauli to revert changes which broke tests in 3.1
+Done
+
+AI: Hugo to add some text to the design document proposal
+    describing what we are looking for in design documents
+Not done
+
+AI: Martin to create ticket for someone to investigate these
+    issues and fix or remove the affected CIs
+
+AI: OTC to read documentation of existing fuzz testing
+    infrastructure
+
+AI: Martin to create both public and YT issues for someone to add
+    fuzzing for the certificate compression PR
+
+AI: Martin to create YT issue to add fuzzing to QUIC implementation
+
+AI: Hugo to update the EC compression compatibility testing PR
+    to test fewer curves. Use original commit message for Nicola's
+    patch
+
+AI: Nicola to propose an OTC vote on the list to follow the
+    compression format as specified in 3.1
+
+AI: A vote should be raised on whether to switch warnings
+    for unused parameters and for elided field initializers.
+    These should be separate votes. (#19626)
