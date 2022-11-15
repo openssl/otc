@@ -183,3 +183,6 @@ AI: Pauli to ask test lab if we can include the 140-3 deprecated
   algorithms in 3.1
 
 AI: Pauli to revert changes which broke tests in 3.1
+
+AI: Hugo to add some text to the design document proposal
+    describing what we are looking for in design documents
