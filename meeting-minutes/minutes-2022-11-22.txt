@@ -1,0 +1,176 @@
+Meeting Date: 2022-11-22
+Minutes taken by: Hugo
+Attendees:
+    Richard Levitte
+    Hugo Landau
+    Paul Dale
+    Matthias St. Pierre
+    Dmitry Belyavskiy
+    Shane Lontis
+    Matt Caswell
+    Tomas Mraz
+    Nicola Tuveri
+    Tim Hudson
+    Kurt Roeckx
+
+External attendees:
+    Martin Koci
+    Daniel Fiala
+
+Agenda:
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Review outstanding security issues
+    * 3.1 Alpha Release
+    * QUIC: Blocking/non-blocking
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Hugo volunteered to take the minutes.
+Proposed: Hugo, seconded: Tomas
+
+Agenda for the meeting agreed. Proposed: Hugo, seconded: Tomas
+
+** Agree minutes from previous meeting
+
+Minutes from previous meeting were agreed. Proposed: Hugo, seconded: Matt
+
+** Review outstanding actions
+
+AI: Richard to create instructions on how to add an OTC member.
+Not done
+
+[Nicola joined the meeting]
+
+AI: Matt to create a proposal on return values and return value types for new
+code.
+Not done
+
+AI: Martin to create a security release guide.
+In progress
+
+AI: Hugo to add some text to the design document proposal
+    describing what we are looking for in design documents
+Not done
+
+AI: Martin to create ticket for someone to investigate these
+    issues and fix or remove the affected CIs
+Done
+
+AI: OTC to read documentation of existing fuzz testing
+    infrastructure
+Not done
+
+AI: Martin to create both public and YT issues for someone to add
+    fuzzing for the certificate compression PR
+Done
+
+AI: Martin to create YT issue to add fuzzing to QUIC implementation
+Done
+
+AI: Hugo to update the EC compression compatibility testing PR
+    to test fewer curves. Use original commit message for Nicola's
+    patch
+Not done
+
+AI: Nicola to propose an OTC vote on the list to follow the
+    compression format as specified in 3.1
+Done
+
+AI: A vote should be raised on whether to switch warnings
+    for unused parameters and for elided field initializers.
+    These should be separate votes. (#19626)
+Not done
+
+[Tim joined the meeting]
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** 3.1 Alpha Release
+
+Plan is to release on 1st Dec
+
+This timing may be tight but if done later the delays
+would be substantial due to the Christmas holidays
+
+The purpose of the alpha is to obtain feedback from
+the community
+
+[Kurt joined the meeting]
+
+Decision: We are still aiming for the 1st Dec but we
+can defer this at the time if we feel we are not ready.
+
+** QUIC: Blocking/non-blocking
+
+AI: Hugo to write a design document explaining the rationales
+    behind the desire to use non-blocking I/O internally
+    - Outline proposed changes
+
+** Review issues with OTC hold (30 minutes)
+
+#19585 - Fix the ceiling on how much encryption growth we can have (1.1.1)
+    OTC: This is OK to go in 1.1.1 as it is.
+
+#19597 - rsaz_exp_x2.c: Avoid potential undefined behavior with strict aliasing
+    OTC: We want at least a one-off test run on a AVX512_IFMA capable machine to
+    confirm this is OK. OTC hold lifted.
+
+#19681 - Honor OSSL_PKEY_PARAM_EC_POINT_CONVERSION_FORMAT as set
+    and default to UNCOMPRESSED
+    OTC: To be discussed further offline
+
+** Review draft technical policies
+
+Not done
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Review outstanding security issues
+    * 3.1 alpha release discussion (round 2)
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** AOB
+
+None.
+
+** New and carried over action items [transported from above]:
+
+AI: Richard to create instructions on how to add an OTC member.
+
+AI: Matt to create a proposal on return values and return value types for new
+code.
+
+AI: Martin to create a security release guide.
+
+AI: Hugo to add some text to the design document proposal
+    describing what we are looking for in design documents
+
+AI: OTC to read documentation of existing fuzz testing
+    infrastructure
+
+AI: Hugo to update the EC compression compatibility testing PR
+    to test fewer curves. Use original commit message for Nicola's
+    patch
+
+AI: A vote should be raised on whether to switch warnings
+    for unused parameters and for elided field initializers.
+    These should be separate votes. (#19626)
+
+AI: Hugo to write a design document explaining the rationales
+    behind the desire to use non-blocking I/O internally
+    - Outline proposed changes
