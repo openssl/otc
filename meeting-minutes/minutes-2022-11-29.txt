@@ -1,0 +1,153 @@
+Meeting Date: 2022-11-29
+Minutes taken by: Hugo
+Attendees:
+    Hugo Landau
+    Dmitry Belyavskiy
+    Matthias St. Pierre
+    Matt Caswell
+    Tomas Mraz
+    Tim Hudson
+
+External attendees:
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Review outstanding security issues
+    * 3.1 alpha release discussion (round 2)
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Hugo volunteered to take the minutes.
+Proposed: Hugo, seconded: Tim
+
+Agenda for the meeting agreed. Proposed: Hugo, seconded: Tim
+
+** Agree minutes from previous meeting
+
+Minutes from previous meeting were agreed. Proposed: Hugo, seconded: Matt
+
+** Review outstanding actions
+
+AI: Richard to create instructions on how to add an OTC member.
+Not done
+
+AI: Matt to create a proposal on return values and return value types for new
+code.
+Not done
+
+AI: Martin to create a security release guide.
+Not done
+
+AI: Hugo to add some text to the design document proposal
+    describing what we are looking for in design documents
+Not done
+
+AI: OTC to read documentation of existing fuzz testing
+    infrastructure
+Not done
+
+AI: Hugo to update the EC compression compatibility testing PR
+    to test fewer curves. Use original commit message for Nicola's
+    patch
+Not done
+
+AI: A vote should be raised on whether to switch warnings
+    for unused parameters and for elided field initializers.
+    These should be separate votes. (#19626)
+Not done
+
+AI: Hugo to write a design document explaining the rationales
+    behind the desire to use non-blocking I/O internally
+    - Outline proposed changes
+Done
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+[Daniel joined the meeting]
+
+AI: Hugo to raise a PR to make documentation more clear on BIO_dgram
+    usage with unconnected sockets
+
+AI: Hugo to propose possible solutions to make BIO_dgram more safe
+
+** 3.1 Alpha Release
+
+- Disable non-working buildbot workers
+    - Windows is covered by GitHub Actions
+    - VMS is a secondary platform
+    - Mac M1: Restart or do a manual build to verify before release
+
+- If Tomas encounters any issues while preparing the alpha,
+  we may choose to delay the alpha release by a week.
+
+AI: Tomas to restart or do a manual build on a Mac M1 to verify readiness
+
+- Currently on track for release on Thursday subject to the above.
+
+** Review issues with OTC hold (30 minutes)
+
+#19724: signature: Clamp PSS salt len to MD len
+    OTC: CMS code bug fix should be fixed in 3.0 and above, the default for salt length can be changed in 3.1 and above.
+
+#19738: crypto/bio: fix build on UEFI
+    OTC: Removing the hold. It's up to the discretion of reviewers.
+
+** Review draft technical policies
+
+Nothing to be discussed.
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Review outstanding security issues
+    * QUIC API and Blocking I/O Discussion
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** AOB
+
+None.
+
+** New and carried over action items [transported from above]:
+
+AI: Richard to create instructions on how to add an OTC member.
+
+AI: Matt to create a proposal on return values and return value types for new
+code.
+
+AI: Martin to create a security release guide.
+
+AI: Hugo to add some text to the design document proposal
+    describing what we are looking for in design documents
+
+AI: OTC to read documentation of existing fuzz testing
+    infrastructure
+
+AI: Hugo to update the EC compression compatibility testing PR
+    to test fewer curves. Use original commit message for Nicola's
+    patch
+
+AI: A vote should be raised on whether to switch warnings
+    for unused parameters and for elided field initializers.
+    These should be separate votes. (#19626)
+
+AI: Hugo to raise a PR to make documentation more clear on BIO_dgram
+    usage with unconnected sockets
+
+AI: Hugo to propose possible solutions to make BIO_dgram more safe
+
+AI: Tomas to restart or do a manual build on a Mac M1 to verify readiness
+
+AI: OTC to read the QUIC API Overview and QUIC I/O Architecture design docs
