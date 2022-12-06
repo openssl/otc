@@ -1,0 +1,136 @@
+Meeting Date: 2022-12-06
+Minutes taken by: Hugo
+Attendees:
+    Richard Levitte
+    Hugo Landau
+    Matthias St. Pierre
+    Shane Lontis
+    Matt Caswell
+    Dmitry Belyavskiy
+    Tomas Mraz
+    Tim Hudson
+
+External attendees:
+    Daniel Fiala
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Review outstanding security issues
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Hugo volunteered to take the minutes.
+Proposed: Hugo, seconded: Matt
+
+Agenda for the meeting agreed. Proposed: Hugo, seconded: Matt
+
+** Agree minutes from previous meeting
+
+Minutes from previous meeting were agreed. Proposed: Hugo, seconded: Matthias
+
+** Review outstanding actions
+
+AI: Richard to create instructions on how to add an OTC member.
+In progress
+
+AI: Matt to create a proposal on return values and return value types for new code.
+Not done
+
+AI: Martin to create a security release guide.
+In progress (Richard)
+
+AI: Hugo to add some text to the design document proposal
+    describing what we are looking for in design documents
+Not done
+
+AI: OTC to read documentation of existing fuzz testing
+    infrastructure
+Not done
+
+[Nicola joined the meeting]
+
+AI: Hugo to update the EC compression compatibility testing PR
+    to test fewer curves. Use original commit message for Nicola's
+    patch
+Not done
+
+AI: A vote should be raised on whether to switch warnings
+    for unused parameters and for elided field initializers.
+    These should be separate votes. (#19626)
+Not done, not to be done
+
+AI: Hugo to raise a PR to make documentation more clear on BIO_dgram
+    usage with unconnected sockets
+Done
+
+AI: Hugo to propose possible solutions to make BIO_dgram more safe
+Not done
+
+AI: Tomas to restart or do a manual build on a Mac M1 to verify readiness
+Done
+
+AI: OTC to read the QUIC API Overview and QUIC I/O Architecture design docs
+In progress
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** Review issues with OTC hold (30 minutes)
+
+None.
+
+** Review draft technical policies
+
+None.
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Review outstanding security issues
+    * QUIC API and Blocking I/O Discussion
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** AOB
+
+PR #13817:
+    AI: Tim to review the PR if nobody else does
+
+** New and carried over action items [transported from above]:
+
+AI: Richard to create instructions on how to add an OTC member.
+
+AI: Matt to create a proposal on return values and return value types for new code.
+
+AI: Martin to create a security release guide.
+
+AI: Hugo to add some text to the design document proposal
+    describing what we are looking for in design documents
+
+AI: OTC to read documentation of existing fuzz testing
+    infrastructure
+
+AI: Hugo to update the EC compression compatibility testing PR
+    to test fewer curves. Use original commit message for Nicola's
+    patch
+
+AI: A vote should be raised on whether to switch warnings
+    for unused parameters and for elided field initializers.
+    These should be separate votes. (#19626)
+
+AI: Hugo to propose possible solutions to make BIO_dgram more safe
+
+AI: OTC to read the QUIC API Overview and QUIC I/O Architecture design docs
+
+AI: Tim to review PR #13817 if nobody else does
