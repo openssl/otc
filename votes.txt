@@ -38,6 +38,27 @@ accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
   Matthias   [  ]
   Nicola     [  ]
 
+----------------
+topic: Fix CVE-2023-0286 by correcting the public header file for all
+       supported versions including premium 1.0.2.
+comment: https://github.openssl.org/otc/security/issues/66
+Proposed by Pauli.
+Public: no
+opened: 2021-01-17
+closed: 2021-01-17
+accepted:  yes  (for: 7, against: 0, abstained: 0, not voted: 3)
+
+  Dmitry     [+1]
+  Matt       [+1]
+  Pauli      [+1]
+  Tim        [  ]
+  Hugo       [+1]
+  Richard    [ 0]
+  Shane      [  ]
+  Tomas      [+1]
+  Kurt       [  ]
+  Matthias   [+1]
+  Nicola     [+1]
 
 ----------------
 topic: Approve the proposed test labelling policy (technical-policies#57)
