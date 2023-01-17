@@ -1,0 +1,114 @@
+Meeting Date: 2023-01-17
+Minutes taken by: Hugo Landau
+Attendees:
+    Richard Levitte
+    Paul Dale
+    Hugo Landau
+    Matthias St. Pierre
+    Dmitry Belyavskiy
+    Matt Caswell
+    Tomas Mraz
+    Nicola Tuveri
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Review outstanding security issues
+    * QUIC API and Blocking I/O Discussion
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Hugo volunteered to take the minutes.
+Proposed: Hugo, seconded: Matt
+
+Agenda for the meeting agreed. Proposed: Hugo, seconded: Matt
+
+** Agree minutes from previous meeting
+
+Minutes from previous meeting were agreed. Proposed: Matt, seconded: Matthias
+
+** Review outstanding actions
+
+AI: Richard to create instructions on how to add an OTC member.
+Not done
+
+AI: Matt to create a proposal on return values and return value types for new code.
+Not done
+
+AI: OTC to read documentation of existing fuzz testing
+    infrastructure
+Done
+
+AI: Hugo to update the EC compression compatibility testing PR
+    to test fewer curves. Use original commit message for Nicola's
+    patch
+Not done
+
+AI: Hugo to propose possible solutions to make BIO_dgram more safe
+Not done
+
+AI: OTC to read the QUIC API Overview and QUIC I/O Architecture design docs
+Done
+
+AI: Hugo to arrange meeting with Stephen about ECH in the new year
+Not done
+
+AI: Dmitry to create the vote issue in technical-policies repo
+Not done
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** QUIC API and Blocking I/O Discussion
+
+Defer
+
+** Review issues with OTC hold (30 minutes)
+
+PR #20020 (fips: make EdDSA unapproved for FIPS)
+    OTC: Not going into 3.0.
+
+PR #20002 (Bump the OSSL_DYNAMIC_VERSION)
+    OTC: This should go into the next major version.
+
+** Review draft technical policies
+
+Not done
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Review outstanding security issues
+    * QUIC API and Blocking I/O Discussion
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** AOB
+
+None.
+
+** New and carried over action items [transported from above]:
+
+AI: Richard to create instructions on how to add an OTC member.
+
+AI: Matt to create a proposal on return values and return value types for new code.
+
+AI: Hugo to update the EC compression compatibility testing PR
+    to test fewer curves. Use original commit message for Nicola's
+    patch
+
+AI: Hugo to propose possible solutions to make BIO_dgram more safe
+
+AI: Hugo to arrange meeting with Stephen about ECH in the new year
+
+AI: Dmitry to create the vote issue in technical-policies repo
