@@ -1,0 +1,193 @@
+Meeting Date: 2023-01-10
+Minutes taken by: Matt Caswell
+Attendees:
+    Paul Dale
+    Matthias St. Pierre
+    Dmitry Belyavskiy
+    Matt Caswell
+    Tomas Mraz
+    Shane Lontis
+    Richard Levitte
+    Nicola Tuveri
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Review outstanding security issues
+    * OTC F2F
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Matt volunteered to take the minutes.
+Proposed: Pauli, seconded: Tomas
+
+Agenda for the meeting agreed. Proposed: Matt, seconded: Tomas
+
+** Agree minutes from previous meeting
+
+Minutes from previous meeting were agreed. Proposed: Matt, seconded: Tomas
+
+** Review outstanding actions
+
+AI: Richard to create instructions on how to add an OTC member.
+Not done
+
+AI: Matt to create a proposal on return values and return value types for new code.
+Not done
+
+AI: Richard to create a security release guide.
+Done
+
+AI: Hugo to add some text to the design document proposal
+    describing what we are looking for in design documents
+Done
+
+AI: OTC to read documentation of existing fuzz testing
+    infrastructure
+In Progress
+
+AI: Hugo to update the EC compression compatibility testing PR
+    to test fewer curves. Use original commit message for Nicola's
+    patch
+Not done
+
+AI: A vote should be raised on whether to switch warnings
+    for unused parameters and for elided field initializers.
+    These should be separate votes. (#19626)
+Not done and closed
+
+AI: Hugo to propose possible solutions to make BIO_dgram more safe
+Not done
+
+AI: OTC to read the QUIC API Overview and QUIC I/O Architecture design docs
+In progress (See PR#19770 and PR#18238)
+
+AI: Tomas to create a blog post before the release for pre-approval.
+Done
+
+AI: Tomas to try to run Coveralls on 3.1.
+Done
+
+AI: Pauli to look at getting Coverity setup before final release of 3.1.
+Done
+
+AI: Hugo to respond to ECH email
+Done
+
+AI: Hugo to create a mailing list called ech
+    All OTC members to be subscribed initially
+    Notify OTC members not present that they have been subscribed
+Done
+
+AI: Arrange meeting with Stephen about ECH in the new year
+In Progress
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** OTC F2F
+
+2/3 days of OTC/committers meeting have been proposed for June 2023 in Czech
+Republic. 1 day of meeting with host, followed by 2 days of OTC/committer
+meeting. To be scheduled immediately after DevConf.
+
+Vote: OTC should propose to the OMC that we hold an OTC/committer face-2-face
+meeting in Czech Republic on 19th-21st June 2023
+Proposed by: Dmitry
+
+  Dmitry     [+1]
+  Matt       [+1]
+  Pauli      [+1]
+  Tim        [  ]
+  Hugo       [  ]
+  Richard    [+1]
+  Shane      [ 0]
+  Tomas      [+1]
+  Kurt       [  ]
+  Matthias   [+1]
+  Nicola     [+1]
+
+AI: Dmitry to create the vote issue in technical-policies repo
+
+** Review issues with OTC hold (30 minutes)
+
+#19567 Consider requiring OMC & OTC members to publish keys fully via
+keys.openpgp.org (or provide them in full via website)
+
+All release managers have done this which should be sufficient
+
+#19922 Should we backport gcc warning fixes to 1.1.1
+
+If someone creates a PR against 1.1.1 and it gets the relevant approvals then it
+can be merged
+
+#19939 Making algorithm names/aliases public
+
+Provider authors cannot access the private header with all the algorithm name
+aliases. Should we make them public?
+
+This is problematic because it means we cannot add new alias names.
+
+An alternative proposal is to prepopulate the name-map with well known names.
+
+No conclusion was reached. To be revisited.
+
+
+** Review draft technical policies
+
+Defer.
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Review outstanding security issues
+    * QUIC API and Blocking I/O Discussion
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** AOB
+
+An application broke in upgrading 3.0 to the lastest patch release because an
+error code changed.
+
+To what extent can error codes be relied on to remain unchanging between
+patch and minor releases?
+
+Application authors should not rely on specific error codes unless the
+documentation explicitly states this.
+
+AI: Dmitry to document what application authors can rely on for error codes
+
+** New and carried over action items [transported from above]:
+
+AI: Richard to create instructions on how to add an OTC member.
+
+AI: Matt to create a proposal on return values and return value types for new code.
+
+
+AI: OTC to read documentation of existing fuzz testing
+    infrastructure
+
+AI: Hugo to update the EC compression compatibility testing PR
+    to test fewer curves. Use original commit message for Nicola's
+    patch
+
+
+AI: Hugo to propose possible solutions to make BIO_dgram more safe
+
+AI: OTC to read the QUIC API Overview and QUIC I/O Architecture design docs
+
+
+AI: Arrange meeting with Stephen about ECH in the new year
+
+AI: Dmitry to create the vote issue in technical-policies repo
