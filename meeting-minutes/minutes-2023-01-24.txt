@@ -1,0 +1,111 @@
+Meeting Date: 2023-01-24
+Minutes taken by: Hugo Landau
+Attendees:
+    Hugo Landau
+    Matt Caswell
+    Kurt Roeckx
+    Matthias St. Pierre
+    Shane Lontis
+    Dmitry Belyavskiy
+    Nicola Tuveri
+    Tomas Mraz
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Review outstanding security issues
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Stephen Farrell - ECH Discussion (30 minutes)
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Hugo volunteered to take the minutes.
+Proposed: Hugo, seconded: Tomas
+
+Agenda for the meeting agreed. Proposed: Hugo, seconded: Matt
+
+** Agree minutes from previous meeting
+
+Minutes from previous meeting were agreed. Proposed: Hugo, seconded: Shane
+
+** Review outstanding actions
+
+AI: Richard to create instructions on how to add an OTC member.
+Not done
+
+AI: Matt to create a proposal on return values and return value types for new code.
+Not done
+
+AI: Hugo to update the EC compression compatibility testing PR
+    to test fewer curves. Use original commit message for Nicola's
+    patch
+Not done
+
+AI: Hugo to propose possible solutions to make BIO_dgram more safe
+Not done
+
+AI: Hugo to arrange meeting with Stephen about ECH in the new year
+Done
+
+AI: Dmitry to create the vote issue in technical-policies repo
+Done
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** Review issues with OTC hold (30 minutes)
+
+** ECH
+
+Application will be responsible for retrieving ECHConfig
+    and passing it to OpenSSL
+Thus this cannot be turned on (by OpenSSL) 'automatically'
+
+Do we want to have the same APIs as BoringSSL?
+    - No need to stray from that API unnecessarily
+    - But we also don't need to use it exactly
+    => 'BoringSSL compatibility is not a goal;
+        avoiding BoringSSL compatibility is not a goal'
+    Normal code review process for APIs
+
+We would like a design document providing at least
+a rough outline of what the API would look like.
+
+Testing: How to handle TLSProxy?
+
+** Review draft technical policies
+
+Not done
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Review outstanding security issues
+    * QUIC API and Blocking I/O Discussion
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** AOB
+
+None.
+
+** New and carried over action items [transported from above]:
+
+AI: Richard to create instructions on how to add an OTC member.
+
+AI: Matt to create a proposal on return values and return value types for new code.
+
+AI: Hugo to update the EC compression compatibility testing PR
+    to test fewer curves. Use original commit message for Nicola's
+    patch
+
+AI: Hugo to propose possible solutions to make BIO_dgram more safe
