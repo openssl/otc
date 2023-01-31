@@ -1,0 +1,150 @@
+Meeting Date: 2023-01-31
+Minutes taken by: Hugo Landau
+Attendees:
+    Kurt Roeckx
+    Richard Levitte
+    Hugo Landau
+    Shane Lontis
+    Paul Dale
+    Matthias St. Pierre
+    Matt Caswell
+    Dmitry Belyavskiy
+    Nicola Tuveri
+    Tomas Mraz
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Review outstanding security issues
+    * Review issues with OTC hold (30 minutes)
+    * QUIC API and Blocking I/O Discussion
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Hugo volunteered to take the minutes.
+Proposed: Hugo, seconded: Matthias
+
+Agenda for the meeting agreed. Proposed: Hugo, seconded: Matt
+
+** Agree minutes from previous meeting
+
+Minutes from previous meeting were agreed. Proposed: Hugo, seconded: Matt
+
+** Review outstanding actions
+
+AI: Richard to create instructions on how to add an OTC member.
+Not done
+
+AI: Matt to create a proposal on return values and return value types for new code.
+Not done
+
+AI: Hugo to update the EC compression compatibility testing PR
+    to test fewer curves. Use original commit message for Nicola's
+    patch
+Not done
+
+AI: Hugo to propose possible solutions to make BIO_dgram more safe
+Not done
+
+** Review outstanding security issues
+
+[Tim joined the call.]
+
+We discussed outstanding security issues.
+
+** Review issues with OTC hold (30 minutes)
+   
+#19669 (Update ASN.1 Corpora)
+    - Should we put them in a submodule? Yes
+        - For all branches
+    OTC: The corpora files should go into a separate repository which we
+    would make a submodule. This can be done on all the branches.
+
+Should we create releases in GitHub?
+    OMC has asked the OTC for its opinion
+    OTC: We think we should extend the existing release process
+    to create the GitHub releases where the tarballs and other
+    artifacts of the existing release process would be
+    uploaded.
+
+#20164 (OSSL_STORE_LOADER_set_open_ex)
+    Should we remove this in 4.0?
+    OTC: This might be removed along with the other deprecated
+    OSSL_STORE_LOADER functions in a future major release. It
+    cannot be removed from current or future minor releases
+    due to ABI stability.
+
+** QUIC API and Blocking I/O Discussion
+
+AI: Hugo to revise CSM to allow application to artifically
+    inject incoming QUIC datagrams using a new public API
+    on a QUIC connection SSL object
+
+AI: Tomas to investigate Cloudflare interop for QUIC 
+
+AI: Hugo to investigate getting the DDD demos working with
+    our current code
+
+Q. Is it OK for network-side BIOs to have to be non-blocking?
+   Defer - we want to see real world applications try to use this
+   first.
+
+** Review draft technical policies
+
+Defer
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Review outstanding security issues
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** AOB
+
+Nicola notes that Stephen Farrell has posted to the ECH list
+with his proposed API changes.
+
+AI: OTC to read Stephen's proposed API changes for ECH
+
+Tim: Should we cancel the Feb 14 OTC meeting?
+OTC: Yes
+
+AI: Hugo to email Stephen Farrell asking him to make a draft
+PR with proposed ECH API changes only (so we can start the
+discussion) - just a design document
+
+** New and carried over action items [transported from above]:
+
+AI: Richard to create instructions on how to add an OTC member.
+
+AI: Matt to create a proposal on return values and return value types for new code.
+
+AI: Hugo to update the EC compression compatibility testing PR
+    to test fewer curves. Use original commit message for Nicola's
+    patch
+
+AI: Hugo to propose possible solutions to make BIO_dgram more safe
+
+AI: Hugo to revise CSM to allow application to artifically
+    inject incoming QUIC datagrams using a new public API
+    on a QUIC connection SSL object
+
+AI: Tomas to investigate Cloudflare interop for QUIC 
+
+AI: Hugo to investigate getting the DDD demos working with
+    our current code
+
+AI: OTC to read Stephen's proposed API changes for ECH
+
+AI: Hugo to email Stephen Farrell asking him to make a draft
+PR with proposed ECH API changes only (so we can start the
+discussion) - just a design document
