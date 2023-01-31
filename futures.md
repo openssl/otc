@@ -1,15 +1,7 @@
-- QUIC
-  - [#8797](https://github.com/openssl/openssl/issues/8797)
-  The standard has now been published and this has become more timely.
-
 - constant time bignum
   - [#6640](https://github.com/openssl/openssl/issues/6640)
   Significant rework is involved to make BNs constant time pervasively and
   by default.
-
-- safe integer operations wrappers
-  Like the constant time ones but avoiding overflow etc.
-  We're constantly reinventing these in a variety of places and they are tricky.
 
 - safe casting operation wrappers
   Safely convert an int to a size_t etc.
@@ -82,10 +74,6 @@
   The three KDFs in the passwd command are aging but potentially useful
   elsewhere.
 
-- Argon2 KDF and thread support
-  - [#4091](https://github.com/openssl/openssl/issues/4091)
-  - [#12256](https://github.com/openssl/openssl/issues/12256)
-
 - yescrypt KDF
 
 - Secret sharing
@@ -136,17 +124,14 @@
 
 - Windows cert & key store
 
-- FIPS 140-3
-  - More generally, maintaining FIPS compliance going forward
+- FIPS
+  - Maintaining FIPS compliance going forward
 
 - EVP_SKEY (or equivalent)
 
 - algorithm state serialisation
   - [#14222](https://github.com/openssl/openssl/issues/14222)
   - [#14223](https://github.com/openssl/openssl/issues/14223)
-
-- HPKE (Hybrid Public Key Encryption)
-  - [#14748](https://github.com/openssl/openssl/issues/14748)
 
 - Attribute Certificate RFC-5755
   - [#14648](https://github.com/openssl/openssl/issues/14648)
@@ -174,9 +159,6 @@
 - DTLS 1.3
   - [#13900](https://github.com/openssl/openssl/issues/13900)
   - Not a standard yet but soon maybe
-
-- Certificate Compression RFC 8879
-  - [#13597](https://github.com/openssl/openssl/issues/13597)
 
 - More encoders/decoders, e.g. JWK support
 
@@ -248,8 +230,4 @@
     As an API change, this would be major release material.
 
 - Amend the test framework to be more amenable to running on embedded platforms
-
-- Use QEMU to run the test suites for the cross compiled CIs
-  Currently, they are compiled but not executed which catches a number of
-  compiler problems.  Executing them would be better.
 
