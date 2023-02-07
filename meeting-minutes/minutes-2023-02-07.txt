@@ -1,0 +1,160 @@
+Meeting Date: 2023-02-07
+Minutes taken by: Hugo Landau
+Attendees:
+    Matthias St. Pierre
+    Richard Levitte
+    Hugo Landau
+    Nicola Tuveri
+    Dmitry Belyavskiy
+    Paul Dale
+    Matt Caswell
+    Tomas Mraz
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Release discussion
+    * Review outstanding security issues
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Hugo volunteered to take the minutes.
+Proposed: Hugo, seconded: Matt
+
+Agenda for the meeting agreed. Proposed: Hugo, seconded: Matt
+
+** Agree minutes from previous meeting
+
+Minutes from previous meeting were agreed. Proposed: Hugo, seconded: Matthias
+
+** Review outstanding actions
+
+AI: Richard to create instructions on how to add an OTC member.
+Not done
+
+AI: Matt to create a proposal on return values and return value types for new code.
+Not done
+
+AI: Hugo to update the EC compression compatibility testing PR
+    to test fewer curves. Use original commit message for Nicola's
+    patch
+Not done
+
+AI: Hugo to propose possible solutions to make BIO_dgram more safe
+Not done
+
+AI: Hugo to revise CSM to allow application to artifically
+    inject incoming QUIC datagrams using a new public API
+    on a QUIC connection SSL object
+Not done
+
+AI: Tomas to investigate Cloudflare interop for QUIC 
+In progress
+
+AI: Hugo to investigate getting the DDD demos working with
+    our current code
+Not done
+
+AI: OTC to read Stephen's proposed API changes for ECH
+    https://github.com/sftcd/openssl/blob/ECH-draft-13c/doc/man3/SSL_ech_set1_echconfig.pod
+In progress
+
+AI: Hugo to email Stephen Farrell asking him to make a draft
+PR with proposed ECH API changes only (so we can start the
+discussion) - just a design document
+Not done
+
+** Release discussion
+
+[Shane joined the call]
+
+- We are ready to proceed with the release.
+- The two-week prenotification period worked well.
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** Review issues with OTC hold (30 minutes)
+
+#19199: CMS_add0_cert: if cert already present, do not throw error but ignore it
+    OTC: This is OK for master if testcase is added and it has a CHANGES.md entry.
+
+#19989: Add support for mandating use of EMS in TLS 1.2
+    OTC: We are OK with adding this feature off by default to 3.1 before the final release.
+
+#20043: remove aes_x86core.c as it is unused
+    OTC: We want to make the code built and maintained.
+
+#20098: fix various instances of unsafe sk_find usage
+    OTC: this should not be merged as is. We should go through each
+    instance and decide which approach to take (pre-sort or locking
+    or fallback to linear search)
+
+** Review draft technical policies
+
+#58: New design policy proposal
+    Anyone interested should read the new design policy proposal
+    We should raise a vote at end of February.
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Review outstanding security issues
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** AOB
+
+AI: Matt to gather more information on the costs and resources
+    which would be required to organise an OTC F2F, send questionairre
+    to OTC list
+
+If anyone would like to do a presentation related to OpenSSL
+at DevConf, this would be welcome and they should let OMC know
+what they'd like to talk about. Deadline for CfPs for DevConf
+is 10th March.
+
+We have a new contractor, Anton Arapov, Engineering Manager.
+He is currently transitioning from his previous organisation.
+He will be attending the F2F.
+
+** New and carried over action items [transported from above]:
+
+AI: Richard to create instructions on how to add an OTC member.
+
+AI: Matt to create a proposal on return values and return value types for new code.
+
+AI: Hugo to update the EC compression compatibility testing PR
+    to test fewer curves. Use original commit message for Nicola's
+    patch
+
+AI: Hugo to propose possible solutions to make BIO_dgram more safe
+
+AI: Hugo to revise CSM to allow application to artifically
+    inject incoming QUIC datagrams using a new public API
+    on a QUIC connection SSL object
+
+AI: Tomas to investigate Cloudflare interop for QUIC 
+
+AI: Hugo to investigate getting the DDD demos working with
+    our current code
+
+AI: OTC to read Stephen's proposed API changes for ECH
+
+AI: Hugo to email Stephen Farrell asking him to make a draft
+PR with proposed ECH API changes only (so we can start the
+discussion) - just a design document
+
+AI: Matt to gather more information on the costs and resources
+    which would be required to organise an OTC F2F, send questionairre
+    to OTC list
