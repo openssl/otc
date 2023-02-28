@@ -1,0 +1,203 @@
+Meeting Date: 2023-02-28
+Minutes taken by: Matt Caswell
+Attendees:
+    Matthias St. Pierre
+    Richard Levitte
+    Dmitry Belyavskiy
+    Paul Dale
+    Matt Caswell
+    Tomas Mraz
+    Shane Lontis
+    Tim Hudson
+
+External:
+    Anton Arapov
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Release discussion
+    * Review outstanding actions
+    * OMC f2f summary
+    * Review outstanding security issues
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Matt volunteered to take the minutes.
+Proposed: Matt, seconded: Matthias
+
+Agenda for the meeting agreed. Proposed: Matt, seconded: Tomas
+
+** Agree minutes from previous meeting
+
+Minutes from previous meeting were agreed. Proposed: Pauli, seconded: Matt
+
+** Release discussion
+
+All issues triaged as regressions on the development branch from which
+the release is to be done must have a milestone assigned. Regressions
+are considered from the previous stable release series. - DONE
+
+All issues or pull requests with the milestone for the release are closed. - DONE
+
+There are no outstanding untriaged Coverity issues - DONE
+
+Coveralls coverage has not decreased overall from the previous release
+from the particular development branch. - DONE
+
+The CI must pass on the tip of the development branch before the release
+commits are added to the tree, including the daily CI builds. - DONE
+
+The tree must be frozen for at least 7 days. No changes apart from
+regression or security fixes should be merged during the freeze. - NOT YET FROZEN
+
+For 2 days before the release there should be no changes to ensure the
+daily CI builds run on the development tree tip. - NOT YET DONE
+
+The OTC should explicitly approve that the source is ready for a release
+with a vote. - NOT YET DONE
+
+Concerns raised about suprising people with the release. Should we announce the
+release first before freezing the tree? Proposal is to do an announcement today
+for a release on 14th to openssl-project with freeze on 7th, and a blog post
+also on 7th.
+AI: Matt to send a 3.1 release announcement today to openssl-project
+
+** Review outstanding actions
+
+AI: Richard to create instructions on how to add an OTC member.
+Not done
+
+AI: Matt to create a proposal on return values and return value types for new code.
+Not done
+
+AI: Hugo to update the EC compression compatibility testing PR
+    to test fewer curves. Use original commit message for Nicola's
+    patch
+Not done
+
+AI: Hugo to propose possible solutions to make BIO_dgram more safe
+Not done
+
+AI: Hugo to revise CSM to allow application to artifically
+    inject incoming QUIC datagrams using a new public API
+    on a QUIC connection SSL object
+Not done
+
+AI: Tomas to investigate Cloudflare interop for QUIC
+In progress
+
+AI: Hugo to investigate getting the DDD demos working with
+    our current code
+Not done
+
+AI: OTC to read Stephen's proposed API changes for ECH
+Not done
+
+AI: Hugo to email Stephen Farrell asking him to make a draft
+PR with proposed ECH API changes only (so we can start the
+discussion) - just a design document
+Done
+
+AI: Matt to gather more information on the costs and resources
+    which would be required to organise an OTC F2F, send questionairre
+    to OTC list
+Not done
+
+** Working Group f2f summary
+
+We met as a single group with all OMC except one and all paid resources except
+one (exceptions attended some sessions remotely)
+
+We made good progress. Tam is currently writing up notes from the session.
+
+We came up with a draft mission statement and values. Waiting for a couple of
+weeks before it goes out for wider comment. Tim presented the current draft.
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+AI: Tomas to raise public issues for security issues #77, #78
+AI: Matt to read #80 and decide whether to follow up with David.
+
+** Review issues with OTC hold (30 minutes)
+
+#20229: We cannot revert the current PKCS7 behaviour. We should document the
+behaviour better. We could implement better functionality for the future.
+
+#20241: Should there be a build time check for the EMS FIPS check. We should
+remove the build time option.
+
+** Review draft technical policies
+
+None
+
+** AOB
+
+Dmitry: We should add the CVE id to all commits that are intended to fix the
+CVE. We should distinguish between "fixes" and "related to" the CVE:
+
+Fixes: CVE-XXXX-YYYY
+Related-to: CVE-XXXX-YYYY
+
+AI: Richard to add something to the security process about adding CVE ids to
+    commits.
+AI: Richard to consider if we can make the security process public.
+
+Dmitry: Duplicating of ctx.
+AI: Dmitry to add a hold on #20375
+
+Dmitry: presented some callgrind output which shows excessive number of calls.
+AI: Dmitry to raise a specific public issue about excessive number of calls in
+    callgrind
+
+Shane: Should we be looking at other toolkits to see if there are relevant
+changes that we could benefit from?
+
+** New and carried over action items [transported from above]:
+
+AI: Richard to create instructions on how to add an OTC member.
+
+AI: Matt to create a proposal on return values and return value types for new code.
+
+AI: Hugo to update the EC compression compatibility testing PR
+    to test fewer curves. Use original commit message for Nicola's
+    patch
+
+AI: Hugo to propose possible solutions to make BIO_dgram more safe
+
+AI: Hugo to revise CSM to allow application to artifically
+    inject incoming QUIC datagrams using a new public API
+    on a QUIC connection SSL object
+
+AI: Tomas to investigate Cloudflare interop for QUIC
+
+AI: Hugo to investigate getting the DDD demos working with
+    our current code
+
+AI: OTC to read Stephen's proposed API changes for ECH
+
+AI: Matt to gather more information on the costs and resources
+    which would be required to organise an OTC F2F, send questionairre
+    to OTC list
+
+AI: Matt to send a 3.1 release announcement today to openssl-project
+
+AI: Tomas to raise public issues for security issues #77, #78
+
+AI: Matt to read #80 and decide whether to follow up with David.
+
+AI: Richard to add something to the security process about adding CVE ids to
+    commits.
+
+AI: Richard to consider if we can make the security process public.
+
+AI: Dmitry to add a hold on #20375
+
+AI: Dmitry to raise a specific public issue about excessive number of calls in
+    callgrind
