@@ -2,6 +2,23 @@
 # according to
 # https://github.com/openssl/technical-policies/blob/master/policies/voting-procedure.md
 #
+
+
+
+
+
+######                    ###                   #######
+#     #   ####   #    #   ###     #####         #        #####      #     #####
+#     #  #    #  ##   #    #        #           #        #    #     #       #
+#     #  #    #  # #  #   #         #           #####    #    #     #       #
+#     #  #    #  #  # #             #           #        #    #     #       #
+#     #  #    #  #   ##             #           #        #    #     #       #
+######    ####   #    #             #           #######  #####      #       #
+
+
+
+
+
 # A record of formal votes in reverse chronological order.
 #
 # To vote, add one of the following entries next to your name:
@@ -16,27 +33,6 @@
 #   [ 0]  I abstain with no stated preference
 #   [-0]  I abstain but with a slight lean towards a vote against
 #
-# A template for voting (alphabetical by surname) follows.
-
-----------------
-topic: .
-Proposed by .
-Public: yes
-opened: 2021-mm-dd
-closed: 2021-mm-dd
-accepted:  yes/no  (for: X, against: Y, abstained: Z, not voted: T)
-
-  Dmitry     [  ]
-  Matt       [  ]
-  Pauli      [  ]
-  Tim        [  ]
-  Hugo       [  ]
-  Richard    [  ]
-  Shane      [  ]
-  Tomas      [  ]
-  Kurt       [  ]
-  Matthias   [  ]
-  Nicola     [  ]
 
 ----------------
 topic: Fix CVE-2023-0286 by correcting the public header file for all
