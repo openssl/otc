@@ -1,0 +1,190 @@
+Meeting Date: 2023-03-07
+Minutes taken by: Hugo Landau
+Attendees:
+    Matthias St. Pierre
+    Dmitry Belyavskiy
+    Shane Lontis
+    Hugo Landau
+    Paul Dale
+    Nicola Tuveri
+    Matt Caswell
+    Tomas Mraz
+    Richard Levitte
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Review issues with OTC hold (30 minutes)
+    * Release discussion
+    * Review outstanding security issues
+    * Review draft technical policies
+    * DRBG discussion
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Hugo volunteered to take the minutes.
+Proposed: Hugo, seconded: Pauli
+
+Agenda for the meeting agreed. Proposed: Hugo, seconded: Tomas
+
+** Agree minutes from previous meeting
+
+Minutes from previous meeting were agreed. Proposed: Matt, seconded: Pauli
+
+** Review outstanding actions
+
+AI: Richard to create instructions on how to add an OTC member.
+Not done
+
+AI: Matt to create a proposal on return values and return value types for new code.
+Not done
+
+AI: Hugo to update the EC compression compatibility testing PR
+    to test fewer curves. Use original commit message for Nicola's
+    patch
+Not done
+
+AI: Hugo to propose possible solutions to make BIO_dgram more safe
+Not done
+
+AI: Hugo to revise CSM to allow application to artifically
+    inject incoming QUIC datagrams using a new public API
+    on a QUIC connection SSL object
+In progress
+
+AI: Tomas to investigate Cloudflare interop for QUIC
+In progress
+
+AI: Hugo to investigate getting the DDD demos working with
+    our current code
+Not done
+
+AI: OTC to read Stephen's proposed API changes for ECH
+Not done
+
+AI: Matt to gather more information on the costs and resources
+    which would be required to organise an OTC F2F, send questionairre
+    to OTC list
+In progress
+
+AI: Matt to send a 3.1 release announcement today to openssl-project
+Done
+
+AI: Tomas to raise public issues for security issues #77, #78
+Done
+
+AI: Matt to read #80 and decide whether to follow up with David.
+Done
+
+AI: Richard to add something to the security process about adding CVE IDs to
+    commits; to mention fixes and related trailers
+Not done
+
+AI: Richard to consider if we can make the security process public.
+Not done
+
+AI: Dmitry to add a hold on #20375
+Not done
+
+AI: Dmitry to raise a specific public issue about excessive number of calls in
+    callgrind
+Done
+
+** Review issues with OTC hold (30 minutes)
+
+#20441: Add option to FIPS module to enforce EMS check during KDF TLS1_PDF
+    OTC: This is OK to go into 3.1.
+
+#20412: Improve the performance of EVP_PKCS82PKEY_ex
+    OTC: This can be backported to 3.0.
+
+#20421: 3.0 PEM reading perf cherry picks: PR 17881, 18354 and 17921
+    OTC: this should not go into 3.0, performance fixes are against our
+         stable release policy and this would require an exception.
+         The intention for 3.1 is to wrap up the performance fixes and
+         for people to migrate to it.
+
+** Release discussion
+
+Three outstanding coverity issues, two of which do apply to 3.1
+    Not checking return value from an upref call
+    Do they need to be fixed?
+        -> Yes, but not a blocker for the release.
+        -> Fix can also be backported to 3.0.
+
+PKCSv1.5 padding not allowed for key transport in FIPS
+    Vote: Release 3.1.0 final on Tuesday the 14th of March 2023 if
+        CI builds have been clean for two days
+
+    Vote passed.
+
+Can the blogpost be published?
+    OTC: No objections
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** Review draft technical policies
+
+AI: OTC to review the updated new design process policy proposal
+
+Nothing to discuss.
+
+** DRBG discussion
+
+#20437: Don't force DRBG reseed on parent reseed
+#20414: What is the reason for this code?
+
+NIST SP 800-90C 3pd 2.4.2 DRBG Reseeding, Prediction Resistance and Recovery
+                          from Compromise
+
+When a DRBG is reseeded in response to a FIPS 'prediction resistant' request,
+all other DRBGs are reseeded on next use, including DRBGs which belong to other
+threads. This is good for security but potentially poses a performance issue.
+
+    Proposal: Document the potential performance issues with using prediction
+              resistance.
+
+** AOB
+
+We discussed a potential committer candidate.
+
+** New and carried over action items [transported from above]:
+
+AI: Richard to create instructions on how to add an OTC member.
+
+AI: Matt to create a proposal on return values and return value types for new code.
+
+AI: Hugo to update the EC compression compatibility testing PR
+    to test fewer curves. Use original commit message for Nicola's
+    patch
+
+AI: Hugo to propose possible solutions to make BIO_dgram more safe
+
+AI: Hugo to revise CSM to allow application to artifically
+    inject incoming QUIC datagrams using a new public API
+    on a QUIC connection SSL object
+
+AI: Tomas to investigate Cloudflare interop for QUIC
+
+AI: Hugo to investigate getting the DDD demos working with
+    our current code
+
+AI: OTC to read Stephen's proposed API changes for ECH
+
+AI: Matt to gather more information on the costs and resources
+    which would be required to organise an OTC F2F, send questionairre
+    to OTC list
+
+AI: Richard to add something to the security process about adding CVE IDs to
+    commits; to mention fixes and related trailers
+
+AI: Richard to consider if we can make the security process public.
+
+AI: Dmitry to add a hold on #20375
+
+AI: OTC to review the updated new design process policy proposal
