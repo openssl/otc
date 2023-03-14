@@ -1,0 +1,193 @@
+Meeting Date: 2023-03-14
+Minutes taken by: Hugo Landau
+Attendees:
+    Richard Levitte
+    Hugo Landau
+    Shane Lontis
+    Matt Caswell
+    Paul Dale
+    Tomas Mraz
+    Dmitry Belyavskiy
+    Nicola Tuveri
+    Tim Hudson
+    Matthias St. Pierre
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Review issues with OTC hold (30 minutes)
+    * Release discussion
+    * Audit discussion
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Hugo volunteered to take the minutes.
+Proposed: Hugo, seconded: Matt
+
+Agenda for the meeting agreed. Proposed: Hugo, seconded: Matt
+
+** Agree minutes from previous meeting
+
+Minutes from previous meeting were agreed. Proposed: Hugo, seconded: Matt
+
+** Review outstanding actions
+
+AI: Richard to create instructions on how to add an OTC member.
+Not done
+
+AI: Matt to create a proposal on return values and return value types for new code.
+Not done
+
+AI: Hugo to update the EC compression compatibility testing PR
+    to test fewer curves. Use original commit message for Nicola's
+    patch
+Not done
+
+AI: Hugo to propose possible solutions to make BIO_dgram more safe
+Not done
+
+AI: Hugo to revise CSM to allow application to artifically
+    inject incoming QUIC datagrams using a new public API
+    on a QUIC connection SSL object
+Done
+
+AI: Tomas to investigate Cloudflare interop for QUIC
+Done
+
+AI: Hugo to investigate getting the DDD demos working with
+    our current code
+Not done
+
+AI: OTC to read Stephen's proposed API changes for ECH
+Not done
+
+AI: Matt to gather more information on the costs and resources
+    which would be required to organise an OTC F2F, send questionairre
+    to OTC list
+In progress
+
+AI: Richard to add something to the security process about adding CVE IDs to
+    commits; to mention fixes and related trailers
+In progress
+
+AI: Richard to consider if we can make the security process public.
+Under consideration
+
+[Tim joined the call]
+
+AI: Dmitry to add a hold on #20375
+Not needed
+
+AI: OTC to review the updated new design process policy proposal
+Not done
+
+** Review issues with OTC hold (30 minutes)
+
+None.
+
+** Release discussion
+
+3.1 release is planned for this afternoon.
+
+No blockers for release.
+
+topic: Accept PR #20484 into the 3.1.0 release
+Proposed by Tim.
+Public: yes
+opened: 2023-03-14
+closed: 2023-03-14
+accepted: yes   (for: 8, against: 0, abstained: 1, not voted: 2)
+
+  Dmitry     [+1]
+  Matt       [+1]
+  Pauli      [+1]
+  Tim        [+1]
+  Hugo       [+1]
+  Richard    [+1]
+  Shane      [+1]
+  Tomas      [+1]
+  Kurt       [  ]
+  Matthias   [  ]
+  Nicola     [+0]
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+[Matthias joined the call]
+
+** Audit discussion
+
+We are planning an external audit of the OpenSSL codebase. We will
+have a meeting to define the scope of the audit soon.
+
+Matt will send an email seeking input on scope.
+
+** Review draft technical policies
+
+Presentation on design policy to be scheduled for next meeting.
+
+** AOB
+
+PR #20436: Fix master build with --strict-warnings
+    Should we take this for 3.1.0?
+    Should the header or the source file be fixed?
+
+Options:
+    - Fix the header in 3.0, 3.1 and master
+    - Fix the source in 3.0, 3.1 and master
+    - Fix in 3.2/4.0 only
+    - Fix in 4.0 only
+
+PR #20501: fixing up EVP_PKEY_get_id for providers
+    We need someone to write up possible solutions.
+
+AI: Richard to do a writeup on the background of the issue
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Discussion on #20436 (--strict-warnings)
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Review draft technical policies: presentation on design policy
+    * Agree agenda for next meeting
+    * AOB
+
+** New and carried over action items [transported from above]:
+
+AI: Richard to create instructions on how to add an OTC member.
+
+AI: Matt to create a proposal on return values and return value types for new code.
+
+AI: Hugo to update the EC compression compatibility testing PR
+    to test fewer curves. Use original commit message for Nicola's
+    patch
+
+AI: Hugo to propose possible solutions to make BIO_dgram more safe
+
+AI: Hugo to investigate getting the DDD demos working with
+    our current code
+
+AI: OTC to read Stephen's proposed API changes for ECH
+
+AI: Matt to gather more information on the costs and resources
+    which would be required to organise an OTC F2F, send questionairre
+    to OTC list
+
+AI: Richard to add something to the security process about adding CVE IDs to
+    commits; to mention fixes and related trailers
+
+AI: Richard to consider if we can make the security process public.
+
+AI: OTC to review the updated new design process policy proposal
+
+AI: Richard to do a writeup on the background of issue #20436
