@@ -1,0 +1,162 @@
+Meeting Date: 2023-03-21
+Minutes taken by: Hugo Landau
+Attendees:
+    Hugo Landau
+    Shane Lontis
+    Matthias St. Pierre
+    Matt Caswell
+    Tomas Mraz
+    Paul Dale
+    Richard Levitte
+    
+    Dmitry Belyavskiy
+    Nicola Tuveri
+    Tim Hudson
+
+External attendees:
+    Anton Arapov
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Discussion on #20436 (--strict-warnings)
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Review draft technical policies: presentation on design policy
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Hugo volunteered to take the minutes.
+Proposed: Hugo, seconded: Matt
+
+Agenda for the meeting agreed. Proposed: Hugo, seconded: Matt
+
+** Agree minutes from previous meeting
+
+Minutes from previous meeting were agreed. Proposed: Hugo, seconded: Paul
+
+** Review outstanding actions
+
+AI: Richard to create instructions on how to add an OTC member.
+Not done
+
+AI: Matt to create a proposal on return values and return value types for new code.
+Not done
+
+AI: Hugo to update the EC compression compatibility testing PR
+    to test fewer curves. Use original commit message for Nicola's
+    patch
+Not done
+
+AI: Hugo to propose possible solutions to make BIO_dgram more safe
+Not done
+
+AI: Hugo to investigate getting the DDD demos working with
+    our current code
+Not done
+
+AI: OTC to read Stephen's proposed API changes for ECH
+Not done
+
+AI: Matt to gather more information on the costs and resources
+    which would be required to organise an OTC F2F, send questionairre
+    to OTC list
+Done
+
+AI: Richard to add something to the security process about adding CVE IDs to
+    commits; to mention fixes and related trailers
+Not done
+
+AI: Richard to consider if we can make the security process public.
+Done
+
+AI: Richard to make the security process public.
+
+AI: OTC to review the updated new design process policy proposal
+Not done
+
+AI: Richard to do a writeup on the background of issue #20497
+In progress
+
+** Discussion on #20436 (--strict-warnings)
+
+OTC: We should fix the header in all branches (3.0/3.1/master).
+
+** Review issues with OTC hold (30 minutes)
+
+#20416: Improve the performance of d2i_AutoPrivateKey and friends
+    OTC: This can be merged.
+
+#20501: fixing up EVP_PKEY_get_id for providers
+    OTC: This should not be merged. We should fix the documentation.
+         The same documentation fix should be done for equivalent functions for
+         ciphers and digests.
+
+#20521: fips: implement 140-3 IG DR
+    Should we merge this to 3.1 as well as master?
+    OTC: We are allowing this in 3.1. The default should be keeping the old
+    behaviour.
+
+AI: Tomas to update stable release updates policy to allow non-breaking changes
+    required for FIPS compliance
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** Review draft technical policies: presentation on design policy
+
+We will start a vote on the design policy proposal on the 11th of April.
+
+OTC members should offer their substantial comments by the 4th of April.
+
+** AOB
+
+* Discussion on email investigating potential closure of openssl-users
+
+OTC: The OTC would like to urge the OMC not to close this list.
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Review draft technical policies: presentation on design policy
+    * Agree agenda for next meeting
+    * AOB
+
+** New and carried over action items [transported from above]:
+
+AI: Richard to create instructions on how to add an OTC member.
+Not done
+Converted to OSSLO-84
+
+AI: Matt to create a proposal on return values and return value types for new code.
+Not done
+Converted to OSSLO-85
+
+AI: Hugo to propose possible solutions to make BIO_dgram more safe
+Captured in CT-517
+
+AI: Hugo to investigate getting the DDD demos working with
+    our current code
+Converted to CT-645
+
+AI: OTC to read Stephen's proposed API changes for ECH
+Not done
+
+AI: Richard to add something to the security process about adding CVE IDs to
+    commits; to mention fixes and related trailers
+Converted to OSSLO-87
+
+AI: Richard to make the security process public.
+Converted to OSSLO-86
+
+AI: Richard to do a writeup on the background of issue #20497
