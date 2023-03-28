@@ -9,10 +9,6 @@ Attendees:
     Paul Dale
     Richard Levitte
     
-    Dmitry Belyavskiy
-    Nicola Tuveri
-    Tim Hudson
-
 External attendees:
     Anton Arapov
 
