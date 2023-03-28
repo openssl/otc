@@ -1,0 +1,158 @@
+Meeting Date: 2023-03-28
+Minutes taken by: Hugo Landau
+Attendees:
+    Hugo Landau
+    Matthias St. Pierre
+    Dmitry Belyavskiy
+    Matt Caswell
+    Richard Levitte
+    Shane Lontis
+    Tomas Mraz
+    Tim Hudson
+
+External attendees:
+    Anton Arapov
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Talk on DevConf
+    * OTC F2F
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Hugo volunteered to take the minutes.
+Proposed: Hugo, seconded: Tomas
+
+Agenda for the meeting agreed. Proposed: Hugo, seconded: Matt
+
+** Agree minutes from previous meeting
+
+Minutes from previous meeting were agreed. Proposed: Hugo, seconded: Matt
+
+** Review outstanding actions
+
+AI: OTC to read Stephen's proposed API changes for ECH
+Not done
+
+AI: Richard to do a writeup on the background of issue #20497
+Done
+
+AI: Tomas to update stable release updates policy to allow non-breaking changes
+    required for FIPS compliance
+Not done
+
+** Review issues with OTC hold (30 minutes)
+
+#20600: Use of method cache can lead to infinite recursion in providers
+    OSSLO-90: Reach out to community of provider writers
+
+    OTC: We discussed this and we agree that we should make the provider
+    author's life easier at least by better documentation and perhaps some
+    helper functions.
+
+#20567: Add high level interface to HPKE
+    OTC: According to our policy we cannot accept this as a library API as it
+    does not implement a standard but would be happy to accept something like
+    this as a demo.
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** Review draft technical policies
+
+None.
+
+** Talk on DevConf
+
+- 25 minutes
+- What do we want to talk about?
+    - Community Engagement
+    - 3.1 and 3.2; EOL of earlier versions, LTS
+    - High level project roadmap
+
+Tomas recommended to produce and give the presentation.
+
+Tomas to produce a presentation for review (=> OSSLO-91)
+
+** OTC F2F
+
+OMC have approved a budget for an OTC F2F.
+
+The preferred option is for employer funding. We can cover travel costs in
+accordance with our travel policy. An organisation has offered a venue to host
+the F2F.
+
+We need to determine an agenda.
+
+The agenda will determine which parts of the meeting are open, which involve
+external organisations, etc.
+
+topic: OTC will hold a face to face meeting in Brno on 19th-21st June 2023 open
+       to all OTC members and committers. Attendees must confirm participation by 14th
+       April including whether or not project funding is required.
+Proposed by Tim.
+Public: yes
+opened: 2023-03-28
+closed: 2023-03-28
+accepted: yes   (for: 8, against: 0, abstained: 0, not voted: 3)
+
+  Dmitry     [+1]
+  Matt       [+1]
+  Pauli      [  ]
+  Tim        [+1]
+  Hugo       [+1]
+  Richard    [+1]
+  Shane      [+1]
+  Tomas      [+1]
+  Kurt       [  ]
+  Matthias   [+1]
+  Nicola     [  ]
+
+https://github.com/openssl/technical-policies/issues/66
+
+AI: Dmitry to write up comments on travel logistics by the 14th April.
+AI: Dmitry to write an email to the committers list inviting them to the F2F
+
+[Tomas left the meeting]
+
+** AOB
+
+It might help to have some guidance on how to install the FIPS provider.
+Should the FIPS module manpage be amended to cover installation?
+
+AI: Shane to update the FIPS module manpage to cover installation
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Branch policy deployment
+    * Agree agenda for next meeting
+    * AOB
+
+** New and carried over action items [transported from above]:
+
+AI: OTC to read Stephen's proposed API changes for ECH
+Not done
+
+AI: Tomas to update stable release updates policy to allow non-breaking changes
+    required for FIPS compliance
+Not done
+
+AI: Dmitry to write up comments on travel logistics by the 14th April.
+
+AI: Dmitry to write an email to the committers list inviting them to the F2F
+
+AI: Shane to update the FIPS module manpage to cover installation
