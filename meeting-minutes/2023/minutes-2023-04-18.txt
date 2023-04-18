@@ -1,0 +1,108 @@
+Meeting Date: 2023-04-18
+Minutes taken by: Hugo Landau
+Attendees:
+    Hugo Landau
+    Shane Lontis
+    Matthias St. Pierre
+    Paul Dale
+    Dmitry Belyavskiy
+    Richard Levitte
+    Tomas Mraz
+    Tim Hudson
+    Nicola Tuveri
+
+External attendees:
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Hugo volunteered to take the minutes.
+Proposed: Hugo, seconded: Tim
+
+Agenda for the meeting agreed. Proposed: Hugo, seconded: Tim
+
+** Agree minutes from previous meeting
+
+Minutes from previous meeting were agreed. Proposed: Hugo, seconded: Tomas
+
+** Review outstanding actions
+
+AI: OTC to read Stephen's proposed API changes for ECH
+Not done
+
+AI: OTC to review draft technical policy on FIPS compliance
+Dropped as action item
+
+AI: Shane to update the FIPS module manpage to cover installation
+Not done
+
+** Review issues with OTC hold (30 minutes)
+
+#20752: fipsinstall: add -pedantic option
+    Should this be backported to 3.1 despite being a feature?
+
+    A vote was called:
+        "Accept #20752 for backport to 3.1 subject to the usual review process."
+
+#20423: QUIC Congestion Controller
+    OTC: This should use OSSL_PARAM(s)
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+AI: OTC to read Mark's email about CVSS scores
+
+** Review draft technical policies
+
+#67: Allow FIPS compliance fixes to be bug fixes
+    - We don't have these arise often enough to need a policy change.
+    - We can discuss at OTC and approve exceptions as the conversation
+      is helpful.
+
+    OTC: We can handle this by the normal exception process so this is
+         being retracted by the proposer.
+
+    It may be brought back at a later date if the exception process becomes a
+    problem in future.
+
+#58: New design policy proposal
+    Reminder that the vote for this has now opened as of today.
+
+** AOB
+
+- We should discuss OTC F2F at next meeting.
+
+AI: Tomas to create a Google Doc to collaborate on OTC F2F agenda
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * OTC F2F meeting agenda
+    * Stephen's proposed API for ECH
+    * Review outstanding actions
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** New and carried over action items [transported from above]:
+
+AI: OTC to read Stephen's proposed API changes for ECH
+
+AI: Shane to update the FIPS module manpage to cover installation
+
+AI: OTC to read Mark's email about CVSS scores
+
+AI: Tomas to create a Google Doc to collaborate on OTC F2F agenda
