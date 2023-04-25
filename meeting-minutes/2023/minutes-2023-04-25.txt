@@ -1,0 +1,134 @@
+Meeting Date: 2023-04-25
+Minutes taken by: Hugo Landau
+Attendees:
+    Hugo Landau
+    Dmitry Belyavskiy
+    Shane Lontis
+    Matthias St. Pierre
+    Matt Caswell
+    Nicola Tuveri
+    Tomas Mraz
+    Richard Levitte
+
+External attendees:
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * OTC F2F meeting agenda
+    * Stephen's proposed API for ECH
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Hugo volunteered to take the minutes.
+Proposed: Hugo, seconded: Matt
+
+Agenda for the meeting agreed. Proposed: Hugo, seconded: Matt
+
+** Agree minutes from previous meeting
+
+Minutes from previous meeting were agreed. Proposed: Hugo, seconded: Nicola
+
+** Review outstanding actions
+
+AI: OTC to read Stephen's proposed API changes for ECH
+In progress
+
+AI: Shane to update the FIPS module manpage to cover installation
+Not done
+
+[Richard joined the call]
+
+AI: OTC to read Mark's email about CVSS scores
+Done
+
+AI: Tomas to create a Google Doc to collaborate on OTC F2F agenda
+Done
+
+** OTC F2F meeting agenda
+
+https://docs.google.com/spreadsheets/d/1EHyrFzmWX6F6pLlHQtdg9fN58--mKrTc-NqSWJgdkkI/edit#gid=0
+
+AI: OTC members to add things to the agenda they want to discuss
+
+AI: Hugo to email committers list asking for agenda items
+
+People without access to the spreadsheet can request
+access (or email their suggestions)
+
+** Stephen's proposed API for ECH
+
+What do we need to do to advance this?
+
+- Would be good to discuss this in a meeting
+  but OTC needs to have read the draft API PR first
+
+- We can ask Stephen when he can join the meeting
+  and set a date to walk us through the API.
+
+AI: Hugo to contact Stephen and arrange a date to bring
+    him into OTC, e.g. at meeting after next
+    OTC should have at least one meeting's advance notice of date.
+
+** Review issues with OTC hold (30 minutes)
+
+#20772: OpenSSL emits invalid ASN.1 when an explicit text contains
+        non-ASCII text, but no explicit tag
+
+    OTC: This is a bug. A PR should be raised for 3.2 to
+         automatically upgrade to a suitable string type when a
+         character is requested in a string which cannot be 
+         represented as a VisibleString and an encoding is not 
+         specified. We should not emit invalid DER. We will decide 
+         whether such a PR is to be backported to stable branches 
+         after that PR is opened.
+
+#20790: Make the min/max proto functions do something sensible for QUIC
+    OTC hold removed
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** Review draft technical policies
+
+Nothing to discuss.
+
+** AOB
+
+AI: Matt to organise a meeting with Intel
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * OTC F2F meeting agenda
+    * Stephen's proposed API for ECH
+    * Review outstanding actions
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** New and carried over action items [transported from above]:
+
+AI: OTC to read Stephen's proposed API changes for ECH
+
+AI: Shane to update the FIPS module manpage to cover installation
+
+AI: OTC members to add things to the agenda they want to discuss
+
+AI: Hugo to email committers list asking for agenda items
+
+AI: Hugo to contact Stephen and arrange a date to bring
+    him into OTC, e.g. at meeting after next
+    OTC should have at least one meeting's advance notice of date.
+
+AI: Matt to organise a meeting with Intel
