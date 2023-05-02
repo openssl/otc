@@ -1,0 +1,164 @@
+Meeting Date: 2023-05-02
+Minutes taken by: Hugo Landau
+Attendees:
+    Hugo Landau
+    Paul Dale
+    Dmitry Belyavskiy
+    Tim Hudson
+    Matt Caswell
+    Matthias St. Pierre
+    Tomas Mraz
+    Richard Levitte
+    Nicola Tuveri
+
+External attendees:
+    Anton Arapov
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * OTC F2F meeting agenda
+    * Shining Light/Binaries
+    * Possible meeting with provider authors
+    * Stephen's proposed API for ECH
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Hugo volunteered to take the minutes.
+Proposed: Hugo, seconded: Matt
+
+Agenda for the meeting agreed. Proposed: Hugo, seconded: Matt
+
+** Agree minutes from previous meeting
+
+Minutes from previous meeting were agreed. Proposed: Hugo, seconded: Matt
+
+** Review outstanding actions
+
+AI: OTC to read Stephen's proposed API changes for ECH
+In progress
+
+AI: Shane to update the FIPS module manpage to cover installation
+Not done
+
+AI: OTC members to add things to the agenda they want to discuss
+In progress
+
+AI: Matt to organise a meeting with Intel
+Done
+
+** OTC F2F meeting agenda
+
+[Nicola joined the call]
+
+https://docs.google.com/spreadsheets/d/1EHyrFzmWX6F6pLlHQtdg9fN58--mKrTc-NqSWJgdkkI/edit#gid=0
+
+- Hotels
+    => We should go for the hotel in the city centre. Proximity to DevConf
+       is desirable.
+
+** Shining Light/Binaries
+
+- The call with Shining Light was constructive.
+- Opening the installer for Windows binaries is possible.
+
+  What repository should installer scripts, etc. be in?
+    => Separate repository
+    => 'installer' is fine as a name
+    => Same review requirements as main repository.
+
+- Binaries are not currently authenticode signed.
+  OpenSSL could decide to undertake this.
+  We will of course sign with our own official PGP key.
+
+AI: Anton to ensure the 'installer' repository is created
+
+** Possible meeting with provider authors
+
+- Should we have a one-off meeting with provider authors?
+- Or ongoing engagement?
+    => Infrequent - annual, biannual?
+
+AI: Hugo to draft an email to openssl-project, openssl-users,
+    support customers list asking about interest in participating
+    in a meeting with provider writers
+
+** Stephen's proposed API for ECH
+
+Stephen will be on the next OTC call to present the proposed ECH API.
+OTC will have the opportunity to ask questions.
+
+Proposed API:
+    https://github.com/openssl/openssl/pull/20408
+
+** Review issues with OTC hold (30 minutes)
+
+#20580: Add QUIC support to s_client
+    SSL_get_tick_timeout: Add third parameter to SSL_get_tick_timeout()
+        indicating lack of timeout and make DTLSv1_get_timeout
+        work with QUIC
+
+#20580: Add QUIC support to s_client
+    SSL_tick: SSL_pump? SSL_handle_events?
+        OTC: Rename to SSL_handle_events, and SSL_get_tick_timeout to SSL_get_event_timeout
+             Fix all documentation.
+
+OTC: These can be handled in a separate PR and do not block the s_client PR.
+
+AI: Hugo to raise a PR to make these QUIC tick function changes
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** Review draft technical policies
+
+None.
+
+** AOB
+
+Should we lower the review requirement for the fuzz-corpora repository?
+    e.g. for additions
+    e.g. 1 review, no 24 hour delay
+    Where to document this?
+        README.md of the repo?
+        Should consider adding review requirements to README.md of every repo
+        Removing test cases still needs second review
+
+AI: Tomas to amend the fuzz-corpora README.md with a new review policy
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * OTC F2F meeting agenda
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Stephen's proposed API for ECH (30 minutes)
+    * Agree agenda for next meeting
+    * AOB
+
+** New and carried over action items [transported from above]:
+AI: OTC to read Stephen's proposed API changes for ECH
+
+AI: Shane to update the FIPS module manpage to cover installation
+
+AI: OTC members to add things to the agenda they want to discuss
+
+AI: Anton to ensure the 'installer' repository is created
+
+AI: Hugo to draft an email to openssl-project, openssl-users,
+    support customers list asking about interest in participating
+    in a meeting with provider writers
+
+AI: Hugo to raise a PR to make these QUIC tick function changes
+
+AI: Tomas to amend the fuzz-corpora README.md with a new review policy
