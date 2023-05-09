@@ -1,0 +1,138 @@
+Meeting Date: 2023-05-09
+Minutes taken by: Hugo Landau
+Attendees:
+    Hugo Landau
+    Nicola Tuveri
+    Matthias St. Pierre
+    Matt Caswell
+    Shane Lontis
+    Richard Levitte
+    Tomas Mraz
+    Dmitry Belyavskiy
+
+External attendees:
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * OTC F2F meeting agenda
+    * Provider user/developer group meeting
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Stephen's proposed API for ECH (30 minutes)
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Hugo volunteered to take the minutes.
+Proposed: Hugo, seconded: Matt
+
+Agenda for the meeting agreed. Proposed: Hugo, seconded: Matt
+
+** Agree minutes from previous meeting
+
+Minutes from previous meeting were agreed. Proposed: Hugo, seconded: Matt
+
+** Review outstanding actions
+
+AI: OTC to read Stephen's proposed API changes for ECH
+In progress
+
+AI: Shane to update the FIPS module manpage to cover installation
+Done
+
+AI: OTC members to add things to the F2F agenda they want to discuss
+In progress
+
+AI: Richard to create the 'installer' repository
+Not done
+
+AI: Hugo to draft an email to openssl-project, openssl-users,
+    support customers list asking about interest in participating
+    in a meeting with provider writers
+Done
+
+AI: Hugo to raise a PR to make these QUIC tick function changes
+Done
+
+AI: Tomas to amend the fuzz-corpora README.md with a new review policy
+Done
+
+** OTC F2F meeting agenda
+
+https://docs.google.com/spreadsheets/d/1EHyrFzmWX6F6pLlHQtdg9fN58--mKrTc-NqSWJgdkkI/edit#gid=0
+
+We should start scheduling agenda items.
+
+Someone needs to start structuring the conference.
+
+AI: Tomas to structure and schedule the OTC F2F agenda
+
+AI: Dmitry to investigate catering for OTC F2F
+
+** Provider user/developer group meeting
+
+Nicola will participate in the meeting both as a provider developer
+and representing OpenSSL.
+
+Nothing to discuss.
+
+** Review issues with OTC hold (30 minutes)
+
+#19769: QUIC API Overview Design Document: SSL_attach/detach_stream
+    OTC: We should make these APIs non-public for now. They can still
+         be used internally in testing.
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** Review draft technical policies
+
+None to discuss.
+
+** Stephen's proposed API for ECH
+
+Proposed API:
+    https://github.com/openssl/openssl/pull/20408
+
+Meeting with Stephen deferred to next week.
+
+** AOB
+
+Locking:
+    No objections in principle to locking callbacks.
+    Should we invite Nico in for a general discussion?
+
+AI: Matt to reach out to Nico about locking
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Stephen's proposed API for ECH (30 minutes)
+    * OTC F2F meeting agenda
+    * Provider meeting
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** New and carried over action items [transported from above]:
+
+AI: OTC to read Stephen's proposed API changes for ECH
+
+AI: OTC members to add things to the F2F agenda they want to discuss
+
+AI: Richard to create the 'installer' repository
+
+AI: Tomas to structure and schedule the OTC F2F agenda
+
+AI: Dmitry to investigate catering for OTC F2F
+
+AI: Matt to reach out to Nico about locking
