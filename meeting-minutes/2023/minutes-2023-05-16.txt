@@ -1,0 +1,207 @@
+Meeting Date: 2023-05-16
+Minutes taken by: Hugo Landau
+Attendees:
+    Hugo Landau
+    Dmitry Belyavskiy
+    Matthias St. Pierre
+    Shane Lontis
+    Tim Hudson
+    Matt Caswell
+    Paul Dale
+    Tomas Mraz
+    Richard Levitte
+    Nicola Tuveri
+
+External attendees:
+    Anton Arapov
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Stephen's proposed API for ECH (30 minutes)
+    * OTC F2F meeting agenda
+    * Provider meeting
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Hugo volunteered to take the minutes.
+Proposed: Hugo, seconded: Matt
+
+Agenda for the meeting agreed. Proposed: Hugo, seconded: Matt
+
+** Agree minutes from previous meeting
+
+Minutes from previous meeting were agreed. Proposed: Hugo, seconded: Matt
+
+** Review outstanding actions
+
+AI: OTC to read Stephen's proposed API changes for ECH
+Done
+
+AI: OTC members to add things to the F2F agenda they want to discuss
+In progress
+
+AI: Richard to create the 'installer' repository
+Done
+
+AI: Tomas to structure and schedule the OTC F2F agenda
+In progress
+
+AI: Dmitry to investigate catering for OTC F2F
+In progress
+
+AI: Matt to reach out to Nico about locking
+Done
+
+** Stephen's proposed API for ECH (30 minutes)
+
+[Richard joined the call]
+[Nicola joined the call]
+
+https://github.com/openssl/openssl/pull/20408
+
+- ossl_ech_make_echconfig should be public (capitalised)
+    - Greasing
+    - How are buffer lengths determined?
+      - Separate function to determine ECHConfig length ahead of time?
+      - or pass NULL for pointers to get lengths? <== API consistent with OpenSSL
+
+- openssl ech command
+
+- On-disk format: combined public/private key, or separate like BoringSSL?
+
+- enable_file/enable_dir v. enable_buffer
+  Tradeoff between more APIs v. less APIs and ease of use
+  ~100 lines of code for a server if we don't provide the former
+
+  - We usually do not change SSL_CTX state after starting to use it for
+    connections; this is OK but we should be aware of the locking issues.
+
+- for_retry argument: probably should be a separate setter call
+
+- flush_keys: s/unsigned int/reasonable fixed size integer/
+
+- Split mode: design should be code, waiting on suitable testing (HAProxy
+  issues)
+    - SSL_CTX argument used only for storing ECH keys
+    - The current API requires buffering an entire CH and is unusual
+      relative to our current SSL object design; probably needs changing
+    - Handling of split mode doesn't need to be part of an MVP
+
+- Client-side APIs: Similar design to DANE, we do not do DNS lookups,
+    application responsible for providing ECH config.
+    Does it make sense to set an ECHConfig on a SSL_CTX rather than SSL?
+    - Should CTX version be dropped? Maybe
+    - Should API be more minimal?
+
+- ossl_ech_find_echconfigs: should DECODER be used? EVP?
+    - Non-essential function
+    - Should non-essential functions be deferred?
+    - Make ECH easier to use in a subsequent PR
+
+- SSL_ech_set_server_names
+    - no_outer: flags argument?
+
+- SSL_ech_get_retry_config
+    - clarify lifetime of blob
+
+- OSSL_ECH_INFO
+    - Concerning about this being a public structure
+    - This will probably change later, so it being public is a problem
+
+- Reducing to a minimal viable API without helper functions
+  would be a valuable place to start. We can add helpers later.
+
+- Likely we need new object types.
+
+- Should we have more meetings for ECH specifically?
+
+** OTC F2F meeting agenda
+
+https://docs.google.com/spreadsheets/d/1EHyrFzmWX6F6pLlHQtdg9fN58--mKrTc-NqSWJgdkkI/edit#gid=0
+
+Tomas has started structuring the conference.
+
+AI: All to respond to Tomas's requests for agenda scheduling information
+
+The agenda is quite full at this time.
+
+** Provider user/developer group meeting
+
+We have a lot of responses to the proposal for a provider meeting.
+
+We will need multiple meetings.
+
+What should the structure of the meetings be?
+
+There needs to be some degree of planning for the meetings.
+
+=> 15 minute proposals on a set of topics about providers in different areas
+   with different presenters?
+=> Meetings & presentations will have to be repeated due to time zones.
+=> Each meeting will be a couple of hours. Probably two hours.
+=> Probably record each meeting.
+
+AI: Anton to identify a shepard to arrange provider meetings
+
+** Review issues with OTC hold (30 minutes)
+
+Locking performance enhancements:
+    Should we be backporting locking related changes?
+    Are there concrete measured benefits?
+
+    => Merge to master for now and we can backport
+       separately if we identify concrete benefits to doing
+       so at a later time.
+
+Tidy up aarch feature detection code in armcap.c (#20948)
+    OTC: This is major refactoring of the CPU feature detection
+         code. We are not inclined to merge this to 3.1 unless this
+         is having a major impact.
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** Review draft technical policies
+
+None to discuss.
+
+** AOB
+
+AI: Matt to send notes about Intel meeting to OTC
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Locking (Nico)
+    * Stephen's proposed API for ECH - followup
+    * OTC F2F meeting agenda
+    * Provider meeting
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** New and carried over action items [transported from above]:
+
+AI: OTC members to add things to the F2F agenda they want to discuss
+
+AI: Tomas to structure and schedule the OTC F2F agenda
+
+AI: Dmitry to investigate catering for OTC F2F
+
+AI: All to respond to Tomas's requests for agenda scheduling information
+
+AI: Anton to identify a shepard to arrange provider meetings
+
+AI: Matt to send notes about Intel meeting to OTC
