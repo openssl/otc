@@ -1,0 +1,153 @@
+Meeting Date: 2023-05-23
+Minutes taken by: Hugo Landau
+Attendees:
+    Hugo Landau
+    Nicola Tuveri
+    Dmitry Belyavskiy
+    Matt Caswell
+    Tim Hudson
+    Shane Lontis
+    Tomas Mraz
+    Richard Levitte
+
+External attendees:
+    Anton Arapov
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Locking issues
+    * ECH discussion
+    * OTC F2F meeting agenda
+    * Provider meeting
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Hugo volunteered to take the minutes.
+Proposed: Hugo, seconded: Matt
+
+Agenda for the meeting agreed. Proposed: Hugo, seconded: Matt
+
+** Agree minutes from previous meeting
+
+Minutes from previous meeting were agreed. Proposed: Hugo, seconded: Matt
+
+** Review outstanding actions
+
+AI: OTC members to add things to the F2F agenda they want to discuss
+Done
+
+AI: Tomas to structure and schedule the OTC F2F agenda
+In progress
+
+AI: Dmitry to investigate catering for OTC F2F
+In progress
+
+AI: All to respond to Tomas's requests for agenda scheduling information
+Not done
+
+AI: Anton to identify a shepard to arrange provider meetings
+Defer
+
+AI: Matt to send notes about Intel meeting to OTC
+Done
+
+** Locking (Nico)
+
+https://github.com/openssl/openssl/issues/20715
+
+- We were thinking of inviting Nico to a meeting but the OTC meeting
+  time is inconvenient for him (3am).
+
+[Richard joined the call]
+
+- Need a proposal for the agenda of the meeting
+  and follow-on actions.
+
+- A preliminary discussion could be a useful input
+  to roadmap planning.
+
+Defer until we can come up with a technical community engagement strategy.
+
+** ECH discussion
+
+Defer until we can come up with a technical community engagement strategy.
+
+    "We should go back to Stephen and thank him for coming along. Say, you know
+    he got a range of different feedback. It's triggering some conversations.
+    We're working through our process of how we allocate substantial features
+    into releases. And we'll get back to him. Once we figured out what their
+    process is and tell them what the next steps are. And we don't have a time
+    frame for that."
+
+** OTC F2F meeting agenda
+
+https://docs.google.com/spreadsheets/d/1EHyrFzmWX6F6pLlHQtdg9fN58--mKrTc-NqSWJgdkkI/edit#gid=0
+
+The spreadsheet has been updated to assign durations.
+
+We will assign a 15-minute slot to all attendees unless they explicitly
+request not to have one.
+
+AI: Tomas to determine who is participating in the F2F remotely
+
+** Provider meeting
+
+Defer
+
+** Review issues with OTC hold (30 minutes)
+
+Defer
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** Review draft technical policies
+
+None.
+
+** AOB
+
+Nicola: Security policy & DoS
+    Should we revise the security policy? F2F meeting?
+    We should have a F2F session, preferably Mark can attend remotely.
+
+AI: Tomas to reach out to see if Mark can remotely attend a security policy
+    session (30m)
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Technical community engagement strategy
+    * OTC F2F meeting agenda
+    * Provider meeting
+    * Param performance enhancements (Pauli)
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** New and carried over action items [transported from above]:
+
+AI: Tomas to structure and schedule the OTC F2F agenda
+
+AI: Dmitry to investigate catering for OTC F2F
+
+AI: All to respond to Tomas's requests for agenda scheduling information
+
+AI: Anton to identify a shepard to arrange provider meetings
+
+AI: Tomas to determine who is participating in the F2F remotely
+
+AI: Tomas to reach out to see if Mark can remotely attend a security policy
+    session (30m)
