@@ -1,0 +1,161 @@
+Meeting Date: 2023-06-13
+Minutes taken by: Hugo Landau
+Attendees:
+    Paul Dale
+    Hugo Landau
+    Dmitry Belyavskiy
+    Matthias St. Pierre
+    Richard Levitte
+    Tomas Mraz
+    Matt Caswell
+    Shane Lontis
+    Nicola Tuveri
+    Tim Hudson
+
+External attendees:
+    Anton Arapov
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * OTC F2F meeting agenda
+    * Param performance enhancements (Pauli)
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Hugo volunteered to take the minutes.
+Proposed: Hugo, seconded: Matt
+
+Agenda for the meeting agreed. Proposed: Hugo, seconded: Matt
+
+** Agree minutes from previous meeting
+
+Minutes from previous meeting were agreed. Proposed: Hugo, seconded: Matt
+
+** Review outstanding actions
+
+AI: Tomas to structure and schedule the OTC F2F agenda
+Done
+
+AI: Tomas to reach out to see if Mark can remotely attend a security policy
+    session (30m)
+Done
+
+AI: Everyone to add abstracts to F2F agenda items, google doc with agenda
+    abstracts linked from spreadsheet
+In progress
+
+AI: Hugo to mail otc@, openssl-committers@ asking them to add abstracts 
+    to their agenda items
+Done
+
+** OTC F2F meeting agenda
+
+[Shane joined the call]
+[Anton joined the call]
+
+https://docs.google.com/spreadsheets/d/1EHyrFzmWX6F6pLlHQtdg9fN58--mKrTc-NqSWJgdkkI/edit#gid=0
+
+https://docs.google.com/document/d/1wa8XXCY9wHQ6naVg5dFKav_m84OhwhtJGWWkVJnSxvM/edit
+
+Schedule is done and is full.
+
+The Australian contingent is likely to attend the start of the day remotely.
+The sessions most relevant to them have been scheduled in the mornings where
+possible.
+
+[Nicola joined the call]
+[Tim joined the call]
+
+Best way to get to the meeting location from the hotel is Tram No. 12.
+
+** Param performance enhancements (Pauli)
+
+https://github.com/openssl/openssl/pull/20940
+
+We can automatically generate fast param decoders for each unit of code
+consuming OSSL_PARAMs.
+
+There is broad consensus in favour of the proposal. It would be nice to
+see some performance measurements, perhaps using our new performance
+measurement infrastructure.
+
+Target release: post 3.2.
+
+** Review issues with OTC hold (30 minutes)
+
+#21011 (TLS: add SSL_writev)
+    OTC: OTC concurs with the above writeup.
+
+AI: Hugo to create an issue to track SSL_writev issue after 3.2
+Done (#20918, existing issue)
+
+#20781 (configure: introduce no-ecx to remove ECX related feature)
+    Whether to backport to 3.1 and/or 3.0 or not?
+
+    OTC: We are disinclined to backport this to 3.0, 3.1. However we
+    are open to additional community feedback influencing this decision.
+
+#21067 (Slow response when using the store X509_LOOKUP method)
+    Defer
+
+[Tim left the call]
+
+#21124 (Fix BN_nnmod and BN_mod_inverse incorrect result)
+    OTC: Do we want to allow aliasing the modulus in modular operations, or just
+         error out instead?
+    OTC: We should error out instead of making it work for the modulus aliasing
+         with result. Documentation should also mention this.
+
+#21187 (fips: use memory ordering rather than locks)
+    OTC: OK to backport in 3.1, 3.0.
+
+#21189 (Cherry-pick uefi float related changes to openssl-3.1)
+    Should this be backported to 3.1 and 3.0?
+    OTC: We are OK with backporting this to 3.1 and 3.0 branches.
+
+#21068 (Unexpected logic for the default store lookup URI)
+    OTC: We should revert the changes to the store handling code.
+    We can keep the Winstore provider but it would have to be loaded
+    explicitly.
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** Review draft technical policies
+
+None.
+
+** AOB
+
+DevConf: There is a presentation on Sunday about OpenSSL Providers.
+
+[Shane left the call]
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * OTC F2F meeting agenda
+    * Param performance enhancements (Pauli)
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** New and carried over action items [transported from above]:
+
+AI: Everyone to add abstracts to F2F agenda items, google doc with agenda
+    abstracts linked from spreadsheet
+
+AI: Hugo to create an issue to track SSL_writev issue after 3.2
+Done (#20918, existing issue)
