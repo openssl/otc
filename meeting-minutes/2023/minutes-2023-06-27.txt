@@ -1,0 +1,132 @@
+Meeting Date: 2023-06-27
+Minutes taken by: Hugo Landau
+Attendees:
+    Paul Dale
+    Hugo Landau
+    Matthias St. Pierre
+    Dmitry Belyavskiy
+    Nicola Tuveri
+    Matt Caswell
+    Tim Hudson
+    Tomas Mraz
+
+External attendees:
+    Anton Arapov
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * OTC F2F aftermath
+    * Provider meeting
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Hugo volunteered to take the minutes.
+Proposed: Hugo, seconded: Matt
+
+Agenda for the meeting agreed. Proposed: Hugo, seconded: Matt
+
+** Agree minutes from previous meeting
+
+Minutes from previous meeting were agreed. Proposed: Hugo, seconded: Matt
+
+** Review outstanding actions
+
+AI: Everyone to add abstracts to F2F agenda items, google doc with agenda
+    abstracts linked from spreadsheet
+Done
+
+AI: Hugo to create an issue to track SSL_writev issue after 3.2
+Done (#20918, existing issue)
+
+** OTC F2F aftermath
+
+AI: Anton to check minutes from F2F and ensure action items are picked up
+
+AI: Anton to find someone to write a blog post about the OTC F2F
+
+AI: Dmitry to check Red Hat F2F minutes and ensure action items are picked up
+
+[Tim joined the call]
+[Tomas joined the call]
+
+- New roles needed to get input from all of our communities
+- New people needed with links to other communities
+
+** Provider meeting
+
+[Tim left the call]
+
+The proposal is to split into two tracks: Provider Users and Provider
+Developers.
+
+We will need to have multiple sessions for each track due to timezones.
+e.g. Two sessions per track: 8am UTC, 4pm UTC. We could do three per
+track.
+
+AI: Anton to make sure that OTC can access the project board
+
+AI: Matt to mail the provider meeting planning text to the openssl-committers@ list
+
+AI: Anton to schedule tasks for preparation of provider meetings
+
+** Review issues with OTC hold (30 minutes)
+
+Defer
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** Review draft technical policies
+
+None.
+
+** AOB
+
+Pauli: Should FIPS installer be backwards compatible or FIPS compliant?
+    Defer to WG
+
+Matthias: Should we discuss the movement from Issues to Discussions?
+    Added to agenda
+
+Matthias: Severities in national vulnerabilities database
+    https://gist.github.com/mspncp/d8be8cc4f4d34074462517b94b28381a
+    https://daniel.haxx.se/blog/2023/03/06/nvd-makes-up-vulnerability-severity-levels/
+
+AI: Anton to find someone to write a blog post about vulnerability classification (Mark?)
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Provider meeting
+    * Switch to GitHub Discussions
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** New and carried over action items [transported from above]:
+
+AI: Anton to check minutes from F2F and ensure action items are picked up
+
+AI: Anton to find someone to write a blog post about the OTC F2F
+
+AI: Dmitry to check Red Hat F2F minutes and ensure action items are picked up
+
+AI: Anton to make sure that OTC can access the project board
+
+AI: Matt to mail the provider meeting planning text to the openssl-committers@ list
+
+AI: Anton to schedule tasks for preparation of provider meetings
+
+AI: Anton to find someone to write a blog post about vulnerability classification (Mark?)
