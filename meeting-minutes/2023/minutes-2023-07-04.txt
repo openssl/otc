@@ -1,0 +1,175 @@
+Meeting Date: 2023-07-04
+Minutes taken by: Hugo Landau
+Attendees:
+    Paul Dale
+    Hugo Landau
+    Shane Lontis
+    Dmitry Belyavskiy
+    Nicola Tuveri
+    Matthias St. Pierre
+    Matt Caswell
+    Tomas Mraz
+    Tim Hudson
+
+External attendees:
+    Anton Arapov
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Provider meeting
+    * Switch to GitHub Discussions
+    * Proposal for openssl evp command
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Hugo volunteered to take the minutes.
+Proposed: Hugo, seconded: Pauli
+
+Agenda for the meeting agreed. Proposed: Hugo, seconded: Dmitry
+
+** Agree minutes from previous meeting
+
+Minutes from previous meeting were agreed. Proposed: Hugo, seconded: Matt
+
+** Review outstanding actions
+
+AI: Anton to check minutes from F2F and ensure action items are picked up
+In progress, mostly done
+
+AI: Anton to find someone to write a blog post about the OTC F2F
+Done (Anton)
+
+AI: Dmitry to check Red Hat F2F minutes and ensure action items are picked up
+In progress
+
+AI: Anton to make sure that OTC can access the project board
+Done
+
+AI: Matt to mail the provider meeting planning text to the openssl-committers@ list
+Done
+
+AI: Anton to schedule tasks for preparation of provider meetings
+Done
+
+AI: Anton to find someone to write a blog post about vulnerability classification (Mark?)
+In progress
+
+** Provider meeting
+
+- The plan for the provider meetings was sent out to the committers list.
+
+- Idea was to have two tracks and multiple meetings (timezones) per track.
+
+- An alternative proposal has been put forward:
+    - The above proposal would require a lot of effort
+      and we currently have a lot of resources tied up in 3.2.
+    - Ongoing programme of meetings on a monthly basis?
+    - We pick a topic, we pick a time, we do a presentation, we invite people
+      along, people can ask questions & we put it on YouTube.
+    - This would be easier, as we prepare one session every month.
+
+    - Should we do each theme more than once?
+
+- Spreading out the meetings would probably
+  be more distracting and still result in the same
+  total effort.
+
+- Participants in the meetings would likely prefer
+  to attend a single time rather than have to attend
+  multiple sessions.
+
+** Switch to GitHub Discussions
+
+- We are going to trial use of GitHub Discussions for questions.
+
+- Proposed categories:
+
+    Questions & Answers (Q&A mode)
+    General Discussion (open-ended mode)
+
+- There are two possible uses for the Q&A section:
+    - Users asking us questions
+    - Keeping a FAQ
+
+AI: Matt to turn on GitHub Discussions using the above categories
+
+AI: Hugo to write pinned post explaining category purpose
+
+AI: Anton to find someone to move useful FAQ items to GitHub Discussions & add
+    more useful FAQ items
+
+AI: Anton to find someone to update the issue template to point at GitHub Discussions
+
+AI: Anton to find someone to make a blog post to announce GitHub Discussions,
+    email to openssl-users@ when published
+
+** Proposal for openssl evp command
+
+Proposal for an "openssl evp" command
+
+We have an overlap with our existing evptest utility.
+
+Is the purpose diagnostics or a utility?
+
+[Tim left the call]
+
+AI: Dmitry to provide a proposed scope for an "openssl evp" command, similar to evptest
+
+** Review issues with OTC hold (30 minutes)
+
+#21218: Fix decoders so that they use the passed in propq
+    Closed in favour of #21219
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** Review draft technical policies
+
+None.
+
+** AOB
+
+OpenSSL has been ported to WebAssembly:
+    https://www.cryptool.org/en/cto/openssl
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Provider meeting
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** New and carried over action items [transported from above]:
+
+AI: Anton to check minutes from F2F and ensure action items are picked up
+
+AI: Dmitry to check Red Hat F2F minutes and ensure action items are picked up
+
+AI: Anton to find someone to write a blog post about vulnerability classification (Mark?)
+
+AI: Matt to turn on GitHub Discussions using the above categories
+
+AI: Hugo to write pinned post explaining category purpose
+
+AI: Anton to find someone to move useful FAQ items to GitHub Discussions & add
+    more useful FAQ items
+
+AI: Anton to find someone to update the issue template to point at GitHub Discussions
+
+AI: Anton to find someone to make a blog post to announce GitHub Discussions,
+    email to openssl-users@ when published
+
+AI: Dmitry to provide a proposed scope for an "openssl evp" command, similar to evptest
