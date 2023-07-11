@@ -1,0 +1,174 @@
+Meeting Date: 2023-07-11
+Minutes taken by: Hugo Landau
+Attendees:
+    Hugo Landau
+    Nicola Tuveri
+    Dmitry Belyavskiy
+    Kurt Roeckx
+    Matt Caswell
+    Shane Lontis
+    Tomas Mraz
+    Matthias St. Pierre
+
+External attendees:
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Utility to test EVP implementations
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Hugo volunteered to take the minutes.
+Proposed: Hugo, seconded: Matt
+
+Agenda for the meeting agreed. Proposed: Hugo, seconded: Matt
+
+** Agree minutes from previous meeting
+
+Minutes from previous meeting were agreed. Proposed: Hugo, seconded: Matt
+
+** Review outstanding actions
+
+AI: Anton to check minutes from F2F and ensure action items are picked up
+Not done
+
+AI: Dmitry to check Red Hat F2F minutes and ensure action items are picked up
+Done
+
+AI: Anton to find someone to write a blog post about vulnerability classification (Mark?)
+Not done
+
+AI: Matt to turn on GitHub Discussions using the above categories
+Done
+
+AI: Hugo to write pinned post explaining category purpose
+Done
+
+AI: Anton to find someone to move useful FAQ items to GitHub Discussions & add
+    more useful FAQ items
+In progress
+
+AI: Anton to find someone to update the issue template to point at GitHub Discussions
+Done
+
+AI: Anton to find someone to make a blog post to announce GitHub Discussions,
+    email to openssl-users@ when published
+Not done
+
+AI: Dmitry to provide a proposed scope for an "openssl evp" command, similar to evptest
+Done
+    
+** Utility to test EVP implementations
+
+- We do not want to duplicate functionality.
+- We can start with extending evptest functionality.
+- In the future we can return to the question of how to distribute it.
+
+[Matthias joined the call]
+
+- evptest could be extended to support other providers.
+- Running of ACVP files?
+    - To be supported later
+
+AI: Dmitry to create a GitHub issue on extending evptest
+
+** Review issues with OTC hold (30 minutes)
+
+#7921: Streaming shake implementation
+    This PR has been abandoned
+    
+    We need an API proposal for streaming XOF usage.
+    - Call the existing API multiple times?
+    - Would a new API be cleaner?
+    - Could final calls make internal copy?
+
+    OTC: We've discussed this and @slontis will create some proposal how to move
+         forward.
+
+AI: Shane to write an API proposal for streaming XOFs
+
+    Related: https://github.com/openssl/openssl/pull/13470
+
+#21206: Extended SSL_SESSION functions using time_t datatype
+
+    OTC: Should we expose OSSL_TIME publicly?
+        OTC: We currently do not want to expose OSSL_TIME as a public type.
+             We need to design a consistent approach to solving Y2K38 problem in
+             OpenSSL APIs.
+
+AI: Someone to create an issue to identify a solution to post-2038 time
+    representation in public APIs
+
+#21366: Performance improvement for CFB on 3.0 branch
+    This is just an alignment change but delivers 50% improvement.
+
+    OTC: We will hold a vote for this.
+
+AI: Tomas to raise a vote to allow an exception to our policy and allow
+    the performance improvement discussed in #21366 to go to 3.0
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** Review draft technical policies
+
+None.
+
+** AOB
+
+Nicola:
+    F2F Meeting Minutes: Should these be in the OTC repository?
+    There is a draft blogpost which is highly detailed and effectively
+    serves as the minutes.
+
+Dmitry:
+    Decoder performance issue
+    Matt is working the issue.
+
+Dmitry/Matthias:
+    Where should we have a live chat for committers, etc.?
+
+AI: Hugo to rename Signal group and invite other committers via email
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** New and carried over action items [transported from above]:
+
+AI: Anton to check minutes from F2F and ensure action items are picked up
+
+AI: Anton to find someone to write a blog post about vulnerability classification (Mark?)
+
+AI: Anton to find someone to move useful FAQ items to GitHub Discussions & add
+    more useful FAQ items
+
+AI: Anton to find someone to make a blog post to announce GitHub Discussions,
+    email to openssl-users@ when published
+
+AI: Dmitry to create a GitHub issue on extending evptest
+
+AI: Shane to write an API proposal for streaming XOFs
+
+AI: Someone to create an issue to identify a solution to post-2038 time
+    representation in public APIs
+
+AI: Tomas to raise a vote to allow an exception to our policy and allow
+    the performance improvement discussed in #21366 to go to 3.0
+
+AI: Hugo to rename Signal group and invite other committers via email
