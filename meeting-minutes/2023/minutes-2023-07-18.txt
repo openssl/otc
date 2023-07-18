@@ -1,0 +1,123 @@
+Meeting Date: 2023-07-18
+Minutes taken by: Hugo Landau
+Attendees:
+    Paul Dale
+    Hugo Landau
+    Shane Lontis
+    Dmitry Belyavskiy
+    Tim Hudson
+    Tomas Mraz
+    Nicola Tuveri
+
+External attendees:
+    Anton Arapov
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * XOF SQUEEZE
+    * Release discussion
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Hugo volunteered to take the minutes.
+Proposed: Hugo, seconded: Tomas
+
+Agenda for the meeting agreed. Proposed: Hugo, seconded: Tomas
+
+** Agree minutes from previous meeting
+
+Minutes from previous meeting were agreed. Proposed: Hugo, seconded: Tomas
+
+** Review outstanding actions
+
+AI: Anton to check minutes from F2F and ensure action items are picked up
+Done
+
+AI: Anton to find someone to write a blog post about vulnerability classification (Mark?)
+Done
+
+AI: Anton to find someone to move useful FAQ items to GitHub Discussions & add
+    more useful FAQ items
+Not done
+
+AI: Anton to find someone to make a blog post to announce GitHub Discussions,
+    email to openssl-users@ when published
+Not done
+
+AI: Dmitry to create a GitHub issue on extending evptest
+Done
+
+AI: Shane to write an API proposal for streaming XOFs
+Done
+
+AI: Someone to create an issue to identify a solution to post-2038 time
+    representation in public APIs
+Done
+
+AI: Tomas to raise a vote to allow an exception to our policy and allow
+    the performance improvement discussed in #21366 to go to 3.0
+Done
+
+AI: Hugo to rename Signal group and invite other committers via email
+Done
+
+** XOF SQUEEZE
+
+[Nicola joined the call]
+
+#21443 (Add design notes for XOF API)
+    We discussed the merits of different XOF API designs.
+
+    Should we allow DigestFinalXOF to be called multiple times
+    or introduce a new DigestSqueeze function?
+
+AI: Shane to raise a PR for XOF
+
+** Release discussion
+
+Patch releases will be made on 1st August.
+
+** Review issues with OTC hold (30 minutes)
+
+None.
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** Review draft technical policies
+
+None.
+
+** AOB
+
+None
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * FIPS indicators (Pauli)
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** New and carried over action items [transported from above]:
+
+AI: Anton to find someone to move useful FAQ items to GitHub Discussions & add
+    more useful FAQ items
+
+AI: Anton to find someone to make a blog post to announce GitHub Discussions,
+    email to openssl-users@ when published
+
+AI: Shane to raise a PR for XOF
