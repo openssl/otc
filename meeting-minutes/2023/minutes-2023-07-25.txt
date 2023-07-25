@@ -1,0 +1,113 @@
+Meeting Date: 2023-07-25
+Minutes taken by: Hugo Landau
+Attendees:
+    Hugo Landau
+    Dmitry Belyavskiy
+    Tim Hudson
+    Matthias St. Pierre
+    Matt Caswell
+    Shane Lontis
+    Tomas Mraz
+    Nicola Tuveri
+
+External attendees:
+    Anton Arapov
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Security Process
+    * Review outstanding actions
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Hugo volunteered to take the minutes.
+Proposed: Hugo, seconded: Matt
+
+Agenda for the meeting agreed. Proposed: Hugo, seconded: Tim
+
+** Agree minutes from previous meeting
+
+Minutes from previous meeting were agreed. Proposed: Hugo, seconded: Dmitry
+
+[Shane joined the call]
+[Tomas joined the call]
+
+** Security Process
+
+- Should responses to reports made to the security list be reviewed?
+
+- Our communication on a recent issue was not great.
+
+[Nicola joined the call]
+
+Should the security process document be public?
+
+Should all emails to the security list be discussed at OTC?
+
+Non-trivial reports to the security list should not receive
+unconsidered responses.
+
+AI: Anton to identify a resource to get the security process document public,
+    including list of what reports to the security list are considered trivial
+
+[Tim left the call]
+
+AI: Matt to reach out to project members about security process
+
+** Review outstanding actions
+
+AI: Anton to find someone to move useful FAQ items to GitHub Discussions & add
+    more useful FAQ items
+Issue created
+
+AI: Anton to find someone to make a blog post to announce GitHub Discussions,
+    email to openssl-users@ when published
+Issue created
+
+AI: Shane to raise a PR for XOF
+Done (#21511)
+
+** Review issues with OTC hold (30 minutes)
+
+None
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** Review draft technical policies
+
+None
+
+** AOB
+
+An ECDSA P384 PR has been submitted.
+
+AI: Nicola to review the ECDSA P384 PR (#21471) and comment
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * FIPS indicators (Pauli)
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** New and carried over action items [transported from above]:
+
+AI: Anton to identify a resource to get the security process document public,
+    including list of what reports to the security list are considered trivial
+
+AI: Matt to reach out to project members about security process
+
+AI: Nicola to review the ECDSA P384 PR (#21471) and comment
