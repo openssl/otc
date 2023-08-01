@@ -1,0 +1,95 @@
+Meeting Date: 2023-08-01
+Minutes taken by: Hugo Landau
+Attendees:
+    Hugo Landau
+    Shane Lontis
+    Matthias St. Pierre
+    Paul Dale
+    Dmitry Belyavskiy
+    Tim Hudson
+    Matt Caswell
+    Tomas Mraz
+
+External attendees:
+    Anton Arapov
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * FIPS indicators (Pauli)
+    * GitHub Discussions
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Hugo volunteered to take the minutes.
+Proposed: Hugo, seconded: Pauli
+
+Agenda for the meeting agreed. Proposed: Hugo, seconded: Matthias
+
+** Agree minutes from previous meeting
+
+Minutes from previous meeting were agreed. Proposed: Hugo, seconded: Matt
+
+** Review outstanding actions
+
+AI: Anton to identify a resource to get the security process document public,
+    including list of what reports to the security list are considered trivial
+Done
+
+AI: Matt to reach out to project members about security process
+Done
+
+AI: Nicola to review the ECDSA P384 PR (#21471) and comment
+In progress
+
+** FIPS indicators (Pauli)
+
+Defer
+
+** GitHub Discussions
+
+The overall feeling is that the GitHub Discussions trial has been
+positive.
+
+** Review issues with OTC hold (30 minutes)
+
+None
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** Review draft technical policies
+
+None
+
+** AOB
+
+http://github.com/openssl/openssl/issues/21604
+AI: Dmitry to come up with a proposal for possible APIs for #21604
+
+A release is being made today.
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * FIPS indicators (Pauli) (Dmitry to be present)
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** New and carried over action items [transported from above]:
+
+AI: Nicola to review the ECDSA P384 PR (#21471) and comment
+
+AI: Dmitry to come up with a proposal for possible APIs for #21604
