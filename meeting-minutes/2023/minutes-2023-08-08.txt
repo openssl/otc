@@ -1,0 +1,94 @@
+Meeting Date: 2023-08-08
+Minutes taken by: Hugo Landau
+Attendees:
+    Hugo Landau
+    Shane Lontis
+    Paul Dale
+    Matt Caswell
+    Nicola Tuveri
+    Tomas Mraz
+    Tim Hudson
+
+External attendees:
+    Anton Arapov
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Hugo volunteered to take the minutes.
+Proposed: Hugo, seconded: Matt
+
+Agenda for the meeting agreed. Proposed: Hugo, seconded: Tim
+
+** Agree minutes from previous meeting
+
+Minutes from previous meeting were agreed. Proposed: Hugo, seconded: Matt
+
+** Review outstanding actions
+
+AI: Nicola to review the ECDSA P384 PR (#21471) and comment
+Done
+
+AI: Dmitry to come up with a proposal for possible APIs for #21604
+In progress
+
+** Review issues with OTC hold (30 minutes)
+
+None
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** Review draft technical policies
+
+Time-based release policy
+    https://github.com/openssl/technical-policies/pull/71
+
+    We want to adopt a time-based release policy.
+    This is separate from a branching policy.
+
+AI: Anton to move time-based releases policy to general policies
+
+AI: Everyone to read the time-based releases policy
+
+AI: Anton to contemplate future release notes process
+
+** AOB
+
+AI: Anton to arrange M1 machine access for Shane
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * FIPS indicators (Pauli) (Dmitry to be present)
+    * PROVIDER_load_ex (Dmitri)
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** New and carried over action items [transported from above]:
+
+AI: Dmitry to come up with a proposal for possible APIs for #21604
+
+AI: Anton to move time-based releases policy to general policies
+
+AI: Everyone to read the time-based releases policy
+
+AI: Anton to contemplate future release notes process
+
+AI: Anton to arrange M1 machine access for Shane
+Done
