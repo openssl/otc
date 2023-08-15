@@ -1,0 +1,107 @@
+Meeting Date: 2023-08-15
+Minutes taken by: Hugo Landau
+Attendees:
+    Richard Levitte
+    Hugo Landau
+    Shane Lontis
+    Dmitry Belyavskiy
+    Tim Hudson
+    Matt Caswell
+    Nicola Tuveri
+    Tomas Mraz
+
+External attendees:
+    Anton Arapov
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * PROVIDER_load_ex (Dmitri)
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Hugo volunteered to take the minutes.
+Proposed: Hugo, seconded: Matt
+
+Agenda for the meeting agreed. Proposed: Hugo, seconded: Matt
+
+** Agree minutes from previous meeting
+
+Minutes from previous meeting were agreed. Proposed: Hugo, seconded: Matt
+
+** Review outstanding actions
+
+AI: Dmitry to come up with a proposal for possible APIs for #21604
+Done
+
+AI: Anton to move time-based releases policy to general policies
+Done
+
+AI: Everyone to read the time-based releases policy
+Done
+
+AI: Anton to contemplate future release notes process
+Not done
+
+** PROVIDER_load_ex (Dmitri)
+
+Current proposal implements the simplest option, feeding parameters
+to implementation function.
+
+Proposal seems reasonable and can go through standard review process.
+
+Should we support multiple instances of a provider in the same libctx?
+
+What are the requirements for improvements to the provider load interface?
+
+** Review issues with OTC hold (30 minutes)
+
+#20754: Optimize SM2 on aarch64
+    Is the 512 kB read-only data table acceptable as is or do we
+    require a possibility to disable it?
+
+OTC: We need compile-time config option for this that is on by default.
+     The increased size of libcrypto also needs to be documented in
+     CHANGES.md.
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** Review draft technical policies
+
+None.
+
+** AOB
+
+Should we have a design meeting for symmetric keys (EVP_SKEY)?
+    Who should be invited to this meeting?
+    Should we post it on the mailing list?
+
+AI: Anton to contemplate a workshop on EVP_SKEY
+
+Shane: SQUEEZE - should we have a separate API for XOF (EVP_XOF_MD)?
+    Consensus is no
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** New and carried over action items [transported from above]:
+
+AI: Anton to contemplate future release notes process
+
+AI: Anton to contemplate a workshop on EVP_SKEY
