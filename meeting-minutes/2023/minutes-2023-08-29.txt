@@ -1,0 +1,110 @@
+Meeting Date: 2023-08-29
+Minutes taken by: Hugo Landau
+Attendees:
+    Hugo Landau
+    Matthias St. Pierre
+    Dmitry Belyavskiy
+    Richard Levitte
+    Shane Lontis
+    Tomas Mraz
+    Matt Caswell
+    Tim Hudson
+
+External attendees:
+    Anton Arapov
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * DTLS 1.3, feature branch creation
+    * Locking discussion
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Hugo volunteered to take the minutes.
+Proposed: Hugo, seconded: Tim
+
+Agenda for the meeting agreed. Proposed: Hugo, seconded: Tim
+
+** Agree minutes from previous meeting
+
+Minutes from previous meeting were agreed. Proposed: Hugo, seconded: Matt
+
+** Review outstanding actions
+
+AI: Matt to respond to questions about implementing DTLS 1.3, ask about APIs
+Done
+
+AI: Matt to write a first draft of a guide for feature contributors
+Issue created (project#174)
+
+** DTLS 1.3, feature branch creation
+
+- Ordinary PR against master for now so we can start review.
+
+- We will defer feature branch creation until we have a policy.
+
+AI: Matt to respond to DTLS 1.3 PR asking contributor to raise PR against master
+
+** Locking discussion
+
+We previously considered inviting Nico to an OTC meeting to discuss locking.
+
+This issue should be considered during release steering.
+
+How should we respond to Nico?
+    => We aren't ready yet / are still working on prioritising this.
+
+** Review issues with OTC hold (30 minutes)
+
+#20783: PKCS8: Allow password-based KDF salt len to be specified when writing
+        an encrypted private key
+#21858: Change PBES PBKDF2 default salt length to 16 bytes
+
+    OTC: We want the approach from #21858 but apply the default longer salt length
+         also to scrypt. We also want an option for specifying the salt length
+         in apps. This is for master branch only.
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** Review draft technical policies
+
+None
+
+** AOB
+
+We have hired several new people: one engineer, two devops.
+    Neil Horman, Engineer
+    Tomas Vavra, Devops
+    Dmitry Misharov, Devops
+
+We have two inactive committers.
+
+AI: Tomas to deactivate the deactivate the inactive committers and email them
+
+Dmitry asks people to review the provider load_ex API PR (#21604)
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** New and carried over action items [transported from above]:
+
+AI: Matt to respond to DTLS 1.3 PR asking contributor to raise PR against master
+
+AI: Tomas to deactivate the deactivate the inactive committers and email them
