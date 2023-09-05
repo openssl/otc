@@ -1,0 +1,168 @@
+Meeting Date: 2023-09-05
+Minutes taken by: Hugo Landau
+Attendees:
+    Hugo Landau
+    Dmitry Belyavskiy
+    Kurt Roeckx
+    Matt Caswell
+    Tomas Mraz
+    Tim Hudson
+    Shane Lontis
+    Matthias St. Pierre
+    Paul Dale
+    Nicola Tuveri
+
+External attendees:
+    Anton Arapov
+    Neil Horman
+    Dmitry Misharov
+    Tomas Vavra
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Inviting our new contractors
+    * Review outstanding actions
+    * OpenSSL 3.2 Alpha
+    * Use of urgent PRs
+    * FIPS Indicators
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Hugo volunteered to take the minutes.
+Proposed: Hugo, seconded: Matt
+
+Agenda for the meeting agreed. Proposed: Hugo, seconded: Tim
+
+** Agree minutes from previous meeting
+
+Minutes from previous meeting were agreed. Proposed: Hugo, seconded: Matt
+
+** Inviting our new contractors
+
+[Nicola joined the call]
+
+OTC invites our new contractors Neil Horman, Dmitry Misharov and Tomas Vavra
+to attend OTC as external attendees.
+
+None of these are required to attend and it is expected that
+attendance will not generally be relevant for Dmitry and Tomas.
+
+[Anton joined the call]
+[Neil joined the call]
+[Dmitry Misharov joined the call]
+[Tomas Vavra joined the call]
+
+** Review outstanding actions
+
+AI: Matt to respond to DTLS 1.3 PR asking contributor to raise PR against master
+Done
+
+AI: Tomas to deactivate the inactive committers and email them
+Done
+
+** OpenSSL 3.2 Alpha
+
+All alpha blockers are cleared.
+
+We would like to make the first 3.2 alpha release on Thursday.
+
+Beta implies an API freeze.
+
+Plan:
+  - We make a blogpost today announcing that we will release
+    an alpha on Thursday.
+
+  - We make an alpha on Thursday.
+
+  - We make a beta two weeks after that.
+
+  - We have the option for an additional alpha if needed but it
+    is not planned.
+
+  - Feature freeze will start with beta.
+
+AI: Hugo to write blogpost about imminent alpha,
+    feature freeze & release plans to be published today
+
+** Use of urgent PRs
+
+Should we be using urgent for things like CI breakage?
+e.g. when CI has been broken for a long time?
+
+Proposal: "The use of the urgent tag should be limited to contexts where the
+breakage is within the CI (including buildbot) within the last 72 hours and the
+change is straight forward."
+
+AI: Matt to raise a proposal for a policy change regarding use of the urgent tag
+
+** FIPS Indicators
+
+We have a FIPS cross-validation failure.
+
+Some changes were in 3.0.9.
+
+We need to do indicators. We do not have to do them now.
+Eventually they will be needed.
+Implicit indicators will not work for us.
+
+[Kurt left the call]
+
+Interaction of indicators with PKCS11 is a major question.
+
+Not for 3.2. Not scheduled for 3.x yet.
+
+If we get a request from CMVP to implement explicit indicators it may
+need to be scheduled for a release at short notice.
+
+** Review issues with OTC hold (30 minutes)
+
+#21826: Add ability to derive primes in EVP_PKEY_fromdata
+    OTC: The explicit OSSL_PARAM must be present to derive the missing
+         CRT params.
+
+#21919: MUTEX: Assert on locking failure
+    OTC: OPENSSL_assert(), i.e., abort in both debug and non-debug builds, can
+    be used here.
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** Review draft technical policies
+
+Defer
+
+** AOB
+
+Dmitry has submitted several PRs containing Redhat
+FIPS changes. They are not intended for 3.2 but
+Dmitry asks which are acceptable changes.
+
+AI: Everyone to read Dmitry's Redhat FIPS PRs
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Redhat FIPS PRs
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** New and carried over action items [transported from above]:
+
+AI: Hugo to write blogpost about imminent alpha,
+    feature freeze & release plans to be published today
+
+AI: Matt to raise a proposal for a policy change regarding use of the urgent tag
+
+AI: Everyone to read Dmitry's Redhat FIPS PRs
