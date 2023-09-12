@@ -1,0 +1,137 @@
+Meeting Date: 2023-09-12
+Minutes taken by: Hugo Landau
+Attendees:
+    Hugo Landau
+    Kurt Roeckx
+    Matthias St. Pierre
+    Shane Lontis
+    Tim Hudson
+    Matt Caswell
+    Paul Dale
+    Tomas Mraz
+
+External attendees:
+    Anton Arapov
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Hugo volunteered to take the minutes.
+Proposed: Hugo, seconded: Matt
+
+Agenda for the meeting agreed. Proposed: Hugo, seconded: Tomas
+
+** Agree minutes from previous meeting
+
+Minutes from previous meeting were agreed. Proposed: Hugo, seconded: Tomas
+
+** Review outstanding actions
+
+AI: Hugo to write blogpost about imminent alpha,
+    feature freeze & release plans to be published today
+Done
+
+AI: Matt to raise a proposal for a policy change regarding use of the urgent tag
+Not done
+
+AI: Everyone to read Dmitry's Redhat FIPS PRs
+In progress
+
+** Review issues with OTC hold (30 minutes)
+
+#21742: Replace strdup with OPENSSL_strdup
+    OTC: Do not use OPENSSL_strdup() here. Please use other standard libc functions.
+
+#21961: Bind provider search property to ssl object
+    OTC: This API cannot be added as is.
+
+    As SSL_CTX can contain fetched algorithms, keys, or other things that
+    depend on property query, it would be inconsistent to try to override the
+    propq on SSL_new(). Could you please give us more information about the
+    architecture of the application where having separate SSL_CTX objects for
+    separate propqueries is infeasible.
+
+#21964: FIPS RNG
+    OTC: The option (3) is the way to go. It should be backported to all
+         3.x branches.
+
+         The FIPS lab will be consulted for the impact on the validation.
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** Review draft technical policies
+
+#72: Add assert policy
+    Received broad support during discussion
+    OTC: Add the word 'only' regarding OPENSSL_assert
+
+** AOB
+
+Dmitry has two PRs he potentially wants included in 3.2.
+    #21875 - Issue 21826: Add ability to derive primes in EVP_PKEY_fromdata
+
+    OTC: Standard review process with feature freeze at beta.
+         We do not need to rush to get this in.
+         There could be a separate PR backporting the fixes only.
+
+    #20131 - Allow to pass a passprase callback at store open
+
+    OTC: Standard review process with feature freeze at beta.
+         We do not need to rush to get this in.
+
+Shane has raised a PR for SQUEEZE (#21511)
+
+Shane wants to know the lab's position on X25519
+    Pauli: Their position is that X25519 and X448 are not approvable
+           but they are allowed.
+
+           This is different from our previous interpretation which
+           was that they are not approvable.
+
+Hugo, Tomas and Anton will be at ICMC next week.
+We are cancelling the OTC meeting next week.
+
+The OTC extends congratulations to Anton for becoming an OMC member.
+
+It would be appreciated if OMC and other status changes were communicated to OTC
+and committers earlier.
+
+OTC suggests to OMC that we should have a blogpost about Anton becoming an OMC
+member.
+
+When are we doing the 3.2 beta release?
+    We can defer this until after ICMC.
+
+If the contractor team decide that an alpha 2 release is appropriate,
+this does not need OTC approval. However this is not planned at this
+time.
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Beta approval
+    * Redhat FIPS PRs (Dmitry)
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** New and carried over action items [transported from above]:
+
+AI: Matt to raise a proposal for a policy change regarding use of the urgent tag
+
+AI: Everyone to read Dmitry's Redhat FIPS PRs
