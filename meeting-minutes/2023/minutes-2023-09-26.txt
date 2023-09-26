@@ -1,0 +1,117 @@
+Meeting Date: 2023-09-26
+Minutes taken by: Matt Caswell
+Attendees:
+    Matthias St. Pierre
+    Matt Caswell
+    Paul Dale
+    Tomas Mraz
+    Richard Levitte
+    Dmitry Belyavskiy
+    Shane Lontis
+
+External attendees:
+    Anton Arapov
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Beta discussion
+    * Redhat FIPS PRs (Dmitry)
+    * ICMC report
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Matt volunteered to take the minutes.
+Proposed: Richard, seconded: Tomas
+
+Agenda for the meeting agreed. Proposed: Matt, seconded: Paul
+
+** Agree minutes from previous meeting
+
+Minutes from previous meeting were agreed. Proposed: Matt, seconded: Pauli
+
+** Review outstanding actions
+
+AI: Matt to raise a proposal for a policy change regarding use of the urgent tag
+Done
+
+AI: Everyone to read Dmitry's Redhat FIPS PRs (#21929, #21928, #21926)
+In progress
+
+** Beta discussion
+
+Multi-stream failures issue is outstanding. We should do another alpha release
+as soon as possible.
+
+** Redhat FIPS PRs (Dmitry)
+
+RSA  - 21926. Updates to include various length checks and other misc updates.
+Needs some updates for style and to remove things which are unacceptable.
+
+We would like all of the fixes eventually.
+
+Selftest - 21928. No concerns in principle but there are review issues to be
+resolved.
+
+Hardening - 21929. PCTs and zeroization of public data. We don't want either of
+these at the moment. Minimal password length: we don't want this either at this
+time.
+
+** ICMC report
+
+ICMC presentation is here:
+https://docs.google.com/presentation/d/1Lgm9waAN_hnZeYXhsZRBkjzEeKIHMlhwysT_6yh2M_o/edit#slide=id.p1
+
+We met some companies that were interested in the QUIC implementation.
+
+People expressed an interest in having PQC algs in OpenSSL.
+
+There were questions about the next LTS release.
+
+Questions about the 140-3 module.
+
+** Review issues with OTC hold (30 minutes)
+
+22140: Property queries on algorithms proposal.
+
+There are multiple problems, e.g. granualrity of prop queries for TLS; finer
+control of prop queries for composite algorithms; fetching by curve in EC.
+
+We should start by defining the problem and then consider solutions.
+
+22158: Apple DHCAST128 support. We would consider a PR that enabled a settable
+minimum length.
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** Review draft technical policies
+
+Assert policy: Just need to start the vote. Tomas to raise it.
+
+** AOB
+
+None
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Beta approval
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** New and carried over action items [transported from above]:
+
+AI: Everyone to read Dmitry's Redhat FIPS PRs (#21929, #21928, #21926)
