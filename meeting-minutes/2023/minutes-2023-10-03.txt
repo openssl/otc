@@ -1,0 +1,129 @@
+Meeting Date: 2023-10-03
+Minutes taken by: Matt Caswell
+Attendees:
+    Matt Caswell
+    Paul Dale
+    Dmitry Belyavskiy
+    Shane Lontis
+    Tomas Mraz
+    Richard Levitte
+
+External attendees:
+    Anton Arapov
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Beta discussion
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Matt volunteered to take the minutes.
+Proposed: Matt, seconded: Pauli
+
+Agenda for the meeting agreed. Proposed: Matt, seconded: Tomas
+
+** Agree minutes from previous meeting
+
+Minutes from previous meeting were agreed. Proposed: Matt, seconded: Pauli
+
+** Review outstanding actions
+
+AI: Everyone to read Dmitry's Redhat FIPS PRs (#21929, #21928, #21926)
+Done
+
+** Beta discussion
+
+3 coverity issues are open.
+Some build failures still.
+A PR for coveralls is about to merge that will reduce the coverage number (but
+this applies to all branches).
+Review of issues to check there are no regressions needs to be done.
+
+AI: Anton to create a ticket to ensure the release checklist is checked before
+next OTC meeting
+
+** Review issues with OTC hold (30 minutes)
+
+18916: apps/smime: Fix behaviour, doc and option name wrt untursted certs
+
+This is not a bug fix because it is adding a new options. Not applicable to
+stable branches currently.
+
+22198: Optimize out uneeded up_ref/free of EVP_CIPHER
+
+[Nicola Tuveri joined the call]
+
+Ok to cherry-pick to 3.1 and 3.0 branches.
+
+22203: key_share /supported_group selection algorithm needs changes for post-quantum
+
+Documentation fix for stable branches + 3.2. Fix for 3.3 to be designed.
+
+22206: feat: support the targetingInformation X.509v3 extension
+
+The structures should be opaque, possibly with accessors. And there should be an
+OSSL_ prefix (or some other prefix to be specified by the review process) so the
+public symbols aren't potentially conflicting with applications
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** Review draft technical policies
+
+AI: Tomas to close the assert policy vote.
+
+** AOB
+
+We need a DTLSv1.3 feature branch
+
+Who is responsible for approving the creation of the branch?
+We need a policy for how to manage the branch.
+How will rebases of the feature branch be reviewed?
+
+AI: Matt to ask WG about approval of DTLSv1.3 feature branch
+AI: Anton to write a policy for feature branches (including how to review rebases)
+
+When to branch 3.2?
+
+The DigestSqueeze API should go into 3.3
+
+We will branch at beta.
+
+Should there be OTC presentation for Richards two design PRs (22129, 22162).
+There is no need at this time.
+
+LMS:
+This does fit well with the DigestVerifyInit/Final APIs. The signature should be
+supplied earlier (before the Update).
+
+AI: Shane to consider LMS API and write a design.
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Beta approval
+    * Add config option to limit MDs used in signatures (19084)
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** New and carried over action items [transported from above]:
+
+AI: Anton to create a ticket to ensure the release checklist is checked before
+next OTC meeting
+AI: Tomas to close the assert policy vote.
+AI: Matt to ask WG about approval of DTLSv1.3 feature branch
+AI: Anton to write a policy for feature branches (including how to review rebases)
+AI: Shane to consider LMS API and write a design.
