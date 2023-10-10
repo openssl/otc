@@ -1,0 +1,145 @@
+Meeting Date: 2023-10-10
+Minutes taken by: Hugo Landau
+Attendees:
+    Richard Levitte
+    Hugo Landau
+    Matthias St. Pierre
+    Dmitry Belyavskiy
+    Nicola Tuveri
+    Tomas Mraz
+    Matt Caswell
+    Paul Dale
+    Shane Lontis
+
+External attendees:
+    Neil Horman
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Standing invitation to James Muir
+    * Beta approval
+    * POSIX Support Policy (Neil)
+    * Add config option to limit MDs used in signatures (19084)
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Hugo volunteered to take the minutes.
+Proposed: Hugo, seconded: Matt
+
+Agenda for the meeting agreed. Proposed: Hugo, seconded: Matt
+
+** Agree minutes from previous meeting
+
+Minutes from previous meeting were agreed. Proposed: Tomas, seconded: Dmitry
+
+** Review outstanding actions
+
+AI: Anton to create a ticket to ensure the release checklist is checked before
+next OTC meeting
+Done
+
+AI: Tomas to close the assert policy vote.
+Done
+
+AI: Matt to ask WG about approval of DTLSv1.3 feature branch
+Done
+
+AI: Anton to write a policy for feature branches (including how to review rebases)
+In progress
+
+AI: Shane to consider LMS API and write a design.
+In progress
+
+** Standing invitation to James Muir
+
+OTC extends a standing invitation to James Muir to attend as an external
+attendee.
+
+OTC extends a standing invitation by default to all current and future
+contractors to attend OTC meetings as external attendees.
+
+** Beta approval
+
+We would like to make a beta release on Thursday.
+
+Remaining concerns:
+  - Intermittent evp_test failure
+  - QUIC fuzzing
+  - VMS failures
+  - FIPS compat
+  - Header file issue
+
+The intermittent evp_test failures are too serious to allow
+beta signoff at this time. QUIC fuzzing is also a priority.
+
+** POSIX Support Policy (Neil)
+
+It would be useful if we could audit the introduction of new OS symbols
+in new PRs.
+
+AI: Hugo to create issue about producing infrastructure for auditing OS symbol usage
+
+** Add config option to limit MDs used in signatures (19084)
+
+Defer
+
+** Review issues with OTC hold (30 minutes)
+
+#21704: md5: add assembly implementation for loongarch64
+    OTC: As this is not an algorithm in the legacy provider, there is no
+         need to block this PR.
+
+#22266: It is no longer possible to insert a second identical unsigned attribute
+    OTC: We should not revert #21505 but this needs to be investigated and
+         possibly a different fix is needed.
+
+#22304: crypto/{CMS,PKCS7,OCSP,TS,X509}: constify cert list parameters; tidy up
+app code
+    OTC: Adding or removing const for reference is an API break. These changes
+         need to be dropped from the PR.
+
+#22296: bio.h syntax error line 993 - openssl-3.2.0-alpha2 - mingw on Wingows -
+g++.exe (Rev7, Built by MSYS2 project) 13.1.0
+    Defer
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** Review draft technical policies
+
+None
+
+** AOB
+
+None
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Beta approval
+    * Applink
+    * Add config option to limit MDs used in signatures (19084)
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** New and carried over action items [transported from above]:
+
+AI: Anton to write a policy for feature branches (including how to review rebases)
+
+AI: Shane to consider LMS API and write a design.
+
+AI: Hugo to create issue about producing infrastructure for auditing OS symbol usage
+Done (#22330)
