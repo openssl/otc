@@ -1,0 +1,142 @@
+Meeting Date: 2023-10-17
+Minutes taken by: Hugo Landau
+Attendees:
+    Nicola Tuveri
+    Richard Levitte
+    Hugo Landau
+    Dmitry Belyavskiy
+    Matthias St. Pierre
+    Matt Caswell
+    Tomas Mraz
+    Shane Lontis
+    Tim Hudson
+
+External attendees:
+    Neil Horman
+    Anton Arapov
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Beta approval
+    * Applink
+    * Add config option to limit MDs used in signatures (19084)
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Hugo volunteered to take the minutes.
+Proposed: Hugo, seconded: Matt
+
+Agenda for the meeting agreed. Proposed: Hugo, seconded: Tim
+
+** Agree minutes from previous meeting
+
+Minutes from previous meeting were agreed. Proposed: Hugo, seconded: Matt
+
+** Review outstanding actions
+
+AI: Anton to write a policy for feature branches (including how to review rebases)
+Not done
+
+AI: Shane to consider LMS API and write a design.
+Done
+
+AI: Hugo to create issue about producing infrastructure for auditing OS symbol usage
+Done (#22330)
+
+** Beta approval
+
+DRBG issues:
+    #22394 should go into Beta 1 and should be backfitted to 3.1.
+
+    #22342: OTC hold pending outcome of #22394.
+
+QUIC Fuzzing:
+    We now have a fuzzer.
+    It has identified some issues.
+
+    Investigating the undiagnosed issues identified by the fuzzer
+    should be a beta blocker. Fixing them is not necessarily
+    a beta blocker, depending on their severity.
+
+VMS Failures:
+    We agreed last week this is not a beta blocker.
+    Decision on whether this is a blocker for final release
+    is deferred.
+
+We are not ready for Beta 1 yet:
+    - QUIC fuzzer needs a second approval
+    - Update fuzzer corpora
+    - QUIC fuzzing issues need to be diagnosed
+    - DRBG PRs need to be resolved
+
+Earliest possible beta would be on the 26th.
+Final release will not be in October.
+
+** Applink
+
+AI: Matthias to produce a writeup on his proposal for fixing applink
+
+AI: Anton to create issue to remove FAQ and issue to create new FAQ
+
+** Add config option to limit MDs used in signatures (19084)
+
+PR is ready for review. The OTC's attention is drawn to the PR.
+
+Should we have fuzzing for config files?
+
+** Review issues with OTC hold (30 minutes)
+
+#11915: "openssl cms" with EdDSA does not work
+Not an OTC question
+
+#22316: Avoid using gets as an argument name in a prototype
+Defer
+
+#22357: Add design document for LMS
+Defer
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** Review draft technical policies
+
+None
+
+** AOB
+
+Matthias:
+    The DRBG issue (#22342) was marked for 3.0 as well.
+    OTC: Is this a mistake? To be determined.
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Beta approval
+    * Applink
+    * gets as argument name (#22316)
+    * Add config option to limit MDs used in signatures (19084)
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** New and carried over action items [transported from above]:
+
+AI: Anton to write a policy for feature branches (including how to review rebases)
+
+AI: Matthias to produce a writeup on his proposal for fixing applink
+
+AI: Anton to create issue to remove FAQ and issue to create new FAQ
+
+AI: Everyone to read the LMS design
