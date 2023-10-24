@@ -1,0 +1,160 @@
+Meeting Date: 2023-10-24
+Minutes taken by: Hugo Landau
+Attendees:
+    Nicola Tuveri
+    Paul Dale
+    Hugo Landau
+    Richard Levitte
+    Matthias St. Pierre
+    Dmitry Belyavskiy
+    Shane Lontis
+    Tomas Mraz
+    Kurt Roeckx
+    Matt Caswell
+
+    Tim Hudson
+
+External attendees:
+    Neil Horman
+    Anton Arapov
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Beta approval
+    * Applink
+    * gets as argument name (#22316)
+    * Add config option to limit MDs used in signatures (19084)
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Hugo volunteered to take the minutes.
+Proposed: Hugo, seconded: Nicola
+
+Agenda for the meeting agreed. Proposed: Hugo, seconded: Pauli
+
+** Agree minutes from previous meeting
+
+Minutes from previous meeting were agreed. Proposed: Hugo, seconded: Nicola
+
+** Review outstanding actions
+
+AI: Anton to write a policy for feature branches (including how to review rebases)
+Not done
+
+AI: Matthias to produce a writeup on his proposal for fixing applink
+Not done
+
+AI: Anton to create issue to remove FAQ and issue to create new FAQ
+Done
+
+AI: Everyone to read the LMS design
+In progress
+
+** Beta approval
+
+[Tim joined the call]
+
+#22394: rand: fix seeding from a weak entropy source
+    OTC: This is approved to go in master and 3.1 immediately.
+
+#22476: QUIC: Fix crypto stream buffering
+
+
+topic:
+    OTC authorises an exemption to the two day wait requirement for the release
+    of a first beta and authorises the release of OpenSSL 3.2.0 beta 1 subject
+    to all beta-blocker PRs merging as per normal review process and all CI
+    passing on master
+comment:
+Proposed by Hugo.
+Public: yes
+opened: 2023-10-24
+closed: 2023-10-24
+accepted: yes (for: 9, against: 0, abstained: 2, not voted: 0)
+
+  Dmitry     [+1]
+  Matt       [+1]
+  Pauli      [+1]
+  Tim        [+0]
+  Hugo       [+1]
+  Richard    [+1]
+  Shane      [+1]
+  Tomas      [+1]
+  Kurt       [ 0]
+  Matthias   [+1]
+  Nicola     [+1]
+
+OTC has approved beta release as per the above vote with the conditions
+described above.
+
+** Applink
+
+Defer
+
+** Add config option to limit MDs used in signatures (19084)
+
+Defer
+
+** Review issues with OTC hold (30 minutes)
+
+#22186: Permit access to select environment where net-cap-bind support active
+    Post-3.2.0, defer discussion
+
+#22444: Use a common BLAKE2 definition for both b and s, thus also bringing XOF
+        support to BLAKE2s. Document how BLAKE2 XOFs work
+    Issue created: Change BLAKE2B to use OSSL_PARAM_DIGEST_SIZE as settable
+                   instead of OSSL_PARAM_DIGEST_XOFLEN (#22488)
+
+** gets as argument name (#22316)
+
+OTC: OK to go in
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** Review draft technical policies
+
+None
+
+** AOB
+
+Nicola and Hugo suggest WG consider possible involvement with
+    https://qubip.eu/partners/
+
+Nicola and Hugo suggest WG consider sending OpenSSL personnel
+    to the IETF meeting (4-10 Nov 2023)
+    Dmitry is partially attending IETF 118
+
+Dmitry is working on migrating openssh-portable to the EVP API.
+    https://github.com/openssh/openssh-portable/pull/453
+    https://github.com/openssl/openssl/discussions/22458
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Beta release post-discussion
+    * Applink
+    * Add config option to limit MDs used in signatures (19084)
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** New and carried over action items [transported from above]:
+
+AI: Anton to write a policy for feature branches (including how to review rebases)
+
+AI: Matthias to produce a writeup on his proposal for fixing applink
+
+AI: Everyone to read the LMS design
