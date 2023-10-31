@@ -1,0 +1,260 @@
+Meeting Date: 2023-10-31
+Minutes taken by: Hugo Landau
+Attendees:
+    Paul Dale
+    Hugo Landau
+    Nicola Tuveri
+    Matt Caswell
+    Dmitry Belyavskiy
+    Shane Lontis
+    Tomas Mraz
+    Tim Hudson
+
+External attendees:
+    Neil Horman
+    Anton Arapov
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Beta release post-discussion
+    * Merge processes & new developer communication
+    * Communications channels update
+    * OPENSSL_cleanup/atexit (#22508)
+    * Add config option to limit MDs used in signatures (19084)
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Hugo volunteered to take the minutes.
+Proposed: Hugo, seconded: Tomas
+
+Agenda for the meeting agreed. Proposed: Hugo, seconded: Tomas
+
+** Agree minutes from previous meeting
+
+Minutes from previous meeting were agreed. Proposed: Hugo, seconded: Nicola
+
+** Review outstanding actions
+
+AI: Anton to write a policy for feature branches (including how to review rebases)
+Not done
+
+AI: Matthias to produce a writeup on his proposal for fixing applink
+Not done
+
+AI: Everyone to read the LMS design (#22357) (last chance before discussion)
+In progress
+
+** Beta release post-discussion
+
+We made the 3.2 beta 1 release on Thursday.
+
+Pretty much no feedback so far.
+
+Now that release-related activity is cooling down, we hope to do
+the provider meetings in November.
+
+** Merge processes & new developer communication
+
+Should we look into using more of the GitHub merge functionality?
+
+=> Adopting GitHub functionality probably not desirable
+   How would we do addrev?
+   Merging is not the bottleneck.
+
+Takeaways:
+
+=> Are there any ideas in Github's merge queue functionality
+   we could borrow? (To be investigated by Tomas)
+
+=> Can we disable the merge button?
+   To be investigated.
+   Could reach out to GitHub about this.
+
+=> How should we communicate our workflow to new developers?
+AI: Hugo to create an issue to ensure workflow is communicated to new developers
+
+** Communications channels update
+
+https://github.com/openssl/project/issues/270
+
+- We have adopted Matrix as a replacement for XMPP as our
+  internal communications system for contractors.
+
+- There is no objection to committers joining the Lounge
+  Matrix channel if they want to be part of contractor
+  work communications. Anyone wanting to join can email
+  Hugo with their Matrix address.
+
+- We want a mailing list for committers plus WG.
+  What do we call it?
+  How does the role of this list differ to openssl-project?
+  We should seek to be as transparent as possible.
+
+- Should Matrix be public (read-only)?
+  
+- Could we just add contractors to the openssl-committers@ list?
+  Seems reasonable
+
+Conclusions:
+  We should use openssl-project@ more often and by default.
+  We could still add contractors to openssl-committers@.
+
+OTC recommends to WG that all contractors be extended a standing
+invitation to be on the openssl-committers@ list as long as they
+are contractors.
+
+AI: Hugo to schedule WG discussion of extending openssl-committers@
+
+We should consider using Matrix to create rooms which are
+accessible to the public as part of engagement with all of our
+communities. Open source projects which have chatrooms can often
+get engagement from the community which would not be possible
+via email.
+
+AI: Hugo to schedule WG discussion of public Matrix channels
+
+** OPENSSL_cleanup/atexit (#22508) (Neil)
+
+Ideally we would like to get rid of all usage of atexit.
+
+How do we do this and what are the implications?
+
+The main motivation for atexit is to keep Valgrind reporting
+clean, as the only resources freed are memory which is freed
+anyway when the process exits.
+
+This is only a problem for the default libctx.
+Is it plausible we could ever get rid of it?
+
+We should have a long term plan to move all globals into a libctx.
+
+In future the thread pooling support will need to be revised to allow one thread
+pool to be shared across libctxs. This is an example of cross-libctx state that
+needs to be considered in any future solution.
+
+We want to get to a point where atexit is not used by default.
+
+Can we use shared library init/fini?
+
+Can OPENSSL_cleanup be made refcounted?
+
+There is probably no perfect solution.
+We need the least bad solution.
+
+We could deprecate the default libctx in 4.0 and remove it in 5.0.
+
+Regarding issue #22508, we cannot fix this currently.
+
+OTC: We cannot support this scenario cleanly. The engine/SoftHSM developer needs
+to ensure that global object data is not freed until the using applications
+release references to them. We want to look at atexit usage in future with
+possible changes in 4.0.
+
+AI: Hugo to create an epic about solving the atexit problem
+
+** Add config option to limit MDs used in signatures (19084)
+
+Defer
+
+** Review issues with OTC hold (30 minutes)
+
+#22499: rand: implement an unbiased random integer from a range
+[Tim joined the call]
+    The PR is excellent but probably not viewable as a bugfix.
+    Neither this nor the HPKE hardening should make 3.2.
+
+    This cannot go into 3.2.
+
+    Related to #22493: HPKE hardening
+    We need to split some of this out to make 3.2.
+
+    We don't have good guidance on what can go into a release after beta.
+
+    topic: Accept #22493 for 3.2 (including the RNG changes)
+           subject to normal review process.
+    comment: https://github.com/openssl/openssl/pull/22493
+    Proposed by Hugo.
+    Public: yes
+    opened: 2023-10-31
+    closed: 2023-10-31
+    accepted:  yes  (for: 4, against: 1, abstained: 4, not voted: 2)
+
+      Dmitry     [ 0]
+      Matt       [+1]
+      Pauli      [+1]
+      Tim        [-1]
+      Hugo       [+0]
+      Richard    [ 0]
+      Shane      [ 0]
+      Tomas      [+1]
+      Kurt       [  ]
+      Matthias   [  ]
+      Nicola     [+1]
+
+#22516: tag ossl_assert not failing as being 'likely' to improve optimisation
+    Can this go into 3.2?
+
+    OTC: not a bug fix not for 3.2.
+
+AI: Hugo to create an issue to rename likely/unlikely
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** Review draft technical policies
+
+None
+
+** AOB
+
+Nicola will be attending IETF 118.
+Dmitry will attend IETF 118 on Sat/Sun and some Friday meetings.
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * 3.2 status
+    * LMS design (Shane)
+    * Applink
+    * Add config option to limit MDs used in signatures (19084)
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** New and carried over action items [transported from above]:
+
+AI: Anton to write a policy for feature branches (including how to review rebases)
+Not done
+
+AI: Matthias to produce a writeup on his proposal for fixing applink
+Not done
+
+AI: Everyone to read the LMS design (#22357) (last chance before discussion)
+In progress
+
+AI: Hugo to create an issue to ensure workflow is communicated to new developers
+Done (project#273)
+
+AI: Hugo to schedule WG discussion of extending openssl-committers@
+Done
+
+AI: Hugo to schedule WG discussion of public Matrix channels
+Done
+
+AI: Hugo to create an epic about solving the atexit problem
+Done (project#271)
+
+AI: Hugo to create an issue to rename likely/unlikely
+Done (project #272)
