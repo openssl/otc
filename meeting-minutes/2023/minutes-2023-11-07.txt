@@ -1,0 +1,181 @@
+Meeting Date: 2023-11-07
+Minutes taken by: Hugo Landau
+Attendees:
+    Hugo Landau
+    Matthias St. Pierre
+    Dmitry Belyavskiy
+    Paul Dale
+    Richard Levitte
+    Matt Caswell
+    Shane Lontis
+    Tomas Mraz
+    Tim Hudson
+
+External attendees:
+    Neil Horman
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * 3.2 status
+    * OTC at IETF
+    * LMS design (Shane)
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+AI: Everyone to read or review #19084 (Config option to limit MDs)
+
+** Nominate a minute taker and confirm agenda
+
+Hugo volunteered to take the minutes.
+Proposed: Hugo, seconded: Tomas
+
+Agenda for the meeting agreed. Proposed: Hugo, seconded: Tim
+
+** Agree minutes from previous meeting
+
+Minutes from previous meeting were agreed. Proposed: Hugo, seconded: Matthias
+
+** Review outstanding actions
+
+AI: Anton to write a policy for feature branches (including how to review rebases)
+Not done
+
+AI: Matthias to produce a writeup on his proposal for fixing applink
+Not done
+
+AI: Everyone to read the LMS design (#22357) (last chance before discussion)
+Done
+
+AI: Hugo to create an issue to ensure workflow is communicated to new developers
+Done (project#273)
+
+AI: Hugo to schedule WG discussion of extending openssl-committers@
+Done
+
+AI: Hugo to schedule WG discussion of public Matrix channels
+Done
+
+AI: Hugo to create an epic about solving the atexit problem
+Done (project#271)
+
+AI: Hugo to create an issue to rename likely/unlikely
+Done (project #272)
+
+** 3.2 status
+
+We seem to be on track for a final release.
+
+Should we do one more beta?
+
+Unclear there is any significantly compelling reason
+for another beta, just minor issues. We can make a call
+on this at the next meeting.
+
+Fuzzing continues to find QUIC issues.
+
+Nonstop issues cannot block the release though we should
+make our best efforts to fix Nonstop issues prior to the
+release. Neil to assist rsbecker in debugging Nonstop issues.
+
+** OTC at IETF
+
+We have several OTC members who attended IETF 118 for one
+or more days (Tomas for one day, Nicola, Dmitry).
+
+Tomas's report:
+    It was good to see how these meetings work.
+    Anyone can speak, including online attendees.
+
+    The hackathon is more about meeting people
+    implementing the standards F2F than coding.
+
+    Tomas attended the TLS WG meeting.
+
+AI: Tomas to send an email about IETF experience
+
+** LMS design (Shane)
+
+Many HSM vendors use OpenSSL internally
+and will want LMS in OpenSSL as the basis of their
+offering.
+
+Standards bodies are continuing to try to
+establish some kind of requirement on secure
+state management for stateful signature functions.
+
+The actual implementation Shane is working on is HSS.
+
+We gave feedback on the proposed API design.
+
+** Review issues with OTC hold (30 minutes)
+
+#22186: Permit access to select environment where net-cap-bind support
+        active
+    OTC: We cannot accept this PR. We do not want to hardcode
+    exemption for specific environment variables or to depend
+    on Linux-specific syscalls or Linux capability APIs.
+    We would consider a mechanism which allows an application to
+    specify a list of environment variable names which should not
+    be routed via secure getenv.
+
+    PR closed.
+
+#22450: crypto/initthread.c: fix misspelled OSSL_provider_init() in comment
+    Should code comment fixes (which aren't considered bugs)
+    be allowed in a beta even though they wouldn't be allowed
+    in a stable release?
+
+    OTC: We treat beta as a stable release.
+
+AI: Tomas to update the stable release updates policy to
+    clarify that beta is considered stable
+
+#22529: Fix the encoding of SM2 keys
+    OTC: This is a regression. We need to test the backwards compatibility with keys encoded both ways.
+
+Defer remaining issues
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** Review draft technical policies
+
+None aside from minor edits.
+
+** AOB
+
+None
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * 3.2 status
+    * OTC at IETF
+    * Applink
+    * Add config option to limit MDs used in signatures (19084)
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** New and carried over action items [transported from above]:
+
+AI: Everyone to read or review #19084 (Config option to limit MDs)
+
+AI: Anton to write a policy for feature branches (including how to review rebases)
+
+AI: Matthias to produce a writeup on his proposal for fixing applink
+
+AI: Tomas to send an email about IETF experience
+
+AI: Tomas to update the stable release updates policy to
+    clarify that beta is considered stable
