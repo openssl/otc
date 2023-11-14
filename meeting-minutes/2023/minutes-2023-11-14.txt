@@ -1,0 +1,232 @@
+Meeting Date: 2023-11-14
+Minutes taken by: Hugo Landau
+Attendees:
+    Matthias St. Pierre
+    Hugo Landau
+    Richard Levitte
+    Dmitry Belyavskiy
+    Matt Caswell
+    Tomas Mraz
+    Shane Lontis
+    Nicola Tuveri
+    Tim Hudson
+
+External attendees:
+    Neil Horman
+    Anton Arapov
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * 3.2 status
+    * Add config option to limit MDs used in signatures (19084)
+    * Algorithm APIs for PKEY (Richard)
+    * Assembly situation (Shane)
+    * QUIC Server API
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+      * Experimental features policy
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Hugo volunteered to take the minutes.
+Proposed: Hugo, seconded: Matt
+
+Agenda for the meeting agreed. Proposed: Hugo, seconded: Tomas
+
+** Agree minutes from previous meeting
+
+Minutes from previous meeting were agreed. Proposed: Hugo, seconded: Matt
+
+** Review outstanding actions
+
+AI: Everyone to read or review #19084 (Config option to limit MDs)
+In progress
+
+AI: Anton to write a policy for feature branches (including how to review rebases)
+In progress
+
+AI: Matthias to produce a writeup on his proposal for fixing applink
+In progress, Matthias will create an issue for discussion
+
+AI: Tomas to send an email about IETF experience
+Done
+
+AI: Tomas to update the stable release updates policy to
+    clarify that beta is considered stable
+PR created
+
+** 3.2 status
+
+We have new fuzzer issues which are fixed but we should
+probably not release on Thursday. We will wait until
+the next OTC meeting to make a decision, postponing the
+release for a week.
+
+We would like fuzzing to be clean for a week before
+releasing.
+
+Neil has made significant progress on diagnosing NonStop
+issues and fixed many issues. There are still many test
+failures to be diagnosed and it is still not a blocker
+for release.
+
+[Nicola joined the call]
+[Tim joined the call]
+
+** Add config option to limit MDs used in signatures (19084)
+
+Pending on people reading the PR
+
+The belief is that the PR is in a good state but thorough
+review is desirable.
+
+AI: Tomas to review #19084 (config option to limit MDs used in signatures)
+AI: Tim to review #19084 (config option to limit MDs used in signatures)
+
+** Algorithm APIs for PKEY (Richard)
+
+Richard has a PR up: #22672
+
+Implementation is likely to begin soon.
+
+Richard presented the design.
+
+** Assembly situation (Shane)
+
+We have a situation where assembly changes on some platforms
+are not tested until merge. This led to some broken assembly
+being merged.
+
+How can we ensure assembly is tested?
+
+- We could add a drop-on-merge commit to amend the workflow
+  file to do cross-compile testing for a PR that changes assembly,
+  but this requires the contributor to do it manually.
+  (Hugo)
+
+- We could have a workflow which autodetects a special command
+  in commit messages to enable cross-compile testing.
+  (Hugo)
+
+- We could try doing cross-compile with evp_test only on all PRs.
+  (Tomas)
+
+We will try adopting option 3 for now.
+
+AI: Tomas to create an issue to enable cross compile with evp_test
+    only for PRs
+
+** QUIC Server API
+
+https://github.com/openssl/openssl/pull/21795
+
+AI: Hugo to amend the Server DDD issue to include analysis of
+    DTLS (possibly SCTP) use cases, and prioritise work on
+    this
+
+AI: OTC to read the QUIC Server API document (#21795)
+
+** Review issues with OTC hold (30 minutes)
+
+#22566: Add RSA_OAEP_WITH_TLS_PADDING support for legacy
+    Do we want to add this support to legacy codepaths?
+    OTC: This can be accepted subject to standard review process.
+
+#22596: Security hardening: Linux Enable Position Independent Execution (PIE)
+    OTC: Should we have an option to enable this?
+    OTC: Should we make this on by default?
+        OTC: This should be a build-time option, which can be on
+             by default for selected platforms after they are tested
+             to work.
+
+#22602: When DH_check() finds P to be excessively large, only set that flag
+
+    topic: Accept PR #22602
+    comment: https://github.com/openssl/openssl/pull/22602
+    Proposed by Matt.
+    Public: yes
+    opened: 2023-11-14
+    closed: 2023-11-14
+    accepted:  no  (for: 1, against: 3, abstained: 5, not voted: 2)
+
+      Dmitry     [ 0]
+      Matt       [-1]
+      Pauli      [  ]
+      Tim        [ 0]
+      Hugo       [ 0]
+      Richard    [+1]
+      Shane      [-1]
+      Tomas      [-1]
+      Kurt       [  ]
+      Matthias   [-0]
+      Nicola     [-0]
+
+#22711: Safe bit shift operations
+    OTC: we don't need to prefix these in this PR but in another PR
+    we could change them all to have a prefix
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** Review draft technical policies
+
+There are two new draft technical policies:
+
+#79: Experimental features policy
+    Defer
+
+#80: Stable release updates policy applies to pre-release branches
+    Defer
+
+** AOB
+
+Nicola - provider meeting preparations:
+    Nicola discussed the use and development of providers
+    with several people at the IETF conference.
+
+    Better documentation would be nice. We have good reference documentation but
+    are lacking narrative documentation, both for use and development of
+    providers.
+
+Provider meetings still under development, planning to have two tracks:
+    provider authors and provider users.
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * 3.2 status
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** New and carried over action items [transported from above]:
+
+AI: Everyone to read or review #19084 (Config option to limit MDs)
+
+AI: Anton to write a policy for feature branches (including how to review rebases)
+
+AI: Matthias to produce a writeup on his proposal for fixing applink
+
+AI: Tomas to review #19084 (config option to limit MDs used in signatures)
+
+AI: Tim to review #19084 (config option to limit MDs used in signatures)
+
+AI: Tomas to create an issue to enable cross compile with evp_test
+    only for PRs
+
+AI: Hugo to amend the Server DDD issue to include analysis of
+    DTLS (possibly SCTP) use cases, and prioritise work on
+    this
+Issue amended (project#111)
+
+AI: OTC to read the QUIC Server API document (#21795)
