@@ -1,0 +1,251 @@
+Meeting Date: 2023-11-20
+Minutes taken by: Hugo Landau
+Attendees:
+    Hugo Landau
+    Nicola Tuveri
+    Dmitry Belyavskiy
+    Matthias St. Pierre
+    Shane Lontis
+    Tomas Mraz
+    Kurt Roeckx
+    Richard Levitte
+    Matt Caswell
+    Tim Hudson
+
+External attendees:
+    Neil Horman
+    Anton Arapov
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * 3.2 status
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Hugo volunteered to take the minutes.
+Proposed: Hugo, seconded: Tomas
+
+Agenda for the meeting agreed. Proposed: Hugo, seconded: Tomas
+
+** Agree minutes from previous meeting
+
+Minutes from previous meeting were agreed. Proposed: Hugo, seconded: Matt
+
+** Review outstanding actions
+
+AI: Anton to write a policy for feature branches (including how to review rebases)
+Not done
+
+AI: Matthias to produce a writeup on his proposal for fixing applink
+Not done
+
+AI: Tomas to review #19084 (config option to limit MDs used in signatures)
+Not done
+
+AI: Tim to review #19084 (config option to limit MDs used in signatures)
+Not done
+
+AI: Tomas to create an issue to enable cross compile with evp_test
+    only for PRs
+Done, PR created
+
+AI: Hugo to amend the Server DDD issue to include analysis of
+    DTLS (possibly SCTP) use cases, and prioritise work on
+    this
+Issue amended (project#111)
+
+AI: OTC to read the QUIC Server API document (#21795)
+Not done
+
+** 3.2 status
+
+No new fuzzer issues. Kurt thinks we probably won't have any new ones as
+coverage seems to have settled.
+
+We have had a significant number of new Coverity issues suddenly,
+but we think this is probably to do with an upgrade to Coverity.
+
+The Coverity issues are under investigation.
+
+AI: Tomas to triage the Coverity issues and determine which (if any) need fixing
+
+Dmitry: Is #22779 (Allow provider sigalgs in SignatureAlgorithms conf)
+    important enough for 3.2?
+
+    Options:
+        Release 3.2.0 with this as a known issue. Fix as 3.2.1.
+
+        We have never done this before. We could choose to.
+
+    or
+        Get the PR approved before release.
+        There is no test which is a problem.
+        We could take the PR over.
+
+AI: Hugo to update release notes PR to add known issues
+
+AI: Matt to investigate if a test can be easily added to #22779
+
+AI: Hugo to review #22779 by today
+
+AI: Matt to review #22779 by today
+
+We should try to get this fix merged if possible before Thursday
+but this means the fix will need to be approved by end of today
+or tomorrow morning at the earliest.
+
+If the fix is not ready we can release with a known issue.
+
+Some of the coverity issues are race conditions due to missing locks.
+
+[Kurt left the call]
+
+We could make an exception to our Coverity policy and communicate
+to our users transparently why we are making an exception to our
+policy (due to a sudden Coverity upgrade 30 untriaged new issues
+were raised).
+
+Ultimately we think #22779 can wait for 3.2.1 and be listed as
+a known issue.
+
+topic: OTC agrees that #22577 and #22679 can merge immediately without waiting
+for the 24 hour timer and should go into 3.2.0.
+Proposed by Hugo
+Public: yes
+opened: 2023-11-21
+closed: 2023-11-21
+accepted:  yes (for: 4, against: 0, abstained: 5, not voted: 1)
+
+  Dmitry     [ 0]
+  Matt       [+1]
+  Tim        [ 0]
+  Hugo       [+0]
+  Richard    [ 0]
+  Shane      [-0]
+  Tomas      [+1]
+  Kurt       [  ]
+  Matthias   [+1]
+  Nicola     [+1]
+
+topic: For OpenSSL-3.2 release, we have relaxed the requirement of "There are no
+outstanding untriaged Coverity issues" as there has been an update introduced to
+scan.coverity.org on 18-Nov-2023 that has identified 30 potential issues. We
+will document this as a known issue. OTC approves 3.2.0 as ready for release.
+Proposed by Tim
+Public: yes
+opened: 2023-11-21
+closed: 2023-11-21
+accepted:  yes  (for: 9, against: 0, abstained: 0, not voted: 1)
+
+  Dmitry     [+1]
+  Matt       [+1]
+  Tim        [+1]
+  Hugo       [+1]
+  Richard    [+1]
+  Shane      [+1]
+  Tomas      [+1]
+  Kurt       [  ]
+  Matthias   [+1]
+  Nicola     [+1]
+
+AI: Hugo to create an issue for clarifying the policy on demos
+
+AI: Hugo to create an issue for revising our release checklists
+
+Revision to release checklists in future:
+    - Fuzzing needs to start earlier
+    - We need to decide how to handle Coverity better
+    - Do we need to tie down CI OS targets (ubuntu-latest etc.)?
+    - The last 2 weeks before release should be considered special
+
+AI: Matt to comment on #21668 asking for an update with a view to inclusion in 3.3
+
+** Review issues with OTC hold (30 minutes)
+
+#21875: Add ability to derive primes in EVP_PKEY_fromdata
+    OTC: We require n and d being proved and it is an error if it isn't.
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+topic: OTC extends standing approval for contractors to have access to the
+security repository and security mailing list when approved at the discretion of
+the engineering manager.
+Proposed by Nicola
+Public: yes
+opened: 2023-11-21
+closed: 2023-11-21
+accepted:  yes  (for: 9, against: 0, abstained: 0, not voted: 1)
+
+  Dmitry     [+1]
+  Matt       [+1]
+  Tim        [+1]
+  Hugo       [+1]
+  Richard    [+1]
+  Shane      [+1]
+  Tomas      [+1]
+  Kurt       [  ]
+  Matthias   [+1]
+  Nicola     [+1]
+
+Nicola noted that we should probably have a policy on this in the future.
+
+[Matthias left the call]
+
+** Review draft technical policies
+
+Defer
+
+** AOB
+
+None
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * 3.2 status
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** New and carried over action items [transported from above]:
+
+AI: Anton to write a policy for feature branches (including how to review rebases)
+
+AI: Matthias to produce a writeup on his proposal for fixing applink
+
+AI: Tomas to review #19084 (config option to limit MDs used in signatures)
+
+AI: Tim to review #19084 (config option to limit MDs used in signatures)
+
+AI: OTC to read the QUIC Server API document (#21795)
+
+AI: Tomas to triage the Coverity issues and determine which (if any) need fixing
+
+AI: Hugo to update release notes PR to add known issues
+
+AI: Matt to investigate if a test can be easily added to #22779
+
+AI: Hugo to review #22779 by today
+
+AI: Matt to review #22779 by today
+
+AI: Hugo to create an issue for clarifying the policy on demos
+Issue created (project#351)
+
+AI: Hugo to create an issue for revising our release checklists
+Issue created (project#352)
+
+AI: Matt to comment on #21668 asking for an update with a view to inclusion in 3.3
