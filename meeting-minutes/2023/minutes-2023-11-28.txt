@@ -1,0 +1,224 @@
+Meeting Date: 2023-11-28
+Minutes taken by: Hugo Landau
+Attendees:
+    Hugo Landau
+    Nicola Tuveri
+    Shane Lontis
+    Dmitry Belyavskiy
+    Matthias St. Pierre
+    Tomas Mraz
+    Richard Levitte
+    Matt Caswell
+    Tim Hudson
+
+External attendees:
+    Neil Horman
+    Anton Arapov
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * 3.2 status
+    * NonStop threading support (Randall)
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Hugo volunteered to take the minutes.
+Proposed: Hugo, seconded: Nicola
+
+Agenda for the meeting agreed. Proposed: Hugo, seconded: Nicola
+
+** Agree minutes from previous meeting
+
+Minutes from previous meeting were agreed. Proposed: Hugo, seconded: Nicola
+
+** Review outstanding actions
+
+AI: Anton to write a policy for feature branches (including how to review rebases)
+In progress
+
+AI: Matthias to produce a writeup on his proposal for fixing applink
+In progress
+
+AI: Tomas to review #19084 (config option to limit MDs used in signatures)
+In progress
+
+AI: Tim to review #19084 (config option to limit MDs used in signatures)
+In progress
+
+AI: OTC to read the QUIC Server API document (#21795)
+Not done
+
+AI: Tomas to triage the Coverity issues and determine which (if any) need fixing
+Done
+
+AI: Hugo to update release notes PR to add known issues
+Done
+
+AI: Matt to investigate if a test can be easily added to #22779
+Not done
+AI: Hugo to review #22779 by today
+Cancelled - no longer urgent
+
+AI: Matt to review #22779 by today
+Cancelled - no longer urgent
+
+AI: Hugo to create an issue for clarifying the policy on demos
+Issue created (project#351)
+
+AI: Hugo to create an issue for revising our release checklists
+Issue created (project#352)
+
+AI: Matt to comment on #21668 asking for an update with a view to inclusion in 3.3
+Not done
+
+** NonStop threading support (Randall)
+
+https://github.com/openssl/openssl/pull/22807
+Hugo would like to invite Randall to talk about this OTC hold at this meeting.
+
+No objections
+
+[Richard joined the call]
+[Matt joined the call]
+[Tim joined the call]
+
+** 3.2 and 3.3 status
+
+We released 3.2.0.
+
+The RSC has been appointed. Anton, Matt, Tim C from NetApp and Denis from
+Oracle. We have had a meeting to cover the high level details of what
+was interesting. Now we need to determine what is realistic for 3.3.
+
+We will be updating our Roadmap page on the website to reflect
+our plans.
+
+Only commitment for 3.3 is server-side QUIC.
+We hope to address performance issues.
+We will do fuzzing earlier in the release cycle.
+
+We need to figure out our FIPS story now that Pauli has left.
+
+Shane can assist with FIPS work.
+
+We do not intend to do PQC by April.
+
+** Review issues with OTC hold (30 minutes)
+
+#22807: Deprecate SPT threading on NonStop
+    The NonStop maintainer has requested dropping support for SPT
+        in 3.2 and master.
+    We should remove support for SPT in 3.2.
+    There is no contest that this should be removed in master.
+
+    topic: Support for the NonStop SPT threading model and SPT build configs
+           can be removed from 3.2 branch subject to no objections being
+           received from the community within two weeks after this vote passing
+    Proposed by Tim
+    Public: yes
+    opened: 2023-11-28
+    closed: 2023-11-28
+    accepted:  yes  (for: 9, against: 0, abstained: 0, not voted: 1)
+
+      Dmitry     [+1]
+      Matt       [+1]
+      Tim        [+1]
+      Hugo       [+1]
+      Richard    [+1]
+      Shane      [+1]
+      Tomas      [+1]
+      Kurt       [  ]
+      Matthias   [+1]
+      Nicola     [+1]
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** Review draft technical policies
+
+#80: Stable release updates policy applies to pre-release branches
+
+** AOB
+
+Provider meetings:
+    Dates are 6 and 7 December for users.
+    Dates are 11 and 12 December for authors.
+    Open to all.
+    Reviews of the draft presentations are welcome.
+
+AI: Matt to ensure providers meeting announcement is sent today
+
+AI: Matt to send draft presentations to otc@
+
+Do OQS want to upstream their work?
+    We should wait until after the providers meetings.
+    Not for 3.3.
+
+Matthias: Release Steering Committee
+    How does it work?
+    We do not have this written down yet.
+
+We are communicating the decisions we have made
+but not our underlying rationales.
+
+The possibility of public transcripts of the OTC meetings
+was discussed. Having private transcripts would definitely be
+useful.
+
+Should resources be allocated to improve communication
+of what OTC does?
+
+OTC requests that the project allocate resources to communicating the role of
+OTC within the project to the community and facilitating other community
+engagement with the work of OTC.
+
+OTC needs to figure out how to engage with the wider community, not just
+the developer community. We have previously discussed standards body
+engagement also.
+
+OTC can take initiative to solve problems it identifies and does not
+need to simply respond to other committees. It can make recommendations,
+including to expend resources. It can identify organisational problems
+as well as technical ones, such as with OTC's communication, and propose
+solutions for consideration.
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * OTC public communications
+    * Clarifying RSC
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** New and carried over action items [transported from above]:
+
+AI: Anton to write a policy for feature branches (including how to review rebases)
+
+AI: Matthias to produce a writeup on his proposal for fixing applink
+
+AI: Tomas to review #19084 (config option to limit MDs used in signatures)
+
+AI: Tim to review #19084 (config option to limit MDs used in signatures)
+
+AI: OTC to read the QUIC Server API document (#21795)
+
+AI: Matt to investigate if a test can be easily added to #22779
+
+AI: Matt to comment on #21668 asking for an update with a view to inclusion in 3.3
+
+AI: Matt to ensure providers meeting announcement is sent today
+
+AI: Matt to send draft presentations to otc@
