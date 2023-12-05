@@ -1,0 +1,173 @@
+Meeting Date: 2023-12-05
+Minutes taken by: Hugo Landau
+Attendees:
+    Hugo Landau
+    Shane Lontis
+    Dmitry Belyavskiy
+    Tomas Mraz
+    Richard Levitte
+    Tim Hudson
+    Matt Caswell
+
+External attendees:
+    Neil Horman
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * OTC public communications
+    * Clarifying RSC
+    * NULL
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Hugo volunteered to take the minutes.
+Proposed: Hugo, seconded: Tim
+
+Agenda for the meeting agreed. Proposed: Hugo, seconded: Tim
+
+** Agree minutes from previous meeting
+
+Minutes from previous meeting were agreed. Proposed: Hugo, seconded: Tomas
+
+** Review outstanding actions
+
+AI: Anton to write a policy for feature branches (including how to review rebases)
+In progress
+
+AI: Matthias to produce a writeup on his proposal for fixing applink
+In progress
+
+AI: Tomas to review #19084 (config option to limit MDs used in signatures)
+Not done
+
+AI: Tim to review #19084 (config option to limit MDs used in signatures)
+Not done
+
+AI: OTC to read the QUIC Server API document (#21795)
+In progress
+
+AI: Matt to investigate if a test can be easily added to #22779
+Not done
+
+AI: Matt to comment on #21668 asking for an update with a view to inclusion in 3.3
+Not done
+
+AI: Matt to ensure providers meeting announcement is sent today
+Done
+
+AI: Matt to send draft presentations to otc@
+Done for users, authors still being worked on
+
+** OTC public communications
+
+We can start documenting the rationale for decisions
+in the minutes, and then just link to the minutes from
+an issue which has an OTC decision posted, rather than
+posting the decision in the thread.
+
+Should we record meetings and publish recordings?
+Some support for this idea.
+
+There is a risk we will accidentially not edit out security
+information.
+
+We think recording and publishing recordings would benefit
+our mission of transparency.
+
+Forward steps:
+  - Consult other OTC members
+  - Consult the wider community
+  - Do a trial recording
+  - Split meetings into public and private meetings,
+    with the private meeting being for discussion of security issues
+
+Broad agreement that we should probably do this but details
+need to be figured out:
+  - Under what circumstances should items be edited out?
+    There are different reasons to edit something out:
+    Security information, personal information,
+    FIPS lab information, CoC violations, ...
+
+A full recording of the private meeting should be available
+to the OTC members not in attendance. It is possible we could
+publish security discussions after the CVEs go public
+
+We should have a disclaimer at the start of the recording
+that we are speaking as individuals and not as company
+representatives.
+
+AI: Hugo to write a draft OTC Meeting Recording Strategy
+
+** Clarifying RSC
+
+Defer
+
+** NULL
+
+Should we do NULL argument checks in public APIs?
+    Policy says yes for new APIs (coding style s. 6.1)
+
+Is the coding style document a guideline or a set of rules?
+
+Are changes to the coding style document desirable?
+
+AI: Neil to summarise our present issues with code style
+
+** Review issues with OTC hold (30 minutes)
+
+Defer
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** Review draft technical policies
+
+Defer
+
+** AOB
+
+Next week's OTC meeting is cancelled due to clashing with
+a providers meeting.
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * OTC public communications
+    * Clarifying RSC
+    * #19084 (Tim)
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** New and carried over action items [transported from above]:
+
+AI: Anton to write a policy for feature branches (including how to review rebases)
+
+AI: Matthias to produce a writeup on his proposal for fixing applink
+
+AI: Tomas to review #19084 (config option to limit MDs used in signatures)
+
+AI: Tim to review #19084 (config option to limit MDs used in signatures)
+
+AI: OTC to read the QUIC Server API document (#21795)
+
+AI: Matt to investigate if a test can be easily added to #22779
+
+AI: Matt to comment on #21668 asking for an update with a view to inclusion in 3.3
+
+AI: Matt to send draft presentations to otc@
+Done for users, authors still being worked on
+
+AI: Neil to summarise our present issues with code style
