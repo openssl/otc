@@ -1,0 +1,199 @@
+Meeting Date: 2023-12-19
+Minutes taken by: Hugo Landau
+Attendees:
+    Hugo Landau
+    Nicola Tuveri
+    Dmitry Belyavskiy
+    Shane Lontis
+    Matt Caswell
+    Matthias St. Pierre
+    Tomas Mraz
+
+    Richard Levitte
+    Tim Hudson
+
+External attendees:
+    Neil Horman
+    Anton Arapov
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * OTC public communications
+    * Possible bugfix releases
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * #19084 (Tim)
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Hugo volunteered to take the minutes.
+Proposed: Hugo, seconded: Matt
+
+Agenda for the meeting agreed. Proposed: Hugo, seconded: Nicola
+
+** Agree minutes from previous meeting
+
+Minutes from previous meeting were agreed. Proposed: Hugo, seconded: Matt
+
+** Review outstanding actions
+
+AI: Anton to write a policy for feature branches (including how to review rebases)
+In progress
+
+AI: Matthias to produce a writeup on his proposal for fixing applink
+Not done
+
+AI: Tomas to review #19084 (config option to limit MDs used in signatures)
+Not done
+
+AI: Tim to review #19084 (config option to limit MDs used in signatures)
+Not done
+
+AI: OTC to read the QUIC Server API document (#21795)
+Done
+
+AI: Matt to investigate if a test can be easily added to #22779
+Not done
+
+AI: Matt to comment on #21668 asking for an update with a view to inclusion in 3.3
+Not done
+
+AI: Matt to send draft presentations to otc@
+Done for both users and authors presentations
+
+AI: Neil to summarise our present issues with code style
+Done
+
+AI: Hugo to write a draft OTC Meeting Recording Strategy
+Issue created (https://github.com/openssl/project/issues/389)
+
+** OTC public communications
+
+AI: Tomas to create an issue to link the YouTube channel from the website
+
+** Possible bugfix releases
+
+We have a public CVE which was fixed on the 24th of October.
+We should do another bugfix release by the end of January.
+
+Should we have a policy to do bugfix releases every 3 months?
+
+We should mention regression fixes in the release notes.
+
+Should we use the new release notes style in older branches?
+
+Using the new release notes style in older branches would make
+our communication here consistent.
+
+AI: Tomas to investigate review template options
+
+OTC recommends to have a bugfix release for 1.0.2, 1.1.1, 3.0, 3.1, 3.2.
+
+** Review issues with OTC hold (30 minutes)
+
+#15653: Add NULL checks to public digest APIs
+    OTC: Adding NULL checks to existing API calls should be done consistently
+    throughout the codebase. This would require concerted effort. New APIs
+    should have NULL checks according to the policy.
+
+#22044: Fix error handling in CMS_EncryptedData_encrypt
+    OTC: There is nothing to decide here right now.
+
+#22303: CI sanitizer runs: limit amount of memory leak output
+    OTC: Any solution to the problem must allow to see the indirect leaks from
+         the CI job if needed.
+
+#22893: Gratutitous warnings for x509 when reading from stdin
+    OTC: Using isatty() to suppress the warning seems reasonable
+
+#22896: FYI: Purported UB around generic functions like OPENSSL_LH_HASHFUNC
+AI: OTC to review #22896 (UB thunking in LHASH)
+    This is unlikely to be fixed for older releases. We can document it
+    as a known issue.
+
+#22906: Make the activate setting more intuitive
+    OTC: We should add explicit values for disabling activation and report an error on unknown values.
+
+#22930: Make OPENSSL_sk_push return only 0 or 1
+    OTC: This should PR is acceptable for master branch, if it has a CHANGES.md
+    entry.
+
+    We consider the risk of breaking application code from this change
+    sufficiently low to allow this change in minor releases.
+
+#22955: KU_* and X509v3_KU_* constants are redundant
+    OTC: We do not want to explicitly deprecate these KU_ constants because it
+    would potentially break many applications with no-deprecated builds.
+    However we should clean up our code to not use these constants and
+    make sure the they are aliases of the X509v3_KU_ constants.
+    The documentation needs to be updated as well.
+
+AI: Tomas to create project issue for resolving KU_ constant issue
+
+#22977: Preserve pkey->pmeth_engine on legacy keys
+    OTC: This should not be applied and #23063 should be used instead.
+#23063: Revert "Improved detection of engine-provided private "classic" keys"
+    OTC: The revert should be applied but it must document what are the
+    implications of having non-OpenSSL default RSA/DSA/ECDSA implementation being set.
+
+[Matthias left the call]
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** Review draft technical policies
+
+Defer
+
+** #19084 (Tim)
+
+Defer
+
+** AOB
+
+Next OTC meeting
+    Next two OTC meetings are cancelled.
+    We will next meet on the 9th of January 2024.
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * OTC public communications
+    * Clarifying RSC
+    * #19084 (Tim)
+    * Deprecations (Hugo)
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** New and carried over action items [transported from above]:
+
+AI: Anton to write a policy for feature branches (including how to review rebases)
+
+AI: Matthias to produce a writeup on his proposal for fixing applink
+
+AI: Tomas to review #19084 (config option to limit MDs used in signatures)
+
+AI: Tim to review #19084 (config option to limit MDs used in signatures)
+
+AI: Matt to investigate if a test can be easily added to #22779
+
+AI: Matt to comment on #21668 asking for an update with a view to inclusion in 3.3
+
+AI: Tomas to create an issue to link the YouTube channel from the website
+
+AI: Tomas to investigate review template options
+
+AI: OTC to review #22896 (UB thunking in LHASH)
+
+AI: Tomas to create project issue for resolving KU_ constant issue
