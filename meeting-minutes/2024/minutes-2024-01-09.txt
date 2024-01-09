@@ -1,0 +1,137 @@
+Meeting Date: 2024-01-09
+Minutes taken by: Hugo Landau
+Attendees:
+    Hugo Landau
+    Nicola Tuveri
+    Shane Lontis
+    Dmitry Belyavskiy
+    Tomas Mraz
+    Matt Caswell
+    Richard Levitte
+    Kurt Roeckx
+
+External attendees:
+    Neil Horman
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * OTC public communications
+    * #19084 (Tim)
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Hugo volunteered to take the minutes.
+Proposed: Hugo, seconded: Matt
+
+Agenda for the meeting agreed. Proposed: Hugo, seconded: Nicola
+
+** Agree minutes from previous meeting
+
+Minutes from previous meeting were agreed. Proposed: Hugo, seconded: Shane
+
+** Review outstanding actions
+
+AI: Anton to write a policy for feature branches (including how to review rebases)
+In progress
+
+AI: Matthias to produce a writeup on his proposal for fixing applink
+Not done
+
+AI: Tomas to review #19084 (config option to limit MDs used in signatures)
+In progress
+
+AI: Tim to review #19084 (config option to limit MDs used in signatures)
+In progress
+
+AI: Matt to investigate if a test can be easily added to #22779
+Done
+
+AI: Matt to comment on #21668 asking for an update with a view to inclusion in 3.3
+Done
+
+AI: Tomas to create an issue to link the YouTube channel from the website
+Issue created (project#390)
+
+AI: Tomas to investigate review template options
+Issue created (project#393)
+
+AI: OTC to review #22896 (UB thunking in LHASH)
+In progress
+
+AI: Tomas to create project issue for resolving KU_ constant issue
+Not needed
+
+** OTC public communications
+
+Defer
+
+** #19084 (Tim)
+
+Defer
+
+** Review issues with OTC hold (30 minutes)
+
+#22264: Limit the number of http headers when receiving the http response
+    OTC: This is not a security issue however we should limit the number
+    processsed headers to some reasonably high number.
+
+#22896: FYI: Purported UB around generic functions like OPENSSL_LH_HASHFUNC
+    OTC: We should attempt to fix it via thunking but we must keep the ABI stable.
+
+#22955: KU_* and X509v3_KU_* constants are redundant
+
+#22995: Add appropriate NULL checks in EVP_CIPHER api
+    OTC: Because of backwards compatibility reasons we should return 0 as error
+    from EVP_CIPHER_get_iv_length().
+
+#23050: Ignore unknown sigalgs and groups in the configuration
+    OTC: This should not be backported to 3.2 branch because this is not a bug fix.
+
+#23075: EVP_DigestSign fails when called second time in 3.2.0
+    OTC: We need to investigate whether the original code produced valid
+    signatures in the subsequent EVP_DigestSign() calls.
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** Review draft technical policies
+
+None
+
+** AOB
+
+OMC meeting keeps overrunning. Should the time be changed?
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * OTC public communications
+    * Clarifying RSC
+    * #19084 (Tim)
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** New and carried over action items [transported from above]:
+
+AI: Anton to write a policy for feature branches (including how to review rebases)
+
+AI: Matthias to produce a writeup on his proposal for fixing applink
+
+AI: Tomas to review #19084 (config option to limit MDs used in signatures)
+
+AI: Tim to review #19084 (config option to limit MDs used in signatures)
+
+AI: OTC to review #22896 (UB thunking in LHASH)
