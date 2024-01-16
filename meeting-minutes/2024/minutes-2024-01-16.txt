@@ -1,0 +1,102 @@
+Meeting Date: 2024-01-16
+Minutes taken by: Hugo Landau
+Attendees:
+    Hugo Landau
+    Dmitry Belyavskiy
+    Shane Lontis
+    Richard Levitte
+    Tomas Mraz
+    Nicola Tuveri
+    Tim Hudson
+
+External attendees:
+    Neil Horman
+    Anton Arapov
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * OTC public communications
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Hugo volunteered to take the minutes.
+Proposed: Hugo, seconded: Tim
+
+Agenda for the meeting agreed. Proposed: Hugo, seconded: Tim
+
+** Agree minutes from previous meeting
+
+Minutes from previous meeting were agreed. Proposed: Hugo, seconded: Nicola
+
+** Review outstanding actions
+
+AI: Anton to write a policy for feature branches (including how to review rebases)
+Not done
+
+AI: Matthias to produce a writeup on his proposal for fixing applink
+Not done
+
+AI: Tomas to review #19084 (config option to limit MDs used in signatures)
+Done
+
+AI: Tim to review #19084 (config option to limit MDs used in signatures)
+No longer relevant
+
+AI: OTC to review #22896 (UB thunking in LHASH)
+In progress
+
+** OTC public communications
+
+What is the protocol if an OTC member disagrees with a decision of the OTC?
+
+[Matt joined the call]
+
+Defer
+
+** Review issues with OTC hold (30 minutes)
+
+Defer
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** Review draft technical policies
+
+Defer
+
+** AOB
+
+Time of OTC meeting
+    Propose we move the OTC meeting half an hour later.
+    Meeting length remains the same.
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * OTC public communications
+    * Clarifying RSC
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** New and carried over action items [transported from above]:
+
+AI: Anton to write a policy for feature branches (including how to review rebases)
+
+AI: Matthias to produce a writeup on his proposal for fixing applink
+
+AI: Tim to review #19084 (config option to limit MDs used in signatures)
+
+AI: OTC to review #22896 (UB thunking in LHASH)
