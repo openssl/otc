@@ -1,0 +1,140 @@
+Meeting Date: 2024-01-23
+Minutes taken by: Hugo Landau
+Attendees:
+    Hugo Landau
+    Richard Levitte
+    Matt Caswell
+    Nicola Tuveri
+    Tomas Mraz
+    Shane Lontis
+    Tim Hudson
+
+External attendees:
+    Neil Horman
+    Anton Arapov
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * OTC public communications policy
+    * FIPS indicators
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Hugo volunteered to take the minutes.
+Proposed: Hugo, seconded: Matt
+
+Agenda for the meeting agreed. Proposed: Hugo, seconded: Tim
+
+** Agree minutes from previous meeting
+
+Minutes from previous meeting were agreed. Proposed: Hugo, seconded: Matt
+
+** Review outstanding actions
+
+AI: Anton to write a policy for feature branches (including how to review rebases)
+Not done
+
+AI: OTC to review #22896 (UB thunking in LHASH)
+Done
+
+** Review issues with OTC hold (30 minutes)
+
+#22037: QUIC: QLOG Draft Implementation
+    Is it OK for us to add a feature where we have an -intent-
+    to make an incompatible format change in future?
+
+    If we are not willing to do this we have to be willing to
+    bear the cost of supporting multiple versions long term.
+
+    OTC: The draft version supported by qvis is OK to be supported. THis PR
+    should document the option in INSTALL.md and openssl-qlog(7) manpage. The
+    environment variable needs to be documented in manual pages as well.
+    The documentation must make it clear that the version supported can be
+    updated in incompatible way in a future release.
+
+#23075: EVP_DigestSign fails when called a second time 3.2.0
+
+#23356: Fix parsing sets/sequences with 0 length, encoded in the long-form
+    OTC: Is there a concrete real-world use case behind this PR?
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** OTC public communications policy
+
+Does the OTC has a consensus on whether we should have a public communications
+policy (without going into what that policy should be)?
+
+topic: The OTC should establish a public communications policy for OTC members
+Proposed by Tim
+Public: yes
+opened: 2024-01-23
+closed:
+accepted:    (for: X, against: Y, abstained: Z, not voted: T)
+
+  Dmitry     [  ]
+  Matt       [ 0]
+  Tim        [+1]
+  Hugo       [-1]
+  Richard    [+0]
+  Shane      [+0]
+  Tomas      [+1]
+  Kurt       [  ]
+  Nicola     [-1]
+
+** Review draft technical policies
+
+None
+
+** FIPS indicators
+
+Can we have a simple, non-granular FIPS indicator?
+    Hugo's draft ideas: https://github.com/openssl/openssl/pull/23366
+
+    Do we need the indicator to reflect usage of other
+    non-FIPS providers?
+
+OTC needs to form a viewpoint on what is compliant with the FIPS
+indicator policy.
+
+We need someone to come up with a proposal for how we comply
+with the FIPS indicator requirements. This is *not* about API
+design (if any) but the enumeration of the requirements and
+how we justify our compliance with each to the lab.
+
+OTC: Technical design of how the FIPS indicator will work is an OTC decision.
+
+AI: Anton to create an OTC tab on the project board
+
+FIPS Indicator Issue: https://github.com/openssl/project/issues/245
+
+** AOB
+
+None.
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * OTC public communications policy
+    * Moving algorithms to the legacy provider
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** New and carried over action items [transported from above]:
+
+AI: Anton to write a policy for feature branches (including how to review rebases)
+
+AI: Anton to create an OTC tab on the project board
