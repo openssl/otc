@@ -1,0 +1,175 @@
+Meeting Date: 2024-01-30
+Minutes taken by: Hugo Landau
+Attendees:
+    Hugo Landau
+    Richard Levitte
+    Shane Lontis
+    Matt Caswell
+    Tomas Mraz
+    Nicola Tuveri
+    Dmitry Belyavskiy
+    Tim Hudson
+
+External attendees:
+    Neil Horman
+    Anton Arapov
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * HACS and Real World Crypto conferences
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Moving algorithms to the legacy provider
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Hugo volunteered to take the minutes.
+Proposed: Hugo, seconded: Matt
+
+Agenda for the meeting agreed. Proposed: Hugo, seconded: Tomas
+
+** Agree minutes from previous meeting
+
+Minutes from previous meeting were agreed. Proposed: Hugo, seconded: Nicola
+
+** Review outstanding actions
+
+AI: Anton to write a policy for feature branches (including how to review rebases)
+    A feature branch approval policy has been created:
+        https://github.com/openssl/general-policies/pull/62
+    A full feature branch policy will be developed later.
+    Dropping this issue.
+
+AI: Anton to create an OTC tab on the project board
+Done
+
+** HACS and Real World Crypto conferences
+
+ISSUE: https://github.com/openssl/project/issues/430
+
+We are happy for any regular OTC participant to represent the OTC
+at HACS or RWC. Nicola is confirmed as attending RWC.
+
+Anyone requiring expense coverage should email the OMC ahead of time.
+
+We are comfortable with potentially having multiple people representing the
+project.
+
+** Discussion with OQS Project
+
+ISSUE: https://github.com/openssl/project/issues/431 (assigned to Nicola)
+
+Nicola is planning an extended visit to the OQS project.
+They are interested in talking to an OTC member about project plans
+regarding post-quantum cryptography.
+
+We want to develop a post-quantum cryptography plan but have yet to
+do so, therefore it makes little sense to try and represent our position.
+However, opening a dialogue with them would be a good idea.
+
+Both OTC and non-OTC groups should engage in dialogue.
+
+Nicola will engage in discussion and form a list of topics which
+can be the basis of future group meetings.
+
+Nicola could also attend the LF Open Source Summit.
+
+AI: Hugo to email Kajal to consider if we should attend LF Open Source Summit
+
+** Review issues with OTC hold (30 minutes)
+
+#22903: TLSv1.3: add optional integrity-only ciphers [RFC 9150]
+    Are we OK with the concept of integrity-only ciphers?
+    It is similar to existing NULL cipher support.
+
+    OTC: This is based on an informational track RFC. Are we ok with integrating
+    support on that basis?
+    OTC: We are OK with including support for integrity-only ciphers according
+    to RFC 9150.
+
+    OTC: This changes the public EVP_MAX_IV_LENGTH from 16 to 48 - which is not
+    allowed in a minor release. How should we handle this situation? Similarly
+    EVP_MAX_AEAD_TAG_LENGTH changes from 16 to 48.
+    OTC: The EVP_MAX_IV_LENGTH and EVP_MAX_AEAD_TAG_LENGTH macros cannot be
+    changed in 3.x versions as this breaks API and ABI stability requirements.
+
+AI: Someone to investigate NULL cipher policy and communicate it
+    in relation to #22903
+ISSUE: https://github.com/openssl/project/issues/433
+
+AI: Determine preferred approach for TLS 1.3 integrity-only ciphersuites (CIPHER vs MD)
+ISSUE: https://github.com/openssl/project/issues/434
+
+AI: Identify possible ways to discard the various EVP_MAX...LENGTH macros
+ISSUE: https://github.com/openssl/project/issues/435
+
+#23075: EVP_DigestSign fails when called second time in 3.2.0
+    OTC: Is it a regression that we now require the EVP_MD_CTX to be
+    reinitialised between EVP_DigestSign calls?
+
+    Removing the OTC hold until the investigation is done.
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** Moving algorithms to the legacy provider
+
+It has been suggested we should have a policy on moving algorithms
+to the legacy provider.
+
+AI: Write up an explanation of the rationale behind the legacy provider
+ISSUE: https://github.com/openssl/project/issues/437
+
+AI: Write a proposed policy on moving algorithms to the legacy provider
+ISSUE: https://github.com/openssl/project/issues/436
+(blocked on above)
+
+** Review draft technical policies
+
+None
+
+** AOB
+
+Propose API deprecations for 3.3
+ISSUE: https://github.com/openssl/project/issues/432
+
+There will be no OTC meeting on 27 Feb.
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** New and carried over action items [transported from above]:
+
+AI: Hugo to email Kajal to consider if we should attend LF Open Source Summit
+Done
+
+AI: Someone to investigate NULL cipher policy and communicate it
+    in relation to #22903
+ISSUE: https://github.com/openssl/project/issues/433
+
+AI: Determine preferred approach for TLS 1.3 integrity-only ciphersuites (CIPHER vs MD)
+ISSUE: https://github.com/openssl/project/issues/434
+
+AI: Identify possible ways to discard the various EVP_MAX...LENGTH macros
+ISSUE: https://github.com/openssl/project/issues/435
+
+AI: Write up an explanation of the rationale behind the legacy provider
+ISSUE: https://github.com/openssl/project/issues/437
+
+AI: Write a proposed policy on moving algorithms to the legacy provider
+ISSUE: https://github.com/openssl/project/issues/436
+(blocked on above)
