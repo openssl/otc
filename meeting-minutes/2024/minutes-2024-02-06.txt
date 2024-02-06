@@ -1,0 +1,145 @@
+Meeting Date: 2024-02-06
+Minutes taken by: Hugo Landau
+Attendees:
+    Hugo Landau
+    Dmitry Belyavskiy
+    Matt Caswell
+    Kurt Roeckx
+    Richard Levitte
+    Matthias St Pierre
+    Shane Lontis
+    Nicola Tuveri
+    Tim Hudson
+    Tomas Mraz
+
+External attendees:
+    Neil Horman
+    Anton Arapov
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * FOSDEM Report
+    * HACS and Real World Crypto conferences
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+[Matthias left the call]
+
+** Nominate a minute taker and confirm agenda
+
+Hugo volunteered to take the minutes.
+Proposed: Hugo, seconded: Tim
+
+Agenda for the meeting agreed. Proposed: Hugo, seconded: Tim
+
+** Agree minutes from previous meeting
+
+Minutes from previous meeting were agreed. Proposed: Hugo, seconded: Tomas
+
+** Review outstanding actions
+
+None
+
+** FOSDEM Report
+
+Very large conference. Lots of interest in OpenSSL.
+Interest in the project's financial situation or in
+working for OpenSSL.
+
+Kurt noted someone reported an improvement in compatibility
+related to HSM support in 3.0.
+
+** HACS and Real World Crypto conferences
+
+Still waiting for an update on HACS.
+
+** Review OTC project board
+
+project#431: OTC discussion with OQS project
+    For OMC/WG discussion.
+
+project#434: Determine preferred approach for TLS 1.3 integrity-only
+             ciphersuites (CIPHER vs MD)
+    We now have consensus in favour of option 2
+        (add an EVP_MAC path to the TLS stack).
+
+    OTC: The consensus of OTC is that the implementation should just use EVP_MAC
+         API directly from the TLS record layer.
+
+project#245: FIPS Indicators
+    Shane is working on a design.
+
+project#433: Investigate NULL cipher policy and communicate it to #22903
+    Priority is 'Low'.
+
+project#435: Identify possible ways to discard the various EVP_MAX_...LENGTH macros
+    Priority is 'Medium'.
+
+project#437: Write up an explanation of the rationale behind the legacy provider
+    Priority is 'Medium'.
+
+project#432: Propose API deprecations for 3.3
+    Priority is 'Low'.
+
+#23492: nameline default change causes output change
+
+The OTC Board can be viewed here:
+    https://github.com/orgs/openssl/projects/2/views/57
+
+** Review issues with OTC hold (30 minutes)
+
+#22903: TLSv1.3: add optional integrity-open ciphers
+    We made a decision above. Tomas will communicate this to the PR.
+
+#23356: Fix parsing sets/sequences with 0 length, encoded in the long-form
+    OTC: There is only a subset of BER supported. We are not going to expand
+    the BER support at this time. We will make a documentation update to make
+    this clear.
+
+#23483: Lower bound checks for GeneralizedTime and UTCTime
+    We are going to wait until we have consensus on this.
+
+[Kurt left the call]
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** Review draft technical policies
+
+None
+
+** AOB
+
+Nicola:
+    https://github.com/openssl/openssl/issues/21671
+    We added this to the project board and Anton will determine
+    if/when to assign resources to update these certificates.
+
+Shane, fips-install:
+    https://github.com/openssl/openssl/issues/23400
+    fips-install needs to work.
+    We need to be testing that it works.
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Performance issues (Dmitry)
+    * HACS and Real World Crypto conferences
+    * Review outstanding actions
+    * Review OTC project board
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** New and carried over action items [transported from above]:
+
+None
