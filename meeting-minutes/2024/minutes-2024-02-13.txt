@@ -1,0 +1,142 @@
+Meeting Date: 2024-02-06
+Minutes taken by: Hugo Landau
+Attendees:
+    Dmitry Belyavskiy
+    Hugo Landau
+    Shane Lontis
+    Tomas Mraz
+    Richard Levitte
+    Matt Caswell
+    Kurt Roeckx
+    Tim Hudson
+
+External attendees:
+    Neil Horman
+    Anton Arapov
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Symbol versioning
+    * Performance issues (Dmitry)
+    * Review outstanding actions
+    * Review OTC project board
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Hugo volunteered to take the minutes.
+Proposed: Hugo, seconded: Matt
+
+Agenda for the meeting agreed. Proposed: Hugo, seconded: Matt
+
+** Agree minutes from previous meeting
+
+Minutes from previous meeting were agreed. Proposed: Hugo, seconded: Tomas
+
+** Review outstanding actions
+
+None
+
+** Symbol versioning
+
+https://github.com/openssl/openssl/issues/23534
+
+We seem to have accidentally changed the symbol versions for two symbols
+between 3.1 and 3.2.
+
+Preferred resolution seems to be to list both symbol versions in the symbol
+table for next 3.2.x release. This ensures compatibility with applications
+built against both 3.1 and 3.2.
+
+Outputs:
+- List both symbol versions to resolve this issue
+- Create issue for adding CI check to ensure this doesn't happen again
+
+** Performance issues (Dmitry)
+
+We continue to receive feedback on performance issues in 3.x.
+
+We have an issue to track performance investigations:
+    https://github.com/openssl/project/issues/441
+
+We have resources assigned to investigating performance issues
+and resolving them, which are tracked in the above epic.
+
+https://github.com/openssl/openssl/issues/20286#issuecomment-1433229574
+
+** Review OTC project board
+
+** Review issues with OTC hold (30 minutes)
+
+#17469: We shouldn't use atexit() in our libraries (or modules, engines and
+providers alike)
+    OTC: Would it be to OK to backport the no-atexit support (without the
+    NonStop changes) to 3.2?
+
+Topic: #23394 (without the NonStop changes) can be backported to 3.2, 3.1 and 3.0
+Proposed by: Hugo
+Issue link: 
+Public: yes
+Opened: 2024-02-13
+Closed: 2024-02-13
+Accepted:  yes  (for: 3, against: 0, abstained: 5, not voted: 1)
+
+  Dmitry     [ 0]
+  Matt       [ 0]
+  Tim        [+0]
+  Hugo       [+0]
+  Richard    [+1]
+  Shane      [ 0]
+  Tomas      [+1]
+  Kurt       [+1]
+  Nicola     [  ]
+
+#23400, #23537: WIP: Add compatibility mode with 3.0 fipsinstall
+    OTC: This cannot go in as is - there must be no option added and the FIPS
+    module must be autodetected.
+
+#23464: Fix coverity missing_lock warnings
+    Defer, pending investigation of Coverity model files and #ifdef'd _Pragma.
+
+#23483: Lower bound checks for GeneralizedTime and UTCTime.
+    OTC: In 3.x we could accept a documentation change to say that these
+    functions accept incorrectly encoded time values without the seconds part,
+    but we may consider removing this handling by 4.0 release.
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** Review draft technical policies
+
+None
+
+** AOB
+
+Pauli's leave of absence will end this Thursday.
+
+Dmitry: #23050: Ignore unknown sigalgs and groups in the configuration
+    Dmitry requests review of this PR.
+
+Meeting of the 27th Feb is cancelled.
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Review OTC project board
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** New and carried over action items [transported from above]:
+
+None
