@@ -1,0 +1,120 @@
+Meeting Date: 2024-02-20
+Minutes taken by: Matt Caswell
+Attendees:
+    Dmitry Belyavskiy
+    Hugo Landau
+    Shane Lontis
+    Tomas Mraz
+    Richard Levitte
+    Matt Caswell
+    Paul Dale
+
+External attendees:
+    Neil Horman
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Review OTC project board
+    * Universal HTTP/3 with Polyfill of QUIC for TCP
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Matt volunteered to take the minutes.
+Proposed: Matt, seconded: Tomas
+
+Agenda for the meeting agreed. Proposed: Matt, seconded: Tomas
+
+** Agree minutes from previous meeting
+
+Minutes from previous meeting were agreed. Proposed: Hugo, seconded: Shane
+
+** Review outstanding actions
+
+None
+
+** Review OTC project board
+
+Fips Indicators (#245)
+ - PR 23609 has been raised for a requirements doc
+ - We need to schedule a discussion at OTC
+
+EVP_DigestSign fails when called a second time 23075
+ - Reassigned to Shane
+
+No progress on other TODO items
+There were no NEW items
+
+** Review issues with OTC hold (30 minutes)
+
+#17469 - atexit vote
+ - The vote to backport to 3.2, 3.1, 3.0 has passed.
+
+Some votes have not been propertly recorded in the repository. Tomas will clean
+this up.
+
+#23464 - Fix coverity missing_lock warnings
+ - We don't want this handling in the repository
+ - Neil will investigate Coverity model files as an alternative
+ - If model files don't work out Neil can return to OTC
+
+
+#23483 - Lower bounds checks for GeneralizedTime and UTCTime
+ - Discussion about whether we should change our mind on this and allow this in
+ a minor release. If so 3.3 or 3.4?
+ - We cann accept this immediately
+
+#23537 - Add compatibility mode with 3.0 fipsinstall
+ - Discussion about where we want later versions of fipsinstall to install the
+ 3.0 fips provider
+ - We will allow new fipsinstall to install the 3.0 fips provider
+ - This compatibility mode should only be rquired for the 3.0.x fips providers
+ - The special handling in fipsinatll will only be accepted for 3.0.x versions
+
+#23575 - atexit is also unusable on atexit
+- Proposal is to make no-atexit the default in a minor release
+- Discussion around using destructors on platforms where they are available
+- Suggestion that if atexit is removed then we no longer need pinning
+- We will investigate making no-atexit the default in 3.4 and use library
+  destructors to call OPENSSL_cleanup()
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** Review draft technical policies
+
+None
+
+** Universal HTTP/3 with Polyfill of QUIC for TCP
+
+This is a heads-up. We should monitor this and how much adoption it gets. it
+won't be 3.4.
+
+** AOB
+
+We will cancel the meeting on 5th March. Next scheduled meeting will be on 12th
+March.
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Review OTC project board
+    * F2F Updates
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** New and carried over action items [transported from above]:
+
+None
