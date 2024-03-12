@@ -1,0 +1,118 @@
+Meeting Date: 2024-03-12
+Minutes taken by: Tomas Mraz
+Attendees:
+    Dmitry Belyavskiy
+    Shane Lontis
+    Tomas Mraz
+    Richard Levitte
+    Matt Caswell
+    Paul Dale
+    Tim Hudson
+    Kurt Roeckx
+
+External attendees:
+    Neil Horman
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review outstanding actions
+    * Review OTC project board
+    * 3.3 release schedule
+    * Proposed FIPS indicators design overview
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Tomas volunteered to take the minutes.
+Proposed: Tomas, seconded: Matt
+
+Agenda for the meeting agreed. Proposed: Tomas, seconded: Matt
+
+** Agree minutes from previous meeting
+
+Minutes from previous meeting were agreed. Proposed: Matt, seconded: Tomas
+
+** Review outstanding actions
+
+None
+
+** Review OTC project board
+
+Handling non-ASCII output #458
+ - Two options for handling this suggested by Dmitry
+ - OTC prefers the second option unless it becomes too invasive
+ - Dmitry will continue investigating the second option
+
+Fips Indicators (#245)
+ - To be discussed in a separate topic below
+
+EVP_DigestSign fails when called a second time 23075
+ - To be discussed in OTC hold issues review
+
+No progress on other TODO items
+There were no NEW items
+
+** 3.3 release schedule
+
+Blog post announcing the alpha release is being prepared.
+
+The release schedule was created by Neil.
+
+We will do the release checklist pre-review next week.
+
+** Proposed FIPS indicators design overview
+
+Shane created a proposal for FIPS 140-3 indicators in PR openssl/openssl#23609.
+He presented an overview of the proposal.
+
+[Tim left the meeting]
+[Neil left the meeting]
+
+It seems we will really require explicit indicators.
+
+AI everyone to read the design proposal in the above PR.
+
+** Review issues with OTC hold (30 minutes)
+
+#22203 - key_share/supported_group selection algorithm is suboptimal for
+post-quantum
+
+OTC recommends implementing a solution for this problem in 3.4.
+
+#23075 - EVP_DigestSign fails when called second time in 3.2.0
+
+It is correct that EVP_DigestSign fails when called second time. This behavior
+should be documented including the life-cycle documents.
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** Review draft technical policies
+
+None
+
+** AOB
+
+Dmitry suggested https://github.com/openssl/openssl/discussions/23720 for
+next week topics.
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review OTC project board
+    * 3.3 release checklist pre-review
+    * F2F Updates
+    * Discuss #23720 (OSSL_LIB_CTX_load_config loads system config
+      even when a particular config is specified)
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
