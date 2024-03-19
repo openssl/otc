@@ -1,0 +1,130 @@
+Meeting Date: 2024-03-19
+Minutes taken by: Dmitry Belyavskiy
+Attendees:
+    Dmitry Belyavskiy
+    Shane Lontis
+    Richard Levitte
+    Paul Dale
+    Tim Hudson
+    Kurt Roeckx
+    Hugo Landau
+    Nicola Tuveri
+
+External attendees:
+    Neil Horman
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review OTC project board
+    * 3.3 release checklist pre-review
+    * FIPS indicators
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * Discuss #23720 (OSSL_LIB_CTX_load_config loads system config
+      even when a particular config is specified)
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Dmitry volunteered to take the minutes.
+Proposed: Hugo, seconded: Tim
+
+Agenda for the meeting agreed. Proposed: Dmitry, seconded: Nicola
+
+** Agree minutes from previous meeting
+
+Minutes from previous meeting were agreed. Proposed: Shane, seconded: Richard
+
+** Review outstanding actions
+
+None
+
+** Review OTC project board
+
+Fips Indicators (#245)
+ - To be discussed in a separate topic below
+
+Comparison of libcrypto/libssl.num between branches (#452)
+ - Move to engineering context (plan)
+
+Explanation of rationale beyond the legacy provider (#437)
+ - Move to plan
+
+Write an OTC meeting recording strategy (#389)
+ - Meeting minutes are sparce, but publishing video will drastically change the
+   meeting atmosphere.
+ - Nicola writes a summary to be discussed later
+
+NULL cipher policy (#433)
+ - Tim: not an OTC policy
+ - Nicola: we need to explore the current NULL policy
+ - Kurt: quoting #22903
+ - Tim: Do we want to have a written policy for NULL ciphers?
+ - We want a documentation beyond man page
+
+[Tim leaves the meeting]
+[Neil leaves the meeting]
+[Hugo leaves the meeting]
+
+Handling non-ASCII output (#458)
+ - Still on Dmitry
+
+** 3.3 release checklist pre-review
+
+Alpha to happen soon. 
+The only criteria is passing tests. The only failing is coverage.
+THe branch is to be created by Richard today
+
+** Proposed FIPS indicators design overview
+
+Paul's proposal is to permit breaking FIPS requirements by raising a
+operational flag before.
+
+Kurt: things that are allowed in some contexts but not in all ones.
+
+Paul: the question is if we support the compatibility with old releases.
+We will have to update documentation, fipsinstall, etc
+
+Shane: we can't just put it into the security policies
+
+Paul: we should probaply fail and let people know about miscompliance
+
+** Review issues with OTC hold (30 minutes)
+
+Set secure default for SHAKE (#23877)
+ - Delayed
+
+Changing exit code and early exit for `openssl req` command (#23773)
+ - Looks like a bug to be fixed
+ - Fixing with 3.3, worth having a CHANGES.md record
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+[Kurt is leaving the meeting]
+
+** Review draft technical policies
+
+None
+
+** AOB
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review OTC project board
+    * 3.3 release checklist pre-review
+    * F2F Updates
+    * FIPS indicators
+    * Discuss #23720 (OSSL_LIB_CTX_load_config loads system config
+      even when a particular config is specified)
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
