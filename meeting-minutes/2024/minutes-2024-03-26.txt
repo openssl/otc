@@ -1,0 +1,153 @@
+Meeting Date: 2024-03-26
+Minutes taken by: Matt Caswell
+    Dmitry Belyavskiy
+    Shane Lontis
+    Kurt Roeckx
+    Hugo Landau
+    Tomas Mraz
+    Matt Caswell
+    Tim Hudson
+    Richard Levitte
+
+External attendees:
+    Neil Horman
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review OTC project board
+    * 3.3 release checklist review
+    * Discuss #23720 (OSSL_LIB_CTX_load_config loads system config
+      even when a particular config is specified)
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+
+** Nominate a minute taker and confirm agenda
+
+Matt volunteered to take the minutes.
+Proposed: Matt, seconded: Tomas
+
+Agenda for the meeting agreed. Proposed: Matt, seconded: Tomas, Dmitry
+
+** Agree minutes from previous meeting
+
+Minutes from previous meeting were agreed. Proposed: Shane, seconded: Dmitry
+
+[Tim Hudson joined]
+
+** Review OTC project board
+
+project #436: policy on moving algorithms to legacy provider
+Blocked
+
+project #245: FIPS indiciator requirements
+postponed until next week
+
+#23075: EVP_DigestSign fails
+Nothing to be done - waiting for PR to be merged
+
+project #389: Meeting recording strategy
+No progress
+
+project #458: Hnadling non-ASCII output
+Waiting on Dmitry
+
+** 3.3 release checklist review
+
+[Richard Levitte joined]
+
+Release checking is in project #420
+
+With regards API changes, Dmitry raised this:
+https://github.com/openssl/openssl/pull/23554
+
+This is important, but it is not a regression in 3.3 and so is not a release
+blocker.
+
+OSX threads test is still failing (#23967). This is an RCU problem which is not
+actually used anywhere. We will disable the test for now. It must be reenabled
+before any functionality that uses RCU is added.
+
+Issue #23773 is still outstanding for 3.3.0 milestone. Other issues have had this
+milestone removed. CIs are failing due to a sub-module update being missing.
+To be marked as urgent.
+
+CHANGES and NEWS needs updating. Matt to do this.
+
+OTC approve the source is ready for 3.3 beta release subject to the following
+occuring prior to beta release:
+- req return value change must be merged (#23773)
+- RCU test should be disabled for Mac platform (#23967)
+- CHANGES and NEWS should be updated
+
+  Dmitry     [+1]
+  Matt       [+1]
+  Pauli      [  ]
+  Tim        [+1]
+  Hugo       [+0]
+  Richard    [+0]
+  Shane      [+1]
+  Tomas      [+1]
+  Kurt       [+0]
+  Nicola     [  ]
+
+[Tim Hudson, Hugo Landau, Neil Horman left]
+
+** Discuss #23720 (OSSL_LIB_CTX_load_config loads system config
+  even when a particular config is specified)
+
+Any API call might end up with the system config being loaded. In the future we
+would like all globals to be held in the libctx - but this a 4.0 change.
+
+Not much further can be done with this until 4.0.
+
+** Review issues with OTC hold (30 minutes)
+
+#23866 Set secure defaults for the SHAKE 128/256 digest output length
+
+This is problematic because changing this length could cause buffer overflows in
+calling applications.
+
+Options:
+
+- We can just change the default length of the SHAKE-128 and SHAKE-256 algorithms
+
+- We can remove the OID from the old SHAKE-128 and SHAKE-256 algorithms and move
+the OID to be against new SHAKE-128/256 and SHAKE-256/512 algorithms.
+
+No decision made as yet.
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** Review draft technical policies
+
+Defer
+
+[Richard Levitte, Kurt Roeckx left]
+
+** Agree agenda for next meeting
+** AOB
+
+Managing SignatureAlgorithms from configuration in the age of providers #23784
+- added to agenda
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review OTC project board
+    * F2F Updates
+    * FIPS indicators
+    * Managing SignatureAlgorithms from configuration in the age of providers #23784
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
