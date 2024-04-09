@@ -1,0 +1,83 @@
+Meeting Date: 2024-04-09
+Minutes taken by: Tomas Mraz
+    Dmitry Belyavskiy
+    Shane Lontis
+    Hugo Landau
+    Tomas Mraz
+    Tim Hudson
+    Richard Levitte
+    Paul Dale
+
+External attendees:
+    Neil Horman
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review OTC project board
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Tomas volunteered to take the minutes.
+Proposed: Tomas, seconded: Tim
+
+Agenda for the meeting agreed. Proposed: Tomas, seconded: Tim
+
+** Agree minutes from previous meeting
+
+They were not recorded in the git repo.
+
+Deferred.
+
+** Review OTC project board
+
+project #436: policy on moving algorithms to legacy provider
+Moved to To do state
+
+project #245: FIPS indiciator requirements
+in progress
+
+project #458: Hnadling non-ASCII output
+Waiting on Dmitry
+
+** Review issues with OTC hold (30 minutes)
+
+#23866 Set secure defaults for the SHAKE 128/256 digest output length
+
+Lenghty discussion reiterating the arguments from two weeks ago.
+
+Tomas proposed breaking the DigestFinal() for SHAKE-128 and SHAKE-256 algorithms
+if XOFLEN is not set, and create SHAKE-128/256 and SHAKE-256/512 aliases which
+provide correct defaults. Possibly with moving the OIDs to these aliases.
+
+Tomas will work on alternative PR implementing the above proposal.
+
+[Tim, Neil, and Hugo left] - we weren't quorate anymore.
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** Review draft technical policies
+
+Defer
+
+** AOB
+
+We would like to move the OTC meeting for 1 and half hour earlier.
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review OTC project board
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
