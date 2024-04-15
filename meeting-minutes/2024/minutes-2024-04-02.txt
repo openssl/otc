@@ -1,0 +1,109 @@
+Meeting Date: 2024-04-02
+Minutes taken by: Matt Caswell
+    Dmitry Belyavskiy
+    Shane Lontis
+    Tomas Mraz
+    Matt Caswell
+    Richard Levitte
+    Paul Dale
+    Nicola Tuveri
+
+External attendees:
+    Neil Horman
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review OTC project board
+    * Managing SignatureAlgorithms from configuration in the age of providers #23784
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * FIPS indicators
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+
+** Nominate a minute taker and confirm agenda
+
+Matt volunteered to take the minutes.
+Proposed: Matt, seconded: Tomas
+
+Agenda for the meeting agreed. Proposed: Matt, seconded: Tomas
+
+** Agree minutes from previous meeting
+
+Minutes from previous meeting were agreed. Proposed: Matt, seconded: Shane
+
+** Review OTC project board
+
+#436: Write a proposed policy on moving things to the legacy provider
+Still blocked
+
+#245: FIPS indicators
+To be discussed later
+
+#389: Recording strategy
+No Updates
+
+#458: Handling non-ASCII output
+No update
+
+** Managing SignatureAlgorithms from configuration in the age of providers #23784
+
+[Nicola Tuveri joined]
+
+AI: Tomas to investigate why config_diagnostics does not have an effect (#517)
+
+Current thinking is that we should report errors in the case of bad sig algs and
+conf_diagnostics is set - but to make this change in 3.4 or later (not before).
+
+** Review issues with OTC hold (30 minutes)
+
+Set secure defaults for SHAKE 128/256 digest output length (#23877)
+
+Defer until next week as a separate agenda item
+
+Design document about handling MAX defines (#23883)
+
+No action - proceed as per normal review process. Hold lifted.
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** Review draft technical policies
+
+None
+
+** FIPS indicators
+
+We need to have indicators of some form. The preferred solution will fail if
+something is not FIPS compliant, but you can pass a parameter which allows the
+check to override this.
+
+There was a discussion around the issue that if FIPS rules change (as they
+frequently do), then this could introduce breaking changes in stable releases.
+Should we have some option that enables override of this? Consensus is that
+we should not use explicit indicators for now. We should use implicit indicators
+with a per-operation bypass.
+
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review OTC project board
+    * F2F Updates
+    * Set secure defaults for SHAKE 128/256 digest output length (#23877)
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** AOB
+
+Nicola attended RWC and responded to various OpenSSL related questions.
+
+The OQS provider is transitioning to Linux Foundation stewardship.
