@@ -1,0 +1,104 @@
+Meeting Date: 2024-04-16
+Minutes taken by: Matt Caswell
+    Dmitry Belyavskiy
+    Shane Lontis
+    Hugo Landau
+    Tomas Mraz
+    Richard Levitte
+    Paul Dale
+    Matt Caswell
+    Tim Hudson
+
+External attendees:
+    Neil Horman
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review OTC project board
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * FIPS indicators
+    * SHAKE
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Matt volunteered to take the minutes.
+Proposed: Matt, seconded: Tomas
+
+Agenda for the meeting agreed. Proposed: Matt, seconded: Tomas
+
+** Agree minutes from previous meeting
+
+Agree minutes from 2nd April. Proposed: Matt, seconded: Tomas
+Agree minutes from 9th April. Proposed: Tomas, seconded: Pauli
+
+** Review OTC project board
+
+458: non-ASCII output handling
+Dmitry to create a new issue describing the proposed solution in more detail
+
+526: Create alternate PR for SHAKE 128/256
+Alternative PR was created
+
+436: Legacy provider policy
+Neil Horman assigned
+Some potential features of the policy were added to the issue
+
+** Review issues with OTC hold (30 minutes)
+
+23240: Add EdDSA support to EVP_PKEY_sign/verify
+Richard Levitte to review the comments and come back with a second opinion
+
+24002: get_cert_by_subject: backward compatibility
+No objections were raised so the hold is lifted
+
+24032: Add an Apple privacy info file
+We are ok with adding the file. Please ensure the contents are correct and we
+should declare C617
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** FIPS indicators
+
+Discussion about indicators. We should allow users to override some rules in
+config. Discussion around whether this is fine-grained or not. Discussion around
+whether we should have an ability to check what indicators have been flagged
+since the last time we checked.
+
+Shane to document the requirements in #23609 and update the solution accordingly
+
+** SHAKE
+
+Long discussion about the competing SHAKE implementations. No agreement was
+reached.
+
+[Tim Hudson, Paul Dale left]
+
+Tomas to update his PR to move the OID to the new names and remove the 128/128
+and 256/256 variants.
+
+** Review draft technical policies
+
+Defer
+
+** AOB
+
+The release tarballs do not include the ctags file (issue 24090). Solution is
+probably to modify .gitattributes. Dmitry to progress.
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review OTC project board
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
