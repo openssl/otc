@@ -1,0 +1,105 @@
+Meeting Date: 2024-04-23
+Minutes taken by: Matt Caswell
+    Dmitry Belyavskiy
+    Tomas Mraz
+    Nicola Tuveri
+    Richard Levitte
+    Paul Dale
+    Matt Caswell
+    Shane Lontis
+
+External attendees:
+    Neil Horman
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review OTC project board
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Matt volunteered to take the minutes.
+Proposed: Matt, seconded: Tomas, Dmitry
+
+Agenda for the meeting agreed. Proposed: Matt, seconded: Tomas
+
+** Agree minutes from previous meeting
+
+Agree minutes from last week. Proposed: Matt, seconded: Tomas
+
+** Review OTC project board
+
+[Shane joined]
+
+245 FIPS indicators:
+This has been updated by Shane. To be treated as a PR and removed from the
+project board.
+
+468 Handling Non-ASCII output
+Issue 24157 has been raised describing the problem in more detail. Nothing more
+for OTC to do.
+
+436 legacy provider policy
+We are ok with the draft policy - it should be raised as a general policy
+
+** Review issues with OTC hold (30 minutes)
+
+23240: Add EdDSA support to EVP_PKEY_sign/verify
+There are some concerns about a confusing API.
+Richard to review the design and update according to comments. 23240 is kept on
+hold until the design is complete.
+
+24105: SHAKE128/SHAKE256
+We cannot move the OIDs to new algorithm names (because old providers will still
+have the OID associated with the wrong names).
+We should break the algorithms to require setting the length. This is a breaking
+change.
+
+Vote:
+The EVP_DigestFinal() and EVP_Digest() functions should fail for SHAKE-128 and
+SHAKE-256 unless the xoflen param is set by the application.
+
+  Dmitry     [+1]
+  Matt       [ 0]
+  Pauli      [+1]
+  Tim        [  ]
+  Hugo       [  ]
+  Richard    [+1]
+  Shane      [+1]
+  Tomas      [+1]
+  Kurt       [  ]
+  Nicola     [+1]
+
+The vote passes. Tomas to record the vote and email project etc.
+
+24195: fips: Remove P-192
+This cannot be a hard removal. It will need an indicator implemented as in the
+indicators requirements PR (#23609)
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** Review draft technical policies
+
+None
+
+** AOB
+
+Dmitry - please review 21727
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review OTC project board
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
