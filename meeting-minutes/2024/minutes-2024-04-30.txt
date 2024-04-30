@@ -1,0 +1,82 @@
+Meeting Date: 2024-04-30
+Minutes taken by: Matt Caswell
+    Dmitry Belyavskiy
+    Tomas Mraz
+    Nicola Tuveri
+    Paul Dale
+    Matt Caswell
+    Shane Lontis
+    Tim Hudson
+
+External attendees:
+    Neil Horman
+    Sasha Nedvedicky
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review OTC project board
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Matt volunteered to take the minutes.
+Proposed: Matt, seconded: Nicola
+
+Agenda for the meeting agreed. Proposed: Matt, seconded: Nicola
+
+** Agree minutes from previous meeting
+
+Agree minutes from last week. Proposed: Matt, seconded: Nicola
+
+** Review OTC project board
+
+project 517: Make conf_diagnostics apply also to conf errors:
+
+Work in progress PR in progress 24275 - OTC members please review
+
+project 436: propposed policy on moving algs to the legacy provider
+
+Neil has created general policy PR #67
+Closing
+
+289: OTC meeting record strategy - no progress
+
+** Review issues with OTC hold (30 minutes)
+23240: Add EdDSA support EVP_PKEY_sign/verify
+
+Currently waiting on a design (#22672). OTC please review the design
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** Review draft technical policies
+
+None
+
+** AOB
+
+[Tim Hudson left]
+
+24289, 24288, 24285: various zeroization PRs for public data in FIPS. We will
+handle these on a case-by-case basis
+
+Shane requests feedback on FIPS indicator document: 23609
+
+Dmitry requests review of 21727 (enhancement of evp test)
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review OTC project board
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
