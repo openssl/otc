@@ -1,0 +1,74 @@
+Meeting Date: 2024-05-07
+Minutes taken by: Matt Caswell
+    Dmitry Belyavskiy
+    Tomas Mraz
+    Nicola Tuveri
+    Matt Caswell
+    Shane Lontis
+    Richard Levitte
+    Tim Hudson
+    Viktor Dukhovni
+
+External attendees:
+    Neil Horman
+    Sasha Nedvedicky
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review OTC project board
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Matt volunteered to take the minutes.
+Proposed: Matt, seconded: Tim
+
+Agenda for the meeting agreed. Proposed:Matt , seconded: Tim
+
+** Agree minutes from previous meeting
+
+Agree minutes from last week. Proposed: Matt, seconded: Nicola
+
+** Review OTC project board
+
+project 389: Recording strategy
+No movement likely on this in the forseeable future. Closed
+
+** Review issues with OTC hold (30 minutes)
+
+23240: Add EdDSA support to EVP_PKEY_sign
+Design doc for explicitly fetched signature algs to be reviewed next week
+
+** Review outstanding security issues
+
+[Viktor joined the call]
+
+We discussed outstanding security issues.
+
+** Review draft technical policies
+
+None
+
+** AOB
+
+Should we be announcing blog posts. Suggestion was made to automatically send an
+email to email lists when a new blog is posted. project #541
+
+CVE-2024-2511 is missing from the CVE and FIPS page. project #542
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review OTC project board
+    * Review Functions for explicitly fetched signature algorithms design #22672
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
