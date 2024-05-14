@@ -1,0 +1,93 @@
+Meeting Date: 2024-05-14
+Minutes taken by: Matt Caswell
+    Dmitry Belyavskiy
+    Tomas Mraz
+    Nicola Tuveri
+    Matt Caswell
+    Shane Lontis
+    Richard Levitte
+    Paul Dale
+
+External attendees:
+    Neil Horman
+    Sasha Nedvedicky
+    Viktor Dukhovni
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review OTC project board
+    * Review issues with OTC hold (30 minutes)
+    * Review Functions for explicitly fetched signature algorithms design #22672
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Matt volunteered to take the minutes.
+Proposed: Matt, seconded: Nicola
+
+Agenda for the meeting agreed. Proposed: Matt, seconded: Tomas
+
+** Agree minutes from previous meeting
+
+Agree minutes from last week. Proposed: Matt, seconded: Nicola
+
+** Review OTC project board
+
+Nothing to discuss
+
+** Review issues with OTC hold (30 minutes)
+
+[Richard Levitte joned the call]
+
+#24358 zeroize rsa->p, rsa->q on error
+
+This is good practice and p, q are private values. PR is OK as is
+
+#24387 rsa no xof
+
+We are OK with this not requiring a way to enable in FIPS MODULE. 
+
+The reason is that it is unlikely to be used by applications and for the
+eventual rare use-case as this is non-approved the fallback is to use the
+default provider.
+
+** Review Functions for explicitly fetched signature algorithms design #22672
+
+[Paul Dale joined the call]
+
+Long discussion about the introduction of the EVP_PKEY_sign_primitive* functions
+compared with the existing primitive sign functions (EVP_PKEY_sign). Also
+relevant is https://github.com/openssl/openssl/pull/23240#issuecomment-1917532043
+
+No consensus at this stage to be discussed again next week
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** Review draft technical policies
+
+None
+
+** AOB
+
+Please review the FIPS indicators PR #23609
+
+AI: All OTC to read the PR. Make a definitive decision next week.
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review OTC project board
+    * Review Functions for explicitly fetched signature algorithms design #22672
+    * FIPS indicators #23609
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
