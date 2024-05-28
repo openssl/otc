@@ -1,0 +1,104 @@
+Meeting Date: 2024-05-28
+Minutes taken by: Matt Caswell
+    Dmitry Belyavskiy
+    Tomas Mraz
+    Nicola Tuveri
+    Matt Caswell
+    Shane Lontis
+    Tim Hudson
+
+External attendees:
+    Neil Horman
+    Sasha Nedvedicky
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review OTC project board
+    * OTC member update
+    * FIPS indicators #23609
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Matt volunteered to take the minutes.
+Proposed: Matt, seconded: Tim
+
+Agenda for the meeting agreed. Proposed: Matt, seconded: Tim
+
+** Agree minutes from previous meeting
+
+Agree minutes from last week. Proposed: Matt, seconded: Dmitry
+
+** Review OTC project board
+
+Nothing to discuss
+
+** OTC member update
+
+OTC recommends that the leave of absence for Matthias St Pierre be extended
+until the end of the calendar year.
+
+Some discussion about the current make up of OTC and how we can improve
+representation from the community. Questions raised about the make up of the
+members of the OTC. To be discussed again in a few weeks time.
+
+** FIPS indicators #23609
+
+Shane presented some example code for what the indicators might look like for
+DSA signatures.
+
+Vote: OTC approve the FIPS indicator design presented in PR#23609 subject to the
+normal review process
+
+  Dmitry     [+1]
+  Matt       [+1]
+  Pauli      [  ]
+  Tim        [+1]
+  Hugo       [  ]
+  Richard    [  ]
+  Shane      [+1]
+  Tomas      [+1]
+  Kurt       [  ]
+  Nicola     [+1]
+
+AI: Matt to raise this publicly and close
+
+** Review issues with OTC hold (30 minutes)
+
+24307: Deprecate SSL_SESSION_get_time()/SSL_SESSION_set_time()
+
+OTC: We are OK with deprecating these functions in 3.4
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** Review draft technical policies
+
+94: Add Doxygen comment requirement to coding style
+
+We should have some examples of the doxygen style
+
+AI: Neil to add examples
+
+** AOB
+
+None
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review OTC project board
+    * Review Functions for explicitly fetched signature algorithms design #22672
+    * FIPS indicators #23609
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
