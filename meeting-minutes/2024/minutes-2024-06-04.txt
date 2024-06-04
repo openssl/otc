@@ -1,0 +1,109 @@
+Meeting Date: 2024-06-04
+Minutes taken by: Matt Caswell
+    Dmitry Belyavskiy
+    Tomas Mraz
+    Matt Caswell
+    Shane Lontis
+    Richard Levitte
+    Paul Dale
+    Tim Hudson
+
+External attendees:
+    Neil Horman
+    Sasha Nedvedicky
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review OTC project board
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+
+** Nominate a minute taker and confirm agenda
+
+Matt volunteered to take the minutes.
+Proposed: Matt, seconded: Tim
+
+Agenda for the meeting agreed. Proposed: Tim, seconded: Matt
+
+** Agree minutes from previous meeting
+
+Agree minutes from last week. Proposed: Matt, seconded: Shane
+
+** Review OTC project board
+
+557: Finalize the FIPS Indicator design
+
+OTC agreed to the design proposed by Shane subject to the normal review process.
+
+575: Add Doxygen examples to the coding style Proposed
+
+Examples have been added.
+
+** Review issues with OTC hold (30 minutes)
+
+24148 Remove atexit()
+
+This is currently being discussed by the engineering team. It may come back to
+OTC for a decision
+
+24531 Enable AES-XTS optimization on Power platform for 3.0 branch
+
+This enables a 20% performance improvement.
+
+Vote: Allow the backport of the AES-XTS optimization on Power platform as per
+#24531 to all branches back to 3.0 subject to the standard review process
+
+  Dmitry     [ 0]
+  Matt       [+1]
+  Pauli      [+1]
+  Tim        [ 0]
+  Richard    [+1]
+  Shane      [+1]
+  Tomas      [ 0]
+  Kurt       [  ]
+  Nicola     [  ]
+
+AI: Matt to raise and close this vote.
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** Review draft technical policies
+
+Nothing to discuss
+
+** AOB
+
+Shane raised a concern about the current SHAKE signature code in master. This
+doesn't affect release branches. Shane will create an issue.
+
+RNG CRNG Tests may or may not be needed (see #24498). To be clarified with the
+lab.
+AI: Pauli to write up a question to send to the lab
+
+Dmitry raised question about symmetric keys and the timescales for that (21573).
+Not 3.4. Most likely 4.0.
+
+Meeting next week. No meeting next week. Next meeting on 18th June.
+
+AI: Tomas to cancel the meeting invite
+AI: Matt to send a note out to the otc list.
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review OTC project board
+    * Review Functions for explicitly fetched signature algorithms design #22672
+    * FIPS indicators #23609
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
