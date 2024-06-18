@@ -1,0 +1,104 @@
+Meeting Date: 2024-06-18
+Minutes taken by: Matt Caswell
+    Dmitry Belyavskiy
+    Matt Caswell
+    Richard Levitte
+    Tomas Mraz
+    Nicola Tuveri
+
+External attendees:
+    Neil Horman
+    Sasha Nedvedicky
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review OTC project board
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+
+** Nominate a minute taker and confirm agenda
+
+Matt volunteered to take the minutes.
+Proposed: Matt, seconded: Tomas
+
+Agenda for the meeting agreed. Proposed: Matt, seconded: Tomas
+
+** Agree minutes from previous meeting
+
+Agree minutes from last week. Proposed: Matt, seconded: Tomas
+
+** Review OTC project board
+
+#652 Raise question with the lab
+
+Questions were sent to lab. The rough consensus seems to be that the health
+check should be done on the raw output of the noise source which is not inside
+our FIPS module boundary.
+
+** Review issues with OTC hold (30 minutes)
+
+#12010 Allow 100 chars per source line and check for non-allowed tabs
+
+80 characters is a soft limit. At the moment there are too many places where we
+exceed even the 100 characters limit. It would be nice to have a CI check for
+this but without fixing (or somehow waiving) these existing places we cannot
+enforce such check.
+
+The other possible coding style CI checks that could be enforced should include
+non-allowed tabs and trailing spaces, EOLs and missing EOLs at EOF.
+
+
+#12721 OpenSSL is sloppy with SSL/TLS cert key usage checks
+
+We would like to have the strict check with an SSL_OP to switch it off/on. In a
+minor release this check should be off by default and we could change the
+default in the next major release.
+
+#15335 TLS 1.0/1.1 and DTLS 1.0 formally deprecated
+
+Project issue #672 raised to investigate how the seclevel check is applied to
+TLS.
+
+#24621: Support converting ed25519 key to x25519 key
+
+This cannot be merged without a public API. That API documentation would have
+to clearly state the security implications of such conversion.
+
+#24636 Pipelining support in provided ciphers
+
+We are OK in principle. We would like to see draft documentation or a design
+document so it could be reviewed in detail.
+
+Docs should answer for example:
+- Whether the numpipes argument should be repeated
+- how aead is going to be handled
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** Review draft technical policies
+
+Nothing to discuss
+
+** AOB
+
+None
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review OTC project board
+    * Review Functions for explicitly fetched signature algorithms design #22672
+    * FIPS indicators #23609
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
