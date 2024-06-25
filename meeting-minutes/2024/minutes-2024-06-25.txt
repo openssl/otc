@@ -1,0 +1,77 @@
+Meeting Date: 2024-06-18
+Minutes taken by: Matt Caswell
+    Matt Caswell
+    Tomas Mraz
+    Paul Dale
+    Shanle Lontis
+    Dmitry Belyavskiy
+    Tim Hudson
+
+External attendees:
+    Neil Horman
+    Sasha Nedvedicky
+    Viktor Dukhovni
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review OTC project board
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Matt volunteered to take the minutes.
+Proposed: Matt, seconded: Tomas
+
+Agenda for the meeting agreed. Proposed: Tomas, seconded: Tim
+
+** Agree minutes from previous meeting
+
+Agree minutes from last week. Proposed: Matt, seconded: Tomas
+
+** Review OTC project board
+
+#672 Investigate how the SECLEVEL check is applied to TLS version
+
+No progress
+
+** Review issues with OTC hold (30 minutes)
+
+15335: TLS 1.0/1.1 and DTLS1.0 formally deprecated
+Blocked on issue 672 above
+
+23240: EdDSA support to EVP_PKEY_sign/verify
+No progress
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** Review draft technical policies
+
+#94: Add Doxygen comment requirement to coding style
+
+Voting is in progress.
+
+** AOB
+
+Dmitry: We should communicate our approach to closing old issues/prs in a blog
+post. Neil has a blog post in progress.
+
+Dmitry raised https://github.com/openssl/openssl/pull/24577 and asked for review
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review OTC project board
+    * Review Functions for explicitly fetched signature algorithms design #22672
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
