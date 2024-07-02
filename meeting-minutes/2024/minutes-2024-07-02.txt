@@ -1,0 +1,88 @@
+Meeting Date: 2024-07-02
+Minutes taken by: Tomas Mraz
+    Tomas Mraz
+    Paul Dale
+    Dmitry Belyavskiy
+    Richard Levitte
+    Shane Lontis
+
+External attendees:
+    Neil Horman
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review OTC project board
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Tomas volunteered to take the minutes.
+Proposed: Tomas, seconded: Richard
+
+Agenda for the meeting agreed. Proposed: Tomas, seconded: Richard
+
+** Agree minutes from previous meeting
+
+Agree minutes from last week. Proposed: Tomas, seconded: Paul
+
+** Review OTC project board
+
+Investigate how the SECLEVEL check is applied to the TLS version (#672)
+
+- Since 3.1 version with SECLEVEL > 0 the TLS-1.0/1.1 and DTLS-1.0 protocol
+  versions are explicitly disabled by the default security check function.
+- Issue closed
+
+OK to create a special group of external contributors with Triage privileges?
+(#732)
+
+- OTC suggests formalizing the rules for membership of such group.
+
+Open up the otc/tools repo to committers to merge things (#741)
+
+- OTC suggests that perf tools should be moved to a separate repo under
+  openssl org with the same rules as the primary openssl/openssl repo.
+
+** Review issues with OTC hold (30 minutes)
+
+TLS 1.0/1.1 and DTLS 1.0 formally deprecated (#15335)
+
+- discussion postponed
+
+Add default cases to switch statements (#24751)
+and
+Add default: label to all switch statements that omitted them (#24756)
+
+- As the warning flag was explicitly added to the Clang strict warning list,
+it is better to just remove it there.
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** Review draft technical policies
+
+#94: Add Doxygen comment requirement to coding style
+
+Vote will be closed today.
+
+** AOB
+
+None.
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review OTC project board
+    * Review Functions for explicitly fetched signature algorithms design #22672
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
