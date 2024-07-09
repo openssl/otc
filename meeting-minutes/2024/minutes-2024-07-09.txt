@@ -1,0 +1,120 @@
+Meeting Date: 2024-07-09
+Minutes taken by: Matt Caswell
+    Dmitry Belyavskiy
+    Shane Lontis
+    Matt Caswell
+    Tomas Mraz
+    Tim Hudson
+    Richard Levitte
+
+External attendees:
+    Neil Horman
+    Sasa Nedvedicky
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review OTC project board
+    * Patch release
+    * Review Functions for explicitly fetched signature algorithms design #22672
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Matt volunteered to take the minutes.
+Proposed: Matt, seconded: Tim
+
+Agenda for the meeting agreed. Proposed: Matt, seconded: Tomas, Tim
+
+** Agree minutes from previous meeting
+
+Agree minutes from last week. Proposed: Tomas, seconded: Dmitry
+
+** Review OTC project board
+
+There were no items to discuss
+
+** Patch release
+
+A possible release on 30th July was discussed. An alternative is to wait for
+August. OTC sees no reason at this time to accelerate a release.
+
+** Review Functions for explicitly fetched signature algorithms design #22672
+
+This adds the ability to fetch and use composite signature algorithms such as
+RSA+SHA256 directly.
+
+Also relevant:
+https://github.com/openssl/openssl/pull/23416/files
+
+Function names proposed are:
+EVP_PKEY_sign_init_for_digest()
+EVP_PKEY_sign_init_for_message()
+EVP_PKEY_sign_update()
+EVP_PKEY_sign_final()
+
+Similar names for verify.
+
+Proposed alternative names:
+
+EVP_PKEY_sign_init_ex2()
+EVP_PKEY_sign_message_init()
+EVP_PKEY_sign_message_update()
+EVP_PKEY_sign_message_final()
+
+A second alternative:
+
+EVP_PKEY_sign_init_ex2()
+EVP_PKEY_sign_data_init()
+EVP_PKEY_sign_data_update()
+EVP_PKEY_sign_data_final()
+
+A discussion was also held around removing the signature from the "verify_final"
+and having it set by a separate "set_signature" function. 
+
+AI: Richard to update the design an bring it back to OTC for further
+consideration (raised as openssl/project#751)
+
+** Review issues with OTC hold (30 minutes)
+
+#15335: TLS 1.0/1.1 and DTLS 1.0 formally deprecated
+
+We would like to see a proposal for how the deprecation would look like
+
+AI: Create a proposal for deprecation of TLS 1.0/1.1 and DTLS 1.0 protocols
+(raised as openssl/project#750)
+
+#23240: Add EdDSA support to EVP_PKEY_sign/verify
+
+This was already discussed in the composite signature agenda item above
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** Review draft technical policies
+
+None
+
+** AOB
+
+Dmitry and Matt will not be attending next week. Tim also has a conflict.
+
+Next weeks meeting is cancelled. Proposed by Matt, Seconded by Tim.
+
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review OTC project board
+    * Review Functions for explicitly fetched signature algorithms design #22672
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
