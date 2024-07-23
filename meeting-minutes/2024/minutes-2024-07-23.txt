@@ -1,0 +1,76 @@
+Meeting Date: 2024-07-23
+Minutes taken by: Matt Caswell
+    Dmitry Belyavskiy
+    Shane Lontis
+    Matt Caswell
+    Tim Hudson
+    Richard Levitte
+    Nicola Tuveri
+    Paul Dale
+
+External attendees:
+    Neil Horman
+    Sasa Nedvedicky
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * OpenSSL Governance Changes
+    * Review OTC project board
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Matt volunteered to take the minutes.
+Proposed: Tim, seconded: Nicola
+
+Agenda for the meeting agreed. Proposed: Matt, seconded: Tim
+
+** Agree minutes from previous meeting
+
+Agree minutes from last meeting. Proposed: Matt, seconded: Tim
+
+** OpenSSL Governance Changes
+
+Matt and Tim presented the forthcoming organisational changes
+
+** Review OTC project board
+
+Proposal for deprecation of TLS 1.0/1.1 and DTLS 1.0, #750
+Assigned to Neil Hormal to write a Proposal
+
+Update the functions for explicitly fetched signature algorithms design, #751
+This was done
+
+** Review issues with OTC hold (30 minutes)
+
+Nothing to discuss
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** Review draft technical policies
+
+None
+
+** AOB
+
+None
+
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review OTC project board
+    * Review Functions for explicitly fetched signature algorithms design #22672
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
