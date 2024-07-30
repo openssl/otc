@@ -1,0 +1,78 @@
+Meeting Date: 2024-07-30
+Minutes taken by: Matt Caswell
+    Dmitry Belyavskiy
+    Shane Lontis
+    Matt Caswell
+    Tim Hudson
+    Nicola Tuveri
+    Paul Dale
+    Tomas Mraz
+
+External attendees:
+    Neil Horman
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review OTC project board
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Matt volunteered to take the minutes.
+Proposed: Matt, seconded: Nicola
+
+Agenda for the meeting agreed. Proposed: Matt, seconded: Tomas
+
+** Agree minutes from previous meeting
+
+Agree minutes from last meeting. Proposed: Matt, seconded: Nicola
+
+** Review OTC project board
+
+Please read the deprecation of TLS1.0/1.1/DTLS1.0 proposal #750:
+https://github.com/openssl/project/issues/750
+
+
+** Review issues with OTC hold (30 minutes)
+
+Add EdDSA support EVP_PKEY_sign/verify (#23240)
+This is related to and likely to be replaced by #24975.
+Can this be closed?
+
+adds TLS signature algorithms list feature #24821
+Can this be backported?
+This is a new feature. There is no compelling reason to justify backporting it
+to 3.2 in exception of the stable branch policy
+
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** Review draft technical policies
+
+None
+
+** AOB
+
+Dmitry requests review of https://github.com/openssl/openssl/pull/24577
+
+Nicola asked whether buildbot testing of our own platforms is still being done.
+This has been replaced by github actions.
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review OTC project board
+    * Review proposal for deprecation of TLS1.0/1.1 and DTLS1.0
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
