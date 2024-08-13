@@ -1,0 +1,90 @@
+Meeting Date: 2024-08-13
+Minutes taken by: Matt Caswell
+    Dmitry Belyavskiy
+    Matt Caswell
+    Tim Hudson
+    Nicola Tuveri
+    Paul Dale
+    Tomas Mraz
+    Shane Lontis
+
+External attendees:
+    Neil Horman
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review OTC project board
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Matt volunteered to take the minutes.
+Proposed: Matt, seconded: Tim
+
+Agenda for the meeting agreed. Proposed: Matt, seconded: Tim
+
+** Agree minutes from previous meeting
+
+Agree minutes from last meeting. Proposed: Matt, seconded: Nicola
+
+** Review OTC project board
+
+Proposal for deprecation of TLS 1.0/1.1 and DTLS 1.0
+
+We requested feedback from oss-security. We got conflicting feedback. Some
+people want us to turn of TLS 1.0/1.1 immediately. Others want us to keep it
+working for the foreseeable future.
+
+[Shane Lontis joined]
+
+AI: Neil to summarise the existing feedback and to create a github discussion
+and blog to elicit further feedback (along with an announcement to
+openssl-users GH Discussion Announcements).
+
+** Review issues with OTC hold (30 minutes)
+
+increse rsa min bits to 1024 (#25094)
+
+Discussion around the pros and cons of this:
+- why 1024 and not 2048?
+- This is a breaking change and probably needs to wait until 4.0
+- This will cause problems for tests where 512 is commonly used for speed reasons
+- Should this minimum be compile time or run time?
+- A run time default that can be changed without recompilation might be possible
+  in a minor release
+
+Raised an issue openssl/project#809 to create a proposal for making various
+min/max key sizes configurable
+
+We should create a "hold: breaking change" label
+AI: Matt to create the label
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** Review draft technical policies
+
+None
+
+** AOB
+
+FIPS indicator work is ongoing and needs review.
+
+3.4.0 Alpha freeze date is August 30th.
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review OTC project board
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB

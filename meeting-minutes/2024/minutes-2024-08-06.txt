@@ -1,0 +1,86 @@
+Meeting Date: 2024-08-06
+Minutes taken by: Matt Caswell
+    Dmitry Belyavskiy
+    Shane Lontis
+    Matt Caswell
+    Tim Hudson
+    Nicola Tuveri
+    Paul Dale
+    Tomas Mraz
+
+External attendees:
+    Neil Horman
+    Sasha Nedvedicky
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review OTC project board
+    * Review proposal for deprecation of TLS1.0/1.1 and DTLS1.0
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Matt volunteered to take the minutes.
+Proposed: Matt, seconded: Nicola
+
+Agenda for the meeting agreed. Proposed: Matt, seconded: Nicola
+
+** Agree minutes from previous meeting
+
+Agree minutes from last meeting. Proposed: Matt, seconded: Nicola
+
+** Review OTC project board
+
+Nothing to be done
+
+** Review proposal for deprecation of TLS1.0/1.1 and DTLS1.0
+
+The proposal in openssl/project#750 is to set the min protocol version to
+DTSLv1.2
+
+Some discussion about whether this is useful, and whether it is really
+deprecation.
+
+A proposed deprecation path could be to compile out tls1.0/1.1 support by
+default from 4.0. We could ask this on the oss-security list.
+
+AI: Neil to formulate a question and post to the oss-security list
+
+** Review issues with OTC hold (30 minutes)
+
+There are no issue with OTC hold (without the 4.0 milestone)
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** Review draft technical policies
+
+None
+
+** AOB
+
+Dmitry mentioned openssl/openssl#25002. Would such a feature be acceptable?
+OTC thinks this would be ok.
+
+Shane requests review of the FIPS indiciator PRs (see #24849 for a list)
+
+Nicola asked about the code freeze for 3.4. Neil has a blog post about this in
+review.
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review OTC project board
+    * Review proposal for deprecation of TLS1.0/1.1 and DTLS1.0
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
