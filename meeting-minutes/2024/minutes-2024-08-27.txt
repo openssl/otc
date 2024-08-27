@@ -100,6 +100,8 @@ implementations. We should have a blog post saying this.
 
 ** AOB
 
+Viktor asked about the base64 BIO code. Viktor has a PR to make it correct - but
+the code is still horrible. General view is that we should improve this code.
 
 ** Agree agenda for next meeting
 
