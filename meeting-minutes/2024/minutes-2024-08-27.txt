@@ -1,0 +1,113 @@
+Meeting Date: 2024-08-27
+Minutes taken by: Matt Caswell
+    Dmitry Belyavskiy
+    Matt Caswell
+    Tim Hudson
+    Nicola Tuveri
+    Paul Dale
+    Tomas Mraz
+    Richard Levitte
+
+External attendees:
+    Neil Horman
+    Viktor Dukhovni
+    Sasha Nedvedicky
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Nominations
+    * Reviews
+    * Signature changes (10 mins)
+    * LTS (10 mins)
+    * FIPS (10 mins)
+    * Review OTC project board
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * PQC (10 mins)
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Matt volunteered to take the minutes.
+Proposed: Matt, seconded: Pauli
+
+Agenda for the meeting agreed. Proposed: Matt, seconded: Tim
+
+** Agree minutes from previous meeting
+
+Agree minutes from last meeting. Proposed: Matt, seconded: Nicola
+
+** Nominations
+
+Matt to raise committer nomination votes on list.
+
+** Reviews
+
+Proposal is to drop the OTC review requirement (so two committer reviews agreed
+required instead of the one committer and one OTC member). Some discussion
+about increasing the review count. Suggestion about having code owners for
+parts of the code.
+
+General consensus that we should have more reviewers/committers.
+
+** Signature changes
+
+Some concerns about the time remaining before freeze for getting this code in.
+
+** LTS
+
+Discussion about which release should be the next LTS, and the approach moving
+forward. To be discussed further once BACs/TACs are established.
+
+** FIPS
+
+A discussion about the next FIPS release, and the outstanding FIPS indicators
+work. PR 25162 needs a second review.
+
+** Review OTC project board
+
+Deprecation of TLS1.0/1.1 #750
+
+Work is in progress
+
+Create a proposal for making min/max key sizes configurable #809
+
+Waiting on a resource to work on this
+
+** Review issues with OTC hold (30 minutes)
+
+Document the output length behaviour of AES-WRAP-PAD #25233
+
+Defer
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** Review draft technical policies
+
+None
+
+** PQC
+
+Questions have been raised about implementing the new standards.
+It is our intention to have implementations of these standards. We do not yet
+have a timescale for it. It would be nice if we had volunteer to help contribute
+implementations. We should have a blog post saying this.
+
+** AOB
+
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review OTC project board
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
