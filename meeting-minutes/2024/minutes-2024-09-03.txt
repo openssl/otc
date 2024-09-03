@@ -1,0 +1,87 @@
+Meeting Date: 2024-09-03
+Minutes taken by: Tomas Mraz
+    Dmitry Belyavskiy
+    Nicola Tuveri
+    Tomas Mraz
+    Richard Levitte
+    Hugo Landau
+    Shane Lontis  
+
+External attendees:
+    Neil Horman
+    Sasha Nedvedicky
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review OTC project board
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Tomas volunteered to take the minutes.
+Proposed: Tomas, seconded: Nicola
+
+Agenda for the meeting agreed. Proposed: Tomas, seconded: Nicola
+
+** Agree minutes from previous meeting
+
+Agree minutes from last meeting. Proposed: Nicola, seconded: Tomas
+
+** Review OTC project board
+
+Create proposal for deprecation of TLS 1.0/1.1 and DTLS 1.0 protocols
+(#750)
+ - waiting on blog post approval
+
+** Review issues with OTC hold (30 minutes)
+
+dtls_meth.c: Silently drop records with invalid MAC (#25353)
+- deferred
+
+Additional, reduced round ChaCha ciphers (#25347)
+- this is outside of our policy, and to really achieve the performance gain,
+the implementation would have to be done in assembler for the exact number
+of rounds. Thus it would be quite unusual to have the number of rounds as
+OSSL_PARAM of the algorithm.
+- In the absence of a national or international standard specifying the use
+of reduced-round ChaCha, we recommend this be implemented as a third-party
+provider.
+
+Document the output length behaviour of AES-WRAP-PAD (#25233)
+- the EVP_Encrypt/Decrypt manual page is unclear in regards to the the decrypt
+output size, however the proposed text is still not right. Shane will come up
+with updates
+- The EVP_EncryptInit manual page should document the generic API contract
+under both the EVP_EncryptUpdate and EVP_DecryptUpdate headings;
+cipher-specific details should be mentioned in the cipher-specific manpage.
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** Review draft technical policies
+
+None
+
+** AOB
+
+OQS project members are offering help with handling the PQC algorithms in
+OpenSSL. There are various options with various amount of effort needed
+on how to move forward.
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review 3.4.0 beta checklist
+    * Review OTC project board
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
