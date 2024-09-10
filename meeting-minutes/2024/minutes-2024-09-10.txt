@@ -1,0 +1,90 @@
+Meeting Date: 2024-09-10
+Minutes taken by: Matt Caswell
+    Dmitry Belyavskiy
+    Nicola Tuveri
+    Tomas Mraz
+    Richard Levitte
+    Hugo Landau
+    Shane Lontis
+    Paul Dale
+    Tim Hudson
+
+External attendees:
+    Neil Horman
+    Sasha Nedvedicky
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review 3.4.0 beta checklist
+    * Review OTC project board
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Matt volunteered to take the minutes.
+Proposed: Matt, seconded: Tim
+
+Agenda for the meeting agreed. Proposed: Matt, seconded: Tim
+
+** Agree minutes from previous meeting
+
+Agree minutes from last meeting. Proposed: Tomas, seconded: Nicola
+
+** Review 3.4.0 beta checklist
+
+Checklist is here:
+https://github.com/openssl/project/issues/507
+
+There are some outstanding documentation updates from Richard pending
+
+** Review OTC project board
+
+TLS deprecation proposal - just waiting on blog approval
+
+Key size configurability - no progress (removing from board)
+
+** Review issues with OTC hold (30 minutes)
+
+#25353: silently drop records with invalid MAC
+
+We should backport this to all relevant branches
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** Review draft technical policies
+
+None
+
+** AOB
+
+Changing the minimum version of perl required
+https://github.com/openssl/openssl/discussions/25394#discussioncomment-10557951
+
+The fix is in https://github.com/openssl/openssl/pull/25367
+
+Should we consider a new 3.3 patch release? The OTC recommends that we should do
+a new 3.3.3 release to fix the regression.
+
+Some discussion about ML-KEM and which is the correct underlying implementation
+to use. Options include the Boring implementation and the OQS implementation.
+
+No OTC meeting next week.
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review 3.4.0 beta checklist
+    * Review OTC project board
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
