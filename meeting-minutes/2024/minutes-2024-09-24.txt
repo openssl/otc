@@ -1,0 +1,87 @@
+Meeting Date: 2024-09-24
+Minutes taken by: Matt Caswell
+    Nicola Tuveri
+    Tomas Mraz
+    Richard Levitte
+    Hugo Landau
+    Matt Caswell
+    Paul Dale
+    Tim Hudson
+    Dmitry Belyavsky
+
+External attendees:
+    Neil Horman
+    Sasha Nedvedicky
+    Viktor Dukhovni
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review 3.4.0 beta checklist
+    * Review outstanding security issues
+    * Review OTC project board
+    * Review issues with OTC hold (30 minutes)
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Matt volunteered to take the minutes.
+Proposed: Matt, seconded: Nicola
+
+Agenda for the meeting agreed. Proposed: Matt, seconded: Nicola
+
+** Agree minutes from previous meeting
+
+Agree minutes from last meeting. Proposed: Nicola, seconded: Pauli
+
+** Review 3.4.0 beta checklist
+
+Checklist is here:
+https://github.com/openssl/project/issues/507
+
+The CIs are currently failing in the QUIC interop tests. These are new CI
+failures. We should either fix the tests or remove them.
+
+[Tim Hudson joined]
+
+We will push the beta release out one week, in order to bring in FIPS DRBG
+changes.
+
+Backport https://github.com/openssl/openssl/pull/25415 to 3.4
+Bring in https://github.com/openssl/openssl/pull/25511
+
+Neil send out an email to openssl-project
+
+** Review outstanding security issues
+
+We discussed security issues.
+
+[Dmitry Belyavsky joined]
+
+** Review OTC project board
+
+Defer
+
+** Review issues with OTC hold (30 minutes)
+
+Defer
+
+** Review draft technical policies
+
+Defer
+
+** AOB
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review 3.4.0 beta checklist
+    * Review OTC project board
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
