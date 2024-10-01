@@ -1,0 +1,116 @@
+Meeting Date: 2024-10-01
+Minutes taken by: Matt Caswell
+    Matt Caswell
+    Richard Levitte
+    Tim Hudson
+    Shane Lontis
+    Paul Dale
+    Dmitry Belyavsky
+    Tomas Mraz
+
+External attendees:
+    Neil Horman
+    Sasha Nedvedicky
+    Kajal Sapkota
+    Michael Baentsch
+    Anton Arapov
+    Tomas Vavra 
+    Dimitry Misharov
+    Katerina Micova
+    Hana Andersen
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review 3.4.0 beta checklist
+    * Review OTC project board
+    * Discuss issue 25551
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Matt volunteered to take the minutes.
+Proposed: Matt, seconded: Tim
+
+Agenda for the meeting agreed. Proposed: Matt, seconded: Tim
+
+** Agree minutes from previous meeting
+
+Agree minutes from last meeting. Proposed: Matt, seconded: Paul
+
+** Review 3.4.0 beta checklist
+
+Checklist is here:
+https://github.com/openssl/project/issues/507
+
+Two urgent issues need to go in 25582 and 25583. We will put 25583 into 3.4,
+but may pull it out if it causes a problem.
+
+Still not pasing CI but we should be once 25582 is merged.
+
+Vote: OTC approve the 3.4 source is ready for beta release subject to the daily
+and on-push CI tests passing
+
+Matt +1
+Dmitry +1
+Paul +1
+Richard +1
+Shane +1
+Tim +1
+Tomas +1
+
+The vote passes.
+
+AI: Matt to record the vote formally
+
+[Tomas M, Tim, Neil, Sasha, Kajal, Michael, Anton, Tomas V, Dmitry M, Katerina,
+Hana left the meeting]
+
+OTC is no longer quorate
+
+** Discuss issue 25551
+
+1. The current behaviour should be tested in 4 combinations and documented
+2. The discussion is delayed to the quorate meeting
+
+** Discuss issue 25553 (also see 25466)
+
+Any potential solution would require a very invasive fix. We won't fix this.
+
+** Review OTC project board
+
+Defer
+
+** Review issues with OTC hold (30 minutes)
+
+Defer
+
+** Review outstanding security issues
+
+We discussed security issues.
+
+** Review draft technical policies
+
+Defer
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review 3.4.0 beta checklist
+    * Review OTC project board
+    * Discuss issue 25551
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** AOB
+
+Shane asked for the HSS feature branch to be created.
+Matt to create the branch.
