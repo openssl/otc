@@ -112,5 +112,8 @@ Defer
 
 ** AOB
 
+There was some discussion about PQC approaches. No firm conclusions at this
+stage.
+
 Shane asked for the HSS feature branch to be created.
 Matt to create the branch.
