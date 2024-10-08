@@ -1,0 +1,84 @@
+Meeting Date: 2024-10-08
+Minutes taken by: Matt Caswell
+    Matt Caswell
+    Shane Lontis
+    Paul Dale
+    Dmitry Belyavsky
+    Hugo Landau
+    Richard Levitte
+    Tomas Mraz
+
+External attendees:
+    Neil Horman
+    Sasha Nedvedicky
+    Viktor Dukhovni
+
+Agenda:
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review OTC project board
+    * HSS/LMS
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Matt volunteered to take the minutes.
+Proposed: Matt, seconded: Hugo
+
+Agenda for the meeting agreed. Proposed: Matt, seconded: Pauli
+
+** Agree minutes from previous meeting
+
+Agree minutes from last meeting. Proposed: Matt, seconded: Pauli
+
+** Review OTC project board
+
+Nothing on the board
+
+** HSS/LMS
+
+Both of these have been implemented for Verify.
+
+For signing we start having mutable keys. Until now we have had mostly immutable
+keys. Mutable keys could be worked around with locking in the provider.
+
+One proposal would be to have the mutable key state stored in the EVP_PKEY_CTX.
+
+Split verify and sign. Do verify first - there are already PRs for this.
+
+** Review issues with OTC hold (30 minutes)
+
+#25538 delay sending TLSv1.3 session tickets
+This is considered a feature
+
+** Review outstanding security issues
+
+We discussed security issues.
+
+** Review draft technical policies
+
+None
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review OTC project board
+    * PQC?
+    * Committer nominations
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** AOB
+
+PQC - ML-KEM-768 is the initial target for 3.5 + hybrid KEM
+
+Richard and Pauli won't be at next weeks meeting.
