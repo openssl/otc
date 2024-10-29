@@ -1,0 +1,87 @@
+Meeting Date: 2024-10-22
+Minutes taken by: Matt Caswell
+    Matt Caswell
+    Dmitry Belyavsky
+    Hugo Landau
+    Tomas Mraz
+    Nicola Tuveri
+    Paul Dale
+    Shane Lontis
+    Richard Levitte
+
+External attendees:
+    Sasha Nedvedicky
+    Tomas Vavra
+    Viktor Dukhovni
+
+Agenda:
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review OTC project board
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Matt volunteered to take the minutes.
+Proposed: Matt, seconded: Tomas
+
+Agenda for the meeting agreed. Proposed: Matt, seconded: Tomas
+
+** Agree minutes from previous meeting
+
+Agree minutes from last meeting. Proposed: Matt, seconded: Nicola, Pauli
+
+** Review OTC project board
+
+Review the security policy (#907)
+
+No action
+
+** Review issues with OTC hold (30 minutes)
+
+Is the current cipher algorithm default the correct one (3DES)? #25776
+
+Any app that currently defaults to 3DES should be changed to AES256. We should
+ensure that any app that does this should have a -cipher option or equivalent
+to change it.
+
+AI: Tomas to create an issue to implement the above
+
+** Review outstanding security issues
+
+We discussed security issues.
+
+** Review draft technical policies
+
+None
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review OTC project board
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** AOB
+
+PQC - Will there be a design document?
+At the moment the design is in the issues.
+
+Pauli proposed that all feature branches should have a design document. Pauli
+will raise a policy change for this.
+
+Nicola sends his apologies for next week.
+
+Shane pointed out that Dmitry has raised a request for an EVP_SKEY feature
+branch and the request is still outstanding.
+
+Shane is working on SLH-DSA.
