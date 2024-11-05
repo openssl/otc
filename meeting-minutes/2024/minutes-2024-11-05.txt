@@ -1,0 +1,83 @@
+Meeting Date: 2024-11-05
+Minutes taken by: Matt Caswell
+    Matt Caswell
+    Dmitry Belyavsky
+    Hugo Landau
+    Tomas Mraz
+    Paul Dale
+    Shane Lontis
+    Tim Hudson
+
+External attendees:
+    Neil Horman
+    Viktor Dukhovni (joined late)
+
+Agenda:
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review OTC project board
+    * Review issues with OTC hold (30 minutes)
+    * EVP_SKEY feature branch
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Matt volunteered to take the minutes.
+Proposed: Matt, seconded: Tomas, Pauli
+
+Agenda for the meeting agreed. Proposed: Matt, seconded: Hugo
+
+** Agree minutes from previous meeting
+
+Agree minutes from last meeting. Proposed: Matt, seconded: Pauli
+
+** Review OTC project board
+
+No progress
+
+** Review issues with OTC hold (30 minutes)
+
+None
+
+** EVP_SKEY feature branch
+
+A request for the feature branch has been made in openssl/project#908
+
+Still waiting for an approval. Dmitry is volunteering to work on this.
+
+AI: Matt to create a feature branch for SLH-DSA
+
+** Review outstanding security issues
+
+We discussed security issues.
+
+[Viktor Dukhovni joined]
+
+** Review draft technical policies
+
+We discussed technical policy PR #105 (mandate a design for all feature branches)
+To be voted on next week.
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review OTC project board
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** AOB
+
+We launched the communities site this week.
+
+We discussed moving the meeting 30 mins later. Tomas to update the meeting invite.
+
+Shane raised a question about BIGNUM use in ML-KEM. There is no such use in the
+BoringSSL code.
