@@ -1,0 +1,106 @@
+Meeting Date: 2024-11-12
+Minutes taken by: Matt Caswell
+    Matt Caswell
+    Dmitry Belyavsky
+    Hugo Landau
+    Tomas Mraz
+    Shane Lontis
+    Nicola Tuveri
+    Richard Levitte
+    Tim Hudson (joined late)
+
+External attendees:
+    Tomas Vavra
+    Sasha Nedvedicky (joined late)
+
+Agenda:
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review OTC project board
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * EVP_SKEY
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Matt volunteered to take the minutes.
+Proposed: Matt, seconded: Nicola
+
+Agenda for the meeting agreed. Proposed: Matt, seconded: Tomas
+
+** Agree minutes from previous meeting
+
+Agree minutes from last meeting. Proposed: Matt, seconded: Nicola
+
+** Review OTC project board
+
+No progress
+
+** Review issues with OTC hold (30 minutes)
+
+18734: Make non-sensitive portions of the trace API use accessible to all users
+
+Are there any performance or security implications of turning on the trace
+functionality by default.
+
+Some discussion about whether we should have a logging API (and whether the
+ERR API could be it).
+
+We would be ok with enabling TRACE by default in debug builds.
+
+25716: Buffer file-based BIO reads on Winddows
+
+Remove the hack where we disable buffering on file in Windows which has severe
+performance impact. Instead we always open files in binary mode on Windows.
+
+Can we backport this?
+
+This is reverting behaviour back to 1.1.1 behaviour and this is considered
+low risk.
+
+[Sasha Nedvedicky joined]
+[Tim Hudson joined]
+
+We don't normally backport performance fixes as far back as 3.0.
+This is OK to go back to the 3.4 branch.
+
+25930 fips-jitter: Forse use jitter entropy in the FIPS 3.0.9 provider
+callback
+
+Defer this discussion until Pauli is present
+
+** Review outstanding security issues
+
+We discussed security issues.
+
+** EVP_SKEY
+
+There was some discussion about whether the EVP_SKEY design fits with PKCS11
+requirements. We might need to make updates to the design. This is a work
+in progress.
+
+Dmitry to continue prototyping and design work. When ready he will set up a
+separate design meeting.
+
+** Review draft technical policies
+
+None
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review OTC project board
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** AOB
+
+None
