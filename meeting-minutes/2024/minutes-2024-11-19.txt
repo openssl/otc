@@ -1,0 +1,119 @@
+Meeting Date: 2024-11-19
+Minutes taken by: Matt Caswell
+    Matt Caswell
+    Dmitry Belyavsky
+    Hugo Landau
+    Tomas Mraz
+    Richard Levitte
+    Shane Lontis (joined late)
+    Nicola Tuveri (joined late)
+
+External attendees:
+    Sasha Nedvedicky
+    Viktor Dukhovni
+    Tomas Vavra (joined late)
+
+Agenda:
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review OTC project board
+    * EVP_SKEY
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Matt volunteered to take the minutes.
+Proposed: Matt, seconded: Hugo
+
+Agenda for the meeting agreed. Proposed: Matt, seconded: Hugo
+
+** Agree minutes from previous meeting
+
+Agree minutes from last meeting. Proposed: Matt, seconded: Tomas
+
+[Shane + Nicola joined]
+
+** Review OTC project board
+
+No update
+
+** EVP_SKEY
+
+[Tomas V joined]
+
+#25908 EVP_SKEY
+
+An initial PR has been implemented and is ready for review.
+
+Discussion around whether the libcrypto side EVP_SKEY can also contain a
+"bunch of bytes" as a fallback for old providers. Should we convert our existing
+providers to support the new EVP_SKEY APIs?
+
+An EVP_SKEY object should have the option of holding a "bunch of bytes" in the
+libcrypto side structure. In this way applications can use the new EVP_SKEY APIs
+and yet still work with old providers that have not been modified explicitly to
+work with them.
+
+For example if an application creates an EVP_SKEY by passing a bunch of bytes,
+those bytes will be cached in the EVP_SKEY structure. In a later call to
+EVP_CipherInit_skey(), passing the EVP_SKEY and an EVP_CIPHER implementation
+from a provider that does not explicit support EVP_SKEY, the libcrypto
+implementation will use the old cipher_init() function on the provider passing
+the bunch of bytes.
+
+Please review the PR
+
+** Review issues with OTC hold (30 minutes)
+
+#25888: Should we backport the printing of the KEM group in s_client
+
+This is a missing feature and not eligible for backport
+
+#25945 fips: zeroize self-check out MD variable
+
+No objections to putting this in
+
+#25955 fips: do not perform cryptographic update operations in error state
+
+Should we add ossl_prov_is_running() checks to the update operations?
+
+We do not want this change as we expect the performance impact won't be
+negligible
+
+Any other addition than in the osslcipher_generic_block_update() does not make
+any sense at all because those functions do not produce any results and _final()
+calls check the state
+
+** Review outstanding security issues
+
+We discussed security issues.
+
+** Review draft technical policies
+
+None
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review OTC project board
+    * Review issues with OTC hold (30 minutes)
+    * Discussion about Windows parameter passing
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** AOB
+
+Memory safe C compiler. This is currently a hobby project, but looks interesting.
+We should keep an eye on it.
+
+Nicola asked about the context parameter used during ML-DSA signing. Is this a
+problem for us? Opinion is that this is not an issue and can be passed as a
+parameter.
