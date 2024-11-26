@@ -7,6 +7,7 @@ Minutes taken by: Matt Caswell
     Richard Levitte
     Shane Lontis (joined late)
     Nicola Tuveri (joined late)
+    Tim Hudson (joined late)
 
 External attendees:
     Sasha Nedvedicky
@@ -45,6 +46,7 @@ No update
 ** EVP_SKEY
 
 [Tomas V joined]
+[Tim Hudson joined]
 
 #25908 EVP_SKEY
 

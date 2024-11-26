@@ -1,0 +1,102 @@
+Meeting Date: 2024-11-26
+Minutes taken by: Tomas Mraz
+    Dmitry Belyavsky
+    Hugo Landau
+    Tomas Mraz
+    Richard Levitte
+    Shane Lontis
+    Nicola Tuveri
+    Tim Hudson
+    Paul Dale
+
+    Matt Caswell
+
+External attendees:
+    Sasha Nedvedicky
+    Viktor Dukhovni
+    Tomas Vavra
+
+Agenda:
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review OTC project board
+    * Review issues with OTC hold (30 minutes)
+    * Discussion about Windows parameter passing
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Tomas volunteered to take the minutes.
+Proposed: Tomas, seconded: Nicola
+
+Agenda for the meeting agreed. Proposed: Tomas, seconded: Tim
+
+** Agree minutes from previous meeting
+
+Agree minutes from last meeting. Proposed: Tomas, seconded: Nicola
+
+** Review OTC project board
+
+No update
+
+** Review issues with OTC hold (30 minutes)
+
+https://github.com/openssl/openssl/issues?q=is%3Aopen+label%3A%22hold%3A+need+otc+decision%22+-milestone%3A4.0.0+
+
+#25807 - fips: zeroization of ECX public keys
+ - We've requested to put this behind #ifdef OPENSSL_PEDANTIC_ZEROIZATION
+
+#25929 - force jitter (3.4)
+ - we do not approve the backport, PR closed
+
+#25930 - fips-jitter: Force use jitter entropy in the FIPS 3.0.9 provider
+callback
+ - This is OK for master subject to the usual review process.
+
+#26028 - fips: remove drgb_no_trunc_dgst IG withdrawn
+ - We want to keep the restriction unless there is compelling reason to
+   alllow the truncated hashes.
+
+** Discussion about Windows parameter passing
+
+[Nicola left the meeting]
+
+This is a documentation issue - we add a warning to the docs that calling the
+openssl command line with any untrusted non-ascii arguments is not secure
+unless the OPENSSL_WIN32_UTF8 environment variable is set.
+
+Tomas to create an issue on the board.
+
+** Review outstanding security issues
+
+We discussed security issues.
+
+[Tim left the meeting]
+[Tomas V left the meeting]
+
+** Review draft technical policies
+
+None
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review OTC project board
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** AOB
+
+Dmitry asked for reviews on the EVP_SKEY implementation PR (#25908).
+
+Dmitry asked the team to investigate the issue #26038 - breakage of legacy
+provider fetches if pkcs11 provider uses no_cache
+
