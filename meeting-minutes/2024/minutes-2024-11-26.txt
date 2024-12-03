@@ -8,8 +8,7 @@ Minutes taken by: Tomas Mraz
     Nicola Tuveri
     Tim Hudson
     Paul Dale
-
-    Matt Caswell
+    Matt Caswell (joined late)
 
 External attendees:
     Sasha Nedvedicky
@@ -44,6 +43,8 @@ Agree minutes from last meeting. Proposed: Tomas, seconded: Nicola
 No update
 
 ** Review issues with OTC hold (30 minutes)
+
+[Matt joined the meeting]
 
 https://github.com/openssl/openssl/issues?q=is%3Aopen+label%3A%22hold%3A+need+otc+decision%22+-milestone%3A4.0.0+
 
