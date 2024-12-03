@@ -1,0 +1,100 @@
+Meeting Date: 2024-12-03
+Minutes taken by: Tomas Mraz
+    Dmitry Belyavsky
+    Hugo Landau
+    Tomas Mraz
+    Richard Levitte
+    Tim Hudson
+    Paul Dale
+    Matt Caswell
+    Shane Lontis (joined late)
+
+External attendees:
+    Sasha Nedvedicky
+    Tomas Vavra
+
+Agenda:
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review OTC project board
+    * Review issues with OTC hold (30 minutes)
+    * EVP_SKEY
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Matt volunteered to take the minutes.
+Proposed: Matt, seconded: Hugo
+
+Agenda for the meeting agreed. Proposed: Matt, seconded: Tim, Hugo
+
+** Agree minutes from previous meeting
+
+Agree minutes from last meeting. Proposed: Matt, seconded: Tomas
+
+** Review OTC project board
+
+No update
+
+** Review issues with OTC hold (30 minutes)
+
+#26046: X509 chain validation: non-standard handling of EKU extensions in CA
+certs
+
+[Shane joined]
+
+We need to document the current behaviour
+For considering changing the behaviour of the strict flag we would need a survey
+of the behaviour of other major libraries (NSS, GnutTLS, BouncyCastle, Microsoft
+Crypto API) and the impact that this change of behaviour would make
+
+#26079 CMS_get1_{certs, crls} behaviour change and inconsistency with
+CMS_get0_signers() in OpenSSL 3.4
+
+If there were no certs/crls we used to return NULL and now we return an empty
+stack.
+
+We will revert the behaviour change of the CMS_get1_certs/crls() functions in
+master and 3.4 branches. We will add an internal call for replacement in 3.4 and
+new public API call in 3.5
+
+** EVP_SKEY
+
+#25908 - Dmitry is asking OTC members for review of the EVP_SKEY implementation
+
+There was a discussion about whether or not we should have an EVP_SKEY "empty"
+state and whether you can change the state later.
+
+We discussed the empty key creation patter and we will discuss again next week
+when everybody has had the opportunity to review the comments in the PR
+
+** Review outstanding security issues
+
+We discussed security issues.
+
+** Review draft technical policies
+
+None
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review OTC project board
+    * Review issues with OTC hold (30 minutes)
+    * EVP_SKEY
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** AOB
+
+Shane says that we need an ML-DSA feature branch. Tomas to do this.
+
+Nicola encourages people via email to consider nominating for individual or
+committer communities on the BACs.
