@@ -1,5 +1,5 @@
 Meeting Date: 2024-12-03
-Minutes taken by: Tomas Mraz
+Minutes taken by: Matt Caswell
     Dmitry Belyavsky
     Hugo Landau
     Tomas Mraz
