@@ -1,0 +1,110 @@
+Meeting Date: 2024-12-17
+Minutes taken by: Matt Caswell
+    Dmitry Belyavsky
+    Hugo Landau
+    Tomas Mraz
+    Paul Dale
+    Matt Caswell
+    Shane Lontis
+    Nicola Tuveri
+    Tim Hudson (joined late)
+
+External attendees:
+    Tomas Vavra
+    Sasha Nedvedicky (joined late)
+    Viktor Dukhovni (joined late)
+
+Agenda:
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review OTC project board
+    * Review issues with OTC hold (30 minutes)
+    * EVP_SKEY
+    * no_cache problem
+    * Committer nominations
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Matt volunteered to take the minutes.
+Proposed: Matt, seconded: Nicola
+
+Agenda for the meeting agreed. Proposed: Matt, seconded: Tomas
+
+** Agree minutes from previous meeting
+
+Agree minutes from last meeting. Proposed: Matt, seconded: Pauli
+
+** Review OTC project board
+
+No update
+
+** Review issues with OTC hold (30 minutes)
+
+None except EVP_SKEY.
+
+** EVP_SKEY
+
+We agree that avoiding the initial empty state in the API is desirable. The keys
+should be directly created when they are imported, generated, etc.
+
+[Sasha Nedvedicky joined]
+
+** no_cache problem
+
+See issue #26038
+
+no_cache is not currently working as expected when used within the context of
+the p11 provider.
+
+[Viktor Dukhovni joined]
+[Tim Hudson joined]
+
+This needs someone to investigate this.
+
+Dmitry to crete a producer not depending on external providers.
+
+** Committer nominations
+
+We discussed some committer nominations.
+
+** Review outstanding security issues
+
+We discussed security issues.
+
+** Review draft technical policies
+
+None
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review OTC project board
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** AOB
+
+ML-KEM: there were some concerns about the clangover attack - the implementation
+has been updated accordingly. Another possible timing signal was also identified,
+but this has now been fixed in collaboration with the BoringSSL team.
+
+https://github.com/antoonpurnal/clangover
+https://github.com/agl/ctgrind
+https://github.com/google/boringssl/commit/f49081b4ef4e99bae452e05170d8433807bd70e9
+https://boringssl-review.googlesource.com/c/boringssl/+/74447
+
+The next meeting date will be 7th January. Tomas to cancel the meetings on 24th
+and 31st December.
+
+Question raised about equality of empty keys in the ML-KEM code. Are two empty
+keys equal to each other. We should be consistent with other algorithms.
+
