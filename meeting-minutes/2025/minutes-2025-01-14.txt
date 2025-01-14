@@ -1,0 +1,106 @@
+Meeting Date: 2025-01-07
+Minutes taken by: Matt Caswell
+    Dmitry Belyavsky
+    Hugo Landau
+    Matt Caswell
+    Shane Lontis
+    Tim Hudson
+    Nicola Tuveri
+    Richard Levitte (joined late)
+    Tomas Mraz (joined late)
+
+External attendees:
+    Tomas Vavra
+    Viktor Dukhovni
+    Sasha Nevedicky (joined late)
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review OTC project board
+    * Post Quantum
+    * Endian
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Matt volunteered to take the minutes.
+Proposed: Matt, seconded: Tim
+
+Agenda for the meeting agreed. Proposed: Matt, seconded: Tim
+
+** Agree minutes from previous meeting
+
+Agree minutes from last meeting. Proposed: Matt, seconded: Tim
+
+** Review OTC project board
+
+[Richard Levitte joined]
+
+No update
+
+** Post Quantum
+
+IETF are planning to encode PQ private keys as the seed, and not encoded in
+an OCTET STRING. Unfortunately lots of implementations do not do this and
+encode the long form private key. The IETF spec is still a draft.
+
+Our strategy: if we have the seed we will write that format. Otherwise we will
+write the long form. When reading we will detect what format we have.
+It is not easy to write an encoder to take a parameter to optionally write a
+seed or not. It is easier to "forget" the seed on import if we want to.
+
+[Tomas Mraz joined]
+
+Discussion about hybrid keys. No concrete plans for encoding/decoding of these.
+
+Viktor should investigate whether "forgetting" the seed on import/key gen is a
+viable option in order to force encoding the seedless format.
+
+Discussion about LMS and whether to do verify only, or sign and verify. We
+could do verify only for 3.5. CNSA 2 is less of an issue now. We might do LMS in
+the October release.
+
+** Endian
+
+A PR exists to load/store values to big/little endian support:
+
+https://github.com/openssl/openssl/pull/26385
+
+A discussion about whether these functions should be public or not. There were
+differing views. Some feel that we should keep them private for now. Others
+that these are beneficial to others and it is useful to make them public.
+
+OTC does not object to this being public and the hold will be removed.
+
+** Review issues with OTC hold (30 minutes)
+
+There are no issues with OTC hold.
+
+** Review outstanding security issues
+
+We discussed security issues.
+
+** Review draft technical policies
+
+None
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review OTC project board
+    * EVP_SKEY
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** AOB
+
+Do we have a freeze date we have 3.5? Not yet announced.
