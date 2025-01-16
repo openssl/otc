@@ -61,9 +61,10 @@ Discussion about hybrid keys. No concrete plans for encoding/decoding of these.
 Viktor should investigate whether "forgetting" the seed on import/key gen is a
 viable option in order to force encoding the seedless format.
 
-Discussion about LMS and whether to do verify only, or sign and verify. We
-could do verify only for 3.5. CNSA 2 is less of an issue now. We might do LMS in
-the October release.
+Discussion about LMS and whether to do verify only, or sign and verify. Doing
+verify only for 3.5 was discussed. Ultimately the consensus was to skip LMS
+verify for 3.5 and wait until we have both verify and signing. CNSA 2 is less of
+an issue now. We might do LMS in the October release.
 
 ** Endian
 
