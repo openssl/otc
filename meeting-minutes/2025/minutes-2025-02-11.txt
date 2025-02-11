@@ -1,0 +1,137 @@
+Meeting Date: 2025-02-11
+Minutes taken by: Matt Caswell
+    Dmitry Belyavsky
+    Hugo Landau
+    Matt Caswell
+    Richard Levitte
+    Nicola Tuveri
+    Tomas Mraz
+    Shane Lontis
+    Tim Hudson
+
+External attendees:
+    Viktor Dukhovni
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review feature branches
+    * Review OTC project board
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Matt volunteered to take the minutes.
+Proposed: Matt, seconded: Tim
+
+Agenda for the meeting agreed. Proposed: Matt, seconded: Tim
+
+** Agree minutes from previous meeting
+
+Agree minutes from last meeting. Proposed: Matt, seconded: Tim
+
+** Review feature branches
+
+- ML-KEM
+
+There are some issues about input/output formats (see #26652)
+
+There are competing formats. The standards are still in development and are not
+consistent with each other.
+
+We currently have 6 different input formats that we can support. Each one can be
+turned on or off at run time. We also have the ability to keep or forget the
+seed after input.
+
+Consensus on supporting multiple input formats. We will support run time
+configurability for this.
+
+We support multiple output formats in a priority list. We also have a "retain
+seed" parameter which enables us to keep or drop the seed. We would like to use
+the IETF format by default if possible - but it might not be agreed by the time
+we release.
+
+Consensus on supporting multiple formats in a priority list preferring the IETF
+format by default if possible by the time of alpha release (28th February).
+
+Question: if we have both seed and key which do we use? Do we compare
+consistency between them, or ignore the one we don't use.
+
+We currently do some minimal consistency checking of the "z" component if we
+retain the seed.
+
+Consensus with minimal consistency checking. If the seed is not preferred we will
+not generate from it.
+
+Consensus is that if we have both a public and private key then we check that
+they are consistent.
+
+On export we will export both the public and private key (and/or seed if available)
+
+Should we do a PCT test on import? Consensus is that we will do the PCT test for
+both ML-KEM and ML-DSA with the option to remove it later because we do not
+believe it is mandatory.
+
+The hybrid KEM is missing from the FIPS provider. Not having this is a blocker
+for alpha, but not for the merge of the branch.
+
+This feature branch is ok to merge to 3.5.
+
+- ML-DSA
+
+This feature branch is ok to merge to 3.5.
+
+- SLH-DSA
+
+This feature branch is ok to merge to 3.5.
+
+- QUIC Server
+
+This feature branch is ok to merge to 3.5.
+
+- LMS (in HSS)
+
+This feature branch is ok to merge to 3.5.
+
+- EVP_SKEY
+
+The current proposal is to remove the KDF support from the current PR and bring
+this in later (i.e. no derives and no KDFs).
+
+With the above changes this feature branch is ok to merge 3.5.
+
+** Review OTC project board
+
+Defer
+
+** Review issues with OTC hold (30 minutes)
+
+Defer
+
+** Review outstanding security issues
+
+[Nicola left the meeting]
+
+** Review draft technical policies
+
+None
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review OTC project board
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** AOB
+
+We did not announce today's release to openssl-users. We should defer it.
+
