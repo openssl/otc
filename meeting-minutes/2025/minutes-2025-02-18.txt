@@ -1,0 +1,80 @@
+Meeting Date: 2025-02-18
+Minutes taken by: Tomas Mraz
+    Dmitry Belyavsky
+    Hugo Landau
+    Richard Levitte
+    Tomas Mraz
+    Shane Lontis
+    Tim Hudson
+    Nicola Tuveri [joined late]
+
+External attendees:
+    Viktor Dukhovni
+    Sasa Nedvedicky
+    Tomas Vavra
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review OTC project board
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Tomas volunteered to take the minutes.
+Proposed: Tomas, seconded: Tim
+
+Agenda for the meeting agreed. Proposed: Tim, seconded: Tomas
+
+** Agree minutes from previous meeting
+
+Deferred as the minutes were not stored in the repo yet.
+
+** Review OTC project board
+
+Deferred, no urgent issues.
+
+** Review issues with OTC hold (30 minutes)
+
+#26573 - Using seed when the generated key material is present
+- OTC: we have controls for what to do and when both are provided we check
+  things by default
+- Note this aligns with the currently proposed IETF LAMPs update (awaiting
+  working group confirmation of acceptance).
+
+** Review outstanding security issues
+
+We discussed security issues.
+
+[Nicola Tuveri joined]
+
+** Review draft technical policies
+
+None
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review OTC project board
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** AOB
+
+Discussed https://github.com/openssl/openssl/pull/26801:
+- Enabling hybrid key shares with QUIC causes issues. Some tests seem to be
+  failing if they are enabled for QUIC.
+- Parsing the default supported groups configuration causes about 600 strcmp()
+  calls. We've discussed ways how to speed this up.
+
+There might be a problem with the X25519 keyshare not working in a libctx with
+both default and fips providers and a property query "fips=yes". However this
+is not a regression.
