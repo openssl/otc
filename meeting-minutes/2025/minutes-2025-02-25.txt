@@ -42,7 +42,7 @@ Feature freeze is imminent. Should we create the 3.6 branch.
 Some discussion of various features that are close to being merged but aren't
 quite ready yet.
 
-Discussion around branching for 3.6 on 11th March (at alpha time).
+Discussion around branching for 3.5 on 11th March (at alpha time).
 
 The following features are ok to go in when ready (before alpha):
 - Intel optimisation (#26410)
