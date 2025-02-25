@@ -1,0 +1,95 @@
+Meeting Date: 2025-02-25
+Minutes taken by: Matt Caswell
+    Dmitry Belyavsky
+    Hugo Landau
+    Tomas Mraz
+    Shane Lontis
+    Nicola Tuveri
+    Matt Caswell
+    Tim Hudson
+
+External attendees:
+    Viktor Dukhovni
+    Tomas Vavra
+    Sasha Nedvedicky [joined late]
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * 3.5 Alpha release
+    * Review OTC project board
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Matt volunteered to take the minutes.
+Proposed: Matt, seconded: Nicola
+
+Agenda for the meeting agreed. Proposed: Matt, seconded: Tomas M
+
+** Agree minutes from previous meeting
+
+Agree minutes from 11th Feb: Proposed Matt, seconded Tomas
+Agree minutes from 18th Feb: Proposed Tim, seconded Tomas
+
+** 3.5 Alpha release
+
+Feature freeze is imminent. Should we create the 3.6 branch.
+Some discussion of various features that are close to being merged but aren't
+quite ready yet.
+
+Discussion around branching for 3.6 on 11th March (at alpha time).
+
+The following features are ok to go in when ready (before alpha):
+- Intel optimisation (#26410)
+- Decoder patch (#26892)
+- KEM mode optional (#26872)
+- Allow zero length plaintext and AEAD for AES SIV mode (#26658)
+
+All other features will either be merged today, or should not be merged for the
+alpha. The full freeze will occur 2 days prior the 11th March alpha release and
+we will the create the 3.5 branch at this point.
+
+** Review OTC project board
+
+The outstanding project board issues have been added the engineering backlog.
+Engineering team to review and consider whether they can be done for 3.5.
+
+** Review issues with OTC hold (30 minutes)
+
+Make the KEM operating mode optional (#26872)
+
+Each KEM has a "mode" and there is only one at the current time. This PR makes
+that mode the default for each algorithm, without the caller having to explicitly
+set it.
+
+OTC is ok with setting these default modes.
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** Review draft technical policies
+
+None
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Policy for feature branches
+    * Review OTC project board
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** AOB
+
+Viktor described a possible RPK bug. Viktor will raise an issue for it.
+
