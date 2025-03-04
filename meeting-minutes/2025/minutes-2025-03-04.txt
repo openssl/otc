@@ -1,0 +1,87 @@
+Meeting Date: 2025-03-04
+Minutes taken by: Matt Caswell
+    Dmitry Belyavsky
+    Matt Caswell
+    Paul Dale
+    Tim Hudson
+    Shane Lontis
+    Tomas Mraz
+    Richard Levitte (joined late)
+
+External attendees:
+    Viktor Dukhovni
+    Tomas Vavra
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * 3.5 alpha release
+    * Review OTC project board
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Matt volunteered to take the minutes.
+Proposed: Matt, seconded: Tomas M
+
+Agenda for the meeting agreed. Proposed: Matt, seconded: Tim
+
+** Agree minutes from previous meeting
+
+Agree minutes from previous meeting: Proposed Matt, seconded Tim
+
+** 3.5 alpha release
+
+There is a current issue with sigalgs (ML-DSA is not preferred #26955). There
+is also a potential issue where sigalgs may not be used for the correct protocol
+version.
+
+[Richard Levitte joined]
+
+Some discussion about the RCU issues and whether they were 3.5 blockers. They
+are not currently considered a blocker for alpha.
+
+** Review OTC project board
+
+No update
+
+** Review issues with OTC hold (30 minutes)
+
+Send an alert on first record (#26936).
+
+We don't want to send a TLS alert in this scenario. We could add more http verbs.
+
+SAN URIs to contain userinfo (#25861)
+
+There no objections to merging this to the master branch now.
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** Review draft technical policies
+
+None
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Policy for feature branches
+    * 3.5 alpha release
+    * Review OTC project board
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+** AOB
+
+Tim: The 3.1.2 FIPS 140-3 module has achieved finalisation state.
+3.5 will be put through FIPS 140-3 validation.
+
