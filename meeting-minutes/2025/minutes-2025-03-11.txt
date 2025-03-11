@@ -102,9 +102,9 @@ issues to the OTC.
 
 Shane asked whether EVP_SKEY should be mutable or immutable. Dmitry said that
 the expectation is that EVP_SKEY is immutable - but providers can do what they
-can like. Shane asks whether there should be some params in the import. The
-consensus is that we should probably have this, but it is now too late for the
-3.5 release.
+can like inside the opaque pointer they get from libcrypto. Shane asks whether
+there should be some params in the import. The consensus is that we should
+probably have this, but it is now too late for the 3.5 release.
 
 Viktor observes that failure to load a provider is not currently visible as a
 configuraton error. See #26997
