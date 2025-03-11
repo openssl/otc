@@ -1,0 +1,110 @@
+Meeting Date: 2025-03-11
+Minutes taken by: Matt Caswell
+    Dmitry Belyavsky
+    Matt Caswell
+    Paul Dale
+    Richard Levitte
+    Tim Hudson
+    Shane Lontis
+    Nicola Tuveri (joined late)
+
+External attendees:
+    Viktor Dukhovni
+    Tomas Vavra
+    Sasha Nedvedicky (joined late)
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * 3.5 alpha release
+    * Config tool
+    * Review OTC project board
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Review draft technical policies
+    * Agree agenda for next meeting
+    * AOB
+
+
+** Nominate a minute taker and confirm agenda
+
+Matt volunteered to take the minutes.
+Proposed: Matt, seconded: Tim
+
+Agenda for the meeting agreed. Proposed: Matt, seconded: Tim
+
+** Agree minutes from previous meeting
+
+Agree minutes from previous meeting: Proposed Matt, seconded Tim
+
+** 3.5 alpha release
+
+[Nicola Tuveri joined]
+[Sasha Nedvedicky joined]
+
+Sasha will be doing the release today.
+
+We will create the 3.5 branch today, and master will be open again for features.
+
+Tim expresses thanks to Paul, Shane and Viktor for the PQC features
+
+Tim moves a motion on behalf of the OTC to express thanks to Paul, Shane and
+Viktor for the post-quantum features in the 3.5 release.
+Motion passes.
+
+** Config tool
+
+RedHat want to ship multiple providers and have a drop in config system. It
+would be helpful to have a tool to check config file correctness.
+
+There was general consensus that having such a tool would be useful.
+
+There was a discussion about conf_diagnostics and whether it is desirable
+behaviour that default initialisation can fail when using this option
+
+Dmitry asked whether it is good practice to have a separate directory for
+include file snippets. The consensus was that this is good practice.
+
+** Review OTC project board
+
+No update
+
+** Review issues with OTC hold (30 minutes)
+
+No update
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+
+** Review draft technical policies
+
+None
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Policy for feature branches
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Agree agenda for next meeting
+    * AOB
+
+** AOB
+
+Dmitry had an email from a group looking at our QUIC implementation. Dmitry to
+loop in Matt and Tim into the conversation.
+
+Nicola had some external discussions around PQC composite signatures and would
+like OTC involvement in design discussions. Nicola to send a summary of the
+issues to the OTC.
+
+Shane asked whether EVP_SKEY should be mutable or immutable. Dmitry said that
+the expectation is that EVP_SKEY is immutable - but providers can do what they
+can like. Shane asks whether there should be some params in the import. The
+consensus is that we should probably have this, but it is now too late for the
+3.5 release.
+
+Viktor observes that failure to load a provider is not currently visible as a
+configuraton error. See #26997
