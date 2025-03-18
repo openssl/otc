@@ -1,0 +1,84 @@
+Meeting Date: 2025-03-18
+Minutes taken by: Matt Caswell
+    Dmitry Belyavsky
+    Matt Caswell
+    Paul Dale
+    Richard Levitte
+    Shane Lontis
+    Nicola Tuveri
+    Tomas Mraz
+    Hugo Landau
+    Tim Hudson
+
+External attendees:
+    Viktor Dukhovni
+    Sasha Nedvedicky
+    Tomas Vavra [joined late]
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * SHAKE and CMS
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Matt volunteered to take the minutes.
+Proposed: Matt, seconded: Hugo
+
+Agenda for the meeting agreed. Proposed: Matt, seconded: Tomas, Hugo
+
+** Agree minutes from previous meeting
+
+Agree minutes from previous meeting: Proposed Matt, seconded Tim
+
+** SHAKE and CMS
+
+The SHAKE digests should have a default length in the CMS context.
+
+Two possibilities were proposed.
+
+- Hard code the length in the CMS context.
+- If you load the digest by OID then load a version of SHAKE witht the correct
+default digest length
+
+The second option does not seem viable. The first option seems the only viable
+one prior to 4.0. After 4.0 we could just change the default digest length - but
+this may not be desirable if we want to still support old providers.
+
+Another option considered was a special case in EVP_DigestFinal.
+
+[Tomas Vavra joined]
+
+** Review issues with OTC hold (30 minutes)
+
+No update
+
+** Review outstanding security issues
+
+We discussed outstanding security issues.
+[Viktor left]
+
+** Review draft technical policies
+
+None
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Beta sign off
+    * Policy for feature branches
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Agree agenda for next meeting
+    * AOB
+
+** AOB
+
+There are a couple of outstanding issues with the 3.5 alpha release that Nedvedicky
+fixing (issues 27047 and 27049). Tomas V will assign someone.
+
