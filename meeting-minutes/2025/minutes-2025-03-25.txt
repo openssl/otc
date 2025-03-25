@@ -1,0 +1,99 @@
+Meeting Date: 2025-03-25
+Minutes taken by: Matt Caswell
+    Dmitry Belyavsky
+    Matt Caswell
+    Richard Levitte
+    Shane Lontis
+    Tomas Mraz
+    Hugo Landau
+    Tim Hudson
+
+External attendees:
+    Viktor Dukhovni
+    Sasha Nedvedicky
+    Tomas Vavra
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * ML-DSA codepoints
+    * Beta sign off
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Matt volunteered to take the minutes.
+Proposed: Matt, seconded: Tomas
+
+Agenda for the meeting agreed. Proposed: Matt, seconded: Tim
+
+** Agree minutes from previous meeting
+
+Agree minutes from previous meeting: Proposed Matt, seconded Tomas
+
+** ML-DSA codepoints
+
+We have enabled ML-DSA TLS sigalgs in 3.5. However the codepoints are still
+draft. There is a risk that the codepoints will not get assigned. We will
+accept that risk.
+
+** Beta sign off
+
+Beta checklist:
+
+Y The code is functionally complete in regards to the particular release objectives as set by OMC and OTC.
+Y There is no remaining refactoring required by OMC or OTC for the release.
+Y There are no remaining API changes required for the release. This applies only to beta releases of a major release as API changes are not allowed on minor releases.
+Y There are no remaining API additions required for the release.
+Y All issues triaged as regressions on the development branch from which the release is to be done must have a milestone assigned. Regressions are considered from the previous stable release or previous beta release.
+Y All issues or pull requests with the milestone for the beta release are closed.
+Y There are no outstanding untriaged Coverity issues.
+Y Coveralls coverage has not decreased overall from the previous release.
+N The CI must pass on the tip of the development branch before the release commits are added to the tree, including the daily CI builds.
+Y The tree must be frozen for at least 3 business days. No changes apart from regression or security fixes should be merged during the freeze.
+N For 2 days before the release there should be no changes to ensure the daily CI builds run on the development tree tip.
+ In case of the first beta release the OTC should explicitly approve that the source is ready for a release with a vote.
+
+OTC sign off the beta release subject to the provider compatibility CI issue being fixed.
+  Dmitry     [+1]
+  Matt       [+1]
+  Pauli      [  ]
+  Tim        [+1]
+  Hugo       [+1]
+  Richard    [+1]
+  Shane      [+1]
+  Tomas      [+1]
+  Kurt       [  ]
+  Nicola     [  ]
+
+** Review issues with OTC hold (30 minutes)
+
+No update
+
+** Review outstanding security issues
+
+We discussed security issues
+
+** Review draft technical policies
+
+None
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Beta sign off
+    * Policy for feature branches
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Agree agenda for next meeting
+    * AOB
+
+** AOB
+
+There are a couple of outstanding issues with the 3.5 alpha release that Nedvedicky
+fixing (issues 27047 and 27049). Tomas V will assign someone.
+
