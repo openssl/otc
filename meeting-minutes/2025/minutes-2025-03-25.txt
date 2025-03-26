@@ -85,7 +85,6 @@ None
 
     * Nominate a minute taker and confirm agenda
     * Agree minutes from previous meeting
-    * Beta sign off
     * Policy for feature branches
     * Review issues with OTC hold (30 minutes)
     * Review outstanding security issues
@@ -94,6 +93,4 @@ None
 
 ** AOB
 
-There are a couple of outstanding issues with the 3.5 alpha release that Nedvedicky
-fixing (issues 27047 and 27049). Tomas V will assign someone.
-
+None
