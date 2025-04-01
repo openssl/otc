@@ -1,0 +1,66 @@
+Meeting Date: 2025-04-01
+Minutes taken by: Matt Caswell
+    Dmitry Belyavsky
+    Matt Caswell
+    Richard Levitte
+    Shane Lontis
+    Tomas Mraz
+    Tim Hudson
+
+External attendees:
+    Viktor Dukhovni
+    Tomas Vavra
+    Sasha Nedvedicky (joined late)
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Matt volunteered to take the minutes.
+Proposed: Matt, seconded: Tim
+
+Agenda for the meeting agreed. Proposed: Matt, seconded: Tim
+
+** Agree minutes from previous meeting
+
+Agree minutes from previous meeting: Proposed Matt, seconded Tim
+
+** Review issues with OTC hold (30 minutes)
+
+No update
+
+** Review outstanding security issues
+
+We discussed security issues
+
+** Review draft technical policies
+
+None
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Policy for feature branches
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Agree agenda for next meeting
+    * AOB
+
+** AOB
+
+No meeting next week. Next meeting will be on 15th April.
+
+We have a public patch up to integrate OpenSSL 3rd party API support to Msquic.
+https://github.com/microsoft/msquic/pull/4959
+
+Shane asked about the status of the RCU code. Tomas says that all fixes are in.
+
+Viktor says we are to expect an expect an external contribution of KEMRI for
+CMS.
