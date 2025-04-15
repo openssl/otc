@@ -1,0 +1,104 @@
+Meeting Date: 2025-04-15
+Minutes taken by: Matt Caswell
+    Dmitry Belyavsky
+    Matt Caswell
+    Nicola Tuveri
+    Tomas Mraz
+    Paul Dale
+    Shane Lontis
+
+External attendees:
+    Viktor Dukhovni
+    Tomas Vavra
+    Sasha Nedvedicky
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Policy for feature branches
+    * X509_NAME_oneline
+    * Configuration parsing
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Matt volunteered to take the minutes.
+Proposed: Matt, seconded: Nicola
+
+Agenda for the meeting agreed. Proposed: Matt, seconded: Tomas
+
+** Agree minutes from previous meeting
+
+Agree minutes from previous meeting: Proposed Matt, seconded Tomas
+
+** Policy for feature branches
+
+What is allowed to be merged into a feature branch. Do we apply the same level
+of rules to what is allowed into master, into a feature branch.
+
+Original intent was to review PRs as if they were being merged to master. There
+might be TODOs left in the code to resolve later. Discussion about whether
+there should always be a TODO or whether sometimes things could be captured
+externally in an issue.
+
+Some discussion how to handle small disagreements between the author and
+reviewers.
+
+The feature branch is considered a staging branch for master. Development occurs
+in the PR branch.
+
+There are three options for resolving disagreements in a PR review for a feature
+branch:
+1) Author and reviewers agree to a compromise
+2) Author and reviewers agree to defer the issue until some later time
+3) Author or reviewers use the exception process (e.g. OTC Hold to resolve the
+   disagreement)
+
+Dmitry raised the point that from an external contributor perspective getting
+review at all for feature branches is a problem.
+
+** X509_NAME_oneline
+
+We have a non-standard encoding of directory names via X509_NAME_oneline. We
+do have functions that implement standard ways of encoding (X509_NAME_print_ex)
+- however we are still using X509_NAME_oneline in various places.
+(See PR #27370)
+
+Consensus is that we should display RFC standard names but this should be from
+4.0. We should raise an issue to review all uses of X509_NAME_oneline.
+
+** Configuration parsing
+
+See issue #27300
+
+Processing of .include directories in config files is not deterministic in terms
+of the order that files are processed. We should sort them first. We should
+fix in the next minor release (but not backport).
+
+** Review issues with OTC hold (30 minutes)
+
+There are none.
+
+** Review outstanding security issues
+
+We discussed security issues
+
+** Review draft technical policies
+
+None
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Agree agenda for next meeting
+    * AOB
+
+** AOB
+
+None
