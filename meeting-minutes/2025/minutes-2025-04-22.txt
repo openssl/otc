@@ -1,0 +1,79 @@
+Meeting Date: 2025-04-22
+Minutes taken by: Matt Caswell
+    Dmitry Belyavsky
+    Matt Caswell
+    Tomas Mraz
+    Shane Lontis
+    Richard Levitte
+    Nicola Tuveri
+
+External attendees:
+    Viktor Dukhovni
+    Tomas Vavra
+    Sasha Nedvedicky
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * When does OTC disband?
+    * AI contributing policy
+    * Agree agenda for next meeting
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Matt volunteered to take the minutes.
+Proposed: Matt, seconded: Tomas
+
+Agenda for the meeting agreed. Proposed: Matt, seconded: Tomas
+
+** Agree minutes from previous meeting
+
+Agree minutes from previous meeting: Proposed Matt, seconded Tomas
+
+** Review issues with OTC hold (30 minutes)
+
+There are none.
+
+** Review outstanding security issues
+
+We discussed security issues
+
+** When does OTC disband?
+
+The OTC is expected to be disbanded by the end of April, so the
+last meeting will be 29th April.
+
+The OTC will ask the Directors of the Foundation/Corporation if
+OTC meetings should continue until such time as the TACs are formed and
+operational.
+
+** AI contributing policy
+
+Dmitry expects us to start receiving AI generated defect reports and
+AI generated/support code contributions.
+
+This is not an OTC issue and should be raised through the BAC.
+
+** Review draft technical policies
+
+None
+
+** Agree agenda for next meeting
+
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Agree agenda for next meeting
+    * AOB
+
+** AOB
+
+Viktor: We do not have a function which tells you the amount of output
+space required for a given input during encrypt/decrypt. Should we
+have one?
+We should create a feature request issue describing what this might
+look like.
