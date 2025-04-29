@@ -1,0 +1,76 @@
+Meeting Date: 2025-04-29
+Minutes taken by: Matt Caswell
+    Dmitry Belyavsky
+    Matt Caswell
+    Tomas Mraz
+    Richard Levitte
+    Paul Dale
+    Hugo Landau
+    Tim Hudson
+    Nicola Tuveri (joined late)
+
+External attendees:
+
+Agenda:
+    * Nominate a minute taker and confirm agenda
+    * Agree minutes from previous meeting
+    * Review issues with OTC hold (30 minutes)
+    * Review outstanding security issues
+    * Security process moving forwards
+    * Closing notes
+    * AOB
+
+** Nominate a minute taker and confirm agenda
+
+Matt volunteered to take the minutes.
+Proposed: Matt, seconded: Tim
+
+Agenda for the meeting agreed. Proposed: Matt, seconded: Tim
+
+** Agree minutes from previous meeting
+
+Agree minutes from previous meeting: Proposed Matt, seconded Tomas
+
+** Review issues with OTC hold (30 minutes)
+
+Nicola Tuveri joined
+
+#27431 fips: Enforce lower bounds checks for password protected files when using
+FIPS provider
+
+Suggested approach is to change the default salt length to 16 in 3.6.
+The current PR goes too far and would enforace the longer lengths and is therefore
+breaking. This might be acceptable in 4.0.
+
+We would accept a PR (in 3.6) that would change the default salt length to 16.
+We do not want to change the enforcement in 3.x
+
+#27519 build break using GCC 15 - C23' new keyword: bool
+
+Dmitry proposed raising the standard to c99 for OpenSSL 4.0.
+The C standard version is a separate discussion to this PR.
+
+** Review outstanding security issues
+
+We discussed security issues
+
+** Security and OTC hold process moving forwards
+
+The Foundation and Corporation will assemble a security team. With others
+invited on an as-needed basis.
+
+A replacement for the OTC hold process has yet to be decided.
+
+** Closing notes
+
+This is the last OTC meeting.
+
+The OTC has been established for nearly 6 years.
+
+The OTC members were thanked for their contribution.
+
+Dmitry suggested a blog post regarding the OTC.
+
+** AOB
+
+None
